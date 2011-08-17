@@ -218,9 +218,6 @@ Buffer
 ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
 				   ReadBufferMode mode, BufferAccessStrategy strategy)
 {
-//	this is where I made changes
-	if ( (reln)->rd_rel != NULL)
-		fprintf(stderr,"REQ %s %d\n", reln->rd_rel->relname.data,  blockNum);
 	bool		hit;
 	Buffer		buf;
 

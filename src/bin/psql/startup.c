@@ -34,7 +34,6 @@
  * Global psql options
  */
 PsqlSettings pset;
-
 #ifndef WIN32
 #define SYSPSQLRC	"psqlrc"
 #define PSQLRC		".psqlrc"
@@ -96,6 +95,7 @@ main(int argc, char *argv[])
 	if (argc > 1)
 	{
 		if (strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-?") == 0)
+
 		{
 			usage();
 			exit(EXIT_SUCCESS);
@@ -296,7 +296,7 @@ main(int argc, char *argv[])
 
 		connection_warnings(true);
 		if (!pset.quiet && !pset.notty)
-			printf(_("Type \"help\" for help.\n\n"));
+			printf(_(" this is welcome \nType \"help\" for help.\n\n"));
 		if (!pset.notty)
 			initializeInput(options.no_readline ? 0 : 1);
 		if (options.action_string)		/* -f - was used */

@@ -1,0 +1,1515 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALIGNOF_XLOG_BUFFER	xlogdefs.h	141;"	d
+ALIGNOF_XLOG_BUFFER	xlogdefs.h	143;"	d
+ALL_SET	hash.h	184;"	d
+ATTNUM_H	attnum.h	15;"	d
+AttrDefault	tupdesc.h	/^} AttrDefault;$/;"	t	typeref:struct:attrDefault
+AttrNumber	attnum.h	/^typedef int16 AttrNumber;$/;"	t
+AttrNumberGetAttrOffset	attnum.h	51;"	d
+AttrNumberIsForUserDefinedAttr	attnum.h	41;"	d
+AttrOffsetGetAttrNumber	attnum.h	61;"	d
+AttributeNumberIsValid	attnum.h	34;"	d
+BITMAPLEN	htup.h	359;"	d
+BITS_PER_MAP	hash.h	211;"	d
+BMPGSZ_BIT	hash.h	194;"	d
+BMPGSZ_BYTE	hash.h	193;"	d
+BMPG_MASK	hash.h	196;"	d
+BMPG_SHIFT	hash.h	195;"	d
+BTCommuteStrategyNumber	nbtree.h	416;"	d
+BTCycleId	nbtree.h	/^typedef uint16 BTCycleId;$/;"	t
+BTEntrySame	nbtree.h	155;"	d
+BTEqualStrategyNumber	skey.h	36;"	d
+BTGreaterEqualStrategyNumber	skey.h	37;"	d
+BTGreaterStrategyNumber	skey.h	38;"	d
+BTLessEqualStrategyNumber	skey.h	35;"	d
+BTLessStrategyNumber	skey.h	34;"	d
+BTMaxItemSize	nbtree.h	117;"	d
+BTMaxStrategyNumber	skey.h	40;"	d
+BTMetaPageData	nbtree.h	/^typedef struct BTMetaPageData$/;"	s
+BTMetaPageData	nbtree.h	/^} BTMetaPageData;$/;"	t	typeref:struct:BTMetaPageData
+BTORDER_PROC	nbtree.h	426;"	d
+BTP_DELETED	nbtree.h	71;"	d
+BTP_HALF_DEAD	nbtree.h	73;"	d
+BTP_HAS_GARBAGE	nbtree.h	75;"	d
+BTP_LEAF	nbtree.h	69;"	d
+BTP_META	nbtree.h	72;"	d
+BTP_ROOT	nbtree.h	70;"	d
+BTP_SPLIT_END	nbtree.h	74;"	d
+BTPageGetMeta	nbtree.h	104;"	d
+BTPageOpaque	nbtree.h	/^typedef BTPageOpaqueData *BTPageOpaque;$/;"	t
+BTPageOpaqueData	nbtree.h	/^typedef struct BTPageOpaqueData$/;"	s
+BTPageOpaqueData	nbtree.h	/^} BTPageOpaqueData;$/;"	t	typeref:struct:BTPageOpaqueData
+BTREE_DEFAULT_FILLFACTOR	nbtree.h	130;"	d
+BTREE_MAGIC	nbtree.h	108;"	d
+BTREE_METAPAGE	nbtree.h	107;"	d
+BTREE_MIN_FILLFACTOR	nbtree.h	129;"	d
+BTREE_NONLEAF_FILLFACTOR	nbtree.h	131;"	d
+BTREE_VERSION	nbtree.h	109;"	d
+BTScanOpaque	nbtree.h	/^typedef BTScanOpaqueData *BTScanOpaque;$/;"	t
+BTScanOpaqueData	nbtree.h	/^typedef struct BTScanOpaqueData$/;"	s
+BTScanOpaqueData	nbtree.h	/^} BTScanOpaqueData;$/;"	t	typeref:struct:BTScanOpaqueData
+BTScanPos	nbtree.h	/^typedef BTScanPosData *BTScanPos;$/;"	t
+BTScanPosData	nbtree.h	/^typedef struct BTScanPosData$/;"	s
+BTScanPosData	nbtree.h	/^} BTScanPosData;$/;"	t	typeref:struct:BTScanPosData
+BTScanPosIsValid	nbtree.h	514;"	d
+BTScanPosItem	nbtree.h	/^typedef struct BTScanPosItem	\/* what we remember about each match *\/$/;"	s
+BTScanPosItem	nbtree.h	/^} BTScanPosItem;$/;"	t	typeref:struct:BTScanPosItem
+BTSpool	nbtree.h	/^typedef struct BTSpool BTSpool; \/* opaque type known only within nbtsort.c *\/$/;"	t	typeref:struct:BTSpool
+BTStack	nbtree.h	/^typedef BTStackData *BTStack;$/;"	t
+BTStackData	nbtree.h	/^typedef struct BTStackData$/;"	s
+BTStackData	nbtree.h	/^} BTStackData;$/;"	t	typeref:struct:BTStackData
+BTTidSame	nbtree.h	151;"	d
+BT_READ	nbtree.h	433;"	d
+BT_WRITE	nbtree.h	434;"	d
+BUCKET_TO_BLKNO	hash.h	34;"	d
+BYTE_TO_BIT	hash.h	183;"	d
+BackupHistoryFileName	xlog_internal.h	234;"	d
+BackupHistoryFilePath	xlog_internal.h	237;"	d
+BackwardScanDirection	sdir.h	/^	BackwardScanDirection = -1,$/;"	e	enum:ScanDirection
+BkpBlock	xlog_internal.h	/^typedef struct BkpBlock$/;"	s
+BkpBlock	xlog_internal.h	/^} BkpBlock;$/;"	t	typeref:struct:BkpBlock
+BootstrapTransactionId	transam.h	32;"	d
+Bucket	hash.h	/^typedef uint32 Bucket;$/;"	t
+BuildAccumulator	gin.h	/^} BuildAccumulator;$/;"	t	typeref:struct:__anon3
+BulkInsertState	heapam.h	/^typedef struct BulkInsertStateData *BulkInsertState;$/;"	t	typeref:struct:BulkInsertStateData
+BulkInsertStateData	hio.h	/^typedef struct BulkInsertStateData$/;"	s
+BulkInsertStateData	hio.h	/^} BulkInsertStateData;$/;"	t	typeref:struct:BulkInsertStateData
+CHECKPOINT_CAUSE_TIME	xlog.h	244;"	d
+CHECKPOINT_CAUSE_XLOG	xlog.h	243;"	d
+CHECKPOINT_END_OF_RECOVERY	xlog.h	235;"	d
+CHECKPOINT_FORCE	xlog.h	239;"	d
+CHECKPOINT_IMMEDIATE	xlog.h	238;"	d
+CHECKPOINT_IS_SHUTDOWN	xlog.h	234;"	d
+CHECKPOINT_WAIT	xlog.h	241;"	d
+CLOG_H	clog.h	12;"	d
+CLOG_TRUNCATE	clog.h	50;"	d
+CLOG_ZEROPAGE	clog.h	49;"	d
+CLRBIT	hash.h	214;"	d
+CheckpointStatsData	xlog.h	/^typedef struct CheckpointStatsData$/;"	s
+CheckpointStatsData	xlog.h	/^} CheckpointStatsData;$/;"	t	typeref:struct:CheckpointStatsData
+ConstrCheck	tupdesc.h	/^} ConstrCheck;$/;"	t	typeref:struct:constrCheck
+ControlLock	slru.h	/^	LWLockId	ControlLock;$/;"	m	struct:SlruSharedData
+DEFAULT_SYNC_METHOD	xlogdefs.h	127;"	d
+DEFAULT_SYNC_METHOD	xlogdefs.h	129;"	d
+DEFAULT_SYNC_METHOD	xlogdefs.h	131;"	d
+DEFAULT_SYNC_METHOD	xlogdefs.h	133;"	d
+DatumTupleFields	htup.h	/^typedef struct DatumTupleFields$/;"	s
+DatumTupleFields	htup.h	/^} DatumTupleFields;$/;"	t	typeref:struct:DatumTupleFields
+Dir	slru.h	/^	char		Dir[64];$/;"	m	struct:SlruCtlData
+EXTERN_TUPLES_PER_PAGE	tuptoaster.h	87;"	d
+EXTERN_TUPLE_MAX_SIZE	tuptoaster.h	89;"	d
+EntryAccumulator	gin.h	/^typedef struct EntryAccumulator$/;"	s
+EntryAccumulator	gin.h	/^} EntryAccumulator;$/;"	t	typeref:struct:EntryAccumulator
+F_DELETED	gist.h	60;"	d
+F_LEAF	gist.h	59;"	d
+F_TUPLES_DELETED	gist.h	61;"	d
+FirstBootstrapObjectId	transam.h	84;"	d
+FirstLowInvalidHeapAttributeNumber	sysattr.h	28;"	d
+FirstMultiXactId	multixact.h	17;"	d
+FirstNormalObjectId	transam.h	85;"	d
+FirstNormalTransactionId	transam.h	34;"	d
+ForwardScanDirection	sdir.h	/^	ForwardScanDirection = 1$/;"	e	enum:ScanDirection
+FrozenTransactionId	transam.h	33;"	d
+GENAM_H	genam.h	15;"	d
+GETSTRUCT	htup.h	508;"	d
+GET_STRING_RELOPTION	reloptions.h	235;"	d
+GET_STRING_RELOPTION_LEN	reloptions.h	226;"	d
+GEVHDRSZ	gist.h	143;"	d
+GINNProcs	gin.h	28;"	d
+GIN_COMPARE_PARTIAL_PROC	gin.h	27;"	d
+GIN_COMPARE_PROC	gin.h	23;"	d
+GIN_CONSISTENT_PROC	gin.h	26;"	d
+GIN_DATA	gin.h	50;"	d
+GIN_DEFAULT_USE_FASTUPDATE	gin.h	206;"	d
+GIN_DELETED	gin.h	52;"	d
+GIN_EXCLUSIVE	gin.h	214;"	d
+GIN_EXTRACTQUERY_PROC	gin.h	25;"	d
+GIN_EXTRACTVALUE_PROC	gin.h	24;"	d
+GIN_H	gin.h	11;"	d
+GIN_LEAF	gin.h	51;"	d
+GIN_LIST	gin.h	54;"	d
+GIN_LIST_FULLROW	gin.h	55;"	d
+GIN_META	gin.h	53;"	d
+GIN_METAPAGE_BLKNO	gin.h	58;"	d
+GIN_NDELETE_AT_ONCE	gin.h	338;"	d
+GIN_ROOT_BLKNO	gin.h	59;"	d
+GIN_SHARE	gin.h	213;"	d
+GIN_TREE_POSTING	gin.h	160;"	d
+GIN_UNLOCK	gin.h	212;"	d
+GISTENTRY	gist.h	/^typedef struct GISTENTRY$/;"	s
+GISTENTRY	gist.h	/^} GISTENTRY;$/;"	t	typeref:struct:GISTENTRY
+GISTInsertStack	gist_private.h	/^typedef struct GISTInsertStack$/;"	s
+GISTInsertStack	gist_private.h	/^} GISTInsertStack;$/;"	t	typeref:struct:GISTInsertStack
+GISTInsertState	gist_private.h	/^} GISTInsertState;$/;"	t	typeref:struct:__anon5
+GISTNProcs	gist.h	35;"	d
+GISTPageOpaque	gist.h	/^typedef GISTPageOpaqueData *GISTPageOpaque;$/;"	t
+GISTPageOpaqueData	gist.h	/^typedef struct GISTPageOpaqueData$/;"	s
+GISTPageOpaqueData	gist.h	/^} GISTPageOpaqueData;$/;"	t	typeref:struct:GISTPageOpaqueData
+GISTSCAN_H	gistscan.h	15;"	d
+GISTSTATE	gist_private.h	/^typedef struct GISTSTATE$/;"	s
+GISTSTATE	gist_private.h	/^} GISTSTATE;$/;"	t	typeref:struct:GISTSTATE
+GISTScanOpaque	gist_private.h	/^typedef GISTScanOpaqueData *GISTScanOpaque;$/;"	t
+GISTScanOpaqueData	gist_private.h	/^typedef struct GISTScanOpaqueData$/;"	s
+GISTScanOpaqueData	gist_private.h	/^} GISTScanOpaqueData;$/;"	t	typeref:struct:GISTScanOpaqueData
+GISTSearchStack	gist_private.h	/^typedef struct GISTSearchStack$/;"	s
+GISTSearchStack	gist_private.h	/^} GISTSearchStack;$/;"	t	typeref:struct:GISTSearchStack
+GIST_COMPRESS_PROC	gist.h	30;"	d
+GIST_CONSISTENT_PROC	gist.h	28;"	d
+GIST_DECOMPRESS_PROC	gist.h	31;"	d
+GIST_DEFAULT_FILLFACTOR	gist_private.h	277;"	d
+GIST_EQUAL_PROC	gist.h	34;"	d
+GIST_EXCLUSIVE	gist_private.h	23;"	d
+GIST_H	gist.h	17;"	d
+GIST_LEAF	gist.h	121;"	d
+GIST_MIN_FILLFACTOR	gist_private.h	276;"	d
+GIST_PAGE_ID	gist.h	81;"	d
+GIST_PENALTY_PROC	gist.h	32;"	d
+GIST_PICKSPLIT_PROC	gist.h	33;"	d
+GIST_PRIVATE_H	gist_private.h	15;"	d
+GIST_ROOT_BLKNO	gist_private.h	223;"	d
+GIST_SHARE	gist_private.h	22;"	d
+GIST_SPLITVEC	gist.h	/^typedef struct GIST_SPLITVEC$/;"	s
+GIST_SPLITVEC	gist.h	/^} GIST_SPLITVEC;$/;"	t	typeref:struct:GIST_SPLITVEC
+GIST_UNION_PROC	gist.h	29;"	d
+GIST_UNLOCK	gist_private.h	21;"	d
+GiSTPageSize	gist_private.h	273;"	d
+GinBtree	gin.h	/^typedef struct GinBtreeData *GinBtree;$/;"	t	typeref:struct:GinBtreeData
+GinBtreeData	gin.h	/^typedef struct GinBtreeData$/;"	s
+GinBtreeData	gin.h	/^} GinBtreeData;$/;"	t	typeref:struct:GinBtreeData
+GinBtreeStack	gin.h	/^typedef struct GinBtreeStack$/;"	s
+GinBtreeStack	gin.h	/^} GinBtreeStack;$/;"	t	typeref:struct:GinBtreeStack
+GinDataPageGetData	gin.h	178;"	d
+GinDataPageGetFreeSpace	gin.h	185;"	d
+GinDataPageGetItem	gin.h	182;"	d
+GinDataPageGetRightBound	gin.h	177;"	d
+GinGetNPosting	gin.h	158;"	d
+GinGetOrigSizePosting	gin.h	165;"	d
+GinGetPosting	gin.h	167;"	d
+GinGetPostingTree	gin.h	163;"	d
+GinGetUseFastUpdate	gin.h	207;"	d
+GinIsPostingTree	gin.h	161;"	d
+GinItemPointerGetBlockNumber	gin.h	110;"	d
+GinItemPointerGetOffsetNumber	gin.h	113;"	d
+GinListPageSize	gin.h	194;"	d
+GinMaxItemSize	gin.h	169;"	d
+GinMetaPageData	gin.h	/^typedef struct GinMetaPageData$/;"	s
+GinMetaPageData	gin.h	/^} GinMetaPageData;$/;"	t	typeref:struct:GinMetaPageData
+GinOptions	gin.h	/^typedef struct GinOptions$/;"	s
+GinOptions	gin.h	/^} GinOptions;$/;"	t	typeref:struct:GinOptions
+GinPageGetMeta	gin.h	84;"	d
+GinPageGetOpaque	gin.h	90;"	d
+GinPageHasFullRow	gin.h	97;"	d
+GinPageIsData	gin.h	95;"	d
+GinPageIsDeleted	gin.h	100;"	d
+GinPageIsLeaf	gin.h	92;"	d
+GinPageOpaque	gin.h	/^typedef GinPageOpaqueData *GinPageOpaque;$/;"	t
+GinPageOpaqueData	gin.h	/^typedef struct GinPageOpaqueData$/;"	s
+GinPageOpaqueData	gin.h	/^} GinPageOpaqueData;$/;"	t	typeref:struct:GinPageOpaqueData
+GinPageRightMost	gin.h	104;"	d
+GinPageSetData	gin.h	96;"	d
+GinPageSetDeleted	gin.h	101;"	d
+GinPageSetFullRow	gin.h	98;"	d
+GinPageSetLeaf	gin.h	93;"	d
+GinPageSetNonDeleted	gin.h	102;"	d
+GinPageSetNonLeaf	gin.h	94;"	d
+GinPostingTreeScan	gin.h	/^} GinPostingTreeScan;$/;"	t	typeref:struct:__anon2
+GinScanEntry	gin.h	/^typedef struct GinScanEntryData *GinScanEntry;$/;"	t	typeref:struct:GinScanEntryData
+GinScanEntryData	gin.h	/^typedef struct GinScanEntryData$/;"	s
+GinScanEntryData	gin.h	/^} GinScanEntryData;$/;"	t	typeref:struct:GinScanEntryData
+GinScanKey	gin.h	/^typedef GinScanKeyData *GinScanKey;$/;"	t
+GinScanKeyData	gin.h	/^typedef struct GinScanKeyData$/;"	s
+GinScanKeyData	gin.h	/^} GinScanKeyData;$/;"	t	typeref:struct:GinScanKeyData
+GinScanOpaque	gin.h	/^typedef GinScanOpaqueData *GinScanOpaque;$/;"	t
+GinScanOpaqueData	gin.h	/^typedef struct GinScanOpaqueData$/;"	s
+GinScanOpaqueData	gin.h	/^} GinScanOpaqueData;$/;"	t	typeref:struct:GinScanOpaqueData
+GinSetNPosting	gin.h	159;"	d
+GinSetOrigSizePosting	gin.h	166;"	d
+GinSetPostingTree	gin.h	162;"	d
+GinSizeOfItem	gin.h	180;"	d
+GinState	gin.h	/^typedef struct GinState$/;"	s
+GinState	gin.h	/^} GinState;$/;"	t	typeref:struct:GinState
+GinTupleCollector	gin.h	/^typedef struct GinTupleCollector$/;"	s
+GinTupleCollector	gin.h	/^} GinTupleCollector;$/;"	t	typeref:struct:GinTupleCollector
+GistClearTuplesDeleted	gist.h	131;"	d
+GistEntryVector	gist.h	/^} GistEntryVector;$/;"	t	typeref:struct:__anon4
+GistMarkTuplesDeleted	gist.h	130;"	d
+GistNSN	gist.h	/^typedef XLogRecPtr GistNSN;$/;"	t
+GistPageGetOpaque	gist.h	118;"	d
+GistPageIsDeleted	gist.h	125;"	d
+GistPageIsLeaf	gist.h	120;"	d
+GistPageSetDeleted	gist.h	126;"	d
+GistPageSetLeaf	gist.h	122;"	d
+GistPageSetNonDeleted	gist.h	127;"	d
+GistPageSetNonLeaf	gist.h	123;"	d
+GistSplitVector	gist_private.h	/^typedef struct GistSplitVector$/;"	s
+GistSplitVector	gist_private.h	/^} GistSplitVector;$/;"	t	typeref:struct:GistSplitVector
+GistTupleIsInvalid	gist_private.h	231;"	d
+GistTupleSetInvalid	gist_private.h	233;"	d
+GistTupleSetValid	gist_private.h	232;"	d
+GistTuplesDeleted	gist.h	129;"	d
+GlobalTransaction	twophase.h	/^typedef struct GlobalTransactionData *GlobalTransaction;$/;"	t	typeref:struct:GlobalTransactionData
+HANDLE_BOOL_RELOPTION	reloptions.h	172;"	d
+HANDLE_INT_RELOPTION	reloptions.h	163;"	d
+HANDLE_REAL_RELOPTION	reloptions.h	181;"	d
+HANDLE_STRING_RELOPTION	reloptions.h	201;"	d
+HASHO_PAGE_ID	hash.h	71;"	d
+HASHPROC	hash.h	239;"	d
+HASH_DEFAULT_FILLFACTOR	hash.h	178;"	d
+HASH_EXCLUSIVE	hash.h	226;"	d
+HASH_H	hash.h	18;"	d
+HASH_MAGIC	hash.h	117;"	d
+HASH_MAX_BITMAPS	hash.h	141;"	d
+HASH_MAX_SPLITPOINTS	hash.h	140;"	d
+HASH_METAPAGE	hash.h	115;"	d
+HASH_MIN_FILLFACTOR	hash.h	177;"	d
+HASH_NOLOCK	hash.h	223;"	d
+HASH_READ	hash.h	221;"	d
+HASH_SHARE	hash.h	225;"	d
+HASH_VERSION	hash.h	118;"	d
+HASH_WRITE	hash.h	222;"	d
+HAVE_RELOPTION	reloptions.h	160;"	d
+HEAP2_XACT_MASK	htup.h	196;"	d
+HEAPAM_H	heapam.h	15;"	d
+HEAPTUPLESIZE	htup.h	503;"	d
+HEAP_COMBOCID	htup.h	167;"	d
+HEAP_HASEXTERNAL	htup.h	164;"	d
+HEAP_HASNULL	htup.h	162;"	d
+HEAP_HASOID	htup.h	165;"	d
+HEAP_HASVARWIDTH	htup.h	163;"	d
+HEAP_HOT_UPDATED	htup.h	193;"	d
+HEAP_INSERT_SKIP_FSM	heapam.h	30;"	d
+HEAP_INSERT_SKIP_WAL	heapam.h	29;"	d
+HEAP_IS_LOCKED	htup.h	171;"	d
+HEAP_MOVED	htup.h	184;"	d
+HEAP_MOVED_IN	htup.h	181;"	d
+HEAP_MOVED_OFF	htup.h	178;"	d
+HEAP_NATTS_MASK	htup.h	191;"	d
+HEAP_ONLY_TUPLE	htup.h	194;"	d
+HEAP_RELOPT_NAMESPACES	reloptions.h	52;"	d
+HEAP_UPDATED	htup.h	177;"	d
+HEAP_XACT_MASK	htup.h	186;"	d
+HEAP_XMAX_COMMITTED	htup.h	174;"	d
+HEAP_XMAX_EXCL_LOCK	htup.h	168;"	d
+HEAP_XMAX_INVALID	htup.h	175;"	d
+HEAP_XMAX_IS_MULTI	htup.h	176;"	d
+HEAP_XMAX_SHARED_LOCK	htup.h	169;"	d
+HEAP_XMIN_COMMITTED	htup.h	172;"	d
+HEAP_XMIN_INVALID	htup.h	173;"	d
+HIO_H	hio.h	15;"	d
+HSpool	hash.h	/^typedef struct HSpool HSpool;	\/* opaque struct in hashsort.c *\/$/;"	t	typeref:struct:HSpool
+HTEqualStrategyNumber	hash.h	231;"	d
+HTMaxStrategyNumber	hash.h	232;"	d
+HTUP_H	htup.h	15;"	d
+HashGetMaxBitmapSize	hash.h	201;"	d
+HashMaxItemSize	hash.h	171;"	d
+HashMetaPage	hash.h	/^typedef HashMetaPageData *HashMetaPage;$/;"	t
+HashMetaPageData	hash.h	/^typedef struct HashMetaPageData$/;"	s
+HashMetaPageData	hash.h	/^} HashMetaPageData;$/;"	t	typeref:struct:HashMetaPageData
+HashPageGetBitmap	hash.h	198;"	d
+HashPageGetMeta	hash.h	205;"	d
+HashPageOpaque	hash.h	/^typedef HashPageOpaqueData *HashPageOpaque;$/;"	t
+HashPageOpaqueData	hash.h	/^typedef struct HashPageOpaqueData$/;"	s
+HashPageOpaqueData	hash.h	/^} HashPageOpaqueData;$/;"	t	typeref:struct:HashPageOpaqueData
+HashScanOpaque	hash.h	/^typedef HashScanOpaqueData *HashScanOpaque;$/;"	t
+HashScanOpaqueData	hash.h	/^typedef struct HashScanOpaqueData$/;"	s
+HashScanOpaqueData	hash.h	/^} HashScanOpaqueData;$/;"	t	typeref:struct:HashScanOpaqueData
+HeapKeyTest	valid.h	22;"	d
+HeapScanDesc	heapam.h	/^typedef struct HeapScanDescData *HeapScanDesc;$/;"	t	typeref:struct:HeapScanDescData
+HeapScanDescData	relscan.h	/^typedef struct HeapScanDescData$/;"	s
+HeapScanDescData	relscan.h	/^} HeapScanDescData;$/;"	t	typeref:struct:HeapScanDescData
+HeapScanIsValid	heapam.h	69;"	d
+HeapTuple	htup.h	/^typedef HeapTupleData *HeapTuple;$/;"	t
+HeapTupleAllFixed	htup.h	524;"	d
+HeapTupleClearHeapOnly	htup.h	545;"	d
+HeapTupleClearHotUpdated	htup.h	536;"	d
+HeapTupleData	htup.h	/^typedef struct HeapTupleData$/;"	s
+HeapTupleData	htup.h	/^} HeapTupleData;$/;"	t	typeref:struct:HeapTupleData
+HeapTupleFields	htup.h	/^typedef struct HeapTupleFields$/;"	s
+HeapTupleFields	htup.h	/^} HeapTupleFields;$/;"	t	typeref:struct:HeapTupleFields
+HeapTupleGetOid	htup.h	548;"	d
+HeapTupleHasExternal	htup.h	527;"	d
+HeapTupleHasNulls	htup.h	515;"	d
+HeapTupleHasVarWidth	htup.h	521;"	d
+HeapTupleHeader	htup.h	/^typedef HeapTupleHeaderData *HeapTupleHeader;$/;"	t
+HeapTupleHeaderClearHeapOnly	htup.h	341;"	d
+HeapTupleHeaderClearHotUpdated	htup.h	326;"	d
+HeapTupleHeaderData	htup.h	/^typedef struct HeapTupleHeaderData$/;"	s
+HeapTupleHeaderData	htup.h	/^} HeapTupleHeaderData;$/;"	t	typeref:struct:HeapTupleHeaderData
+HeapTupleHeaderGetDatumLength	htup.h	269;"	d
+HeapTupleHeaderGetNatts	htup.h	346;"	d
+HeapTupleHeaderGetOid	htup.h	295;"	d
+HeapTupleHeaderGetRawCommandId	htup.h	231;"	d
+HeapTupleHeaderGetTypMod	htup.h	285;"	d
+HeapTupleHeaderGetTypeId	htup.h	275;"	d
+HeapTupleHeaderGetXmax	htup.h	215;"	d
+HeapTupleHeaderGetXmin	htup.h	205;"	d
+HeapTupleHeaderGetXvac	htup.h	255;"	d
+HeapTupleHeaderIsHeapOnly	htup.h	331;"	d
+HeapTupleHeaderIsHotUpdated	htup.h	315;"	d
+HeapTupleHeaderSetCmax	htup.h	245;"	d
+HeapTupleHeaderSetCmin	htup.h	237;"	d
+HeapTupleHeaderSetDatumLength	htup.h	272;"	d
+HeapTupleHeaderSetHeapOnly	htup.h	336;"	d
+HeapTupleHeaderSetHotUpdated	htup.h	321;"	d
+HeapTupleHeaderSetNatts	htup.h	349;"	d
+HeapTupleHeaderSetOid	htup.h	303;"	d
+HeapTupleHeaderSetTypMod	htup.h	290;"	d
+HeapTupleHeaderSetTypeId	htup.h	280;"	d
+HeapTupleHeaderSetXmax	htup.h	220;"	d
+HeapTupleHeaderSetXmin	htup.h	210;"	d
+HeapTupleHeaderSetXvac	htup.h	263;"	d
+HeapTupleIsHeapOnly	htup.h	539;"	d
+HeapTupleIsHotUpdated	htup.h	530;"	d
+HeapTupleIsValid	htup.h	513;"	d
+HeapTupleNoNulls	htup.h	518;"	d
+HeapTupleSetHeapOnly	htup.h	542;"	d
+HeapTupleSetHotUpdated	htup.h	533;"	d
+HeapTupleSetOid	htup.h	551;"	d
+HotStandbyState	xlog.h	/^} HotStandbyState;$/;"	t	typeref:enum:__anon15
+INDEX_NULL_MASK	itup.h	68;"	d
+INDEX_SIZE_MASK	itup.h	65;"	d
+INDEX_VAR_MASK	itup.h	67;"	d
+ISSET	hash.h	216;"	d
+ITUP_H	itup.h	15;"	d
+InHotStandby	xlog.h	177;"	d
+IndexAttributeBitMap	itup.h	/^typedef IndexAttributeBitMapData *IndexAttributeBitMap;$/;"	t
+IndexAttributeBitMapData	itup.h	/^typedef struct IndexAttributeBitMapData$/;"	s
+IndexAttributeBitMapData	itup.h	/^} IndexAttributeBitMapData;$/;"	t	typeref:struct:IndexAttributeBitMapData
+IndexBuildResult	genam.h	/^typedef struct IndexBuildResult$/;"	s
+IndexBuildResult	genam.h	/^} IndexBuildResult;$/;"	t	typeref:struct:IndexBuildResult
+IndexBulkDeleteCallback	genam.h	/^typedef bool (*IndexBulkDeleteCallback) (ItemPointer itemptr, void *state);$/;"	t
+IndexBulkDeleteResult	genam.h	/^typedef struct IndexBulkDeleteResult$/;"	s
+IndexBulkDeleteResult	genam.h	/^} IndexBulkDeleteResult;$/;"	t	typeref:struct:IndexBulkDeleteResult
+IndexInfoFindDataOffset	itup.h	80;"	d
+IndexScanDesc	genam.h	/^typedef struct IndexScanDescData *IndexScanDesc;$/;"	t	typeref:struct:IndexScanDescData
+IndexScanDescData	relscan.h	/^typedef struct IndexScanDescData$/;"	s
+IndexScanDescData	relscan.h	/^} IndexScanDescData;$/;"	t	typeref:struct:IndexScanDescData
+IndexScanIsValid	genam.h	124;"	d
+IndexTuple	itup.h	/^typedef IndexTupleData *IndexTuple;$/;"	t
+IndexTupleDSize	itup.h	71;"	d
+IndexTupleData	itup.h	/^typedef struct IndexTupleData$/;"	s
+IndexTupleData	itup.h	/^} IndexTupleData;				\/* MORE DATA FOLLOWS AT END OF STRUCT *\/$/;"	t	typeref:struct:IndexTupleData
+IndexTupleHasNulls	itup.h	72;"	d
+IndexTupleHasVarwidths	itup.h	73;"	d
+IndexTupleSize	itup.h	70;"	d
+IndexUniqueCheck	genam.h	/^typedef enum IndexUniqueCheck$/;"	g
+IndexUniqueCheck	genam.h	/^} IndexUniqueCheck;$/;"	t	typeref:enum:IndexUniqueCheck
+IndexVacuumInfo	genam.h	/^typedef struct IndexVacuumInfo$/;"	s
+IndexVacuumInfo	genam.h	/^} IndexVacuumInfo;$/;"	t	typeref:struct:IndexVacuumInfo
+InvalidAttrNumber	attnum.h	23;"	d
+InvalidMultiXactId	multixact.h	16;"	d
+InvalidStrategy	skey.h	28;"	d
+InvalidTransactionId	transam.h	31;"	d
+IsXactIsoLevelSerializable	xact.h	38;"	d
+ItemPointerIsLossyPage	gin.h	138;"	d
+ItemPointerIsMax	gin.h	133;"	d
+ItemPointerIsMin	gin.h	128;"	d
+ItemPointerSetLossyPage	gin.h	136;"	d
+ItemPointerSetMax	gin.h	131;"	d
+ItemPointerSetMin	gin.h	126;"	d
+ItemResult	gist_private.h	/^typedef struct ItemResult$/;"	s
+ItemResult	gist_private.h	/^} ItemResult;$/;"	t	typeref:struct:ItemResult
+LH_BITMAP_PAGE	hash.h	51;"	d
+LH_BUCKET_PAGE	hash.h	50;"	d
+LH_META_PAGE	hash.h	52;"	d
+LH_OVERFLOW_PAGE	hash.h	49;"	d
+LH_UNUSED_PAGE	hash.h	48;"	d
+LockTupleExclusive	heapam.h	/^	LockTupleExclusive$/;"	e	enum:__anon6
+LockTupleMode	heapam.h	/^} LockTupleMode;$/;"	t	typeref:enum:__anon6
+LockTupleShared	heapam.h	/^	LockTupleShared,$/;"	e	enum:__anon6
+MAXFNAMELEN	xlog_internal.h	214;"	d
+MAX_BT_CYCLE_ID	nbtree.h	84;"	d
+MINIMAL_TUPLE_DATA_OFFSET	htup.h	434;"	d
+MINIMAL_TUPLE_OFFSET	htup.h	430;"	d
+MINIMAL_TUPLE_PADDING	htup.h	432;"	d
+MULTIXACT_H	multixact.h	12;"	d
+MaxAttrNumber	attnum.h	24;"	d
+MaxAttrSize	htup.h	396;"	d
+MaxCommandIdAttributeNumber	sysattr.h	26;"	d
+MaxHeapAttributeNumber	htup.h	46;"	d
+MaxHeapTupleSize	htup.h	372;"	d
+MaxHeapTuplesPerPage	htup.h	385;"	d
+MaxIndexTuplesPerPage	itup.h	136;"	d
+MaxTransactionId	transam.h	35;"	d
+MaxTransactionIdAttributeNumber	sysattr.h	25;"	d
+MaxTupleAttributeNumber	htup.h	32;"	d
+MaximumBytesPerTuple	tuptoaster.h	30;"	d
+MinCommandIdAttributeNumber	sysattr.h	24;"	d
+MinSizeOfMultiXactCreate	multixact.h	42;"	d
+MinSizeOfXactAbort	xact.h	142;"	d
+MinSizeOfXactAbortPrepared	xact.h	167;"	d
+MinSizeOfXactAssignment	xact.h	96;"	d
+MinSizeOfXactCommit	xact.h	113;"	d
+MinSizeOfXactCommitPrepared	xact.h	158;"	d
+MinTransactionIdAttributeNumber	sysattr.h	23;"	d
+MinimalTuple	htup.h	/^typedef MinimalTupleData *MinimalTuple;$/;"	t
+MinimalTupleData	htup.h	/^typedef struct MinimalTupleData$/;"	s
+MinimalTupleData	htup.h	/^} MinimalTupleData;$/;"	t	typeref:struct:MinimalTupleData
+MultiXactIdIsValid	multixact.h	19;"	d
+NBTREE_H	nbtree.h	15;"	d
+NUM_CLOG_BUFFERS	clog.h	32;"	d
+NUM_MXACTMEMBER_BUFFERS	multixact.h	23;"	d
+NUM_MXACTOFFSET_BUFFERS	multixact.h	22;"	d
+NUM_SUBTRANS_BUFFERS	subtrans.h	15;"	d
+NextLogPage	xlog_internal.h	155;"	d
+NextLogSeg	xlog_internal.h	131;"	d
+NoMovementScanDirection	sdir.h	/^	NoMovementScanDirection = 0,$/;"	e	enum:ScanDirection
+OPEN_DATASYNC_FLAG	xlogdefs.h	118;"	d
+OPEN_DATASYNC_FLAG	xlogdefs.h	122;"	d
+OPEN_SYNC_FLAG	xlogdefs.h	109;"	d
+OPEN_SYNC_FLAG	xlogdefs.h	111;"	d
+ObjectIdAttributeNumber	sysattr.h	22;"	d
+PG_O_DIRECT	xlogdefs.h	97;"	d
+PG_O_DIRECT	xlogdefs.h	99;"	d
+PRINTTUP_H	printtup.h	15;"	d
+P_FIRSTDATAKEY	nbtree.h	202;"	d
+P_FIRSTKEY	nbtree.h	201;"	d
+P_HAS_GARBAGE	nbtree.h	180;"	d
+P_HIKEY	nbtree.h	200;"	d
+P_IGNORE	nbtree.h	179;"	d
+P_ISDELETED	nbtree.h	177;"	d
+P_ISHALFDEAD	nbtree.h	178;"	d
+P_ISLEAF	nbtree.h	175;"	d
+P_ISROOT	nbtree.h	176;"	d
+P_LEFTMOST	nbtree.h	173;"	d
+P_NONE	nbtree.h	167;"	d
+P_RIGHTMOST	nbtree.h	174;"	d
+PagePrecedes	slru.h	/^	bool		(*PagePrecedes) (int, int);$/;"	m	struct:SlruCtlData
+PinTupleDesc	tupdesc.h	96;"	d
+PostingItem	gin.h	/^} PostingItem;$/;"	t	typeref:struct:__anon1
+PostingItemGetBlockNumber	gin.h	149;"	d
+PostingItemSetBlockNumber	gin.h	152;"	d
+PrevLogSeg	xlog_internal.h	143;"	d
+RECOVERY_TARGET_TIME	xlog.h	/^	RECOVERY_TARGET_TIME$/;"	e	enum:__anon16
+RECOVERY_TARGET_UNSET	xlog.h	/^	RECOVERY_TARGET_UNSET,$/;"	e	enum:__anon16
+RECOVERY_TARGET_XID	xlog.h	/^	RECOVERY_TARGET_XID,$/;"	e	enum:__anon16
+RELOPTIONS_H	reloptions.h	20;"	d
+RELOPT_KIND_ATTRIBUTE	reloptions.h	/^	RELOPT_KIND_ATTRIBUTE = (1 << 6),$/;"	e	enum:relopt_kind
+RELOPT_KIND_BTREE	reloptions.h	/^	RELOPT_KIND_BTREE = (1 << 2),$/;"	e	enum:relopt_kind
+RELOPT_KIND_GIN	reloptions.h	/^	RELOPT_KIND_GIN = (1 << 4),$/;"	e	enum:relopt_kind
+RELOPT_KIND_GIST	reloptions.h	/^	RELOPT_KIND_GIST = (1 << 5),$/;"	e	enum:relopt_kind
+RELOPT_KIND_HASH	reloptions.h	/^	RELOPT_KIND_HASH = (1 << 3),$/;"	e	enum:relopt_kind
+RELOPT_KIND_HEAP	reloptions.h	/^	RELOPT_KIND_HEAP = (1 << 0),$/;"	e	enum:relopt_kind
+RELOPT_KIND_LAST_DEFAULT	reloptions.h	/^	RELOPT_KIND_LAST_DEFAULT = RELOPT_KIND_TABLESPACE,$/;"	e	enum:relopt_kind
+RELOPT_KIND_MAX	reloptions.h	/^	RELOPT_KIND_MAX = (1 << 30)$/;"	e	enum:relopt_kind
+RELOPT_KIND_TABLESPACE	reloptions.h	/^	RELOPT_KIND_TABLESPACE = (1 << 7),$/;"	e	enum:relopt_kind
+RELOPT_KIND_TOAST	reloptions.h	/^	RELOPT_KIND_TOAST = (1 << 1),$/;"	e	enum:relopt_kind
+RELOPT_TYPE_BOOL	reloptions.h	/^	RELOPT_TYPE_BOOL,$/;"	e	enum:relopt_type
+RELOPT_TYPE_INT	reloptions.h	/^	RELOPT_TYPE_INT,$/;"	e	enum:relopt_type
+RELOPT_TYPE_REAL	reloptions.h	/^	RELOPT_TYPE_REAL,$/;"	e	enum:relopt_type
+RELOPT_TYPE_STRING	reloptions.h	/^	RELOPT_TYPE_STRING$/;"	e	enum:relopt_type
+RELSCAN_H	relscan.h	15;"	d
+REWRITE_HEAP_H	rewriteheap.h	14;"	d
+RMGR_H	rmgr.h	9;"	d
+RM_BTREE_ID	rmgr.h	30;"	d
+RM_CLOG_ID	rmgr.h	22;"	d
+RM_DBASE_ID	rmgr.h	23;"	d
+RM_GIN_ID	rmgr.h	32;"	d
+RM_GIST_ID	rmgr.h	33;"	d
+RM_HASH_ID	rmgr.h	31;"	d
+RM_HEAP2_ID	rmgr.h	28;"	d
+RM_HEAP_ID	rmgr.h	29;"	d
+RM_MAX_ID	rmgr.h	35;"	d
+RM_MULTIXACT_ID	rmgr.h	25;"	d
+RM_RELMAP_ID	rmgr.h	26;"	d
+RM_SEQ_ID	rmgr.h	34;"	d
+RM_SMGR_ID	rmgr.h	21;"	d
+RM_STANDBY_ID	rmgr.h	27;"	d
+RM_TBLSPC_ID	rmgr.h	24;"	d
+RM_XACT_ID	rmgr.h	20;"	d
+RM_XLOG_ID	rmgr.h	19;"	d
+RTAboveStrategyNumber	gist.h	51;"	d
+RTBelowStrategyNumber	gist.h	50;"	d
+RTContainedByStrategyNumber	gist.h	48;"	d
+RTContainsStrategyNumber	gist.h	47;"	d
+RTLeftStrategyNumber	gist.h	41;"	d
+RTOldContainedByStrategyNumber	gist.h	54;"	d
+RTOldContainsStrategyNumber	gist.h	53;"	d
+RTOverAboveStrategyNumber	gist.h	52;"	d
+RTOverBelowStrategyNumber	gist.h	49;"	d
+RTOverLeftStrategyNumber	gist.h	42;"	d
+RTOverRightStrategyNumber	gist.h	44;"	d
+RTOverlapStrategyNumber	gist.h	43;"	d
+RTRightStrategyNumber	gist.h	45;"	d
+RTSameStrategyNumber	gist.h	46;"	d
+RecoveryTargetType	xlog.h	/^} RecoveryTargetType;$/;"	t	typeref:enum:__anon16
+ReleaseTupleDesc	tupdesc.h	102;"	d
+RewriteState	rewriteheap.h	/^typedef struct RewriteStateData *RewriteState;$/;"	t	typeref:struct:RewriteStateData
+RmgrData	xlog_internal.h	/^typedef struct RmgrData$/;"	s
+RmgrData	xlog_internal.h	/^} RmgrData;$/;"	t	typeref:struct:RmgrData
+RmgrId	rmgr.h	/^typedef uint8 RmgrId;$/;"	t
+SDIR_H	sdir.h	15;"	d
+SETBIT	hash.h	215;"	d
+SKEY_H	skey.h	15;"	d
+SK_BT_DESC	nbtree.h	551;"	d
+SK_BT_INDOPTION_SHIFT	nbtree.h	550;"	d
+SK_BT_NULLS_FIRST	nbtree.h	552;"	d
+SK_BT_REQBKWD	nbtree.h	549;"	d
+SK_BT_REQFWD	nbtree.h	548;"	d
+SK_ISNULL	skey.h	117;"	d
+SK_ROW_END	skey.h	121;"	d
+SK_ROW_HEADER	skey.h	119;"	d
+SK_ROW_MEMBER	skey.h	120;"	d
+SK_SEARCHNOTNULL	skey.h	123;"	d
+SK_SEARCHNULL	skey.h	122;"	d
+SK_UNARY	skey.h	118;"	d
+SLRU_H	slru.h	14;"	d
+SLRU_PAGES_PER_SEGMENT	slru.h	37;"	d
+SLRU_PAGE_EMPTY	slru.h	/^	SLRU_PAGE_EMPTY,			\/* buffer is not in use *\/$/;"	e	enum:__anon12
+SLRU_PAGE_READ_IN_PROGRESS	slru.h	/^	SLRU_PAGE_READ_IN_PROGRESS, \/* page is being read in *\/$/;"	e	enum:__anon12
+SLRU_PAGE_VALID	slru.h	/^	SLRU_PAGE_VALID,			\/* page is valid and not being written *\/$/;"	e	enum:__anon12
+SLRU_PAGE_WRITE_IN_PROGRESS	slru.h	/^	SLRU_PAGE_WRITE_IN_PROGRESS \/* page is being written out *\/$/;"	e	enum:__anon12
+STANDBY_DISABLED	xlog.h	/^	STANDBY_DISABLED,$/;"	e	enum:__anon15
+STANDBY_INITIALIZED	xlog.h	/^	STANDBY_INITIALIZED,$/;"	e	enum:__anon15
+STANDBY_SNAPSHOT_PENDING	xlog.h	/^	STANDBY_SNAPSHOT_PENDING,$/;"	e	enum:__anon15
+STANDBY_SNAPSHOT_READY	xlog.h	/^	STANDBY_SNAPSHOT_READY$/;"	e	enum:__anon15
+SUBTRANS_H	subtrans.h	12;"	d
+SUBXACT_EVENT_ABORT_SUB	xact.h	/^	SUBXACT_EVENT_ABORT_SUB$/;"	e	enum:__anon14
+SUBXACT_EVENT_COMMIT_SUB	xact.h	/^	SUBXACT_EVENT_COMMIT_SUB,$/;"	e	enum:__anon14
+SUBXACT_EVENT_START_SUB	xact.h	/^	SUBXACT_EVENT_START_SUB,$/;"	e	enum:__anon14
+SYNC_METHOD_FDATASYNC	xlog.h	90;"	d
+SYNC_METHOD_FSYNC	xlog.h	89;"	d
+SYNC_METHOD_FSYNC_WRITETHROUGH	xlog.h	92;"	d
+SYNC_METHOD_OPEN	xlog.h	91;"	d
+SYNC_METHOD_OPEN_DSYNC	xlog.h	93;"	d
+SYSATTR_H	sysattr.h	15;"	d
+ScanDirection	sdir.h	/^typedef enum ScanDirection$/;"	g
+ScanDirection	sdir.h	/^} ScanDirection;$/;"	t	typeref:enum:ScanDirection
+ScanDirectionIsBackward	sdir.h	41;"	d
+ScanDirectionIsForward	sdir.h	55;"	d
+ScanDirectionIsNoMovement	sdir.h	48;"	d
+ScanDirectionIsValid	sdir.h	33;"	d
+ScanKey	skey.h	/^typedef ScanKeyData *ScanKey;$/;"	t
+ScanKeyData	skey.h	/^typedef struct ScanKeyData$/;"	s
+ScanKeyData	skey.h	/^} ScanKeyData;$/;"	t	typeref:struct:ScanKeyData
+SelfItemPointerAttributeNumber	sysattr.h	21;"	d
+SizeOfBtreeDelete	nbtree.h	326;"	d
+SizeOfBtreeDeletePage	nbtree.h	389;"	d
+SizeOfBtreeInsert	nbtree.h	262;"	d
+SizeOfBtreeNewroot	nbtree.h	406;"	d
+SizeOfBtreeReusePage	nbtree.h	338;"	d
+SizeOfBtreeSplit	nbtree.h	308;"	d
+SizeOfBtreeVacuum	nbtree.h	370;"	d
+SizeOfHeapClean	htup.h	672;"	d
+SizeOfHeapCleanupInfo	htup.h	685;"	d
+SizeOfHeapDelete	htup.h	610;"	d
+SizeOfHeapFreeze	htup.h	728;"	d
+SizeOfHeapHeader	htup.h	627;"	d
+SizeOfHeapInplace	htup.h	717;"	d
+SizeOfHeapInsert	htup.h	637;"	d
+SizeOfHeapLock	htup.h	708;"	d
+SizeOfHeapNewpage	htup.h	697;"	d
+SizeOfHeapTid	htup.h	601;"	d
+SizeOfHeapUpdate	htup.h	649;"	d
+SizeOfXLogContRecord	xlog_internal.h	69;"	d
+SizeOfXLogLongPHD	xlog_internal.h	101;"	d
+SizeOfXLogRecord	xlog.h	58;"	d
+SizeOfXLogShortPHD	xlog_internal.h	84;"	d
+SlruCtl	slru.h	/^typedef SlruCtlData *SlruCtl;$/;"	t
+SlruCtlData	slru.h	/^typedef struct SlruCtlData$/;"	s
+SlruCtlData	slru.h	/^} SlruCtlData;$/;"	t	typeref:struct:SlruCtlData
+SlruFlush	slru.h	/^typedef struct SlruFlushData *SlruFlush;$/;"	t	typeref:struct:SlruFlushData
+SlruPageStatus	slru.h	/^} SlruPageStatus;$/;"	t	typeref:enum:__anon12
+SlruShared	slru.h	/^typedef SlruSharedData *SlruShared;$/;"	t
+SlruSharedData	slru.h	/^typedef struct SlruSharedData$/;"	s
+SlruSharedData	slru.h	/^} SlruSharedData;$/;"	t	typeref:struct:SlruSharedData
+SplitedPageLayout	gist_private.h	/^typedef struct SplitedPageLayout$/;"	s
+SplitedPageLayout	gist_private.h	/^} SplitedPageLayout;$/;"	t	typeref:struct:SplitedPageLayout
+StatusFilePath	xlog_internal.h	231;"	d
+StoreInvalidTransactionId	transam.h	45;"	d
+StrategyNumber	skey.h	/^typedef uint16 StrategyNumber;$/;"	t
+SubXactCallback	xact.h	/^typedef void (*SubXactCallback) (SubXactEvent event, SubTransactionId mySubid,$/;"	t
+SubXactEvent	xact.h	/^} SubXactEvent;$/;"	t	typeref:enum:__anon14
+SysScanDesc	genam.h	/^typedef struct SysScanDescData *SysScanDesc;$/;"	t	typeref:struct:SysScanDescData
+SysScanDescData	relscan.h	/^typedef struct SysScanDescData$/;"	s
+SysScanDescData	relscan.h	/^} SysScanDescData;$/;"	t	typeref:struct:SysScanDescData
+TLHistoryFileName	xlog_internal.h	225;"	d
+TLHistoryFilePath	xlog_internal.h	228;"	d
+TOAST_INDEX_HACK	tuptoaster.h	24;"	d
+TOAST_INDEX_TARGET	tuptoaster.h	75;"	d
+TOAST_MAX_CHUNK_SIZE	tuptoaster.h	91;"	d
+TOAST_TUPLES_PER_PAGE	tuptoaster.h	53;"	d
+TOAST_TUPLES_PER_PAGE_MAIN	tuptoaster.h	66;"	d
+TOAST_TUPLE_TARGET	tuptoaster.h	57;"	d
+TOAST_TUPLE_TARGET_MAIN	tuptoaster.h	68;"	d
+TOAST_TUPLE_THRESHOLD	tuptoaster.h	55;"	d
+TRANSACTION_STATUS_ABORTED	clog.h	27;"	d
+TRANSACTION_STATUS_COMMITTED	clog.h	26;"	d
+TRANSACTION_STATUS_IN_PROGRESS	clog.h	25;"	d
+TRANSACTION_STATUS_SUB_COMMITTED	clog.h	28;"	d
+TRANSAM_H	transam.h	15;"	d
+TUPCONVERT_H	tupconvert.h	15;"	d
+TUPDESC_H	tupdesc.h	15;"	d
+TUPLE_IS_INVALID	gist_private.h	229;"	d
+TUPLE_IS_VALID	gist_private.h	228;"	d
+TUPMACS_H	tupmacs.h	15;"	d
+TUPTOASTER_H	tuptoaster.h	14;"	d
+TWOPHASE_H	twophase.h	15;"	d
+TWOPHASE_RMGR_H	twophase_rmgr.h	15;"	d
+TWOPHASE_RM_END_ID	twophase_rmgr.h	24;"	d
+TWOPHASE_RM_LOCK_ID	twophase_rmgr.h	25;"	d
+TWOPHASE_RM_MAX_ID	twophase_rmgr.h	28;"	d
+TWOPHASE_RM_MULTIXACT_ID	twophase_rmgr.h	27;"	d
+TWOPHASE_RM_PGSTAT_ID	twophase_rmgr.h	26;"	d
+TableOidAttributeNumber	sysattr.h	27;"	d
+TimeLineID	xlogdefs.h	/^typedef uint32 TimeLineID;$/;"	t
+TransactionIdAdvance	transam.h	48;"	d
+TransactionIdEquals	transam.h	43;"	d
+TransactionIdIsNormal	transam.h	42;"	d
+TransactionIdIsValid	transam.h	41;"	d
+TransactionIdRetreat	transam.h	56;"	d
+TransactionIdStore	transam.h	44;"	d
+TupleConstr	tupdesc.h	/^} TupleConstr;$/;"	t	typeref:struct:tupleConstr
+TupleConversionMap	tupconvert.h	/^typedef struct TupleConversionMap$/;"	s
+TupleConversionMap	tupconvert.h	/^} TupleConversionMap;$/;"	t	typeref:struct:TupleConversionMap
+TupleDesc	tupdesc.h	/^}	*TupleDesc;$/;"	t	typeref:struct:tupleDesc
+TwoPhaseCallback	twophase_rmgr.h	/^typedef void (*TwoPhaseCallback) (TransactionId xid, uint16 info,$/;"	t
+TwoPhaseRmgrId	twophase_rmgr.h	/^typedef uint8 TwoPhaseRmgrId;$/;"	t
+UNIQUE_CHECK_EXISTING	genam.h	/^	UNIQUE_CHECK_EXISTING		\/* Check if existing tuple is unique *\/$/;"	e	enum:IndexUniqueCheck
+UNIQUE_CHECK_NO	genam.h	/^	UNIQUE_CHECK_NO,			\/* Don't do any uniqueness checking *\/$/;"	e	enum:IndexUniqueCheck
+UNIQUE_CHECK_PARTIAL	genam.h	/^	UNIQUE_CHECK_PARTIAL,		\/* Test uniqueness, but no error *\/$/;"	e	enum:IndexUniqueCheck
+UNIQUE_CHECK_YES	genam.h	/^	UNIQUE_CHECK_YES,			\/* Enforce uniqueness at insertion time *\/$/;"	e	enum:IndexUniqueCheck
+VALID_H	valid.h	15;"	d
+VISIBILITYMAP_H	visibilitymap.h	15;"	d
+VariableCache	transam.h	/^typedef VariableCacheData *VariableCache;$/;"	t
+VariableCacheData	transam.h	/^typedef struct VariableCacheData$/;"	s
+VariableCacheData	transam.h	/^} VariableCacheData;$/;"	t	typeref:struct:VariableCacheData
+WAL_LEVEL_ARCHIVE	xlog.h	/^	WAL_LEVEL_ARCHIVE,$/;"	e	enum:WalLevel
+WAL_LEVEL_HOT_STANDBY	xlog.h	/^	WAL_LEVEL_HOT_STANDBY$/;"	e	enum:WalLevel
+WAL_LEVEL_MINIMAL	xlog.h	/^	WAL_LEVEL_MINIMAL = 0,$/;"	e	enum:WalLevel
+WalLevel	xlog.h	/^typedef enum WalLevel$/;"	g
+WalLevel	xlog.h	/^} WalLevel;$/;"	t	typeref:enum:WalLevel
+XACT_COMPLETION_FORCE_SYNC_COMMIT	xact.h	124;"	d
+XACT_COMPLETION_UPDATE_RELCACHE_FILE	xact.h	123;"	d
+XACT_EVENT_ABORT	xact.h	/^	XACT_EVENT_ABORT,$/;"	e	enum:__anon13
+XACT_EVENT_COMMIT	xact.h	/^	XACT_EVENT_COMMIT,$/;"	e	enum:__anon13
+XACT_EVENT_PREPARE	xact.h	/^	XACT_EVENT_PREPARE$/;"	e	enum:__anon13
+XACT_H	xact.h	15;"	d
+XACT_READ_COMMITTED	xact.h	27;"	d
+XACT_READ_UNCOMMITTED	xact.h	26;"	d
+XACT_REPEATABLE_READ	xact.h	28;"	d
+XACT_SERIALIZABLE	xact.h	29;"	d
+XLByteAdvance	xlogdefs.h	62;"	d
+XLByteEQ	xlogdefs.h	55;"	d
+XLByteInPrevSeg	xlog_internal.h	195;"	d
+XLByteInSeg	xlog_internal.h	191;"	d
+XLByteLE	xlogdefs.h	51;"	d
+XLByteLT	xlogdefs.h	47;"	d
+XLByteToPrevSeg	xlog_internal.h	180;"	d
+XLByteToSeg	xlog_internal.h	176;"	d
+XLOGDIR	xlog_internal.h	207;"	d
+XLOG_BTREE_DELETE	nbtree.h	217;"	d
+XLOG_BTREE_DELETE_PAGE	nbtree.h	218;"	d
+XLOG_BTREE_DELETE_PAGE_HALF	nbtree.h	221;"	d
+XLOG_BTREE_DELETE_PAGE_META	nbtree.h	219;"	d
+XLOG_BTREE_INSERT_LEAF	nbtree.h	210;"	d
+XLOG_BTREE_INSERT_META	nbtree.h	212;"	d
+XLOG_BTREE_INSERT_UPPER	nbtree.h	211;"	d
+XLOG_BTREE_NEWROOT	nbtree.h	220;"	d
+XLOG_BTREE_REUSE_PAGE	nbtree.h	225;"	d
+XLOG_BTREE_SPLIT_L	nbtree.h	213;"	d
+XLOG_BTREE_SPLIT_L_ROOT	nbtree.h	215;"	d
+XLOG_BTREE_SPLIT_R	nbtree.h	214;"	d
+XLOG_BTREE_SPLIT_R_ROOT	nbtree.h	216;"	d
+XLOG_BTREE_VACUUM	nbtree.h	223;"	d
+XLOG_CONTROL_FILE	xlog_internal.h	208;"	d
+XLOG_DEFS_H	xlogdefs.h	13;"	d
+XLOG_GIN_CREATE_INDEX	gin.h	235;"	d
+XLOG_GIN_CREATE_PTREE	gin.h	237;"	d
+XLOG_GIN_DELETE_LISTPAGE	gin.h	336;"	d
+XLOG_GIN_DELETE_PAGE	gin.h	299;"	d
+XLOG_GIN_INSERT	gin.h	247;"	d
+XLOG_GIN_INSERT_LISTPAGE	gin.h	325;"	d
+XLOG_GIN_SPLIT	gin.h	266;"	d
+XLOG_GIN_UPDATE_META_PAGE	gin.h	311;"	d
+XLOG_GIN_VACUUM_PAGE	gin.h	289;"	d
+XLOG_GIST_CREATE_INDEX	gist_private.h	95;"	d
+XLOG_GIST_INSERT_COMPLETE	gist_private.h	94;"	d
+XLOG_GIST_NEW_ROOT	gist_private.h	92;"	d
+XLOG_GIST_PAGE_DELETE	gist_private.h	96;"	d
+XLOG_GIST_PAGE_SPLIT	gist_private.h	93;"	d
+XLOG_GIST_PAGE_UPDATE	gist_private.h	91;"	d
+XLOG_H	xlog.h	12;"	d
+XLOG_HEAP2_CLEAN	htup.h	583;"	d
+XLOG_HEAP2_CLEANUP_INFO	htup.h	585;"	d
+XLOG_HEAP2_FREEZE	htup.h	582;"	d
+XLOG_HEAP_DELETE	htup.h	562;"	d
+XLOG_HEAP_HOT_UPDATE	htup.h	565;"	d
+XLOG_HEAP_INIT_PAGE	htup.h	575;"	d
+XLOG_HEAP_INPLACE	htup.h	568;"	d
+XLOG_HEAP_INSERT	htup.h	561;"	d
+XLOG_HEAP_LOCK	htup.h	567;"	d
+XLOG_HEAP_NEWPAGE	htup.h	566;"	d
+XLOG_HEAP_OPMASK	htup.h	570;"	d
+XLOG_HEAP_UPDATE	htup.h	563;"	d
+XLOG_INTERNAL_H	xlog_internal.h	17;"	d
+XLOG_MULTIXACT_CREATE_ID	multixact.h	32;"	d
+XLOG_MULTIXACT_ZERO_MEM_PAGE	multixact.h	31;"	d
+XLOG_MULTIXACT_ZERO_OFF_PAGE	multixact.h	30;"	d
+XLOG_PAGE_MAGIC	xlog_internal.h	74;"	d
+XLOG_UTILS_H	xlogutils.h	12;"	d
+XLOG_XACT_ABORT	xact.h	84;"	d
+XLOG_XACT_ABORT_PREPARED	xact.h	86;"	d
+XLOG_XACT_ASSIGNMENT	xact.h	87;"	d
+XLOG_XACT_COMMIT	xact.h	82;"	d
+XLOG_XACT_COMMIT_PREPARED	xact.h	85;"	d
+XLOG_XACT_PREPARE	xact.h	83;"	d
+XLP_ALL_FLAGS	xlog_internal.h	110;"	d
+XLP_FIRST_IS_CONTRECORD	xlog_internal.h	106;"	d
+XLP_LONG_HEADER	xlog_internal.h	108;"	d
+XLR_BKP_BLOCK_1	xlog.h	75;"	d
+XLR_BKP_BLOCK_2	xlog.h	76;"	d
+XLR_BKP_BLOCK_3	xlog.h	77;"	d
+XLR_BKP_BLOCK_MASK	xlog.h	72;"	d
+XLR_BKP_REMOVABLE	xlog.h	86;"	d
+XLR_INFO_MASK	xlog.h	65;"	d
+XLR_MAX_BKP_BLOCKS	xlog.h	73;"	d
+XLR_SET_BKP_BLOCK	xlog.h	74;"	d
+XLogArchiveCommandSet	xlog.h	212;"	d
+XLogArchivingActive	xlog.h	211;"	d
+XLogContRecord	xlog_internal.h	/^typedef struct XLogContRecord$/;"	s
+XLogContRecord	xlog_internal.h	/^} XLogContRecord;$/;"	t	typeref:struct:XLogContRecord
+XLogFileName	xlog_internal.h	216;"	d
+XLogFilePath	xlog_internal.h	222;"	d
+XLogFileSize	xlog_internal.h	123;"	d
+XLogFromFileName	xlog_internal.h	219;"	d
+XLogIsNeeded	xlog.h	218;"	d
+XLogLongPageHeader	xlog_internal.h	/^typedef XLogLongPageHeaderData *XLogLongPageHeader;$/;"	t
+XLogLongPageHeaderData	xlog_internal.h	/^typedef struct XLogLongPageHeaderData$/;"	s
+XLogLongPageHeaderData	xlog_internal.h	/^} XLogLongPageHeaderData;$/;"	t	typeref:struct:XLogLongPageHeaderData
+XLogPageHeader	xlog_internal.h	/^typedef XLogPageHeaderData *XLogPageHeader;$/;"	t
+XLogPageHeaderData	xlog_internal.h	/^typedef struct XLogPageHeaderData$/;"	s
+XLogPageHeaderData	xlog_internal.h	/^} XLogPageHeaderData;$/;"	t	typeref:struct:XLogPageHeaderData
+XLogPageHeaderSize	xlog_internal.h	112;"	d
+XLogRecData	xlog.h	/^typedef struct XLogRecData$/;"	s
+XLogRecData	xlog.h	/^} XLogRecData;$/;"	t	typeref:struct:XLogRecData
+XLogRecGetData	xlog.h	60;"	d
+XLogRecPtr	xlogdefs.h	/^typedef struct XLogRecPtr$/;"	s
+XLogRecPtr	xlogdefs.h	/^} XLogRecPtr;$/;"	t	typeref:struct:XLogRecPtr
+XLogRecPtrIsInvalid	xlogdefs.h	38;"	d
+XLogRecord	xlog.h	/^typedef struct XLogRecord$/;"	s
+XLogRecord	xlog.h	/^} XLogRecord;$/;"	t	typeref:struct:XLogRecord
+XLogSegSize	xlog_internal.h	121;"	d
+XLogSegsPerFile	xlog_internal.h	122;"	d
+XLogStandbyInfoActive	xlog.h	221;"	d
+XRecOffIsValid	xlog_internal.h	200;"	d
+XactCallback	xact.h	/^typedef void (*XactCallback) (XactEvent event, void *arg);$/;"	t
+XactCompletionForceSyncCommit	xact.h	128;"	d
+XactCompletionRelcacheInitFileInval	xact.h	127;"	d
+XactEvent	xact.h	/^} XactEvent;$/;"	t	typeref:enum:__anon13
+XidStatus	clog.h	/^typedef int XidStatus;$/;"	t
+adbin	tupdesc.h	/^	char	   *adbin;			\/* nodeToString representation of expr *\/$/;"	m	struct:attrDefault
+adnum	tupdesc.h	/^	AttrNumber	adnum;$/;"	m	struct:attrDefault
+all_visible_cleared	htup.h	/^	bool		all_visible_cleared;	\/* PD_ALL_VISIBLE was cleared *\/$/;"	m	struct:xl_heap_delete
+all_visible_cleared	htup.h	/^	bool		all_visible_cleared;	\/* PD_ALL_VISIBLE was cleared *\/$/;"	m	struct:xl_heap_insert
+all_visible_cleared	htup.h	/^	bool		all_visible_cleared;	\/* PD_ALL_VISIBLE was cleared *\/$/;"	m	struct:xl_heap_update
+allocatedMemory	gin.h	/^	long		allocatedMemory;$/;"	m	struct:__anon3
+analyze_only	genam.h	/^	bool		analyze_only;	\/* ANALYZE (without any actual vacuum) *\/$/;"	m	struct:IndexVacuumInfo
+arec	xact.h	/^	xl_xact_abort arec;			\/* ABORT record *\/$/;"	m	struct:xl_xact_abort_prepared
+att_addlength_datum	tupmacs.h	160;"	d
+att_addlength_pointer	tupmacs.h	172;"	d
+att_align_datum	tupmacs.h	101;"	d
+att_align_nominal	tupmacs.h	144;"	d
+att_align_pointer	tupmacs.h	122;"	d
+att_isnull	tupmacs.h	21;"	d
+attnum	gin.h	/^	OffsetNumber attnum;$/;"	m	struct:EntryAccumulator
+attnum	gin.h	/^	OffsetNumber attnum;$/;"	m	struct:GinScanEntryData
+attnum	gin.h	/^	OffsetNumber attnum;$/;"	m	struct:GinScanKeyData
+attrDefault	tupdesc.h	/^typedef struct attrDefault$/;"	s
+attrMap	tupconvert.h	/^	AttrNumber *attrMap;		\/* indexes of input fields, or 0 for null *\/$/;"	m	struct:TupleConversionMap
+attrs	tupdesc.h	/^	Form_pg_attribute *attrs;$/;"	m	struct:tupleDesc
+bits	itup.h	/^	bits8		bits[(INDEX_MAX_KEYS + 8 - 1) \/ 8];$/;"	m	struct:IndexAttributeBitMapData
+blkno	gin.h	/^	BlockNumber blkno;$/;"	m	struct:GinBtreeStack
+blkno	gin.h	/^	BlockNumber blkno;$/;"	m	struct:ginxlogCreatePostingTree
+blkno	gin.h	/^	BlockNumber blkno;$/;"	m	struct:ginxlogDeletePage
+blkno	gin.h	/^	BlockNumber blkno;$/;"	m	struct:ginxlogInsert
+blkno	gin.h	/^	BlockNumber blkno;$/;"	m	struct:ginxlogInsertListPage
+blkno	gin.h	/^	BlockNumber blkno;$/;"	m	struct:ginxlogVacuumPage
+blkno	gist_private.h	/^	BlockNumber blkno;$/;"	m	struct:GISTInsertStack
+blkno	gist_private.h	/^	BlockNumber blkno;$/;"	m	struct:gistxlogPage
+blkno	gist_private.h	/^	BlockNumber blkno;$/;"	m	struct:gistxlogPageDelete
+blkno	gist_private.h	/^	BlockNumber blkno;$/;"	m	struct:gistxlogPageUpdate
+blkno	htup.h	/^	BlockNumber blkno;			\/* location of new page *\/$/;"	m	struct:xl_heap_newpage
+block	gist_private.h	/^	BlockNumber block;$/;"	m	struct:GISTSearchStack
+block	gist_private.h	/^	gistxlogPage block;$/;"	m	struct:SplitedPageLayout
+block	htup.h	/^	BlockNumber block;$/;"	m	struct:xl_heap_clean
+block	htup.h	/^	BlockNumber block;$/;"	m	struct:xl_heap_freeze
+block	nbtree.h	/^	BlockNumber block;$/;"	m	struct:xl_btree_delete
+block	nbtree.h	/^	BlockNumber block;$/;"	m	struct:xl_btree_reuse_page
+block	nbtree.h	/^	BlockNumber block;$/;"	m	struct:xl_btree_vacuum
+block	xlog_internal.h	/^	BlockNumber block;			\/* block number *\/$/;"	m	struct:BkpBlock
+bool_val	reloptions.h	/^		bool		bool_val;$/;"	m	union:relopt_value::__anon10
+btm_fastlevel	nbtree.h	/^	uint32		btm_fastlevel;	\/* tree level of the "fast" root page *\/$/;"	m	struct:BTMetaPageData
+btm_fastroot	nbtree.h	/^	BlockNumber btm_fastroot;	\/* current "fast" root location *\/$/;"	m	struct:BTMetaPageData
+btm_level	nbtree.h	/^	uint32		btm_level;		\/* tree level of the root page *\/$/;"	m	struct:BTMetaPageData
+btm_magic	nbtree.h	/^	uint32		btm_magic;		\/* should contain BTREE_MAGIC *\/$/;"	m	struct:BTMetaPageData
+btm_root	nbtree.h	/^	BlockNumber btm_root;		\/* current root location *\/$/;"	m	struct:BTMetaPageData
+btm_version	nbtree.h	/^	uint32		btm_version;	\/* should contain BTREE_VERSION *\/$/;"	m	struct:BTMetaPageData
+btpo	nbtree.h	/^	}			btpo;$/;"	m	struct:BTPageOpaqueData	typeref:union:BTPageOpaqueData::__anon9
+btpo_cycleid	nbtree.h	/^	BTCycleId	btpo_cycleid;	\/* vacuum cycle ID of latest split *\/$/;"	m	struct:BTPageOpaqueData
+btpo_flags	nbtree.h	/^	uint16		btpo_flags;		\/* flag bits, see below *\/$/;"	m	struct:BTPageOpaqueData
+btpo_next	nbtree.h	/^	BlockNumber btpo_next;		\/* right sibling, or P_NONE if rightmost *\/$/;"	m	struct:BTPageOpaqueData
+btpo_prev	nbtree.h	/^	BlockNumber btpo_prev;		\/* left sibling, or P_NONE if leftmost *\/$/;"	m	struct:BTPageOpaqueData
+btpo_xact	nbtree.h	/^	TransactionId btpo_xact;	\/* value of btpo.xact for use in recovery *\/$/;"	m	struct:xl_btree_delete_page
+btree	gin.h	/^	GinBtreeData btree;$/;"	m	struct:__anon2
+bts_blkno	nbtree.h	/^	BlockNumber bts_blkno;$/;"	m	struct:BTStackData
+bts_btentry	nbtree.h	/^	IndexTupleData bts_btentry;$/;"	m	struct:BTStackData
+bts_offset	nbtree.h	/^	OffsetNumber bts_offset;$/;"	m	struct:BTStackData
+bts_parent	nbtree.h	/^	struct BTStackData *bts_parent;$/;"	m	struct:BTStackData	typeref:struct:BTStackData::BTStackData
+buf	nbtree.h	/^	Buffer		buf;			\/* if valid, the buffer is pinned *\/$/;"	m	struct:BTScanPosData
+buffer	gin.h	/^	Buffer		buffer;$/;"	m	struct:GinBtreeStack
+buffer	gin.h	/^	Buffer		buffer;$/;"	m	struct:GinScanEntryData
+buffer	gist_private.h	/^	Buffer		buffer;			\/* to write after all proceed *\/$/;"	m	struct:SplitedPageLayout
+buffer	gist_private.h	/^	Buffer		buffer;$/;"	m	struct:GISTInsertStack
+buffer	xlog.h	/^	Buffer		buffer;			\/* buffer associated with data, if any *\/$/;"	m	struct:XLogRecData
+buffer_locks	slru.h	/^	LWLockId   *buffer_locks;$/;"	m	struct:SlruSharedData
+buffer_std	xlog.h	/^	bool		buffer_std;		\/* buffer has standard pd_lower\/pd_upper *\/$/;"	m	struct:XLogRecData
+canPartialMatch	gin.h	/^	bool		canPartialMatch[INDEX_MAX_KEYS];		\/* can opclass perform$/;"	m	struct:GinState
+ccbin	tupdesc.h	/^	char	   *ccbin;			\/* nodeToString representation of expr *\/$/;"	m	struct:constrCheck
+ccname	tupdesc.h	/^	char	   *ccname;$/;"	m	struct:constrCheck
+check	tupdesc.h	/^	ConstrCheck *check;			\/* array *\/$/;"	m	struct:tupleConstr
+child	gist_private.h	/^	struct GISTInsertStack *child;$/;"	m	struct:GISTInsertStack	typeref:struct:GISTInsertStack::GISTInsertStack
+child_blkno	gin.h	/^	BlockIdData child_blkno;	\/* use it instead of BlockNumber to save space$/;"	m	struct:__anon1
+childoffnum	gist_private.h	/^	OffsetNumber childoffnum;$/;"	m	struct:GISTInsertStack
+ckpt_bufs_written	xlog.h	/^	int			ckpt_bufs_written;		\/* # of buffers written *\/$/;"	m	struct:CheckpointStatsData
+ckpt_end_t	xlog.h	/^	TimestampTz ckpt_end_t;		\/* end of checkpoint *\/$/;"	m	struct:CheckpointStatsData
+ckpt_segs_added	xlog.h	/^	int			ckpt_segs_added;	\/* # of new xlog segments created *\/$/;"	m	struct:CheckpointStatsData
+ckpt_segs_recycled	xlog.h	/^	int			ckpt_segs_recycled;		\/* # of xlog segments recycled *\/$/;"	m	struct:CheckpointStatsData
+ckpt_segs_removed	xlog.h	/^	int			ckpt_segs_removed;		\/* # of xlog segments deleted *\/$/;"	m	struct:CheckpointStatsData
+ckpt_start_t	xlog.h	/^	TimestampTz ckpt_start_t;	\/* start of checkpoint *\/$/;"	m	struct:CheckpointStatsData
+ckpt_sync_end_t	xlog.h	/^	TimestampTz ckpt_sync_end_t;	\/* end of fsyncs *\/$/;"	m	struct:CheckpointStatsData
+ckpt_sync_t	xlog.h	/^	TimestampTz ckpt_sync_t;	\/* start of fsyncs *\/$/;"	m	struct:CheckpointStatsData
+ckpt_write_t	xlog.h	/^	TimestampTz ckpt_write_t;	\/* start of flushing buffers *\/$/;"	m	struct:CheckpointStatsData
+compareFn	gin.h	/^	FmgrInfo	compareFn[INDEX_MAX_KEYS];$/;"	m	struct:GinState
+comparePartialFn	gin.h	/^	FmgrInfo	comparePartialFn[INDEX_MAX_KEYS];		\/* optional method *\/$/;"	m	struct:GinState
+compressFn	gist_private.h	/^	FmgrInfo	compressFn[INDEX_MAX_KEYS];$/;"	m	struct:GISTSTATE
+consistentFn	gin.h	/^	FmgrInfo	consistentFn[INDEX_MAX_KEYS];$/;"	m	struct:GinState
+consistentFn	gist_private.h	/^	FmgrInfo	consistentFn[INDEX_MAX_KEYS];$/;"	m	struct:GISTSTATE
+constr	tupdesc.h	/^	TupleConstr *constr;		\/* constraints, or NULL if none *\/$/;"	m	struct:tupleDesc
+constrCheck	tupdesc.h	/^typedef struct constrCheck$/;"	s
+crec	xact.h	/^	xl_xact_commit crec;		\/* COMMIT record *\/$/;"	m	struct:xl_xact_commit_prepared
+curItem	gin.h	/^	ItemPointerData curItem;$/;"	m	struct:GinScanEntryData
+curItem	gin.h	/^	ItemPointerData curItem;$/;"	m	struct:GinScanKeyData
+curPageData	gist_private.h	/^	OffsetNumber curPageData;$/;"	m	struct:GISTScanOpaqueData
+cur_lru_count	slru.h	/^	int			cur_lru_count;$/;"	m	struct:SlruSharedData
+curbuf	gist_private.h	/^	Buffer		curbuf;$/;"	m	struct:GISTScanOpaqueData
+curitem	gin.h	/^	uint32		curitem;$/;"	m	struct:GinBtreeData
+curpos	gist_private.h	/^	ItemPointerData curpos;$/;"	m	struct:GISTScanOpaqueData
+currPos	nbtree.h	/^	BTScanPosData currPos;		\/* current position data *\/$/;"	m	struct:BTScanOpaqueData
+current_buf	hio.h	/^	Buffer		current_buf;	\/* current insertion target page *\/$/;"	m	struct:BulkInsertStateData
+cutoff_xid	htup.h	/^	TransactionId cutoff_xid;$/;"	m	struct:xl_heap_freeze
+data	xlog.h	/^	char	   *data;			\/* start of rmgr data to include *\/$/;"	m	struct:XLogRecData
+datum_len_	htup.h	/^	int32		datum_len_;		\/* varlena header (do not touch directly!) *\/$/;"	m	struct:DatumTupleFields
+datum_typeid	htup.h	/^	Oid			datum_typeid;	\/* composite type OID, or RECORDOID *\/$/;"	m	struct:DatumTupleFields
+datum_typmod	htup.h	/^	int32		datum_typmod;	\/* -1, or identifier of a record type *\/$/;"	m	struct:DatumTupleFields
+dbId	xact.h	/^	Oid			dbId;			\/* MyDatabaseId *\/$/;"	m	struct:xl_xact_commit
+deadblk	nbtree.h	/^	BlockNumber deadblk;		\/* child block being deleted *\/$/;"	m	struct:xl_btree_delete_page
+decompressFn	gist_private.h	/^	FmgrInfo	decompressFn[INDEX_MAX_KEYS];$/;"	m	struct:GISTSTATE
+default_isnull	reloptions.h	/^	bool		default_isnull;$/;"	m	struct:relopt_string
+default_len	reloptions.h	/^	int			default_len;$/;"	m	struct:relopt_string
+default_val	reloptions.h	/^	bool		default_val;$/;"	m	struct:relopt_bool
+default_val	reloptions.h	/^	char		default_val[1]; \/* variable length, zero-terminated *\/$/;"	m	struct:relopt_string
+default_val	reloptions.h	/^	double		default_val;$/;"	m	struct:relopt_real
+default_val	reloptions.h	/^	int			default_val;$/;"	m	struct:relopt_int
+defval	tupdesc.h	/^	AttrDefault *defval;		\/* array *\/$/;"	m	struct:tupleConstr
+desc	reloptions.h	/^	const char *desc;$/;"	m	struct:relopt_gen
+do_fsync	slru.h	/^	bool		do_fsync;$/;"	m	struct:SlruCtlData
+entry	gin.h	/^	Datum		entry;$/;"	m	struct:GinScanEntryData
+entry	gin.h	/^	IndexTuple	entry;$/;"	m	struct:GinBtreeData
+entryAttnum	gin.h	/^	OffsetNumber entryAttnum;$/;"	m	struct:GinBtreeData
+entryRes	gin.h	/^	bool	   *entryRes;$/;"	m	struct:GinScanKeyData
+entryValue	gin.h	/^	Datum		entryValue;$/;"	m	struct:GinBtreeData
+entryallocator	gin.h	/^	EntryAccumulator *entryallocator;$/;"	m	struct:__anon3
+equalFn	gist_private.h	/^	FmgrInfo	equalFn[INDEX_MAX_KEYS];$/;"	m	struct:GISTSTATE
+estimated_count	genam.h	/^	bool		estimated_count;	\/* num_heap_tuples is an estimate *\/$/;"	m	struct:IndexVacuumInfo
+estimated_count	genam.h	/^	bool		estimated_count;	\/* num_index_tuples is an estimate *\/$/;"	m	struct:IndexBulkDeleteResult
+extra_data	gin.h	/^	Pointer		extra_data;$/;"	m	struct:GinScanEntryData
+extra_data	gin.h	/^	Pointer    *extra_data;$/;"	m	struct:GinScanKeyData
+extractQueryFn	gin.h	/^	FmgrInfo	extractQueryFn[INDEX_MAX_KEYS];$/;"	m	struct:GinState
+extractValueFn	gin.h	/^	FmgrInfo	extractValueFn[INDEX_MAX_KEYS];$/;"	m	struct:GinState
+fastgetattr	htup.h	757;"	d
+fastlevel	nbtree.h	/^	uint32		fastlevel;$/;"	m	struct:xl_btree_metadata
+fastroot	nbtree.h	/^	BlockNumber fastroot;$/;"	m	struct:xl_btree_metadata
+fetch_att	tupmacs.h	44;"	d
+fetch_att	tupmacs.h	71;"	d
+fetchatt	tupmacs.h	37;"	d
+fillRoot	gin.h	/^	void		(*fillRoot) (GinBtree, Buffer, Buffer, Buffer);$/;"	m	struct:GinBtreeData
+findChildPage	gin.h	/^	BlockNumber (*findChildPage) (GinBtree, GinBtreeStack *);$/;"	m	struct:GinBtreeData
+findChildPtr	gin.h	/^	OffsetNumber (*findChildPtr) (GinBtree, Page, BlockNumber, OffsetNumber);$/;"	m	struct:GinBtreeData
+findItem	gin.h	/^	bool		(*findItem) (GinBtree, GinBtreeStack *);$/;"	m	struct:GinBtreeData
+firstCall	gin.h	/^	bool		firstCall;$/;"	m	struct:GinScanKeyData
+firstItem	nbtree.h	/^	int			firstItem;		\/* first valid index in items[] *\/$/;"	m	struct:BTScanPosData
+firstright	nbtree.h	/^	OffsetNumber firstright;	\/* first item moved to right page *\/$/;"	m	struct:xl_btree_split
+flags	gin.h	/^	uint16		flags;			\/* see bit definitions below *\/$/;"	m	struct:GinPageOpaqueData
+flags	gist.h	/^	uint16		flags;			\/* see bit definitions above *\/$/;"	m	struct:GISTPageOpaqueData
+fork	xlog_internal.h	/^	ForkNumber	fork;			\/* fork within the relation *\/$/;"	m	struct:BkpBlock
+forknum	htup.h	/^	ForkNumber	forknum;$/;"	m	struct:xl_heap_newpage
+freespace	gist_private.h	/^	Size		freespace;		\/* free space to be left *\/$/;"	m	struct:__anon5
+fullScan	gin.h	/^	bool		fullScan;$/;"	m	struct:GinBtreeData
+gen	reloptions.h	/^	relopt_gen	gen;$/;"	m	struct:relopt_bool
+gen	reloptions.h	/^	relopt_gen	gen;$/;"	m	struct:relopt_int
+gen	reloptions.h	/^	relopt_gen	gen;$/;"	m	struct:relopt_real
+gen	reloptions.h	/^	relopt_gen	gen;$/;"	m	struct:relopt_string
+gen	reloptions.h	/^	relopt_gen *gen;$/;"	m	struct:relopt_value
+getLeftMostPage	gin.h	/^	BlockNumber (*getLeftMostPage) (GinBtree, Page);$/;"	m	struct:GinBtreeData
+ginstate	gin.h	/^	GinState	ginstate;$/;"	m	struct:GinScanOpaqueData
+ginstate	gin.h	/^	GinState   *ginstate;$/;"	m	struct:GinBtreeData
+ginstate	gin.h	/^	GinState   *ginstate;$/;"	m	struct:__anon3
+ginxlogCreatePostingTree	gin.h	/^typedef struct ginxlogCreatePostingTree$/;"	s
+ginxlogCreatePostingTree	gin.h	/^} ginxlogCreatePostingTree;$/;"	t	typeref:struct:ginxlogCreatePostingTree
+ginxlogDeleteListPages	gin.h	/^typedef struct ginxlogDeleteListPages$/;"	s
+ginxlogDeleteListPages	gin.h	/^} ginxlogDeleteListPages;$/;"	t	typeref:struct:ginxlogDeleteListPages
+ginxlogDeletePage	gin.h	/^typedef struct ginxlogDeletePage$/;"	s
+ginxlogDeletePage	gin.h	/^} ginxlogDeletePage;$/;"	t	typeref:struct:ginxlogDeletePage
+ginxlogInsert	gin.h	/^typedef struct ginxlogInsert$/;"	s
+ginxlogInsert	gin.h	/^} ginxlogInsert;$/;"	t	typeref:struct:ginxlogInsert
+ginxlogInsertListPage	gin.h	/^typedef struct ginxlogInsertListPage$/;"	s
+ginxlogInsertListPage	gin.h	/^} ginxlogInsertListPage;$/;"	t	typeref:struct:ginxlogInsertListPage
+ginxlogSplit	gin.h	/^typedef struct ginxlogSplit$/;"	s
+ginxlogSplit	gin.h	/^} ginxlogSplit;$/;"	t	typeref:struct:ginxlogSplit
+ginxlogUpdateMeta	gin.h	/^typedef struct ginxlogUpdateMeta$/;"	s
+ginxlogUpdateMeta	gin.h	/^} ginxlogUpdateMeta;$/;"	t	typeref:struct:ginxlogUpdateMeta
+ginxlogVacuumPage	gin.h	/^typedef struct ginxlogVacuumPage$/;"	s
+ginxlogVacuumPage	gin.h	/^} ginxlogVacuumPage;$/;"	t	typeref:struct:ginxlogVacuumPage
+gist_page_id	gist.h	/^	uint16		gist_page_id;	\/* for identification of GiST indexes *\/$/;"	m	struct:GISTPageOpaqueData
+gistentryinit	gist.h	148;"	d
+giststate	gist_private.h	/^	GISTSTATE  *giststate;$/;"	m	struct:GISTScanOpaqueData
+gistxlogInsertComplete	gist_private.h	/^typedef struct gistxlogInsertComplete$/;"	s
+gistxlogInsertComplete	gist_private.h	/^} gistxlogInsertComplete;$/;"	t	typeref:struct:gistxlogInsertComplete
+gistxlogPage	gist_private.h	/^typedef struct gistxlogPage$/;"	s
+gistxlogPage	gist_private.h	/^} gistxlogPage;$/;"	t	typeref:struct:gistxlogPage
+gistxlogPageDelete	gist_private.h	/^typedef struct gistxlogPageDelete$/;"	s
+gistxlogPageDelete	gist_private.h	/^} gistxlogPageDelete;$/;"	t	typeref:struct:gistxlogPageDelete
+gistxlogPageSplit	gist_private.h	/^typedef struct gistxlogPageSplit$/;"	s
+gistxlogPageSplit	gist_private.h	/^} gistxlogPageSplit;$/;"	t	typeref:struct:gistxlogPageSplit
+gistxlogPageUpdate	gist_private.h	/^typedef struct gistxlogPageUpdate$/;"	s
+gistxlogPageUpdate	gist_private.h	/^} gistxlogPageUpdate;$/;"	t	typeref:struct:gistxlogPageUpdate
+group_lsn	slru.h	/^	XLogRecPtr *group_lsn;$/;"	m	struct:SlruSharedData
+has_not_null	tupdesc.h	/^	bool		has_not_null;$/;"	m	struct:tupleConstr
+hashm_bmshift	hash.h	/^	uint16		hashm_bmshift;	\/* log2(bitmap array size in BITS) *\/$/;"	m	struct:HashMetaPageData
+hashm_bmsize	hash.h	/^	uint16		hashm_bmsize;	\/* bitmap array size (bytes) - must be a power$/;"	m	struct:HashMetaPageData
+hashm_bsize	hash.h	/^	uint16		hashm_bsize;	\/* index page size (bytes) *\/$/;"	m	struct:HashMetaPageData
+hashm_ffactor	hash.h	/^	uint16		hashm_ffactor;	\/* target fill factor (tuples\/bucket) *\/$/;"	m	struct:HashMetaPageData
+hashm_firstfree	hash.h	/^	uint32		hashm_firstfree;	\/* lowest-number free ovflpage (bit#) *\/$/;"	m	struct:HashMetaPageData
+hashm_highmask	hash.h	/^	uint32		hashm_highmask; \/* mask to modulo into entire table *\/$/;"	m	struct:HashMetaPageData
+hashm_lowmask	hash.h	/^	uint32		hashm_lowmask;	\/* mask to modulo into lower half of table *\/$/;"	m	struct:HashMetaPageData
+hashm_magic	hash.h	/^	uint32		hashm_magic;	\/* magic no. for hash tables *\/$/;"	m	struct:HashMetaPageData
+hashm_mapp	hash.h	/^	BlockNumber hashm_mapp[HASH_MAX_BITMAPS];	\/* blknos of ovfl bitmaps *\/$/;"	m	struct:HashMetaPageData
+hashm_maxbucket	hash.h	/^	uint32		hashm_maxbucket;	\/* ID of maximum bucket in use *\/$/;"	m	struct:HashMetaPageData
+hashm_nmaps	hash.h	/^	uint32		hashm_nmaps;	\/* number of bitmap pages *\/$/;"	m	struct:HashMetaPageData
+hashm_ntuples	hash.h	/^	double		hashm_ntuples;	\/* number of tuples stored in the table *\/$/;"	m	struct:HashMetaPageData
+hashm_ovflpoint	hash.h	/^	uint32		hashm_ovflpoint;\/* splitpoint from which ovflpgs being$/;"	m	struct:HashMetaPageData
+hashm_procid	hash.h	/^	RegProcedure hashm_procid;	\/* hash procedure id from pg_proc *\/$/;"	m	struct:HashMetaPageData
+hashm_spares	hash.h	/^	uint32		hashm_spares[HASH_MAX_SPLITPOINTS];		\/* spare pages before$/;"	m	struct:HashMetaPageData
+hashm_version	hash.h	/^	uint32		hashm_version;	\/* version ID *\/$/;"	m	struct:HashMetaPageData
+hasho_bucket	hash.h	/^	Bucket		hasho_bucket;	\/* bucket number this pg belongs to *\/$/;"	m	struct:HashPageOpaqueData
+hasho_flag	hash.h	/^	uint16		hasho_flag;		\/* page type code, see above *\/$/;"	m	struct:HashPageOpaqueData
+hasho_nextblkno	hash.h	/^	BlockNumber hasho_nextblkno;	\/* next ovfl blkno *\/$/;"	m	struct:HashPageOpaqueData
+hasho_page_id	hash.h	/^	uint16		hasho_page_id;	\/* for identification of hash indexes *\/$/;"	m	struct:HashPageOpaqueData
+hasho_prevblkno	hash.h	/^	BlockNumber hasho_prevblkno;	\/* previous ovfl (or bucket) blkno *\/$/;"	m	struct:HashPageOpaqueData
+hashso_bucket	hash.h	/^	Bucket		hashso_bucket;$/;"	m	struct:HashScanOpaqueData
+hashso_bucket_blkno	hash.h	/^	BlockNumber hashso_bucket_blkno;$/;"	m	struct:HashScanOpaqueData
+hashso_bucket_valid	hash.h	/^	bool		hashso_bucket_valid;$/;"	m	struct:HashScanOpaqueData
+hashso_curbuf	hash.h	/^	Buffer		hashso_curbuf;$/;"	m	struct:HashScanOpaqueData
+hashso_curpos	hash.h	/^	ItemPointerData hashso_curpos;$/;"	m	struct:HashScanOpaqueData
+hashso_heappos	hash.h	/^	ItemPointerData hashso_heappos;$/;"	m	struct:HashScanOpaqueData
+hashso_sk_hash	hash.h	/^	uint32		hashso_sk_hash;$/;"	m	struct:HashScanOpaqueData
+head	gin.h	/^	BlockNumber head;$/;"	m	struct:GinMetaPageData
+heapPtr	gist_private.h	/^	ItemPointerData heapPtr;$/;"	m	struct:ItemResult
+heapRelation	relscan.h	/^	Relation	heapRelation;	\/* heap relation descriptor, or NULL *\/$/;"	m	struct:IndexScanDescData
+heapTid	nbtree.h	/^	ItemPointerData heapTid;	\/* TID of referenced heap item *\/$/;"	m	struct:BTScanPosItem
+heap_close	heapam.h	60;"	d
+heap_getattr	htup.h	807;"	d
+heap_rel	relscan.h	/^	Relation	heap_rel;		\/* catalog being scanned *\/$/;"	m	struct:SysScanDescData
+heap_tuples	genam.h	/^	double		heap_tuples;	\/* # of tuples seen in parent table *\/$/;"	m	struct:IndexBuildResult
+hnode	nbtree.h	/^	RelFileNode hnode;			\/* RelFileNode of the heap the index currently$/;"	m	struct:xl_btree_delete
+hole_length	xlog_internal.h	/^	uint16		hole_length;	\/* number of bytes in "hole" *\/$/;"	m	struct:BkpBlock
+hole_offset	xlog_internal.h	/^	uint16		hole_offset;	\/* number of bytes before "hole" *\/$/;"	m	struct:BkpBlock
+ignore_killed_tuples	relscan.h	/^	bool		ignore_killed_tuples;	\/* do not return killed entries *\/$/;"	m	struct:IndexScanDescData
+indesc	tupconvert.h	/^	TupleDesc	indesc;			\/* tupdesc for source rowtype *\/$/;"	m	struct:TupleConversionMap
+index	genam.h	/^	Relation	index;			\/* the index being vacuumed *\/$/;"	m	struct:IndexVacuumInfo
+index	gin.h	/^	Relation	index;$/;"	m	struct:GinBtreeData
+indexOffset	nbtree.h	/^	OffsetNumber indexOffset;	\/* index item's location within page *\/$/;"	m	struct:BTScanPosItem
+indexRelation	relscan.h	/^	Relation	indexRelation;	\/* index relation descriptor *\/$/;"	m	struct:IndexScanDescData
+index_getattr	itup.h	100;"	d
+index_tuples	genam.h	/^	double		index_tuples;	\/* # of tuples inserted into index *\/$/;"	m	struct:IndexBuildResult
+inisnull	tupconvert.h	/^	bool	   *inisnull;$/;"	m	struct:TupleConversionMap
+int_val	reloptions.h	/^		int			int_val;$/;"	m	union:relopt_value::__anon10
+invalues	tupconvert.h	/^	Datum	   *invalues;		\/* workspace for deconstructing source *\/$/;"	m	struct:TupleConversionMap
+irel	relscan.h	/^	Relation	irel;			\/* NULL if doing heap scan *\/$/;"	m	struct:SysScanDescData
+isBuild	gin.h	/^	bool		isBuild;$/;"	m	struct:GinBtreeData
+isData	gin.h	/^	bool		isData;$/;"	m	struct:ginxlogInsert
+isData	gin.h	/^	bool		isData;$/;"	m	struct:ginxlogSplit
+isDelete	gin.h	/^	bool		isDelete;$/;"	m	struct:GinBtreeData
+isDelete	gin.h	/^	bool		isDelete;$/;"	m	struct:ginxlogInsert
+isEnoughSpace	gin.h	/^	bool		(*isEnoughSpace) (GinBtree, Buffer, OffsetNumber);$/;"	m	struct:GinBtreeData
+isFinished	gin.h	/^	bool		isFinished;$/;"	m	struct:GinScanEntryData
+isFinished	gin.h	/^	bool		isFinished;$/;"	m	struct:GinScanKeyData
+isLeaf	gin.h	/^	bool		isLeaf;$/;"	m	struct:ginxlogInsert
+isLeaf	gin.h	/^	bool		isLeaf;$/;"	m	struct:ginxlogSplit
+isMoveRight	gin.h	/^	bool		(*isMoveRight) (GinBtree, Page);$/;"	m	struct:GinBtreeData
+isPartialMatch	gin.h	/^	bool		isPartialMatch;$/;"	m	struct:GinScanEntryData
+isRootSplit	gin.h	/^	bool		isRootSplit;$/;"	m	struct:ginxlogSplit
+isVoidRes	gin.h	/^	bool		isVoidRes;		\/* true if ginstate.extractQueryFn guarantees$/;"	m	struct:GinScanOpaqueData
+iscan	relscan.h	/^	IndexScanDesc iscan;		\/* only valid in index-scan case *\/$/;"	m	struct:SysScanDescData
+isset	reloptions.h	/^	bool		isset;$/;"	m	struct:relopt_value
+itemIndex	nbtree.h	/^	int			itemIndex;		\/* current index in items[] *\/$/;"	m	struct:BTScanPosData
+items	gin.h	/^	ItemPointerData *items;$/;"	m	struct:GinBtreeData
+items	nbtree.h	/^	BTScanPosItem items[MaxIndexTuplesPerPage]; \/* MUST BE LAST *\/$/;"	m	struct:BTScanPosData
+itup	gist_private.h	/^	IndexTuple	itup;			\/* union key for page *\/$/;"	m	struct:SplitedPageLayout
+itup	gist_private.h	/^	IndexTuple *itup;			\/* in\/out, points to compressed entry *\/$/;"	m	struct:__anon5
+ituplen	gist_private.h	/^	int			ituplen;		\/* length of itup *\/$/;"	m	struct:__anon5
+key	gin.h	/^	ItemPointerData key;$/;"	m	struct:__anon1
+key	gist.h	/^	Datum		key;$/;"	m	struct:GISTENTRY
+key	gist_private.h	/^	ItemPointerData key;$/;"	m	struct:__anon5
+key	gist_private.h	/^	ItemPointerData key;$/;"	m	struct:gistxlogPageSplit
+key	gist_private.h	/^	ItemPointerData key;$/;"	m	struct:gistxlogPageUpdate
+keyData	nbtree.h	/^	ScanKey		keyData;		\/* array of preprocessed scan keys *\/$/;"	m	struct:BTScanOpaqueData
+keyData	relscan.h	/^	ScanKey		keyData;		\/* array of scan key descriptors *\/$/;"	m	struct:IndexScanDescData
+keys	gin.h	/^	GinScanKey	keys;$/;"	m	struct:GinScanOpaqueData
+kill_prior_tuple	relscan.h	/^	bool		kill_prior_tuple;		\/* last-returned tuple is dead *\/$/;"	m	struct:IndexScanDescData
+killedItems	nbtree.h	/^	int		   *killedItems;	\/* currPos.items indexes of killed items *\/$/;"	m	struct:BTScanOpaqueData
+kinds	reloptions.h	/^	bits32		kinds;$/;"	m	struct:relopt_gen
+lastBlockVacuumed	nbtree.h	/^	BlockNumber lastBlockVacuumed;$/;"	m	struct:xl_btree_vacuum
+lastItem	nbtree.h	/^	int			lastItem;		\/* last valid index in items[] *\/$/;"	m	struct:BTScanPosData
+latestCompletedXid	transam.h	/^	TransactionId latestCompletedXid;	\/* newest XID that has committed or$/;"	m	struct:VariableCacheData
+latestRemovedXid	htup.h	/^	TransactionId latestRemovedXid;$/;"	m	struct:xl_heap_clean
+latestRemovedXid	htup.h	/^	TransactionId latestRemovedXid;$/;"	m	struct:xl_heap_cleanup_info
+latestRemovedXid	nbtree.h	/^	TransactionId latestRemovedXid;$/;"	m	struct:xl_btree_reuse_page
+latest_page_number	slru.h	/^	int			latest_page_number;$/;"	m	struct:SlruSharedData
+lblkno	gin.h	/^	BlockNumber lblkno;$/;"	m	struct:ginxlogSplit
+leafkey	gist.h	/^	bool		leafkey;$/;"	m	struct:GISTENTRY
+leftBlkno	gin.h	/^	BlockNumber leftBlkno;$/;"	m	struct:ginxlogDeletePage
+leftChildBlkno	gin.h	/^	BlockNumber leftChildBlkno;$/;"	m	struct:ginxlogSplit
+leftblk	nbtree.h	/^	BlockNumber leftblk;		\/* child block's left sibling, if any *\/$/;"	m	struct:xl_btree_delete_page
+leftsib	nbtree.h	/^	BlockNumber leftsib;		\/* orig page \/ new left page *\/$/;"	m	struct:xl_btree_split
+len	xlog.h	/^	uint32		len;			\/* length of rmgr data to include *\/$/;"	m	struct:XLogRecData
+length	gin.h	/^	uint32		length;$/;"	m	struct:EntryAccumulator
+length	gin.h	/^	uint32		length;$/;"	m	struct:__anon3
+lenlist	gist_private.h	/^	int			lenlist;$/;"	m	struct:SplitedPageLayout
+lentuples	gin.h	/^	uint32		lentuples;$/;"	m	struct:GinTupleCollector
+level	nbtree.h	/^		uint32		level;		\/* tree level --- zero for leaf pages *\/$/;"	m	union:BTPageOpaqueData::__anon9
+level	nbtree.h	/^	uint32		level;			\/* its tree level *\/$/;"	m	struct:xl_btree_newroot
+level	nbtree.h	/^	uint32		level;			\/* tree level of page being split *\/$/;"	m	struct:xl_btree_split
+level	nbtree.h	/^	uint32		level;$/;"	m	struct:xl_btree_metadata
+list	gin.h	/^	ItemPointerData *list;$/;"	m	struct:EntryAccumulator
+list	gin.h	/^	ItemPointerData *list;$/;"	m	struct:GinScanEntryData
+list	gist_private.h	/^	IndexTupleData *list;$/;"	m	struct:SplitedPageLayout
+locking_xid	htup.h	/^	TransactionId locking_xid;	\/* might be a MultiXactId not xid *\/$/;"	m	struct:xl_heap_lock
+lsn	gist_private.h	/^	GistNSN		lsn;$/;"	m	struct:GISTInsertStack
+lsn	gist_private.h	/^	GistNSN		lsn;$/;"	m	struct:GISTSearchStack
+lsn_groups_per_page	slru.h	/^	int			lsn_groups_per_page;$/;"	m	struct:SlruSharedData
+markItemIndex	nbtree.h	/^	int			markItemIndex;	\/* itemIndex, or -1 if not valid *\/$/;"	m	struct:BTScanOpaqueData
+markPos	nbtree.h	/^	BTScanPosData markPos;		\/* marked position, if any *\/$/;"	m	struct:BTScanOpaqueData
+markstk	gist_private.h	/^	GISTSearchStack *markstk;$/;"	m	struct:GISTScanOpaqueData
+master	gin.h	/^	GinScanEntry master;$/;"	m	struct:GinScanEntryData
+max	reloptions.h	/^	double		max;$/;"	m	struct:relopt_real
+max	reloptions.h	/^	int			max;$/;"	m	struct:relopt_int
+maxoff	gin.h	/^	OffsetNumber maxoff;		\/* number entries on GIN_DATA page; number of$/;"	m	struct:GinPageOpaqueData
+message_level	genam.h	/^	int			message_level;	\/* ereport level for progress messages *\/$/;"	m	struct:IndexVacuumInfo
+metadata	gin.h	/^	GinMetaPageData metadata;$/;"	m	struct:ginxlogDeleteListPages
+metadata	gin.h	/^	GinMetaPageData metadata;$/;"	m	struct:ginxlogUpdateMeta
+mid	multixact.h	/^	MultiXactId mid;			\/* new MultiXact's ID *\/$/;"	m	struct:xl_multixact_create
+min	reloptions.h	/^	double		min;$/;"	m	struct:relopt_real
+min	reloptions.h	/^	int			min;$/;"	m	struct:relopt_int
+moff	multixact.h	/^	MultiXactOffset moff;		\/* its starting offset in members file *\/$/;"	m	struct:xl_multixact_create
+moreLeft	nbtree.h	/^	bool		moreLeft;$/;"	m	struct:BTScanPosData
+moreRight	nbtree.h	/^	bool		moreRight;$/;"	m	struct:BTScanPosData
+mt_padding	htup.h	/^	char		mt_padding[MINIMAL_TUPLE_PADDING];$/;"	m	struct:MinimalTupleData
+n	gist.h	/^	int32		n;				\/* number of elements *\/$/;"	m	struct:__anon4
+nPageData	gist_private.h	/^	OffsetNumber nPageData;$/;"	m	struct:GISTScanOpaqueData
+nPendingHeapTuples	gin.h	/^	int64		nPendingHeapTuples;$/;"	m	struct:GinMetaPageData
+nPendingPages	gin.h	/^	BlockNumber nPendingPages;$/;"	m	struct:GinMetaPageData
+name	reloptions.h	/^	const char *name;			\/* must be first (used as list termination$/;"	m	struct:relopt_gen
+namelen	reloptions.h	/^	int			namelen;$/;"	m	struct:relopt_gen
+natts	tupdesc.h	/^	int			natts;			\/* number of attributes in the tuple *\/$/;"	m	struct:tupleDesc
+ndead	htup.h	/^	uint16		ndead;$/;"	m	struct:xl_heap_clean
+ndeleted	gin.h	/^	int32		ndeleted;$/;"	m	struct:ginxlogDeleteListPages
+needInsertComplete	gist_private.h	/^	bool		needInsertComplete;$/;"	m	struct:__anon5
+nentries	gin.h	/^	uint32		nentries;$/;"	m	struct:GinScanKeyData
+newRightlink	gin.h	/^	BlockNumber newRightlink;$/;"	m	struct:ginxlogUpdateMeta
+new_all_visible_cleared	htup.h	/^	bool		new_all_visible_cleared;		\/* same for the page of newtid *\/$/;"	m	struct:xl_heap_update
+newtid	htup.h	/^	ItemPointerData newtid;		\/* new inserted tuple id *\/$/;"	m	struct:xl_heap_update
+next	gist_private.h	/^	struct GISTInsertStack *next;$/;"	m	struct:GISTInsertStack	typeref:struct:GISTInsertStack::GISTInsertStack
+next	gist_private.h	/^	struct GISTSearchStack *next;$/;"	m	struct:GISTSearchStack	typeref:struct:GISTSearchStack::GISTSearchStack
+next	gist_private.h	/^	struct SplitedPageLayout *next;$/;"	m	struct:SplitedPageLayout	typeref:struct:SplitedPageLayout::SplitedPageLayout
+next	xlog.h	/^	struct XLogRecData *next;	\/* next struct in chain, or NULL *\/$/;"	m	struct:XLogRecData	typeref:struct:XLogRecData::XLogRecData
+nextOid	transam.h	/^	Oid			nextOid;		\/* next OID to assign *\/$/;"	m	struct:VariableCacheData
+nextPage	nbtree.h	/^	BlockNumber nextPage;		\/* page's right link when we scanned it *\/$/;"	m	struct:BTScanPosData
+nextXid	transam.h	/^	TransactionId nextXid;		\/* next XID to assign *\/$/;"	m	struct:VariableCacheData
+nitem	gin.h	/^	OffsetNumber nitem;$/;"	m	struct:ginxlogInsert
+nitem	gin.h	/^	OffsetNumber nitem;$/;"	m	struct:ginxlogSplit
+nitem	gin.h	/^	OffsetNumber nitem;$/;"	m	struct:ginxlogVacuumPage
+nitem	gin.h	/^	uint32		nitem;$/;"	m	struct:GinBtreeData
+nitem	gin.h	/^	uint32		nitem;$/;"	m	struct:ginxlogCreatePostingTree
+nitems	nbtree.h	/^	int			nitems;$/;"	m	struct:xl_btree_delete
+nkeys	gin.h	/^	uint32		nkeys;$/;"	m	struct:GinScanOpaqueData
+nlist	gin.h	/^	uint32		nlist;$/;"	m	struct:GinScanEntryData
+nmsgs	xact.h	/^	int			nmsgs;			\/* number of shared inval msgs *\/$/;"	m	struct:xl_xact_commit
+node	gin.h	/^	RelFileNode node;$/;"	m	struct:ginxlogCreatePostingTree
+node	gin.h	/^	RelFileNode node;$/;"	m	struct:ginxlogDeleteListPages
+node	gin.h	/^	RelFileNode node;$/;"	m	struct:ginxlogDeletePage
+node	gin.h	/^	RelFileNode node;$/;"	m	struct:ginxlogInsert
+node	gin.h	/^	RelFileNode node;$/;"	m	struct:ginxlogInsertListPage
+node	gin.h	/^	RelFileNode node;$/;"	m	struct:ginxlogSplit
+node	gin.h	/^	RelFileNode node;$/;"	m	struct:ginxlogUpdateMeta
+node	gin.h	/^	RelFileNode node;$/;"	m	struct:ginxlogVacuumPage
+node	gist_private.h	/^	RelFileNode node;$/;"	m	struct:gistxlogInsertComplete
+node	gist_private.h	/^	RelFileNode node;$/;"	m	struct:gistxlogPageDelete
+node	gist_private.h	/^	RelFileNode node;$/;"	m	struct:gistxlogPageSplit
+node	gist_private.h	/^	RelFileNode node;$/;"	m	struct:gistxlogPageUpdate
+node	htup.h	/^	RelFileNode node;$/;"	m	struct:xl_heap_clean
+node	htup.h	/^	RelFileNode node;$/;"	m	struct:xl_heap_cleanup_info
+node	htup.h	/^	RelFileNode node;$/;"	m	struct:xl_heap_freeze
+node	htup.h	/^	RelFileNode node;$/;"	m	struct:xl_heap_newpage
+node	htup.h	/^	RelFileNode node;$/;"	m	struct:xl_heaptid
+node	nbtree.h	/^	RelFileNode node;			\/* RelFileNode of the index *\/$/;"	m	struct:xl_btree_delete
+node	nbtree.h	/^	RelFileNode node;$/;"	m	struct:xl_btree_newroot
+node	nbtree.h	/^	RelFileNode node;$/;"	m	struct:xl_btree_reuse_page
+node	nbtree.h	/^	RelFileNode node;$/;"	m	struct:xl_btree_split
+node	nbtree.h	/^	RelFileNode node;$/;"	m	struct:xl_btree_vacuum
+node	nbtree.h	/^	RelFileNode node;$/;"	m	struct:xl_btreetid
+node	xlog_internal.h	/^	RelFileNode node;			\/* relation containing block *\/$/;"	m	struct:BkpBlock
+npage	gist_private.h	/^	uint16		npage;$/;"	m	struct:gistxlogPageSplit
+nredirected	htup.h	/^	uint16		nredirected;$/;"	m	struct:xl_heap_clean
+nrels	xact.h	/^	int			nrels;			\/* number of RelFileNodes *\/$/;"	m	struct:xl_xact_abort
+nrels	xact.h	/^	int			nrels;			\/* number of RelFileNodes *\/$/;"	m	struct:xl_xact_commit
+nsn	gist.h	/^	GistNSN		nsn;			\/* this value must change on page split *\/$/;"	m	struct:GISTPageOpaqueData
+nsubxacts	xact.h	/^	int			nsubxacts;		\/* number of subtransaction XIDs *\/$/;"	m	struct:xl_xact_abort
+nsubxacts	xact.h	/^	int			nsubxacts;		\/* number of subtransaction XIDs *\/$/;"	m	struct:xl_xact_assignment
+nsubxacts	xact.h	/^	int			nsubxacts;		\/* number of subtransaction XIDs *\/$/;"	m	struct:xl_xact_commit
+ntodelete	gist_private.h	/^	uint16		ntodelete;$/;"	m	struct:gistxlogPageUpdate
+ntuples	gin.h	/^	int32		ntuples;		\/* if ntuples > 0 then metadata.tail was$/;"	m	struct:ginxlogUpdateMeta
+ntuples	gin.h	/^	int32		ntuples;$/;"	m	struct:ginxlogInsertListPage
+ntuples	gin.h	/^	uint32		ntuples;$/;"	m	struct:GinTupleCollector
+num	gist_private.h	/^	int			num;			\/* number of index tuples following *\/$/;"	m	struct:gistxlogPage
+numKilled	nbtree.h	/^	int			numKilled;		\/* number of currently stored items *\/$/;"	m	struct:BTScanOpaqueData
+num_check	tupdesc.h	/^	uint16		num_check;$/;"	m	struct:tupleConstr
+num_defval	tupdesc.h	/^	uint16		num_defval;$/;"	m	struct:tupleConstr
+num_heap_tuples	genam.h	/^	double		num_heap_tuples;	\/* tuples remaining in heap *\/$/;"	m	struct:IndexVacuumInfo
+num_index_tuples	genam.h	/^	double		num_index_tuples;		\/* tuples remaining *\/$/;"	m	struct:IndexBulkDeleteResult
+num_pages	genam.h	/^	BlockNumber num_pages;		\/* pages remaining in index *\/$/;"	m	struct:IndexBulkDeleteResult
+num_slots	slru.h	/^	int			num_slots;$/;"	m	struct:SlruSharedData
+number	gin.h	/^	uint32		number;$/;"	m	struct:EntryAccumulator
+numberOfKeys	nbtree.h	/^	int			numberOfKeys;	\/* number of preprocessed scan keys *\/$/;"	m	struct:BTScanOpaqueData
+numberOfKeys	relscan.h	/^	int			numberOfKeys;	\/* number of scan keys *\/$/;"	m	struct:IndexScanDescData
+nxids	multixact.h	/^	int32		nxids;			\/* number of member XIDs *\/$/;"	m	struct:xl_multixact_create
+off	gin.h	/^	OffsetNumber off;$/;"	m	struct:GinBtreeStack
+offset	gin.h	/^	OffsetNumber offset;$/;"	m	struct:GinScanEntryData
+offset	gin.h	/^	OffsetNumber offset;$/;"	m	struct:ginxlogInsert
+offset	gist.h	/^	OffsetNumber offset;$/;"	m	struct:GISTENTRY
+offset	reloptions.h	/^	int			offset;			\/* offset of field in result struct *\/$/;"	m	struct:__anon11
+oidCount	transam.h	/^	uint32		oidCount;		\/* OIDs available before must do XLOG work *\/$/;"	m	struct:VariableCacheData
+oldestXid	transam.h	/^	TransactionId oldestXid;	\/* cluster-wide minimum datfrozenxid *\/$/;"	m	struct:VariableCacheData
+oldestXidDB	transam.h	/^	Oid			oldestXidDB;	\/* database with minimum datfrozenxid *\/$/;"	m	struct:VariableCacheData
+oneCol	gin.h	/^	bool		oneCol;$/;"	m	struct:GinState
+opaque	relscan.h	/^	void	   *opaque;			\/* access-method-specific info *\/$/;"	m	struct:IndexScanDescData
+optname	reloptions.h	/^	const char *optname;		\/* option's name *\/$/;"	m	struct:__anon11
+opttype	reloptions.h	/^	relopt_type opttype;		\/* option's datatype *\/$/;"	m	struct:__anon11
+origTupdesc	gin.h	/^	TupleDesc	origTupdesc;$/;"	m	struct:GinState
+origblkno	gist_private.h	/^	BlockNumber origblkno;		\/* splitted page *\/$/;"	m	struct:gistxlogPageSplit
+origleaf	gist_private.h	/^	bool		origleaf;		\/* was splitted page a leaf page? *\/$/;"	m	struct:gistxlogPageSplit
+outdesc	tupconvert.h	/^	TupleDesc	outdesc;		\/* tupdesc for result rowtype *\/$/;"	m	struct:TupleConversionMap
+outisnull	tupconvert.h	/^	bool	   *outisnull;$/;"	m	struct:TupleConversionMap
+outvalues	tupconvert.h	/^	Datum	   *outvalues;		\/* workspace for constructing result *\/$/;"	m	struct:TupleConversionMap
+page	gist.h	/^	Page		page;$/;"	m	struct:GISTENTRY
+page	gist_private.h	/^	Page		page;			\/* to operate *\/$/;"	m	struct:SplitedPageLayout
+page	gist_private.h	/^	Page		page;$/;"	m	struct:GISTInsertStack
+pageData	gist_private.h	/^	ItemResult	pageData[BLCKSZ \/ sizeof(IndexTupleData)];$/;"	m	struct:GISTScanOpaqueData
+pageOffset	gist_private.h	/^	OffsetNumber pageOffset;	\/* offset in index page *\/$/;"	m	struct:ItemResult
+page_buffer	slru.h	/^	char	  **page_buffer;$/;"	m	struct:SlruSharedData
+page_dirty	slru.h	/^	bool	   *page_dirty;$/;"	m	struct:SlruSharedData
+page_lru_count	slru.h	/^	int		   *page_lru_count;$/;"	m	struct:SlruSharedData
+page_number	slru.h	/^	int		   *page_number;$/;"	m	struct:SlruSharedData
+page_status	slru.h	/^	SlruPageStatus *page_status;$/;"	m	struct:SlruSharedData
+pages_deleted	genam.h	/^	BlockNumber pages_deleted;	\/* # unused pages in index *\/$/;"	m	struct:IndexBulkDeleteResult
+pages_free	genam.h	/^	BlockNumber pages_free;		\/* # pages available for reuse *\/$/;"	m	struct:IndexBulkDeleteResult
+pages_removed	genam.h	/^	BlockNumber pages_removed;	\/* # removed during vacuum operation *\/$/;"	m	struct:IndexBulkDeleteResult
+parent	gin.h	/^	struct GinBtreeStack *parent;$/;"	m	struct:GinBtreeStack	typeref:struct:GinBtreeStack::GinBtreeStack
+parent	gist_private.h	/^	struct GISTInsertStack *parent;$/;"	m	struct:GISTInsertStack	typeref:struct:GISTInsertStack::GISTInsertStack
+parentBlkno	gin.h	/^	BlockNumber parentBlkno;$/;"	m	struct:ginxlogDeletePage
+parentOffset	gin.h	/^	OffsetNumber parentOffset;$/;"	m	struct:ginxlogDeletePage
+parentlsn	gist_private.h	/^	GistNSN		parentlsn;$/;"	m	struct:GISTSearchStack
+partialMatch	gin.h	/^	TIDBitmap  *partialMatch;$/;"	m	struct:GinScanEntryData
+partialMatchIterator	gin.h	/^	TBMIterator *partialMatchIterator;$/;"	m	struct:GinScanEntryData
+partialMatchResult	gin.h	/^	TBMIterateResult *partialMatchResult;$/;"	m	struct:GinScanEntryData
+penaltyFn	gist_private.h	/^	FmgrInfo	penaltyFn[INDEX_MAX_KEYS];$/;"	m	struct:GISTSTATE
+picksplitFn	gist_private.h	/^	FmgrInfo	picksplitFn[INDEX_MAX_KEYS];$/;"	m	struct:GISTSTATE
+pitem	gin.h	/^	PostingItem pitem;$/;"	m	struct:GinBtreeData
+placeToPage	gin.h	/^	void		(*placeToPage) (GinBtree, Buffer, OffsetNumber, XLogRecData **);$/;"	m	struct:GinBtreeData
+predictNumber	gin.h	/^	uint32		predictNumber;$/;"	m	struct:GinBtreeStack
+predictNumberResult	gin.h	/^	uint32		predictNumberResult;$/;"	m	struct:GinScanEntryData
+prevTail	gin.h	/^	BlockNumber prevTail;$/;"	m	struct:ginxlogUpdateMeta
+pval	gin.h	/^	bool	   *pval;$/;"	m	struct:GinScanEntryData
+qual_ok	gist_private.h	/^	bool		qual_ok;		\/* false if qual can never be satisfied *\/$/;"	m	struct:GISTScanOpaqueData
+qual_ok	nbtree.h	/^	bool		qual_ok;		\/* false if qual can never be satisfied *\/$/;"	m	struct:BTScanOpaqueData
+query	gin.h	/^	Datum		query;$/;"	m	struct:GinScanKeyData
+r	gist_private.h	/^	Relation	r;$/;"	m	struct:__anon5
+rblkno	gin.h	/^	BlockNumber rblkno;$/;"	m	struct:ginxlogSplit
+rbnode	gin.h	/^	RBNode		rbnode;$/;"	m	struct:EntryAccumulator
+real_val	reloptions.h	/^		double		real_val;$/;"	m	union:relopt_value::__anon10
+recheck	gist_private.h	/^	bool		recheck;$/;"	m	struct:ItemResult
+recheckCurItem	gin.h	/^	bool		recheckCurItem;$/;"	m	struct:GinScanKeyData
+reduceResult	gin.h	/^	bool		reduceResult;$/;"	m	struct:GinScanEntryData
+rel	gist.h	/^	Relation	rel;$/;"	m	struct:GISTENTRY
+relopt_bool	reloptions.h	/^typedef struct relopt_bool$/;"	s
+relopt_bool	reloptions.h	/^} relopt_bool;$/;"	t	typeref:struct:relopt_bool
+relopt_gen	reloptions.h	/^typedef struct relopt_gen$/;"	s
+relopt_gen	reloptions.h	/^} relopt_gen;$/;"	t	typeref:struct:relopt_gen
+relopt_int	reloptions.h	/^typedef struct relopt_int$/;"	s
+relopt_int	reloptions.h	/^} relopt_int;$/;"	t	typeref:struct:relopt_int
+relopt_kind	reloptions.h	/^typedef enum relopt_kind$/;"	g
+relopt_kind	reloptions.h	/^} relopt_kind;$/;"	t	typeref:enum:relopt_kind
+relopt_parse_elt	reloptions.h	/^} relopt_parse_elt;$/;"	t	typeref:struct:__anon11
+relopt_real	reloptions.h	/^typedef struct relopt_real$/;"	s
+relopt_real	reloptions.h	/^} relopt_real;$/;"	t	typeref:struct:relopt_real
+relopt_string	reloptions.h	/^typedef struct relopt_string$/;"	s
+relopt_string	reloptions.h	/^} relopt_string;$/;"	t	typeref:struct:relopt_string
+relopt_type	reloptions.h	/^typedef enum relopt_type$/;"	g
+relopt_type	reloptions.h	/^} relopt_type;$/;"	t	typeref:enum:relopt_type
+relopt_value	reloptions.h	/^typedef struct relopt_value$/;"	s
+relopt_value	reloptions.h	/^} relopt_value;$/;"	t	typeref:struct:relopt_value
+rightLink	gin.h	/^	BlockNumber rightLink;$/;"	m	struct:ginxlogDeletePage
+rightblk	nbtree.h	/^	BlockNumber rightblk;		\/* child block's right sibling *\/$/;"	m	struct:xl_btree_delete_page
+rightblkno	gin.h	/^	BlockNumber rightblkno;$/;"	m	struct:GinBtreeData
+rightbound	gin.h	/^	ItemPointerData rightbound; \/* used only in posting tree *\/$/;"	m	struct:ginxlogSplit
+rightlink	gin.h	/^	BlockNumber rightlink;		\/* next page if any *\/$/;"	m	struct:GinPageOpaqueData
+rightlink	gin.h	/^	BlockNumber rightlink;$/;"	m	struct:ginxlogInsertListPage
+rightlink	gist.h	/^	BlockNumber rightlink;		\/* next page if any *\/$/;"	m	struct:GISTPageOpaqueData
+rightsib	nbtree.h	/^	BlockNumber rightsib;		\/* new right page *\/$/;"	m	struct:xl_btree_split
+rm_cleanup	xlog_internal.h	/^	void		(*rm_cleanup) (void);$/;"	m	struct:RmgrData
+rm_desc	xlog_internal.h	/^	void		(*rm_desc) (StringInfo buf, uint8 xl_info, char *rec);$/;"	m	struct:RmgrData
+rm_name	xlog_internal.h	/^	const char *rm_name;$/;"	m	struct:RmgrData
+rm_redo	xlog_internal.h	/^	void		(*rm_redo) (XLogRecPtr lsn, XLogRecord *rptr);$/;"	m	struct:RmgrData
+rm_safe_restartpoint	xlog_internal.h	/^	bool		(*rm_safe_restartpoint) (void);$/;"	m	struct:RmgrData
+rm_startup	xlog_internal.h	/^	void		(*rm_startup) (void);$/;"	m	struct:RmgrData
+rnext	nbtree.h	/^	BlockNumber rnext;			\/* next block (orig page's rightlink) *\/$/;"	m	struct:xl_btree_split
+root	nbtree.h	/^	BlockNumber root;$/;"	m	struct:xl_btree_metadata
+rootBlkno	gin.h	/^	BlockNumber rootBlkno;$/;"	m	struct:ginxlogSplit
+rootblk	nbtree.h	/^	BlockNumber rootblk;		\/* location of new root *\/$/;"	m	struct:xl_btree_newroot
+rrlink	gin.h	/^	BlockNumber rrlink;$/;"	m	struct:ginxlogSplit
+rs_allow_strat	relscan.h	/^	bool		rs_allow_strat; \/* allow or disallow use of access strategy *\/$/;"	m	struct:HeapScanDescData
+rs_allow_sync	relscan.h	/^	bool		rs_allow_sync;	\/* allow or disallow use of syncscan *\/$/;"	m	struct:HeapScanDescData
+rs_bitmapscan	relscan.h	/^	bool		rs_bitmapscan;	\/* true if this is really a bitmap scan *\/$/;"	m	struct:HeapScanDescData
+rs_cblock	relscan.h	/^	BlockNumber rs_cblock;		\/* current block # in scan, if any *\/$/;"	m	struct:HeapScanDescData
+rs_cbuf	relscan.h	/^	Buffer		rs_cbuf;		\/* current buffer in scan, if any *\/$/;"	m	struct:HeapScanDescData
+rs_cindex	relscan.h	/^	int			rs_cindex;		\/* current tuple's index in vistuples *\/$/;"	m	struct:HeapScanDescData
+rs_ctup	relscan.h	/^	HeapTupleData rs_ctup;		\/* current tuple in scan, if any *\/$/;"	m	struct:HeapScanDescData
+rs_inited	relscan.h	/^	bool		rs_inited;		\/* false = scan not init'd yet *\/$/;"	m	struct:HeapScanDescData
+rs_key	relscan.h	/^	ScanKey		rs_key;			\/* array of scan key descriptors *\/$/;"	m	struct:HeapScanDescData
+rs_mctid	relscan.h	/^	ItemPointerData rs_mctid;	\/* marked scan position, if any *\/$/;"	m	struct:HeapScanDescData
+rs_mindex	relscan.h	/^	int			rs_mindex;		\/* marked tuple's saved index *\/$/;"	m	struct:HeapScanDescData
+rs_nblocks	relscan.h	/^	BlockNumber rs_nblocks;		\/* number of blocks to scan *\/$/;"	m	struct:HeapScanDescData
+rs_nkeys	relscan.h	/^	int			rs_nkeys;		\/* number of scan keys *\/$/;"	m	struct:HeapScanDescData
+rs_ntuples	relscan.h	/^	int			rs_ntuples;		\/* number of visible tuples on page *\/$/;"	m	struct:HeapScanDescData
+rs_pageatatime	relscan.h	/^	bool		rs_pageatatime; \/* verify visibility page-at-a-time? *\/$/;"	m	struct:HeapScanDescData
+rs_rd	relscan.h	/^	Relation	rs_rd;			\/* heap relation descriptor *\/$/;"	m	struct:HeapScanDescData
+rs_snapshot	relscan.h	/^	Snapshot	rs_snapshot;	\/* snapshot to see *\/$/;"	m	struct:HeapScanDescData
+rs_startblock	relscan.h	/^	BlockNumber rs_startblock;	\/* block # to start at *\/$/;"	m	struct:HeapScanDescData
+rs_strategy	relscan.h	/^	BufferAccessStrategy rs_strategy;	\/* access strategy for reads *\/$/;"	m	struct:HeapScanDescData
+rs_syncscan	relscan.h	/^	bool		rs_syncscan;	\/* report location to syncscan logic? *\/$/;"	m	struct:HeapScanDescData
+rs_vistuples	relscan.h	/^	OffsetNumber rs_vistuples[MaxHeapTuplesPerPage];	\/* their offsets *\/$/;"	m	struct:HeapScanDescData
+scan	relscan.h	/^	HeapScanDesc scan;			\/* only valid in heap-scan case *\/$/;"	m	struct:SysScanDescData
+scanEntry	gin.h	/^	GinScanEntry scanEntry;$/;"	m	struct:GinScanKeyData
+searchMode	gin.h	/^	bool		searchMode;$/;"	m	struct:GinBtreeData
+separator	gin.h	/^	OffsetNumber separator;$/;"	m	struct:ginxlogSplit
+shared	slru.h	/^	SlruShared	shared;$/;"	m	struct:SlruCtlData
+shared_lock	htup.h	/^	bool		shared_lock;	\/* shared or exclusive row lock? *\/$/;"	m	struct:xl_heap_lock
+shouldSort	gin.h	/^	bool		shouldSort;$/;"	m	struct:EntryAccumulator
+sk_argument	skey.h	/^	Datum		sk_argument;	\/* data to compare *\/$/;"	m	struct:ScanKeyData
+sk_attno	skey.h	/^	AttrNumber	sk_attno;		\/* table or index column number *\/$/;"	m	struct:ScanKeyData
+sk_flags	skey.h	/^	int			sk_flags;		\/* flags, see below *\/$/;"	m	struct:ScanKeyData
+sk_func	skey.h	/^	FmgrInfo	sk_func;		\/* lookup info for function to call *\/$/;"	m	struct:ScanKeyData
+sk_strategy	skey.h	/^	StrategyNumber sk_strategy; \/* operator strategy number *\/$/;"	m	struct:ScanKeyData
+sk_subtype	skey.h	/^	Oid			sk_subtype;		\/* strategy subtype *\/$/;"	m	struct:ScanKeyData
+spl_equiv	gist_private.h	/^	bool	   *spl_equiv;		\/* equivalent tuples which can be freely$/;"	m	struct:GistSplitVector
+spl_lattr	gist_private.h	/^	Datum		spl_lattr[INDEX_MAX_KEYS];		\/* Union of subkeys in$/;"	m	struct:GistSplitVector
+spl_ldatum	gist.h	/^	Datum		spl_ldatum;		\/* Union of keys in spl_left *\/$/;"	m	struct:GIST_SPLITVEC
+spl_ldatum_exists	gist.h	/^	bool		spl_ldatum_exists;		\/* true, if spl_ldatum already exists. *\/$/;"	m	struct:GIST_SPLITVEC
+spl_left	gist.h	/^	OffsetNumber *spl_left;		\/* array of entries that go left *\/$/;"	m	struct:GIST_SPLITVEC
+spl_leftvalid	gist_private.h	/^	bool		spl_leftvalid;$/;"	m	struct:GistSplitVector
+spl_lisnull	gist_private.h	/^	bool		spl_lisnull[INDEX_MAX_KEYS];$/;"	m	struct:GistSplitVector
+spl_nleft	gist.h	/^	int			spl_nleft;		\/* size of this array *\/$/;"	m	struct:GIST_SPLITVEC
+spl_nright	gist.h	/^	int			spl_nright;		\/* size of the array *\/$/;"	m	struct:GIST_SPLITVEC
+spl_rattr	gist_private.h	/^	Datum		spl_rattr[INDEX_MAX_KEYS];		\/* Union of subkeys in$/;"	m	struct:GistSplitVector
+spl_rdatum	gist.h	/^	Datum		spl_rdatum;		\/* Union of keys in spl_right *\/$/;"	m	struct:GIST_SPLITVEC
+spl_rdatum_exists	gist.h	/^	bool		spl_rdatum_exists;		\/* true, if spl_rdatum already exists. *\/$/;"	m	struct:GIST_SPLITVEC
+spl_right	gist.h	/^	OffsetNumber *spl_right;	\/* array of entries that go right *\/$/;"	m	struct:GIST_SPLITVEC
+spl_rightvalid	gist_private.h	/^	bool		spl_rightvalid;$/;"	m	struct:GistSplitVector
+spl_risnull	gist_private.h	/^	bool		spl_risnull[INDEX_MAX_KEYS];$/;"	m	struct:GistSplitVector
+splitPage	gin.h	/^	Page		(*splitPage) (GinBtree, Buffer, Buffer, OffsetNumber, XLogRecData **);$/;"	m	struct:GinBtreeData
+splitVector	gist_private.h	/^	GIST_SPLITVEC splitVector;	\/* to\/from PickSplit method *\/$/;"	m	struct:GistSplitVector
+stack	gin.h	/^	GinBtreeStack *stack;$/;"	m	struct:__anon2
+stack	gist_private.h	/^	GISTInsertStack *stack;$/;"	m	struct:__anon5
+stack	gist_private.h	/^	GISTSearchStack *stack;$/;"	m	struct:GISTScanOpaqueData
+std	xlog_internal.h	/^	XLogPageHeaderData std;		\/* standard header fields *\/$/;"	m	struct:XLogLongPageHeaderData
+store_att_byval	tupmacs.h	198;"	d
+store_att_byval	tupmacs.h	222;"	d
+strategy	genam.h	/^	BufferAccessStrategy strategy;		\/* access strategy for reads *\/$/;"	m	struct:IndexVacuumInfo
+strategy	gin.h	/^	StrategyNumber strategy;$/;"	m	struct:GinScanEntryData
+strategy	gin.h	/^	StrategyNumber strategy;$/;"	m	struct:GinScanKeyData
+strategy	hio.h	/^	BufferAccessStrategy strategy;		\/* our BULKWRITE strategy object *\/$/;"	m	struct:BulkInsertStateData
+string_val	reloptions.h	/^		char	   *string_val; \/* allocated separately *\/$/;"	m	union:relopt_value::__anon10
+sumsize	gin.h	/^	uint32		sumsize;$/;"	m	struct:GinTupleCollector
+t_bits	htup.h	/^	bits8		t_bits[1];		\/* bitmap of NULLs -- VARIABLE LENGTH *\/$/;"	m	struct:HeapTupleHeaderData
+t_bits	htup.h	/^	bits8		t_bits[1];		\/* bitmap of NULLs -- VARIABLE LENGTH *\/$/;"	m	struct:MinimalTupleData
+t_choice	htup.h	/^	}			t_choice;$/;"	m	struct:HeapTupleHeaderData	typeref:union:HeapTupleHeaderData::__anon8
+t_cid	htup.h	/^		CommandId	t_cid;		\/* inserting or deleting command ID, or both *\/$/;"	m	union:HeapTupleFields::__anon7
+t_ctid	htup.h	/^	ItemPointerData t_ctid;		\/* current TID of this or newer tuple *\/$/;"	m	struct:HeapTupleHeaderData
+t_data	htup.h	/^	HeapTupleHeader t_data;		\/* -> tuple header and data *\/$/;"	m	struct:HeapTupleData
+t_datum	htup.h	/^		DatumTupleFields t_datum;$/;"	m	union:HeapTupleHeaderData::__anon8
+t_field3	htup.h	/^	}			t_field3;$/;"	m	struct:HeapTupleFields	typeref:union:HeapTupleFields::__anon7
+t_heap	htup.h	/^		HeapTupleFields t_heap;$/;"	m	union:HeapTupleHeaderData::__anon8
+t_hoff	htup.h	/^	uint8		t_hoff;			\/* sizeof header incl. bitmap, padding *\/$/;"	m	struct:HeapTupleHeaderData
+t_hoff	htup.h	/^	uint8		t_hoff;			\/* sizeof header incl. bitmap, padding *\/$/;"	m	struct:MinimalTupleData
+t_hoff	htup.h	/^	uint8		t_hoff;$/;"	m	struct:xl_heap_header
+t_info	itup.h	/^	unsigned short t_info;		\/* various info about tuple *\/$/;"	m	struct:IndexTupleData
+t_infomask	htup.h	/^	uint16		t_infomask;		\/* various flag bits, see below *\/$/;"	m	struct:HeapTupleHeaderData
+t_infomask	htup.h	/^	uint16		t_infomask;		\/* various flag bits, see below *\/$/;"	m	struct:MinimalTupleData
+t_infomask	htup.h	/^	uint16		t_infomask;$/;"	m	struct:xl_heap_header
+t_infomask2	htup.h	/^	uint16		t_infomask2;	\/* number of attributes + various flags *\/$/;"	m	struct:HeapTupleHeaderData
+t_infomask2	htup.h	/^	uint16		t_infomask2;	\/* number of attributes + various flags *\/$/;"	m	struct:MinimalTupleData
+t_infomask2	htup.h	/^	uint16		t_infomask2;$/;"	m	struct:xl_heap_header
+t_len	htup.h	/^	uint32		t_len;			\/* actual length of minimal tuple *\/$/;"	m	struct:MinimalTupleData
+t_len	htup.h	/^	uint32		t_len;			\/* length of *t_data *\/$/;"	m	struct:HeapTupleData
+t_self	htup.h	/^	ItemPointerData t_self;		\/* SelfItemPointer *\/$/;"	m	struct:HeapTupleData
+t_tableOid	htup.h	/^	Oid			t_tableOid;		\/* table the tuple came from *\/$/;"	m	struct:HeapTupleData
+t_tid	itup.h	/^	ItemPointerData t_tid;		\/* reference TID to heap tuple *\/$/;"	m	struct:IndexTupleData
+t_xmax	htup.h	/^	TransactionId t_xmax;		\/* deleting or locking xact ID *\/$/;"	m	struct:HeapTupleFields
+t_xmin	htup.h	/^	TransactionId t_xmin;		\/* inserting xact ID *\/$/;"	m	struct:HeapTupleFields
+t_xvac	htup.h	/^		TransactionId t_xvac;	\/* old-style VACUUM FULL xact ID *\/$/;"	m	union:HeapTupleFields::__anon7
+tail	gin.h	/^	BlockNumber tail;$/;"	m	struct:GinMetaPageData
+tailFreeSize	gin.h	/^	uint32		tailFreeSize;$/;"	m	struct:GinMetaPageData
+target	htup.h	/^	xl_heaptid	target;			\/* deleted tuple id *\/$/;"	m	struct:xl_heap_delete
+target	htup.h	/^	xl_heaptid	target;			\/* deleted tuple id *\/$/;"	m	struct:xl_heap_update
+target	htup.h	/^	xl_heaptid	target;			\/* inserted tuple id *\/$/;"	m	struct:xl_heap_insert
+target	htup.h	/^	xl_heaptid	target;			\/* locked tuple id *\/$/;"	m	struct:xl_heap_lock
+target	htup.h	/^	xl_heaptid	target;			\/* updated tuple id *\/$/;"	m	struct:xl_heap_inplace
+target	nbtree.h	/^	xl_btreetid target;			\/* deleted tuple id in parent page *\/$/;"	m	struct:xl_btree_delete_page
+target	nbtree.h	/^	xl_btreetid target;			\/* inserted tuple id *\/$/;"	m	struct:xl_btree_insert
+tdhasoid	tupdesc.h	/^	bool		tdhasoid;		\/* tuple has oid attribute in its header *\/$/;"	m	struct:tupleDesc
+tdrefcount	tupdesc.h	/^	int			tdrefcount;		\/* reference count, or -1 if not counting *\/$/;"	m	struct:tupleDesc
+tdtypeid	tupdesc.h	/^	Oid			tdtypeid;		\/* composite type ID for tuple type *\/$/;"	m	struct:tupleDesc
+tdtypmod	tupdesc.h	/^	int32		tdtypmod;		\/* typmod for tuple type *\/$/;"	m	struct:tupleDesc
+tempCtx	gin.h	/^	MemoryContext tempCtx;$/;"	m	struct:GinScanOpaqueData
+tempCxt	gist_private.h	/^	MemoryContext tempCxt;$/;"	m	struct:GISTScanOpaqueData
+tid	htup.h	/^	ItemPointerData tid;		\/* changed tuple id *\/$/;"	m	struct:xl_heaptid
+tid	nbtree.h	/^	ItemPointerData tid;		\/* changed tuple id *\/$/;"	m	struct:xl_btreetid
+toDelete	gin.h	/^	BlockNumber toDelete[GIN_NDELETE_AT_ONCE];$/;"	m	struct:ginxlogDeleteListPages
+tree	gin.h	/^	RBTree	   *tree;$/;"	m	struct:__anon3
+tsId	xact.h	/^	Oid			tsId;			\/* MyDatabaseTableSpace *\/$/;"	m	struct:xl_xact_commit
+tupdesc	gin.h	/^	TupleDesc	tupdesc[INDEX_MAX_KEYS];$/;"	m	struct:GinState
+tupdesc	gist_private.h	/^	TupleDesc	tupdesc;$/;"	m	struct:GISTSTATE
+tupleConstr	tupdesc.h	/^typedef struct tupleConstr$/;"	s
+tupleDesc	tupdesc.h	/^typedef struct tupleDesc$/;"	s
+tuples	gin.h	/^	IndexTuple *tuples;$/;"	m	struct:GinTupleCollector
+tuples_removed	genam.h	/^	double		tuples_removed; \/* # removed during vacuum operation *\/$/;"	m	struct:IndexBulkDeleteResult
+type	reloptions.h	/^	relopt_type type;$/;"	m	struct:relopt_gen
+unionFn	gist_private.h	/^	FmgrInfo	unionFn[INDEX_MAX_KEYS];$/;"	m	struct:GISTSTATE
+updateBlkno	gin.h	/^	BlockNumber updateBlkno;$/;"	m	struct:ginxlogInsert
+updateBlkno	gin.h	/^	BlockNumber updateBlkno;$/;"	m	struct:ginxlogSplit
+useFastUpdate	gin.h	/^	bool		useFastUpdate;	\/* use fast updates? *\/$/;"	m	struct:GinOptions
+validate_cb	reloptions.h	/^	validate_string_relopt validate_cb;$/;"	m	struct:relopt_string
+validate_string_relopt	reloptions.h	/^typedef void (*validate_string_relopt) (char *value);$/;"	t
+value	gin.h	/^	Datum		value;$/;"	m	struct:EntryAccumulator
+values	reloptions.h	/^	}			values;$/;"	m	struct:relopt_value	typeref:union:relopt_value::__anon10
+vector	gist.h	/^	GISTENTRY	vector[1];$/;"	m	struct:__anon4
+vl_len_	gin.h	/^	int32		vl_len_;		\/* varlena header (do not touch directly!) *\/$/;"	m	struct:GinOptions
+xact	nbtree.h	/^		TransactionId xact;		\/* next transaction ID, if deleted *\/$/;"	m	union:BTPageOpaqueData::__anon9
+xactStartedInRecovery	relscan.h	/^	bool		xactStartedInRecovery;	\/* prevents killing\/seeing killed$/;"	m	struct:IndexScanDescData
+xact_time	xact.h	/^	TimestampTz xact_time;		\/* time of abort *\/$/;"	m	struct:xl_xact_abort
+xact_time	xact.h	/^	TimestampTz xact_time;		\/* time of commit *\/$/;"	m	struct:xl_xact_commit
+xid	xact.h	/^	TransactionId xid;			\/* XID of prepared xact *\/$/;"	m	struct:xl_xact_abort_prepared
+xid	xact.h	/^	TransactionId xid;			\/* XID of prepared xact *\/$/;"	m	struct:xl_xact_commit_prepared
+xidStopLimit	transam.h	/^	TransactionId xidStopLimit; \/* refuse to advance nextXid beyond here *\/$/;"	m	struct:VariableCacheData
+xidVacLimit	transam.h	/^	TransactionId xidVacLimit;	\/* start forcing autovacuums here *\/$/;"	m	struct:VariableCacheData
+xidWarnLimit	transam.h	/^	TransactionId xidWarnLimit; \/* start complaining here *\/$/;"	m	struct:VariableCacheData
+xidWrapLimit	transam.h	/^	TransactionId xidWrapLimit; \/* where the world ends *\/$/;"	m	struct:VariableCacheData
+xid_is_mxact	htup.h	/^	bool		xid_is_mxact;	\/* is it? *\/$/;"	m	struct:xl_heap_lock
+xids	multixact.h	/^	TransactionId xids[1];		\/* VARIABLE LENGTH ARRAY *\/$/;"	m	struct:xl_multixact_create
+xinfo	xact.h	/^	uint32		xinfo;			\/* info flags *\/$/;"	m	struct:xl_xact_commit
+xl_btree_delete	nbtree.h	/^typedef struct xl_btree_delete$/;"	s
+xl_btree_delete	nbtree.h	/^} xl_btree_delete;$/;"	t	typeref:struct:xl_btree_delete
+xl_btree_delete_page	nbtree.h	/^typedef struct xl_btree_delete_page$/;"	s
+xl_btree_delete_page	nbtree.h	/^} xl_btree_delete_page;$/;"	t	typeref:struct:xl_btree_delete_page
+xl_btree_insert	nbtree.h	/^typedef struct xl_btree_insert$/;"	s
+xl_btree_insert	nbtree.h	/^} xl_btree_insert;$/;"	t	typeref:struct:xl_btree_insert
+xl_btree_metadata	nbtree.h	/^typedef struct xl_btree_metadata$/;"	s
+xl_btree_metadata	nbtree.h	/^} xl_btree_metadata;$/;"	t	typeref:struct:xl_btree_metadata
+xl_btree_newroot	nbtree.h	/^typedef struct xl_btree_newroot$/;"	s
+xl_btree_newroot	nbtree.h	/^} xl_btree_newroot;$/;"	t	typeref:struct:xl_btree_newroot
+xl_btree_reuse_page	nbtree.h	/^typedef struct xl_btree_reuse_page$/;"	s
+xl_btree_reuse_page	nbtree.h	/^} xl_btree_reuse_page;$/;"	t	typeref:struct:xl_btree_reuse_page
+xl_btree_split	nbtree.h	/^typedef struct xl_btree_split$/;"	s
+xl_btree_split	nbtree.h	/^} xl_btree_split;$/;"	t	typeref:struct:xl_btree_split
+xl_btree_vacuum	nbtree.h	/^typedef struct xl_btree_vacuum$/;"	s
+xl_btree_vacuum	nbtree.h	/^} xl_btree_vacuum;$/;"	t	typeref:struct:xl_btree_vacuum
+xl_btreetid	nbtree.h	/^typedef struct xl_btreetid$/;"	s
+xl_btreetid	nbtree.h	/^} xl_btreetid;$/;"	t	typeref:struct:xl_btreetid
+xl_crc	xlog.h	/^	pg_crc32	xl_crc;			\/* CRC for this record *\/$/;"	m	struct:XLogRecord
+xl_heap_clean	htup.h	/^typedef struct xl_heap_clean$/;"	s
+xl_heap_clean	htup.h	/^} xl_heap_clean;$/;"	t	typeref:struct:xl_heap_clean
+xl_heap_cleanup_info	htup.h	/^typedef struct xl_heap_cleanup_info$/;"	s
+xl_heap_cleanup_info	htup.h	/^} xl_heap_cleanup_info;$/;"	t	typeref:struct:xl_heap_cleanup_info
+xl_heap_delete	htup.h	/^typedef struct xl_heap_delete$/;"	s
+xl_heap_delete	htup.h	/^} xl_heap_delete;$/;"	t	typeref:struct:xl_heap_delete
+xl_heap_freeze	htup.h	/^typedef struct xl_heap_freeze$/;"	s
+xl_heap_freeze	htup.h	/^} xl_heap_freeze;$/;"	t	typeref:struct:xl_heap_freeze
+xl_heap_header	htup.h	/^typedef struct xl_heap_header$/;"	s
+xl_heap_header	htup.h	/^} xl_heap_header;$/;"	t	typeref:struct:xl_heap_header
+xl_heap_inplace	htup.h	/^typedef struct xl_heap_inplace$/;"	s
+xl_heap_inplace	htup.h	/^} xl_heap_inplace;$/;"	t	typeref:struct:xl_heap_inplace
+xl_heap_insert	htup.h	/^typedef struct xl_heap_insert$/;"	s
+xl_heap_insert	htup.h	/^} xl_heap_insert;$/;"	t	typeref:struct:xl_heap_insert
+xl_heap_lock	htup.h	/^typedef struct xl_heap_lock$/;"	s
+xl_heap_lock	htup.h	/^} xl_heap_lock;$/;"	t	typeref:struct:xl_heap_lock
+xl_heap_newpage	htup.h	/^typedef struct xl_heap_newpage$/;"	s
+xl_heap_newpage	htup.h	/^} xl_heap_newpage;$/;"	t	typeref:struct:xl_heap_newpage
+xl_heap_update	htup.h	/^typedef struct xl_heap_update$/;"	s
+xl_heap_update	htup.h	/^} xl_heap_update;$/;"	t	typeref:struct:xl_heap_update
+xl_heaptid	htup.h	/^typedef struct xl_heaptid$/;"	s
+xl_heaptid	htup.h	/^} xl_heaptid;$/;"	t	typeref:struct:xl_heaptid
+xl_info	xlog.h	/^	uint8		xl_info;		\/* flag bits, see below *\/$/;"	m	struct:XLogRecord
+xl_len	xlog.h	/^	uint32		xl_len;			\/* total len of rmgr data *\/$/;"	m	struct:XLogRecord
+xl_multixact_create	multixact.h	/^typedef struct xl_multixact_create$/;"	s
+xl_multixact_create	multixact.h	/^} xl_multixact_create;$/;"	t	typeref:struct:xl_multixact_create
+xl_prev	xlog.h	/^	XLogRecPtr	xl_prev;		\/* ptr to previous record in log *\/$/;"	m	struct:XLogRecord
+xl_rem_len	xlog_internal.h	/^	uint32		xl_rem_len;		\/* total len of remaining data for record *\/$/;"	m	struct:XLogContRecord
+xl_rmid	xlog.h	/^	RmgrId		xl_rmid;		\/* resource manager for this record *\/$/;"	m	struct:XLogRecord
+xl_tot_len	xlog.h	/^	uint32		xl_tot_len;		\/* total len of entire record *\/$/;"	m	struct:XLogRecord
+xl_xact_abort	xact.h	/^typedef struct xl_xact_abort$/;"	s
+xl_xact_abort	xact.h	/^} xl_xact_abort;$/;"	t	typeref:struct:xl_xact_abort
+xl_xact_abort_prepared	xact.h	/^typedef struct xl_xact_abort_prepared$/;"	s
+xl_xact_abort_prepared	xact.h	/^} xl_xact_abort_prepared;$/;"	t	typeref:struct:xl_xact_abort_prepared
+xl_xact_assignment	xact.h	/^typedef struct xl_xact_assignment$/;"	s
+xl_xact_assignment	xact.h	/^} xl_xact_assignment;$/;"	t	typeref:struct:xl_xact_assignment
+xl_xact_commit	xact.h	/^typedef struct xl_xact_commit$/;"	s
+xl_xact_commit	xact.h	/^} xl_xact_commit;$/;"	t	typeref:struct:xl_xact_commit
+xl_xact_commit_prepared	xact.h	/^typedef struct xl_xact_commit_prepared$/;"	s
+xl_xact_commit_prepared	xact.h	/^} xl_xact_commit_prepared;$/;"	t	typeref:struct:xl_xact_commit_prepared
+xl_xid	xlog.h	/^	TransactionId xl_xid;		\/* xact id *\/$/;"	m	struct:XLogRecord
+xlogid	xlogdefs.h	/^	uint32		xlogid;			\/* log file #, 0 based *\/$/;"	m	struct:XLogRecPtr
+xlp_info	xlog_internal.h	/^	uint16		xlp_info;		\/* flag bits, see below *\/$/;"	m	struct:XLogPageHeaderData
+xlp_magic	xlog_internal.h	/^	uint16		xlp_magic;		\/* magic value for correctness checks *\/$/;"	m	struct:XLogPageHeaderData
+xlp_pageaddr	xlog_internal.h	/^	XLogRecPtr	xlp_pageaddr;	\/* XLOG address of this page *\/$/;"	m	struct:XLogPageHeaderData
+xlp_seg_size	xlog_internal.h	/^	uint32		xlp_seg_size;	\/* just as a cross-check *\/$/;"	m	struct:XLogLongPageHeaderData
+xlp_sysid	xlog_internal.h	/^	uint64		xlp_sysid;		\/* system identifier from pg_control *\/$/;"	m	struct:XLogLongPageHeaderData
+xlp_tli	xlog_internal.h	/^	TimeLineID	xlp_tli;		\/* TimeLineID of first record on page *\/$/;"	m	struct:XLogPageHeaderData
+xlp_xlog_blcksz	xlog_internal.h	/^	uint32		xlp_xlog_blcksz;	\/* just as a cross-check *\/$/;"	m	struct:XLogLongPageHeaderData
+xnodes	xact.h	/^	RelFileNode xnodes[1];		\/* VARIABLE LENGTH ARRAY *\/$/;"	m	struct:xl_xact_abort
+xnodes	xact.h	/^	RelFileNode xnodes[1];		\/* VARIABLE LENGTH ARRAY *\/$/;"	m	struct:xl_xact_commit
+xrecoff	xlogdefs.h	/^	uint32		xrecoff;		\/* byte offset of location in log file *\/$/;"	m	struct:XLogRecPtr
+xs_cbuf	relscan.h	/^	Buffer		xs_cbuf;		\/* current heap buffer in scan, if any *\/$/;"	m	struct:IndexScanDescData
+xs_ctup	relscan.h	/^	HeapTupleData xs_ctup;		\/* current heap tuple, if any *\/$/;"	m	struct:IndexScanDescData
+xs_hot_dead	relscan.h	/^	bool		xs_hot_dead;	\/* T if all members of HOT chain are dead *\/$/;"	m	struct:IndexScanDescData
+xs_next_hot	relscan.h	/^	OffsetNumber xs_next_hot;	\/* next member of HOT chain, if any *\/$/;"	m	struct:IndexScanDescData
+xs_prev_xmax	relscan.h	/^	TransactionId xs_prev_xmax; \/* previous HOT chain member's XMAX, if any *\/$/;"	m	struct:IndexScanDescData
+xs_recheck	relscan.h	/^	bool		xs_recheck;		\/* T means scan keys must be rechecked *\/$/;"	m	struct:IndexScanDescData
+xs_snapshot	relscan.h	/^	Snapshot	xs_snapshot;	\/* snapshot to see *\/$/;"	m	struct:IndexScanDescData
+xsub	xact.h	/^	TransactionId xsub[1];		\/* assigned subxids *\/$/;"	m	struct:xl_xact_assignment
+xtop	xact.h	/^	TransactionId xtop;			\/* assigned XID's top-level XID *\/$/;"	m	struct:xl_xact_assignment

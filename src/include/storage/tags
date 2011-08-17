@@ -1,0 +1,1098 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ACCEPT_TYPE_ARG1	../pg_config.h	5;"	d
+ACCEPT_TYPE_ARG2	../pg_config.h	8;"	d
+ACCEPT_TYPE_ARG3	../pg_config.h	11;"	d
+ACCEPT_TYPE_RETURN	../pg_config.h	14;"	d
+AGG_CONTEXT_AGGREGATE	../fmgr.h	541;"	d
+AGG_CONTEXT_WINDOW	../fmgr.h	542;"	d
+AI_NUMERICHOST	../getaddrinfo.h	73;"	d
+AI_NUMERICHOST	../getaddrinfo.h	75;"	d
+AI_PASSIVE	../getaddrinfo.h	64;"	d
+ALIGNOF_BUFFER	../pg_config_manual.h	101;"	d
+ALIGNOF_DOUBLE	../pg_config.h	20;"	d
+ALIGNOF_INT	../pg_config.h	23;"	d
+ALIGNOF_LONG	../pg_config.h	26;"	d
+ALIGNOF_LONG_LONG_INT	../pg_config.h	29;"	d
+ALIGNOF_SHORT	../pg_config.h	32;"	d
+Abs	../c.h	573;"	d
+Assert	../postgres.h	668;"	d
+Assert	../postgres.h	673;"	d
+AssertArg	../postgres.h	670;"	d
+AssertArg	../postgres.h	679;"	d
+AssertMacro	../postgres.h	669;"	d
+AssertMacro	../postgres.h	676;"	d
+AssertState	../postgres.h	671;"	d
+AssertState	../postgres.h	682;"	d
+AttInMetadata	../funcapi.h	/^typedef struct AttInMetadata$/;"	s
+AttInMetadata	../funcapi.h	/^} AttInMetadata;$/;"	t	typeref:struct:AttInMetadata
+BITS_PER_BYTE	../pg_config_manual.h	93;"	d
+BLCKSZ	../pg_config.h	41;"	d
+BUFFERALIGN	../c.h	542;"	d
+BoolGetDatum	../postgres.h	338;"	d
+BoolIsValid	../c.h	475;"	d
+BoolPtr	../c.h	/^typedef bool *BoolPtr;$/;"	t
+BootstrapProcessing	../miscadmin.h	/^	BootstrapProcessing,		\/* bootstrap creation of template database *\/$/;"	e	enum:ProcessingMode
+BpChar	../c.h	/^typedef struct varlena BpChar;	\/* blank-padded char, ie SQL char(n) *\/$/;"	t	typeref:struct:varlena
+CHECK_FOR_INTERRUPTS	../miscadmin.h	83;"	d
+CHECK_FOR_INTERRUPTS	../miscadmin.h	90;"	d
+CLOBBER_FREED_MEMORY	../pg_config_manual.h	171;"	d
+CStringGetDatum	../postgres.h	507;"	d
+C_H	../c.h	45;"	d
+CharGetDatum	../postgres.h	352;"	d
+CommandId	../c.h	/^typedef uint32 CommandId;$/;"	t
+CommandIdGetDatum	../postgres.h	471;"	d
+CppAsString	../c.h	136;"	d
+CppAsString	../c.h	140;"	d
+CppAsString2	../c.h	730;"	d
+CppConcat	../c.h	137;"	d
+CppConcat	../c.h	151;"	d
+DATEORDER_DMY	../miscadmin.h	190;"	d
+DATEORDER_MDY	../miscadmin.h	191;"	d
+DATEORDER_YMD	../miscadmin.h	189;"	d
+DEFAULT_PGSOCKET_DIR	../pg_config_manual.h	144;"	d
+DEF_PGPORT	../pg_config.h	47;"	d
+DEF_PGPORT_STR	../pg_config.h	50;"	d
+DEVNULL	../port.h	106;"	d
+DEVNULL	../port.h	110;"	d
+DEVTTY	../port.h	108;"	d
+DEVTTY	../port.h	111;"	d
+DOUBLEALIGN	../c.h	539;"	d
+DOUBLEALIGN_DOWN	../c.h	550;"	d
+Datum	../postgres.h	/^typedef uintptr_t Datum;$/;"	t
+DatumGetBool	../postgres.h	329;"	d
+DatumGetBpCharP	../fmgr.h	231;"	d
+DatumGetBpCharPCopy	../fmgr.h	239;"	d
+DatumGetBpCharPP	../fmgr.h	232;"	d
+DatumGetBpCharPSlice	../fmgr.h	245;"	d
+DatumGetByteaP	../fmgr.h	227;"	d
+DatumGetByteaPCopy	../fmgr.h	237;"	d
+DatumGetByteaPP	../fmgr.h	228;"	d
+DatumGetByteaPSlice	../fmgr.h	243;"	d
+DatumGetCString	../postgres.h	495;"	d
+DatumGetChar	../postgres.h	345;"	d
+DatumGetCommandId	../postgres.h	464;"	d
+DatumGetFloat4	../postgres.h	563;"	d
+DatumGetFloat8	../postgres.h	586;"	d
+DatumGetHeapTupleHeader	../fmgr.h	235;"	d
+DatumGetHeapTupleHeaderCopy	../fmgr.h	241;"	d
+DatumGetInt16	../postgres.h	380;"	d
+DatumGetInt32	../postgres.h	408;"	d
+DatumGetInt64	../postgres.h	534;"	d
+DatumGetInt64	../postgres.h	536;"	d
+DatumGetName	../postgres.h	514;"	d
+DatumGetObjectId	../postgres.h	436;"	d
+DatumGetPointer	../postgres.h	478;"	d
+DatumGetTextP	../fmgr.h	229;"	d
+DatumGetTextPCopy	../fmgr.h	238;"	d
+DatumGetTextPP	../fmgr.h	230;"	d
+DatumGetTextPSlice	../fmgr.h	244;"	d
+DatumGetTransactionId	../postgres.h	450;"	d
+DatumGetUInt16	../postgres.h	394;"	d
+DatumGetUInt32	../postgres.h	422;"	d
+DatumGetUInt8	../postgres.h	366;"	d
+DatumGetVarCharP	../fmgr.h	233;"	d
+DatumGetVarCharPCopy	../fmgr.h	240;"	d
+DatumGetVarCharPP	../fmgr.h	234;"	d
+DatumGetVarCharPSlice	../fmgr.h	246;"	d
+DatumPtr	../postgres.h	/^typedef Datum *DatumPtr;$/;"	t
+EAI_AGAIN	../getaddrinfo.h	35;"	d
+EAI_AGAIN	../getaddrinfo.h	51;"	d
+EAI_BADFLAGS	../getaddrinfo.h	33;"	d
+EAI_BADFLAGS	../getaddrinfo.h	52;"	d
+EAI_FAIL	../getaddrinfo.h	36;"	d
+EAI_FAIL	../getaddrinfo.h	53;"	d
+EAI_FAMILY	../getaddrinfo.h	37;"	d
+EAI_FAMILY	../getaddrinfo.h	54;"	d
+EAI_MEMORY	../getaddrinfo.h	40;"	d
+EAI_MEMORY	../getaddrinfo.h	55;"	d
+EAI_NODATA	../getaddrinfo.h	56;"	d
+EAI_NONAME	../getaddrinfo.h	34;"	d
+EAI_NONAME	../getaddrinfo.h	57;"	d
+EAI_SERVICE	../getaddrinfo.h	39;"	d
+EAI_SERVICE	../getaddrinfo.h	58;"	d
+EAI_SOCKTYPE	../getaddrinfo.h	38;"	d
+EAI_SOCKTYPE	../getaddrinfo.h	59;"	d
+EAI_SYSTEM	../getaddrinfo.h	41;"	d
+ENABLE_THREAD_SAFETY	../pg_config.h	63;"	d
+END_CRIT_SECTION	../miscadmin.h	110;"	d
+ESCAPE_STRING_SYNTAX	../c.h	465;"	d
+EXE	../port.h	100;"	d
+EXE	../port.h	102;"	d
+FALSE	../c.h	203;"	d
+FLOAT4PASSBYVAL	../pg_config.h	66;"	d
+FLOAT8PASSBYVAL	../pg_config.h	70;"	d
+FMGR_H	../fmgr.h	19;"	d
+FRONTEND	../postgres_fe.h	22;"	d
+FUNCAPI_H	../funcapi.h	17;"	d
+FUNC_MAX_ARGS	../pg_config_manual.h	34;"	d
+FirstCommandId	../c.h	370;"	d
+Float4GetDatumFast	../postgres.h	623;"	d
+Float4GetDatumFast	../postgres.h	625;"	d
+Float8GetDatumFast	../postgres.h	616;"	d
+Float8GetDatumFast	../postgres.h	619;"	d
+FmgrInfo	../fmgr.h	/^typedef struct FmgrInfo$/;"	s
+FmgrInfo	../fmgr.h	/^} FmgrInfo;$/;"	t	typeref:struct:FmgrInfo
+FuncCallContext	../funcapi.h	/^typedef struct FuncCallContext$/;"	s
+FuncCallContext	../funcapi.h	/^} FuncCallContext;$/;"	t	typeref:struct:FuncCallContext
+FunctionCallInfo	../fmgr.h	/^typedef struct FunctionCallInfoData *FunctionCallInfo;$/;"	t	typeref:struct:FunctionCallInfoData
+FunctionCallInfoData	../fmgr.h	/^typedef struct FunctionCallInfoData$/;"	s
+FunctionCallInfoData	../fmgr.h	/^} FunctionCallInfoData;$/;"	t	typeref:struct:FunctionCallInfoData
+FunctionCallInvoke	../fmgr.h	115;"	d
+GETADDRINFO_H	../getaddrinfo.h	23;"	d
+GETOPT_LONG_H	../getopt_long.h	10;"	d
+GETPWUID_R_5ARG	../pg_config.h	73;"	d
+GET_1_BYTE	../postgres.h	308;"	d
+GET_2_BYTES	../postgres.h	309;"	d
+GET_4_BYTES	../postgres.h	310;"	d
+GET_8_BYTES	../postgres.h	312;"	d
+GetProcessingMode	../miscadmin.h	331;"	d
+HAVE_ATEXIT	../pg_config.h	86;"	d
+HAVE_CBRT	../pg_config.h	89;"	d
+HAVE_CRYPT	../pg_config.h	95;"	d
+HAVE_CRYPT_H	../pg_config.h	98;"	d
+HAVE_DECL_FDATASYNC	../pg_config.h	102;"	d
+HAVE_DECL_F_FULLFSYNC	../pg_config.h	106;"	d
+HAVE_DECL_POSIX_FADVISE	../pg_config.h	110;"	d
+HAVE_DECL_SNPRINTF	../pg_config.h	114;"	d
+HAVE_DECL_STRLCAT	../pg_config.h	118;"	d
+HAVE_DECL_STRLCPY	../pg_config.h	122;"	d
+HAVE_DECL_SYS_SIGLIST	../pg_config.h	126;"	d
+HAVE_DECL_VSNPRINTF	../pg_config.h	130;"	d
+HAVE_DLOPEN	../pg_config.h	136;"	d
+HAVE_ERAND48	../pg_config.h	145;"	d
+HAVE_FCVT	../pg_config.h	151;"	d
+HAVE_FDATASYNC	../pg_config.h	154;"	d
+HAVE_FSEEKO	../pg_config.h	169;"	d
+HAVE_FUNCNAME__FUNC	../pg_config.h	172;"	d
+HAVE_GETADDRINFO	../pg_config.h	178;"	d
+HAVE_GETHOSTBYNAME_R	../pg_config.h	181;"	d
+HAVE_GETIFADDRS	../pg_config.h	184;"	d
+HAVE_GETOPT	../pg_config.h	187;"	d
+HAVE_GETOPT_H	../pg_config.h	190;"	d
+HAVE_GETOPT_LONG	../pg_config.h	193;"	d
+HAVE_GETPWUID_R	../pg_config.h	202;"	d
+HAVE_GETRLIMIT	../pg_config.h	205;"	d
+HAVE_GETRUSAGE	../pg_config.h	208;"	d
+HAVE_IFADDRS_H	../pg_config.h	229;"	d
+HAVE_INET_ATON	../pg_config.h	232;"	d
+HAVE_INT64_TIMESTAMP	../c.h	299;"	d
+HAVE_INTPTR_T	../pg_config.h	241;"	d
+HAVE_INTTYPES_H	../pg_config.h	244;"	d
+HAVE_INT_OPTERR	../pg_config.h	247;"	d
+HAVE_INT_TIMEZONE	../pg_config.h	253;"	d
+HAVE_IPV6	../pg_config.h	256;"	d
+HAVE_ISINF	../pg_config.h	259;"	d
+HAVE_LANGINFO_H	../pg_config.h	283;"	d
+HAVE_LIBM	../pg_config.h	301;"	d
+HAVE_LIBZ	../pg_config.h	325;"	d
+HAVE_LINUX_EIDRM_BUG	../pg_config_os.h	14;"	d
+HAVE_LL_CONSTANTS	../pg_config.h	329;"	d
+HAVE_LONG_LONG_INT	../pg_config.h	335;"	d
+HAVE_LONG_LONG_INT_64	../pg_config.h	338;"	d
+HAVE_MEMMOVE	../pg_config.h	341;"	d
+HAVE_MEMORY_H	../pg_config.h	344;"	d
+HAVE_NETINET_IN_H	../pg_config.h	347;"	d
+HAVE_NETINET_TCP_H	../pg_config.h	350;"	d
+HAVE_NET_IF_H	../pg_config.h	353;"	d
+HAVE_POLL	../pg_config.h	365;"	d
+HAVE_POLL_H	../pg_config.h	368;"	d
+HAVE_POSIX_FADVISE	../pg_config.h	371;"	d
+HAVE_POSIX_SIGNALS	../pg_config.h	374;"	d
+HAVE_PWD_H	../pg_config.h	386;"	d
+HAVE_RANDOM	../pg_config.h	389;"	d
+HAVE_READLINK	../pg_config.h	401;"	d
+HAVE_RINT	../pg_config.h	404;"	d
+HAVE_SCANDIR	../pg_config.h	417;"	d
+HAVE_SETSID	../pg_config.h	426;"	d
+HAVE_SIGPROCMASK	../pg_config.h	429;"	d
+HAVE_SIGSETJMP	../pg_config.h	432;"	d
+HAVE_SIG_ATOMIC_T	../pg_config.h	435;"	d
+HAVE_SNPRINTF	../pg_config.h	438;"	d
+HAVE_SPINLOCKS	../pg_config.h	441;"	d
+HAVE_SRANDOM	../pg_config.h	444;"	d
+HAVE_STDINT_H	../pg_config.h	447;"	d
+HAVE_STDLIB_H	../pg_config.h	450;"	d
+HAVE_STRDUP	../pg_config.h	453;"	d
+HAVE_STRERROR	../pg_config.h	456;"	d
+HAVE_STRERROR_R	../pg_config.h	459;"	d
+HAVE_STRINGIZE	../pg_config.h	462;"	d
+HAVE_STRINGS_H	../pg_config.h	465;"	d
+HAVE_STRING_H	../pg_config.h	468;"	d
+HAVE_STRTOL	../pg_config.h	477;"	d
+HAVE_STRTOLL	../c.h	826;"	d
+HAVE_STRTOLL	../pg_config.h	480;"	d
+HAVE_STRTOUL	../pg_config.h	486;"	d
+HAVE_STRTOULL	../c.h	832;"	d
+HAVE_STRTOULL	../pg_config.h	489;"	d
+HAVE_STRUCT_ADDRINFO	../pg_config.h	495;"	d
+HAVE_STRUCT_OPTION	../pg_config.h	504;"	d
+HAVE_STRUCT_SOCKADDR_STORAGE	../pg_config.h	510;"	d
+HAVE_STRUCT_SOCKADDR_STORAGE_SS_FAMILY	../pg_config.h	513;"	d
+HAVE_STRUCT_SOCKADDR_UN	../pg_config.h	525;"	d
+HAVE_STRUCT_TM_TM_ZONE	../pg_config.h	531;"	d
+HAVE_SYMLINK	../pg_config.h	537;"	d
+HAVE_SYSCONF	../pg_config.h	540;"	d
+HAVE_SYSLOG	../pg_config.h	543;"	d
+HAVE_SYS_IOCTL_H	../pg_config.h	546;"	d
+HAVE_SYS_IPC_H	../pg_config.h	549;"	d
+HAVE_SYS_POLL_H	../pg_config.h	552;"	d
+HAVE_SYS_RESOURCE_H	../pg_config.h	558;"	d
+HAVE_SYS_SELECT_H	../pg_config.h	561;"	d
+HAVE_SYS_SEM_H	../pg_config.h	564;"	d
+HAVE_SYS_SHM_H	../pg_config.h	567;"	d
+HAVE_SYS_SOCKET_H	../pg_config.h	570;"	d
+HAVE_SYS_STAT_H	../pg_config.h	576;"	d
+HAVE_SYS_TIME_H	../pg_config.h	582;"	d
+HAVE_SYS_TYPES_H	../pg_config.h	585;"	d
+HAVE_SYS_UN_H	../pg_config.h	588;"	d
+HAVE_TERMIOS_H	../pg_config.h	591;"	d
+HAVE_TM_ZONE	../pg_config.h	595;"	d
+HAVE_TOWLOWER	../pg_config.h	598;"	d
+HAVE_TZNAME	../pg_config.h	601;"	d
+HAVE_UINTPTR_T	../pg_config.h	613;"	d
+HAVE_UNISTD_H	../pg_config.h	619;"	d
+HAVE_UNIX_SOCKETS	../pg_config.h	622;"	d
+HAVE_UNIX_SOCKETS	../pg_config_manual.h	107;"	d
+HAVE_UNSETENV	../pg_config.h	625;"	d
+HAVE_UTIME	../pg_config.h	628;"	d
+HAVE_UTIMES	../pg_config.h	631;"	d
+HAVE_UTIME_H	../pg_config.h	634;"	d
+HAVE_VSNPRINTF	../pg_config.h	640;"	d
+HAVE_WAITPID	../pg_config.h	643;"	d
+HAVE_WCHAR_H	../pg_config.h	646;"	d
+HAVE_WCSTOMBS	../pg_config.h	649;"	d
+HAVE_WCTYPE_H	../pg_config.h	652;"	d
+HAVE_WORKING_LINK	../pg_config_manual.h	114;"	d
+HIGHBIT	../c.h	703;"	d
+HOLD_INTERRUPTS	../miscadmin.h	100;"	d
+HeapTupleGetDatum	../funcapi.h	219;"	d
+INDEX_MAX_KEYS	../pg_config_manual.h	43;"	d
+INT64CONST	../c.h	289;"	d
+INT64CONST	../c.h	292;"	d
+INT64_FORMAT	../pg_config.h	658;"	d
+INTALIGN	../c.h	537;"	d
+INTALIGN_DOWN	../c.h	548;"	d
+INTSTYLE_ISO_8601	../miscadmin.h	206;"	d
+INTSTYLE_POSTGRES	../miscadmin.h	203;"	d
+INTSTYLE_POSTGRES_VERBOSE	../miscadmin.h	204;"	d
+INTSTYLE_SQL_STANDARD	../miscadmin.h	205;"	d
+IS_HIGHBIT_SET	../c.h	704;"	d
+Index	../c.h	/^typedef unsigned int Index;$/;"	t
+InitFunctionCallInfoData	../fmgr.h	99;"	d
+InitProcessing	../miscadmin.h	/^	InitProcessing,				\/* initializing system *\/$/;"	e	enum:ProcessingMode
+Int16GetDatum	../postgres.h	387;"	d
+Int32GetDatum	../postgres.h	415;"	d
+Int64GetDatum	../postgres.h	548;"	d
+Int64GetDatumFast	../postgres.h	615;"	d
+Int64GetDatumFast	../postgres.h	618;"	d
+Int8GetDatum	../postgres.h	359;"	d
+IntArray	../c.h	/^} IntArray;$/;"	t	typeref:struct:__anon1
+InvalidOid	../postgres_ext.h	32;"	d
+InvalidOid	../postgres_ext.h	34;"	d
+InvalidSubTransactionId	../c.h	360;"	d
+IsBootstrapProcessingMode	../miscadmin.h	319;"	d
+IsInitProcessingMode	../miscadmin.h	320;"	d
+IsNormalProcessingMode	../miscadmin.h	321;"	d
+LONGALIGN	../c.h	538;"	d
+LONGALIGN_DOWN	../c.h	549;"	d
+LONG_ALIGN_MASK	../c.h	606;"	d
+LocalTransactionId	../c.h	/^typedef uint32 LocalTransactionId;$/;"	t
+MAXALIGN	../c.h	540;"	d
+MAXALIGN_DOWN	../c.h	551;"	d
+MAXDIM	../c.h	375;"	d
+MAXIMUM_ALIGNOF	../pg_config.h	664;"	d
+MAXPGPATH	../pg_config_manual.h	76;"	d
+MAXTZLEN	../miscadmin.h	219;"	d
+MAX_RANDOM_VALUE	../pg_config_manual.h	155;"	d
+MEMORY_CONTEXT_CHECKING	../pg_config_manual.h	180;"	d
+MEMSET_LOOP_LIMIT	../pg_config.h	667;"	d
+MISCADMIN_H	../miscadmin.h	24;"	d
+Max	../c.h	561;"	d
+MemSet	../c.h	618;"	d
+MemSetAligned	../c.h	651;"	d
+MemSetLoop	../c.h	686;"	d
+MemSetTest	../c.h	680;"	d
+Min	../c.h	567;"	d
+MultiXactId	../c.h	/^typedef TransactionId MultiXactId;$/;"	t
+MultiXactOffset	../c.h	/^typedef uint32 MultiXactOffset;$/;"	t
+NAMEDATALEN	../pg_config_manual.h	20;"	d
+NI_MAXHOST	../getaddrinfo.h	87;"	d
+NI_MAXSERV	../getaddrinfo.h	90;"	d
+NI_NUMERICHOST	../getaddrinfo.h	80;"	d
+NI_NUMERICSERV	../getaddrinfo.h	83;"	d
+NON_EXEC_STATIC	../c.h	845;"	d
+NON_EXEC_STATIC	../c.h	847;"	d
+NULL	../c.h	211;"	d
+NUM_USER_DEFINED_LWLOCKS	../pg_config_manual.h	54;"	d
+Name	../c.h	/^typedef NameData *Name;$/;"	t
+NameData	../c.h	/^} NameData;$/;"	t	typeref:struct:nameData
+NameGetDatum	../postgres.h	524;"	d
+NameStr	../c.h	454;"	d
+NormalProcessing	../miscadmin.h	/^	NormalProcessing			\/* normal processing *\/$/;"	e	enum:ProcessingMode
+OID_MAX	../postgres_ext.h	37;"	d
+O_DIRECT	../port.h	318;"	d
+ObjectIdGetDatum	../postgres.h	443;"	d
+Offset	../c.h	/^typedef signed int Offset;$/;"	t
+Oid	../postgres_ext.h	/^typedef unsigned int Oid;$/;"	t
+OidIsValid	../c.h	490;"	d
+PACKAGE_BUGREPORT	../pg_config.h	670;"	d
+PACKAGE_NAME	../pg_config.h	673;"	d
+PACKAGE_STRING	../pg_config.h	676;"	d
+PACKAGE_TARNAME	../pg_config.h	679;"	d
+PACKAGE_VERSION	../pg_config.h	682;"	d
+PGDLLEXPORT	../c.h	792;"	d
+PGDLLIMPORT	../c.h	789;"	d
+PGFInfoFunction	../fmgr.h	/^typedef const Pg_finfo_record *(*PGFInfoFunction) (void);$/;"	t
+PGFunction	../fmgr.h	/^typedef Datum (*PGFunction) (FunctionCallInfo fcinfo);$/;"	t
+PGINVALID_SOCKET	../port.h	24;"	d
+PGINVALID_SOCKET	../port.h	28;"	d
+PGModuleMagicFunction	../fmgr.h	/^typedef const Pg_magic_struct *(*PGModuleMagicFunction) (void);$/;"	t
+PGSTAT_FILE_FORMAT_ID	../pgstat.h	473;"	d
+PGSTAT_H	../pgstat.h	12;"	d
+PGSTAT_MSG_PAYLOAD	../pgstat.h	180;"	d
+PGSTAT_MTYPE_ANALYZE	../pgstat.h	/^	PGSTAT_MTYPE_ANALYZE,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_AUTOVAC_START	../pgstat.h	/^	PGSTAT_MTYPE_AUTOVAC_START,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_BGWRITER	../pgstat.h	/^	PGSTAT_MTYPE_BGWRITER,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_DROPDB	../pgstat.h	/^	PGSTAT_MTYPE_DROPDB,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_DUMMY	../pgstat.h	/^	PGSTAT_MTYPE_DUMMY,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_FUNCPURGE	../pgstat.h	/^	PGSTAT_MTYPE_FUNCPURGE$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_FUNCSTAT	../pgstat.h	/^	PGSTAT_MTYPE_FUNCSTAT,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_INQUIRY	../pgstat.h	/^	PGSTAT_MTYPE_INQUIRY,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_RESETCOUNTER	../pgstat.h	/^	PGSTAT_MTYPE_RESETCOUNTER,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_RESETSHAREDCOUNTER	../pgstat.h	/^	PGSTAT_MTYPE_RESETSHAREDCOUNTER,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_RESETSINGLECOUNTER	../pgstat.h	/^	PGSTAT_MTYPE_RESETSINGLECOUNTER,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_TABPURGE	../pgstat.h	/^	PGSTAT_MTYPE_TABPURGE,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_TABSTAT	../pgstat.h	/^	PGSTAT_MTYPE_TABSTAT,$/;"	e	enum:StatMsgType
+PGSTAT_MTYPE_VACUUM	../pgstat.h	/^	PGSTAT_MTYPE_VACUUM,$/;"	e	enum:StatMsgType
+PGSTAT_NUM_FUNCENTRIES	../pgstat.h	411;"	d
+PGSTAT_NUM_FUNCPURGE	../pgstat.h	428;"	d
+PGSTAT_NUM_TABENTRIES	../pgstat.h	221;"	d
+PGSTAT_NUM_TABPURGE	../pgstat.h	241;"	d
+PG_ARGISNULL	../fmgr.h	147;"	d
+PG_BACKEND_VERSIONSTR	../miscadmin.h	29;"	d
+PG_BINARY	../c.h	756;"	d
+PG_BINARY	../c.h	761;"	d
+PG_BINARY_A	../c.h	757;"	d
+PG_BINARY_A	../c.h	762;"	d
+PG_BINARY_R	../c.h	758;"	d
+PG_BINARY_R	../c.h	763;"	d
+PG_BINARY_W	../c.h	759;"	d
+PG_BINARY_W	../c.h	764;"	d
+PG_DETOAST_DATUM	../fmgr.h	177;"	d
+PG_DETOAST_DATUM_COPY	../fmgr.h	179;"	d
+PG_DETOAST_DATUM_PACKED	../fmgr.h	185;"	d
+PG_DETOAST_DATUM_SLICE	../fmgr.h	181;"	d
+PG_DIAG_CONTEXT	../postgres_ext.h	54;"	d
+PG_DIAG_INTERNAL_POSITION	../postgres_ext.h	52;"	d
+PG_DIAG_INTERNAL_QUERY	../postgres_ext.h	53;"	d
+PG_DIAG_MESSAGE_DETAIL	../postgres_ext.h	49;"	d
+PG_DIAG_MESSAGE_HINT	../postgres_ext.h	50;"	d
+PG_DIAG_MESSAGE_PRIMARY	../postgres_ext.h	48;"	d
+PG_DIAG_SEVERITY	../postgres_ext.h	46;"	d
+PG_DIAG_SOURCE_FILE	../postgres_ext.h	55;"	d
+PG_DIAG_SOURCE_FUNCTION	../postgres_ext.h	57;"	d
+PG_DIAG_SOURCE_LINE	../postgres_ext.h	56;"	d
+PG_DIAG_SQLSTATE	../postgres_ext.h	47;"	d
+PG_DIAG_STATEMENT_POSITION	../postgres_ext.h	51;"	d
+PG_FREE_IF_COPY	../fmgr.h	197;"	d
+PG_FUNCTION_ARGS	../fmgr.h	136;"	d
+PG_FUNCTION_INFO_V1	../fmgr.h	330;"	d
+PG_GETARG_BOOL	../fmgr.h	211;"	d
+PG_GETARG_BPCHAR_P	../fmgr.h	252;"	d
+PG_GETARG_BPCHAR_PP	../fmgr.h	253;"	d
+PG_GETARG_BPCHAR_P_COPY	../fmgr.h	260;"	d
+PG_GETARG_BPCHAR_P_SLICE	../fmgr.h	266;"	d
+PG_GETARG_BYTEA_P	../fmgr.h	248;"	d
+PG_GETARG_BYTEA_PP	../fmgr.h	249;"	d
+PG_GETARG_BYTEA_P_COPY	../fmgr.h	258;"	d
+PG_GETARG_BYTEA_P_SLICE	../fmgr.h	264;"	d
+PG_GETARG_CHAR	../fmgr.h	210;"	d
+PG_GETARG_CSTRING	../fmgr.h	214;"	d
+PG_GETARG_DATUM	../fmgr.h	205;"	d
+PG_GETARG_FLOAT4	../fmgr.h	217;"	d
+PG_GETARG_FLOAT8	../fmgr.h	218;"	d
+PG_GETARG_HEAPTUPLEHEADER	../fmgr.h	256;"	d
+PG_GETARG_HEAPTUPLEHEADER_COPY	../fmgr.h	262;"	d
+PG_GETARG_INT16	../fmgr.h	208;"	d
+PG_GETARG_INT32	../fmgr.h	206;"	d
+PG_GETARG_INT64	../fmgr.h	219;"	d
+PG_GETARG_NAME	../fmgr.h	215;"	d
+PG_GETARG_OID	../fmgr.h	212;"	d
+PG_GETARG_POINTER	../fmgr.h	213;"	d
+PG_GETARG_RAW_VARLENA_P	../fmgr.h	221;"	d
+PG_GETARG_TEXT_P	../fmgr.h	250;"	d
+PG_GETARG_TEXT_PP	../fmgr.h	251;"	d
+PG_GETARG_TEXT_P_COPY	../fmgr.h	259;"	d
+PG_GETARG_TEXT_P_SLICE	../fmgr.h	265;"	d
+PG_GETARG_UINT16	../fmgr.h	209;"	d
+PG_GETARG_UINT32	../fmgr.h	207;"	d
+PG_GETARG_VARCHAR_P	../fmgr.h	254;"	d
+PG_GETARG_VARCHAR_PP	../fmgr.h	255;"	d
+PG_GETARG_VARCHAR_P_COPY	../fmgr.h	261;"	d
+PG_GETARG_VARCHAR_P_SLICE	../fmgr.h	267;"	d
+PG_GETARG_VARLENA_P	../fmgr.h	223;"	d
+PG_GETARG_VARLENA_PP	../fmgr.h	225;"	d
+PG_KRB_SRVNAM	../pg_config.h	686;"	d
+PG_MAGIC_FUNCTION_NAME	../fmgr.h	396;"	d
+PG_MAGIC_FUNCTION_NAME_STRING	../fmgr.h	397;"	d
+PG_MAJORVERSION	../pg_config.h	689;"	d
+PG_MODULE_MAGIC	../fmgr.h	399;"	d
+PG_MODULE_MAGIC_DATA	../fmgr.h	379;"	d
+PG_NARGS	../fmgr.h	141;"	d
+PG_PORT_H	../port.h	14;"	d
+PG_RETURN_BOOL	../fmgr.h	283;"	d
+PG_RETURN_BPCHAR_P	../fmgr.h	295;"	d
+PG_RETURN_BYTEA_P	../fmgr.h	293;"	d
+PG_RETURN_CHAR	../fmgr.h	282;"	d
+PG_RETURN_CSTRING	../fmgr.h	286;"	d
+PG_RETURN_DATUM	../fmgr.h	278;"	d
+PG_RETURN_FLOAT4	../fmgr.h	289;"	d
+PG_RETURN_FLOAT8	../fmgr.h	290;"	d
+PG_RETURN_HEAPTUPLEHEADER	../fmgr.h	297;"	d
+PG_RETURN_INT16	../fmgr.h	281;"	d
+PG_RETURN_INT32	../fmgr.h	279;"	d
+PG_RETURN_INT64	../fmgr.h	291;"	d
+PG_RETURN_NAME	../fmgr.h	287;"	d
+PG_RETURN_NULL	../fmgr.h	270;"	d
+PG_RETURN_OID	../fmgr.h	284;"	d
+PG_RETURN_POINTER	../fmgr.h	285;"	d
+PG_RETURN_TEXT_P	../fmgr.h	294;"	d
+PG_RETURN_UINT32	../fmgr.h	280;"	d
+PG_RETURN_VARCHAR_P	../fmgr.h	296;"	d
+PG_RETURN_VOID	../fmgr.h	274;"	d
+PG_SIGNAL_COUNT	../port.h	244;"	d
+PG_SOMAXCONN	../pg_config_manual.h	87;"	d
+PG_TEXTDOMAIN	../c.h	733;"	d
+PG_TEXTDOMAIN	../c.h	735;"	d
+PG_TRACE_H	../pg_trace.h	13;"	d
+PG_VERSION	../pg_config.h	692;"	d
+PG_VERSION_NUM	../pg_config.h	695;"	d
+PG_VERSION_STR	../pg_config.h	698;"	d
+PG_WINDOW_OBJECT	../windowapi.h	39;"	d
+PLATFORM_DEFAULT_SYNC_METHOD	../pg_config_os.h	22;"	d
+PORT_PROTOS_H	../dynloader.h	15;"	d
+POSTGRES_EXT_H	../postgres_ext.h	24;"	d
+POSTGRES_FE_H	../postgres_fe.h	19;"	d
+POSTGRES_H	../postgres.h	45;"	d
+PgBackendStatus	../pgstat.h	/^typedef struct PgBackendStatus$/;"	s
+PgBackendStatus	../pgstat.h	/^} PgBackendStatus;$/;"	t	typeref:struct:PgBackendStatus
+PgStat_BackendFunctionEntry	../pgstat.h	/^typedef struct PgStat_BackendFunctionEntry$/;"	s
+PgStat_BackendFunctionEntry	../pgstat.h	/^} PgStat_BackendFunctionEntry;$/;"	t	typeref:struct:PgStat_BackendFunctionEntry
+PgStat_Counter	../pgstat.h	/^typedef int64 PgStat_Counter;$/;"	t
+PgStat_FunctionCallUsage	../pgstat.h	/^typedef struct PgStat_FunctionCallUsage$/;"	s
+PgStat_FunctionCallUsage	../pgstat.h	/^} PgStat_FunctionCallUsage;$/;"	t	typeref:struct:PgStat_FunctionCallUsage
+PgStat_FunctionCounts	../pgstat.h	/^typedef struct PgStat_FunctionCounts$/;"	s
+PgStat_FunctionCounts	../pgstat.h	/^} PgStat_FunctionCounts;$/;"	t	typeref:struct:PgStat_FunctionCounts
+PgStat_FunctionEntry	../pgstat.h	/^typedef struct PgStat_FunctionEntry$/;"	s
+PgStat_FunctionEntry	../pgstat.h	/^} PgStat_FunctionEntry;$/;"	t	typeref:struct:PgStat_FunctionEntry
+PgStat_GlobalStats	../pgstat.h	/^typedef struct PgStat_GlobalStats$/;"	s
+PgStat_GlobalStats	../pgstat.h	/^} PgStat_GlobalStats;$/;"	t	typeref:struct:PgStat_GlobalStats
+PgStat_Msg	../pgstat.h	/^typedef union PgStat_Msg$/;"	u
+PgStat_Msg	../pgstat.h	/^} PgStat_Msg;$/;"	t	typeref:union:PgStat_Msg
+PgStat_MsgAnalyze	../pgstat.h	/^typedef struct PgStat_MsgAnalyze$/;"	s
+PgStat_MsgAnalyze	../pgstat.h	/^} PgStat_MsgAnalyze;$/;"	t	typeref:struct:PgStat_MsgAnalyze
+PgStat_MsgAutovacStart	../pgstat.h	/^typedef struct PgStat_MsgAutovacStart$/;"	s
+PgStat_MsgAutovacStart	../pgstat.h	/^} PgStat_MsgAutovacStart;$/;"	t	typeref:struct:PgStat_MsgAutovacStart
+PgStat_MsgBgWriter	../pgstat.h	/^typedef struct PgStat_MsgBgWriter$/;"	s
+PgStat_MsgBgWriter	../pgstat.h	/^} PgStat_MsgBgWriter;$/;"	t	typeref:struct:PgStat_MsgBgWriter
+PgStat_MsgDropdb	../pgstat.h	/^typedef struct PgStat_MsgDropdb$/;"	s
+PgStat_MsgDropdb	../pgstat.h	/^} PgStat_MsgDropdb;$/;"	t	typeref:struct:PgStat_MsgDropdb
+PgStat_MsgDummy	../pgstat.h	/^typedef struct PgStat_MsgDummy$/;"	s
+PgStat_MsgDummy	../pgstat.h	/^} PgStat_MsgDummy;$/;"	t	typeref:struct:PgStat_MsgDummy
+PgStat_MsgFuncpurge	../pgstat.h	/^typedef struct PgStat_MsgFuncpurge$/;"	s
+PgStat_MsgFuncpurge	../pgstat.h	/^} PgStat_MsgFuncpurge;$/;"	t	typeref:struct:PgStat_MsgFuncpurge
+PgStat_MsgFuncstat	../pgstat.h	/^typedef struct PgStat_MsgFuncstat$/;"	s
+PgStat_MsgFuncstat	../pgstat.h	/^} PgStat_MsgFuncstat;$/;"	t	typeref:struct:PgStat_MsgFuncstat
+PgStat_MsgHdr	../pgstat.h	/^typedef struct PgStat_MsgHdr$/;"	s
+PgStat_MsgHdr	../pgstat.h	/^} PgStat_MsgHdr;$/;"	t	typeref:struct:PgStat_MsgHdr
+PgStat_MsgInquiry	../pgstat.h	/^typedef struct PgStat_MsgInquiry$/;"	s
+PgStat_MsgInquiry	../pgstat.h	/^} PgStat_MsgInquiry;$/;"	t	typeref:struct:PgStat_MsgInquiry
+PgStat_MsgResetcounter	../pgstat.h	/^typedef struct PgStat_MsgResetcounter$/;"	s
+PgStat_MsgResetcounter	../pgstat.h	/^} PgStat_MsgResetcounter;$/;"	t	typeref:struct:PgStat_MsgResetcounter
+PgStat_MsgResetsharedcounter	../pgstat.h	/^typedef struct PgStat_MsgResetsharedcounter$/;"	s
+PgStat_MsgResetsharedcounter	../pgstat.h	/^} PgStat_MsgResetsharedcounter;$/;"	t	typeref:struct:PgStat_MsgResetsharedcounter
+PgStat_MsgResetsinglecounter	../pgstat.h	/^typedef struct PgStat_MsgResetsinglecounter$/;"	s
+PgStat_MsgResetsinglecounter	../pgstat.h	/^} PgStat_MsgResetsinglecounter;$/;"	t	typeref:struct:PgStat_MsgResetsinglecounter
+PgStat_MsgTabpurge	../pgstat.h	/^typedef struct PgStat_MsgTabpurge$/;"	s
+PgStat_MsgTabpurge	../pgstat.h	/^} PgStat_MsgTabpurge;$/;"	t	typeref:struct:PgStat_MsgTabpurge
+PgStat_MsgTabstat	../pgstat.h	/^typedef struct PgStat_MsgTabstat$/;"	s
+PgStat_MsgTabstat	../pgstat.h	/^} PgStat_MsgTabstat;$/;"	t	typeref:struct:PgStat_MsgTabstat
+PgStat_MsgVacuum	../pgstat.h	/^typedef struct PgStat_MsgVacuum$/;"	s
+PgStat_MsgVacuum	../pgstat.h	/^} PgStat_MsgVacuum;$/;"	t	typeref:struct:PgStat_MsgVacuum
+PgStat_Shared_Reset_Target	../pgstat.h	/^typedef enum PgStat_Shared_Reset_Target$/;"	g
+PgStat_Shared_Reset_Target	../pgstat.h	/^} PgStat_Shared_Reset_Target;$/;"	t	typeref:enum:PgStat_Shared_Reset_Target
+PgStat_Single_Reset_Type	../pgstat.h	/^typedef enum PgStat_Single_Reset_Type$/;"	g
+PgStat_Single_Reset_Type	../pgstat.h	/^} PgStat_Single_Reset_Type;$/;"	t	typeref:enum:PgStat_Single_Reset_Type
+PgStat_StatDBEntry	../pgstat.h	/^typedef struct PgStat_StatDBEntry$/;"	s
+PgStat_StatDBEntry	../pgstat.h	/^} PgStat_StatDBEntry;$/;"	t	typeref:struct:PgStat_StatDBEntry
+PgStat_StatFuncEntry	../pgstat.h	/^typedef struct PgStat_StatFuncEntry$/;"	s
+PgStat_StatFuncEntry	../pgstat.h	/^} PgStat_StatFuncEntry;$/;"	t	typeref:struct:PgStat_StatFuncEntry
+PgStat_StatTabEntry	../pgstat.h	/^typedef struct PgStat_StatTabEntry$/;"	s
+PgStat_StatTabEntry	../pgstat.h	/^} PgStat_StatTabEntry;$/;"	t	typeref:struct:PgStat_StatTabEntry
+PgStat_TableCounts	../pgstat.h	/^typedef struct PgStat_TableCounts$/;"	s
+PgStat_TableCounts	../pgstat.h	/^} PgStat_TableCounts;$/;"	t	typeref:struct:PgStat_TableCounts
+PgStat_TableEntry	../pgstat.h	/^typedef struct PgStat_TableEntry$/;"	s
+PgStat_TableEntry	../pgstat.h	/^} PgStat_TableEntry;$/;"	t	typeref:struct:PgStat_TableEntry
+PgStat_TableStatus	../pgstat.h	/^typedef struct PgStat_TableStatus$/;"	s
+PgStat_TableStatus	../pgstat.h	/^} PgStat_TableStatus;$/;"	t	typeref:struct:PgStat_TableStatus
+PgStat_TableXactStatus	../pgstat.h	/^typedef struct PgStat_TableXactStatus$/;"	s
+PgStat_TableXactStatus	../pgstat.h	/^} PgStat_TableXactStatus;$/;"	t	typeref:struct:PgStat_TableXactStatus
+Pg_finfo_record	../fmgr.h	/^} Pg_finfo_record;$/;"	t	typeref:struct:__anon4
+Pg_magic_struct	../fmgr.h	/^} Pg_magic_struct;$/;"	t	typeref:struct:__anon5
+Pointer	../c.h	/^typedef char *Pointer;$/;"	t
+PointerGetDatum	../postgres.h	485;"	d
+PointerIsAligned	../c.h	487;"	d
+PointerIsValid	../c.h	481;"	d
+ProcessingMode	../miscadmin.h	/^typedef enum ProcessingMode$/;"	g
+ProcessingMode	../miscadmin.h	/^} ProcessingMode;$/;"	t	typeref:enum:ProcessingMode
+RELSEG_SIZE	../pg_config.h	719;"	d
+RESET_BGWRITER	../pgstat.h	/^	RESET_BGWRITER$/;"	e	enum:PgStat_Shared_Reset_Target
+RESET_FUNCTION	../pgstat.h	/^	RESET_FUNCTION$/;"	e	enum:PgStat_Single_Reset_Type
+RESET_TABLE	../pgstat.h	/^	RESET_TABLE,$/;"	e	enum:PgStat_Single_Reset_Type
+RESUME_INTERRUPTS	../miscadmin.h	102;"	d
+RTLD_GLOBAL	../dynloader.h	35;"	d
+RTLD_NOW	../dynloader.h	32;"	d
+RUSAGESTUB_H	../rusagestub.h	15;"	d
+RUSAGE_CHILDREN	../rusagestub.h	24;"	d
+RUSAGE_SELF	../rusagestub.h	23;"	d
+RegProcedure	../c.h	/^typedef regproc RegProcedure;$/;"	t
+RegProcedureIsValid	../c.h	492;"	d
+SECURITY_LOCAL_USERID_CHANGE	../miscadmin.h	253;"	d
+SECURITY_RESTRICTED_OPERATION	../miscadmin.h	254;"	d
+SEQ_MAXVALUE	../pg_config_manual.h	48;"	d
+SEQ_MINVALUE	../pg_config_manual.h	49;"	d
+SET_1_BYTE	../postgres.h	314;"	d
+SET_2_BYTES	../postgres.h	315;"	d
+SET_4_BYTES	../postgres.h	316;"	d
+SET_8_BYTES	../postgres.h	318;"	d
+SET_VARSIZE	../postgres.h	260;"	d
+SET_VARSIZE_1B	../postgres.h	171;"	d
+SET_VARSIZE_1B	../postgres.h	203;"	d
+SET_VARSIZE_1B_E	../postgres.h	173;"	d
+SET_VARSIZE_1B_E	../postgres.h	205;"	d
+SET_VARSIZE_4B	../postgres.h	167;"	d
+SET_VARSIZE_4B	../postgres.h	199;"	d
+SET_VARSIZE_4B_C	../postgres.h	169;"	d
+SET_VARSIZE_4B_C	../postgres.h	201;"	d
+SET_VARSIZE_COMPRESSED	../postgres.h	262;"	d
+SET_VARSIZE_EXTERNAL	../postgres.h	263;"	d
+SET_VARSIZE_SHORT	../postgres.h	261;"	d
+SHORTALIGN	../c.h	536;"	d
+SHORTALIGN_DOWN	../c.h	547;"	d
+SIGNAL_ARGS	../c.h	805;"	d
+SIZEOF_DATUM	../postgres.h	304;"	d
+SIZEOF_LONG	../pg_config.h	722;"	d
+SIZEOF_OFF_T	../pg_config.h	725;"	d
+SIZEOF_SIZE_T	../pg_config.h	728;"	d
+SIZEOF_VOID_P	../pg_config.h	731;"	d
+SQL_STR_DOUBLE	../c.h	462;"	d
+SRF_FIRSTCALL_INIT	../funcapi.h	283;"	d
+SRF_IS_FIRSTCALL	../funcapi.h	281;"	d
+SRF_PERCALL_SETUP	../funcapi.h	285;"	d
+SRF_RETURN_DONE	../funcapi.h	296;"	d
+SRF_RETURN_NEXT	../funcapi.h	287;"	d
+START_CRIT_SECTION	../miscadmin.h	108;"	d
+STATUS_EOF	../c.h	708;"	d
+STATUS_ERROR	../c.h	707;"	d
+STATUS_FOUND	../c.h	709;"	d
+STATUS_OK	../c.h	706;"	d
+STATUS_WAITING	../c.h	710;"	d
+STDC_HEADERS	../pg_config.h	734;"	d
+SYSTEMQUOTE	../port.h	140;"	d
+SYSTEMQUOTE	../port.h	142;"	d
+SetProcessingMode	../miscadmin.h	323;"	d
+Size	../c.h	/^typedef size_t Size;$/;"	t
+StatMsgType	../pgstat.h	/^typedef enum StatMsgType$/;"	g
+StatMsgType	../pgstat.h	/^} StatMsgType;$/;"	t	typeref:enum:StatMsgType
+StrNCpy	../c.h	591;"	d
+SubTransactionId	../c.h	/^typedef uint32 SubTransactionId;$/;"	t
+TIMEZONE_GLOBAL	../port.h	253;"	d
+TIMEZONE_GLOBAL	../port.h	256;"	d
+TRACE_SORT	../pg_config_manual.h	212;"	d
+TRACK_FUNC_ALL	../pgstat.h	/^	TRACK_FUNC_ALL$/;"	e	enum:TrackFunctionsLevel
+TRACK_FUNC_OFF	../pgstat.h	/^	TRACK_FUNC_OFF,$/;"	e	enum:TrackFunctionsLevel
+TRACK_FUNC_PL	../pgstat.h	/^	TRACK_FUNC_PL,$/;"	e	enum:TrackFunctionsLevel
+TRUE	../c.h	199;"	d
+TYPEALIGN	../c.h	533;"	d
+TYPEALIGN_DOWN	../c.h	544;"	d
+TYPEFUNC_COMPOSITE	../funcapi.h	/^	TYPEFUNC_COMPOSITE,			\/* determinable rowtype result *\/$/;"	e	enum:TypeFuncClass
+TYPEFUNC_OTHER	../funcapi.h	/^	TYPEFUNC_OTHER				\/* bogus type, eg pseudotype *\/$/;"	e	enum:TypeFuncClass
+TYPEFUNC_RECORD	../funcapi.h	/^	TYPEFUNC_RECORD,			\/* indeterminate rowtype result *\/$/;"	e	enum:TypeFuncClass
+TYPEFUNC_SCALAR	../funcapi.h	/^	TYPEFUNC_SCALAR,			\/* scalar result type *\/$/;"	e	enum:TypeFuncClass
+TZNAME_GLOBAL	../port.h	254;"	d
+TZNAME_GLOBAL	../port.h	257;"	d
+TZ_STRLEN_MAX	../pgtime.h	71;"	d
+TopSubTransactionId	../c.h	361;"	d
+TrackFunctionsLevel	../pgstat.h	/^typedef enum TrackFunctionsLevel$/;"	g
+TrackFunctionsLevel	../pgstat.h	/^} TrackFunctionsLevel;$/;"	t	typeref:enum:TrackFunctionsLevel
+TransactionId	../c.h	/^typedef uint32 TransactionId;$/;"	t
+TransactionIdGetDatum	../postgres.h	457;"	d
+Trap	../postgres.h	648;"	d
+TrapMacro	../postgres.h	662;"	d
+TupleGetDatum	../funcapi.h	221;"	d
+TypeFuncClass	../funcapi.h	/^typedef enum TypeFuncClass$/;"	g
+TypeFuncClass	../funcapi.h	/^} TypeFuncClass;$/;"	t	typeref:enum:TypeFuncClass
+UINT64CONST	../c.h	290;"	d
+UINT64CONST	../c.h	293;"	d
+UINT64_FORMAT	../pg_config.h	743;"	d
+UInt16GetDatum	../postgres.h	401;"	d
+UInt32GetDatum	../postgres.h	429;"	d
+UInt8GetDatum	../postgres.h	373;"	d
+USE_FLOAT4_BYVAL	../pg_config.h	753;"	d
+USE_GERMAN_DATES	../miscadmin.h	185;"	d
+USE_INLINE	../pg_config.h	761;"	d
+USE_INTEGER_DATETIMES	../pg_config.h	765;"	d
+USE_ISO_DATES	../miscadmin.h	183;"	d
+USE_POSIX_FADVISE	../pg_config_manual.h	124;"	d
+USE_POSTGRES_DATES	../miscadmin.h	182;"	d
+USE_PREFETCH	../pg_config_manual.h	133;"	d
+USE_SQL_DATES	../miscadmin.h	184;"	d
+USE_SYSV_SEMAPHORES	../pg_config.h	790;"	d
+USE_SYSV_SHARED_MEMORY	../pg_config.h	793;"	d
+USE_WIDE_UPPER_LOWER	../c.h	840;"	d
+USE_XSD_DATES	../miscadmin.h	186;"	d
+VARATT_CAN_MAKE_SHORT	../postgres.h	212;"	d
+VARATT_CONVERTED_SHORT_SIZE	../postgres.h	215;"	d
+VARATT_IS_1B	../postgres.h	152;"	d
+VARATT_IS_1B	../postgres.h	184;"	d
+VARATT_IS_1B_E	../postgres.h	154;"	d
+VARATT_IS_1B_E	../postgres.h	186;"	d
+VARATT_IS_4B	../postgres.h	146;"	d
+VARATT_IS_4B	../postgres.h	178;"	d
+VARATT_IS_4B_C	../postgres.h	150;"	d
+VARATT_IS_4B_C	../postgres.h	182;"	d
+VARATT_IS_4B_U	../postgres.h	148;"	d
+VARATT_IS_4B_U	../postgres.h	180;"	d
+VARATT_IS_COMPRESSED	../postgres.h	255;"	d
+VARATT_IS_EXTENDED	../postgres.h	258;"	d
+VARATT_IS_EXTERNAL	../postgres.h	256;"	d
+VARATT_IS_SHORT	../postgres.h	257;"	d
+VARATT_NOT_PAD_BYTE	../postgres.h	156;"	d
+VARATT_NOT_PAD_BYTE	../postgres.h	188;"	d
+VARATT_SHORT_MAX	../postgres.h	211;"	d
+VARDATA	../postgres.h	246;"	d
+VARDATA_1B	../postgres.h	222;"	d
+VARDATA_1B_E	../postgres.h	223;"	d
+VARDATA_4B	../postgres.h	220;"	d
+VARDATA_4B_C	../postgres.h	221;"	d
+VARDATA_ANY	../postgres.h	277;"	d
+VARDATA_EXTERNAL	../postgres.h	253;"	d
+VARDATA_SHORT	../postgres.h	250;"	d
+VARHDRSZ	../c.h	400;"	d
+VARHDRSZ_EXTERNAL	../postgres.h	218;"	d
+VARHDRSZ_SHORT	../postgres.h	210;"	d
+VARRAWSIZE_4B_C	../postgres.h	225;"	d
+VARSIZE	../postgres.h	247;"	d
+VARSIZE_1B	../postgres.h	162;"	d
+VARSIZE_1B	../postgres.h	194;"	d
+VARSIZE_1B_E	../postgres.h	164;"	d
+VARSIZE_1B_E	../postgres.h	196;"	d
+VARSIZE_4B	../postgres.h	160;"	d
+VARSIZE_4B	../postgres.h	192;"	d
+VARSIZE_ANY	../postgres.h	265;"	d
+VARSIZE_ANY_EXHDR	../postgres.h	270;"	d
+VARSIZE_EXTERNAL	../postgres.h	252;"	d
+VARSIZE_SHORT	../postgres.h	249;"	d
+VarChar	../c.h	/^typedef struct varlena VarChar; \/* var-length char, ie SQL varchar(n) *\/$/;"	t	typeref:struct:varlena
+WINDOWAPI_H	../windowapi.h	29;"	d
+WINDOW_SEEK_CURRENT	../windowapi.h	32;"	d
+WINDOW_SEEK_HEAD	../windowapi.h	33;"	d
+WINDOW_SEEK_TAIL	../windowapi.h	34;"	d
+WORDS_BIGENDIAN	../pg_config.h	808;"	d
+WSATYPE_NOT_FOUND	../getaddrinfo.h	48;"	d
+WSA_NOT_ENOUGH_MEMORY	../getaddrinfo.h	45;"	d
+WindowObject	../windowapi.h	/^typedef struct WindowObjectData *WindowObject;$/;"	t	typeref:struct:WindowObjectData
+WindowObjectIsValid	../windowapi.h	41;"	d
+XLOG_BLCKSZ	../pg_config.h	821;"	d
+XLOG_SEG_SIZE	../pg_config.h	826;"	d
+_	../c.h	96;"	d
+_FILE_OFFSET_BITS	../pg_config.h	829;"	d
+_PGTIME_H	../pgtime.h	14;"	d
+__attribute__	../c.h	165;"	d
+_priv_CppIdentity	../c.h	150;"	d
+addrinfo	../getaddrinfo.h	/^struct addrinfo$/;"	s
+ai_addr	../getaddrinfo.h	/^	struct sockaddr *ai_addr;$/;"	m	struct:addrinfo	typeref:struct:addrinfo::sockaddr
+ai_addrlen	../getaddrinfo.h	/^	size_t		ai_addrlen;$/;"	m	struct:addrinfo
+ai_canonname	../getaddrinfo.h	/^	char	   *ai_canonname;$/;"	m	struct:addrinfo
+ai_family	../getaddrinfo.h	/^	int			ai_family;$/;"	m	struct:addrinfo
+ai_flags	../getaddrinfo.h	/^	int			ai_flags;$/;"	m	struct:addrinfo
+ai_next	../getaddrinfo.h	/^	struct addrinfo *ai_next;$/;"	m	struct:addrinfo	typeref:struct:addrinfo::addrinfo
+ai_protocol	../getaddrinfo.h	/^	int			ai_protocol;$/;"	m	struct:addrinfo
+ai_socktype	../getaddrinfo.h	/^	int			ai_socktype;$/;"	m	struct:addrinfo
+analyze_timestamp	../pgstat.h	/^	TimestampTz analyze_timestamp;		\/* user initiated *\/$/;"	m	struct:PgStat_StatTabEntry
+api_version	../fmgr.h	/^	int			api_version;	\/* specifies call convention version number *\/$/;"	m	struct:__anon4
+arg	../fmgr.h	/^	Datum		arg[FUNC_MAX_ARGS];		\/* Arguments passed to function *\/$/;"	m	struct:FunctionCallInfoData
+argnull	../fmgr.h	/^	bool		argnull[FUNC_MAX_ARGS]; \/* T if arg[i] is actually NULL *\/$/;"	m	struct:FunctionCallInfoData
+attinfuncs	../funcapi.h	/^	FmgrInfo   *attinfuncs;$/;"	m	struct:AttInMetadata
+attinmeta	../funcapi.h	/^	AttInMetadata *attinmeta;$/;"	m	struct:FuncCallContext
+attioparams	../funcapi.h	/^	Oid		   *attioparams;$/;"	m	struct:AttInMetadata
+atttypmods	../funcapi.h	/^	int32	   *atttypmods;$/;"	m	struct:AttInMetadata
+autovac_analyze_timestamp	../pgstat.h	/^	TimestampTz autovac_analyze_timestamp;		\/* autovacuum initiated *\/$/;"	m	struct:PgStat_StatTabEntry
+autovac_vacuum_timestamp	../pgstat.h	/^	TimestampTz autovac_vacuum_timestamp;		\/* autovacuum initiated *\/$/;"	m	struct:PgStat_StatTabEntry
+bits16	../c.h	/^typedef uint16 bits16;			\/* >= 16 bits *\/$/;"	t
+bits32	../c.h	/^typedef uint32 bits32;			\/* >= 32 bits *\/$/;"	t
+bits8	../c.h	/^typedef uint8 bits8;			\/* >= 8 bits *\/$/;"	t
+blocks_fetched	../pgstat.h	/^	PgStat_Counter blocks_fetched;$/;"	m	struct:PgStat_StatTabEntry
+blocks_hit	../pgstat.h	/^	PgStat_Counter blocks_hit;$/;"	m	struct:PgStat_StatTabEntry
+bool	../c.h	/^typedef char bool;$/;"	t
+buf_alloc	../pgstat.h	/^	PgStat_Counter buf_alloc;$/;"	m	struct:PgStat_GlobalStats
+buf_written_backend	../pgstat.h	/^	PgStat_Counter buf_written_backend;$/;"	m	struct:PgStat_GlobalStats
+buf_written_checkpoints	../pgstat.h	/^	PgStat_Counter buf_written_checkpoints;$/;"	m	struct:PgStat_GlobalStats
+buf_written_clean	../pgstat.h	/^	PgStat_Counter buf_written_clean;$/;"	m	struct:PgStat_GlobalStats
+bytea	../c.h	/^typedef struct varlena bytea;$/;"	t	typeref:struct:varlena
+call_cntr	../funcapi.h	/^	uint32		call_cntr;$/;"	m	struct:FuncCallContext
+changes_since_analyze	../pgstat.h	/^	PgStat_Counter changes_since_analyze;$/;"	m	struct:PgStat_StatTabEntry
+closesocket	../port.h	341;"	d
+context	../fmgr.h	/^	fmNodePtr	context;		\/* pass info about context of call *\/$/;"	m	struct:FunctionCallInfoData
+data	../c.h	/^	char		data[NAMEDATALEN];$/;"	m	struct:nameData
+databaseid	../pgstat.h	/^	Oid			databaseid;$/;"	m	struct:PgStat_StatDBEntry
+dataoffset	../c.h	/^	int32		dataoffset;		\/* always 0 for int2vector *\/$/;"	m	struct:__anon2
+dataoffset	../c.h	/^	int32		dataoffset;		\/* always 0 for oidvector *\/$/;"	m	struct:__anon3
+dgettext	../c.h	102;"	d
+dim1	../c.h	/^	int			dim1;$/;"	m	struct:__anon2
+dim1	../c.h	/^	int			dim1;$/;"	m	struct:__anon3
+dngettext	../c.h	104;"	d
+dummyret	../c.h	159;"	d
+dummyret	../c.h	161;"	d
+elemtype	../c.h	/^	Oid			elemtype;$/;"	m	struct:__anon2
+elemtype	../c.h	/^	Oid			elemtype;$/;"	m	struct:__anon3
+endof	../c.h	520;"	d
+errcode	../c.h	62;"	d
+errcode	../c.h	64;"	d
+f_counts	../pgstat.h	/^	PgStat_FunctionCounts f_counts;$/;"	m	struct:PgStat_BackendFunctionEntry
+f_id	../pgstat.h	/^	Oid			f_id;$/;"	m	struct:PgStat_BackendFunctionEntry
+f_id	../pgstat.h	/^	Oid			f_id;$/;"	m	struct:PgStat_FunctionEntry
+f_numcalls	../pgstat.h	/^	PgStat_Counter f_numcalls;$/;"	m	struct:PgStat_FunctionCounts
+f_numcalls	../pgstat.h	/^	PgStat_Counter f_numcalls;$/;"	m	struct:PgStat_FunctionEntry
+f_numcalls	../pgstat.h	/^	PgStat_Counter f_numcalls;$/;"	m	struct:PgStat_StatFuncEntry
+f_start	../pgstat.h	/^	instr_time	f_start;$/;"	m	struct:PgStat_FunctionCallUsage
+f_time	../pgstat.h	/^	PgStat_Counter f_time;		\/* times in microseconds *\/$/;"	m	struct:PgStat_FunctionEntry
+f_time	../pgstat.h	/^	PgStat_Counter f_time;		\/* times in microseconds *\/$/;"	m	struct:PgStat_StatFuncEntry
+f_time	../pgstat.h	/^	instr_time	f_time;$/;"	m	struct:PgStat_FunctionCounts
+f_time_self	../pgstat.h	/^	PgStat_Counter f_time_self;$/;"	m	struct:PgStat_FunctionEntry
+f_time_self	../pgstat.h	/^	PgStat_Counter f_time_self;$/;"	m	struct:PgStat_StatFuncEntry
+f_time_self	../pgstat.h	/^	instr_time	f_time_self;$/;"	m	struct:PgStat_FunctionCounts
+false	../c.h	192;"	d
+flag	../getopt_long.h	/^	int		   *flag;$/;"	m	struct:option
+flinfo	../fmgr.h	/^	FmgrInfo   *flinfo;			\/* ptr to lookup info used for this call *\/$/;"	m	struct:FunctionCallInfoData
+float4	../c.h	/^typedef float float4;$/;"	t
+float4byval	../fmgr.h	/^	int			float4byval;	\/* FLOAT4PASSBYVAL *\/$/;"	m	struct:__anon5
+float8	../c.h	/^typedef double float8;$/;"	t
+float8byval	../fmgr.h	/^	int			float8byval;	\/* FLOAT8PASSBYVAL *\/$/;"	m	struct:__anon5
+fmNodePtr	../fmgr.h	/^typedef struct Node *fmNodePtr;$/;"	t	typeref:struct:Node
+fmStringInfo	../fmgr.h	/^typedef struct StringInfoData *fmStringInfo;$/;"	t	typeref:struct:StringInfoData
+fn_addr	../fmgr.h	/^	PGFunction	fn_addr;		\/* pointer to function or handler to be called *\/$/;"	m	struct:FmgrInfo
+fn_expr	../fmgr.h	/^	fmNodePtr	fn_expr;		\/* expression parse tree for call, or NULL *\/$/;"	m	struct:FmgrInfo
+fn_extra	../fmgr.h	/^	void	   *fn_extra;		\/* extra space for use by handler *\/$/;"	m	struct:FmgrInfo
+fn_mcxt	../fmgr.h	/^	MemoryContext fn_mcxt;		\/* memory context to store fn_extra in *\/$/;"	m	struct:FmgrInfo
+fn_nargs	../fmgr.h	/^	short		fn_nargs;		\/* 0..FUNC_MAX_ARGS, or -1 if variable arg$/;"	m	struct:FmgrInfo
+fn_oid	../fmgr.h	/^	Oid			fn_oid;			\/* OID of function (NOT of handler, if any) *\/$/;"	m	struct:FmgrInfo
+fn_retset	../fmgr.h	/^	bool		fn_retset;		\/* function returns a set *\/$/;"	m	struct:FmgrInfo
+fn_stats	../fmgr.h	/^	unsigned char fn_stats;		\/* collect stats if track_functions > this *\/$/;"	m	struct:FmgrInfo
+fn_strict	../fmgr.h	/^	bool		fn_strict;		\/* function is "strict" (NULL in => NULL out) *\/$/;"	m	struct:FmgrInfo
+fopen	../port.h	324;"	d
+fprintf	../port.h	174;"	d
+fprintf	../port.h	209;"	d
+fprintf	../port.h	216;"	d
+freeaddrinfo	../getaddrinfo.h	138;"	d
+freeaddrinfo	../getaddrinfo.h	140;"	d
+fs	../pgstat.h	/^	PgStat_FunctionCounts *fs;$/;"	m	struct:PgStat_FunctionCallUsage
+fseeko	../port.h	369;"	d
+ftello	../port.h	370;"	d
+funcmaxargs	../fmgr.h	/^	int			funcmaxargs;	\/* FUNC_MAX_ARGS *\/$/;"	m	struct:__anon5
+functionid	../pgstat.h	/^	Oid			functionid;$/;"	m	struct:PgStat_StatFuncEntry
+functions	../pgstat.h	/^	HTAB	   *functions;$/;"	m	struct:PgStat_StatDBEntry
+gai_strerror	../getaddrinfo.h	143;"	d
+gai_strerror	../getaddrinfo.h	145;"	d
+getaddrinfo	../getaddrinfo.h	133;"	d
+getaddrinfo	../getaddrinfo.h	135;"	d
+getnameinfo	../getaddrinfo.h	148;"	d
+getnameinfo	../getaddrinfo.h	150;"	d
+gettext	../c.h	101;"	d
+gettext_noop	../c.h	115;"	d
+gettimeofday	../pg_config.h	79;"	d
+has_arg	../getopt_long.h	/^	int			has_arg;$/;"	m	struct:option
+indexmaxkeys	../fmgr.h	/^	int			indexmaxkeys;	\/* INDEX_MAX_KEYS *\/$/;"	m	struct:__anon5
+indx	../c.h	/^	int			indx[MAXDIM];$/;"	m	struct:__anon1
+inquiry_time	../pgstat.h	/^	TimestampTz inquiry_time;	\/* minimum acceptable file timestamp *\/$/;"	m	struct:PgStat_MsgInquiry
+int16	../c.h	/^typedef signed short int16;		\/* == 16 bits *\/$/;"	t
+int2	../c.h	/^typedef int16 int2;$/;"	t
+int2vector	../c.h	/^} int2vector;					\/* VARIABLE LENGTH STRUCT *\/$/;"	t	typeref:struct:__anon2
+int32	../c.h	/^typedef signed int int32;		\/* == 32 bits *\/$/;"	t
+int4	../c.h	/^typedef int32 int4;$/;"	t
+int64	../c.h	/^typedef long int int64;$/;"	t
+int64	../c.h	/^typedef long long int int64;$/;"	t
+int8	../c.h	/^typedef signed char int8;		\/* == 8 bits *\/$/;"	t
+is_absolute_path	../port.h	71;"	d
+is_absolute_path	../port.h	76;"	d
+isnull	../fmgr.h	/^	bool		isnull;			\/* function must set true if result is NULL *\/$/;"	m	struct:FunctionCallInfoData
+kill	../port.h	245;"	d
+last_autovac_time	../pgstat.h	/^	TimestampTz last_autovac_time;$/;"	m	struct:PgStat_StatDBEntry
+lbound1	../c.h	/^	int			lbound1;$/;"	m	struct:__anon2
+lbound1	../c.h	/^	int			lbound1;$/;"	m	struct:__anon3
+len	../fmgr.h	/^	int			len;			\/* sizeof(this struct) *\/$/;"	m	struct:__anon5
+lengthof	../c.h	514;"	d
+m_adopt_counts	../pgstat.h	/^	bool		m_adopt_counts;$/;"	m	struct:PgStat_MsgAnalyze
+m_adopt_counts	../pgstat.h	/^	bool		m_adopt_counts;$/;"	m	struct:PgStat_MsgVacuum
+m_analyzetime	../pgstat.h	/^	TimestampTz m_analyzetime;$/;"	m	struct:PgStat_MsgAnalyze
+m_autovacuum	../pgstat.h	/^	bool		m_autovacuum;$/;"	m	struct:PgStat_MsgAnalyze
+m_autovacuum	../pgstat.h	/^	bool		m_autovacuum;$/;"	m	struct:PgStat_MsgVacuum
+m_buf_alloc	../pgstat.h	/^	PgStat_Counter m_buf_alloc;$/;"	m	struct:PgStat_MsgBgWriter
+m_buf_written_backend	../pgstat.h	/^	PgStat_Counter m_buf_written_backend;$/;"	m	struct:PgStat_MsgBgWriter
+m_buf_written_checkpoints	../pgstat.h	/^	PgStat_Counter m_buf_written_checkpoints;$/;"	m	struct:PgStat_MsgBgWriter
+m_buf_written_clean	../pgstat.h	/^	PgStat_Counter m_buf_written_clean;$/;"	m	struct:PgStat_MsgBgWriter
+m_databaseid	../pgstat.h	/^	Oid			m_databaseid;$/;"	m	struct:PgStat_MsgAnalyze
+m_databaseid	../pgstat.h	/^	Oid			m_databaseid;$/;"	m	struct:PgStat_MsgAutovacStart
+m_databaseid	../pgstat.h	/^	Oid			m_databaseid;$/;"	m	struct:PgStat_MsgDropdb
+m_databaseid	../pgstat.h	/^	Oid			m_databaseid;$/;"	m	struct:PgStat_MsgFuncpurge
+m_databaseid	../pgstat.h	/^	Oid			m_databaseid;$/;"	m	struct:PgStat_MsgFuncstat
+m_databaseid	../pgstat.h	/^	Oid			m_databaseid;$/;"	m	struct:PgStat_MsgResetcounter
+m_databaseid	../pgstat.h	/^	Oid			m_databaseid;$/;"	m	struct:PgStat_MsgResetsinglecounter
+m_databaseid	../pgstat.h	/^	Oid			m_databaseid;$/;"	m	struct:PgStat_MsgTabpurge
+m_databaseid	../pgstat.h	/^	Oid			m_databaseid;$/;"	m	struct:PgStat_MsgTabstat
+m_databaseid	../pgstat.h	/^	Oid			m_databaseid;$/;"	m	struct:PgStat_MsgVacuum
+m_dead_tuples	../pgstat.h	/^	PgStat_Counter m_dead_tuples;$/;"	m	struct:PgStat_MsgAnalyze
+m_entry	../pgstat.h	/^	PgStat_FunctionEntry m_entry[PGSTAT_NUM_FUNCENTRIES];$/;"	m	struct:PgStat_MsgFuncstat
+m_entry	../pgstat.h	/^	PgStat_TableEntry m_entry[PGSTAT_NUM_TABENTRIES];$/;"	m	struct:PgStat_MsgTabstat
+m_functionid	../pgstat.h	/^	Oid			m_functionid[PGSTAT_NUM_FUNCPURGE];$/;"	m	struct:PgStat_MsgFuncpurge
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgAnalyze
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgAutovacStart
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgBgWriter
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgDropdb
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgDummy
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgFuncpurge
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgFuncstat
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgInquiry
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgResetcounter
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgResetsharedcounter
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgResetsinglecounter
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgTabpurge
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgTabstat
+m_hdr	../pgstat.h	/^	PgStat_MsgHdr m_hdr;$/;"	m	struct:PgStat_MsgVacuum
+m_live_tuples	../pgstat.h	/^	PgStat_Counter m_live_tuples;$/;"	m	struct:PgStat_MsgAnalyze
+m_maxwritten_clean	../pgstat.h	/^	PgStat_Counter m_maxwritten_clean;$/;"	m	struct:PgStat_MsgBgWriter
+m_nentries	../pgstat.h	/^	int			m_nentries;$/;"	m	struct:PgStat_MsgFuncpurge
+m_nentries	../pgstat.h	/^	int			m_nentries;$/;"	m	struct:PgStat_MsgFuncstat
+m_nentries	../pgstat.h	/^	int			m_nentries;$/;"	m	struct:PgStat_MsgTabpurge
+m_nentries	../pgstat.h	/^	int			m_nentries;$/;"	m	struct:PgStat_MsgTabstat
+m_objectid	../pgstat.h	/^	Oid			m_objectid;$/;"	m	struct:PgStat_MsgResetsinglecounter
+m_requested_checkpoints	../pgstat.h	/^	PgStat_Counter m_requested_checkpoints;$/;"	m	struct:PgStat_MsgBgWriter
+m_resettarget	../pgstat.h	/^	PgStat_Shared_Reset_Target m_resettarget;$/;"	m	struct:PgStat_MsgResetsharedcounter
+m_resettype	../pgstat.h	/^	PgStat_Single_Reset_Type m_resettype;$/;"	m	struct:PgStat_MsgResetsinglecounter
+m_size	../pgstat.h	/^	int			m_size;$/;"	m	struct:PgStat_MsgHdr
+m_start_time	../pgstat.h	/^	TimestampTz m_start_time;$/;"	m	struct:PgStat_MsgAutovacStart
+m_tableid	../pgstat.h	/^	Oid			m_tableid[PGSTAT_NUM_TABPURGE];$/;"	m	struct:PgStat_MsgTabpurge
+m_tableoid	../pgstat.h	/^	Oid			m_tableoid;$/;"	m	struct:PgStat_MsgAnalyze
+m_tableoid	../pgstat.h	/^	Oid			m_tableoid;$/;"	m	struct:PgStat_MsgVacuum
+m_timed_checkpoints	../pgstat.h	/^	PgStat_Counter m_timed_checkpoints;$/;"	m	struct:PgStat_MsgBgWriter
+m_tuples	../pgstat.h	/^	PgStat_Counter m_tuples;$/;"	m	struct:PgStat_MsgVacuum
+m_type	../pgstat.h	/^	StatMsgType m_type;$/;"	m	struct:PgStat_MsgHdr
+m_vacuumtime	../pgstat.h	/^	TimestampTz m_vacuumtime;$/;"	m	struct:PgStat_MsgVacuum
+m_xact_commit	../pgstat.h	/^	int			m_xact_commit;$/;"	m	struct:PgStat_MsgTabstat
+m_xact_rollback	../pgstat.h	/^	int			m_xact_rollback;$/;"	m	struct:PgStat_MsgTabstat
+max_calls	../funcapi.h	/^	uint32		max_calls;$/;"	m	struct:FuncCallContext
+maxwritten_clean	../pgstat.h	/^	PgStat_Counter maxwritten_clean;$/;"	m	struct:PgStat_GlobalStats
+memmove	../c.h	784;"	d
+msg_analyze	../pgstat.h	/^	PgStat_MsgAnalyze msg_analyze;$/;"	m	union:PgStat_Msg
+msg_autovacuum	../pgstat.h	/^	PgStat_MsgAutovacStart msg_autovacuum;$/;"	m	union:PgStat_Msg
+msg_bgwriter	../pgstat.h	/^	PgStat_MsgBgWriter msg_bgwriter;$/;"	m	union:PgStat_Msg
+msg_dropdb	../pgstat.h	/^	PgStat_MsgDropdb msg_dropdb;$/;"	m	union:PgStat_Msg
+msg_dummy	../pgstat.h	/^	PgStat_MsgDummy msg_dummy;$/;"	m	union:PgStat_Msg
+msg_funcpurge	../pgstat.h	/^	PgStat_MsgFuncpurge msg_funcpurge;$/;"	m	union:PgStat_Msg
+msg_funcstat	../pgstat.h	/^	PgStat_MsgFuncstat msg_funcstat;$/;"	m	union:PgStat_Msg
+msg_hdr	../pgstat.h	/^	PgStat_MsgHdr msg_hdr;$/;"	m	union:PgStat_Msg
+msg_inquiry	../pgstat.h	/^	PgStat_MsgInquiry msg_inquiry;$/;"	m	union:PgStat_Msg
+msg_resetcounter	../pgstat.h	/^	PgStat_MsgResetcounter msg_resetcounter;$/;"	m	union:PgStat_Msg
+msg_resetsharedcounter	../pgstat.h	/^	PgStat_MsgResetsharedcounter msg_resetsharedcounter;$/;"	m	union:PgStat_Msg
+msg_resetsinglecounter	../pgstat.h	/^	PgStat_MsgResetsinglecounter msg_resetsinglecounter;$/;"	m	union:PgStat_Msg
+msg_tabpurge	../pgstat.h	/^	PgStat_MsgTabpurge msg_tabpurge;$/;"	m	union:PgStat_Msg
+msg_tabstat	../pgstat.h	/^	PgStat_MsgTabstat msg_tabstat;$/;"	m	union:PgStat_Msg
+msg_vacuum	../pgstat.h	/^	PgStat_MsgVacuum msg_vacuum;$/;"	m	union:PgStat_Msg
+multi_call_memory_ctx	../funcapi.h	/^	MemoryContext multi_call_memory_ctx;$/;"	m	struct:FuncCallContext
+n_blocks_fetched	../pgstat.h	/^	PgStat_Counter n_blocks_fetched;$/;"	m	struct:PgStat_StatDBEntry
+n_blocks_hit	../pgstat.h	/^	PgStat_Counter n_blocks_hit;$/;"	m	struct:PgStat_StatDBEntry
+n_dead_tuples	../pgstat.h	/^	PgStat_Counter n_dead_tuples;$/;"	m	struct:PgStat_StatTabEntry
+n_live_tuples	../pgstat.h	/^	PgStat_Counter n_live_tuples;$/;"	m	struct:PgStat_StatTabEntry
+n_tuples_deleted	../pgstat.h	/^	PgStat_Counter n_tuples_deleted;$/;"	m	struct:PgStat_StatDBEntry
+n_tuples_fetched	../pgstat.h	/^	PgStat_Counter n_tuples_fetched;$/;"	m	struct:PgStat_StatDBEntry
+n_tuples_inserted	../pgstat.h	/^	PgStat_Counter n_tuples_inserted;$/;"	m	struct:PgStat_StatDBEntry
+n_tuples_returned	../pgstat.h	/^	PgStat_Counter n_tuples_returned;$/;"	m	struct:PgStat_StatDBEntry
+n_tuples_updated	../pgstat.h	/^	PgStat_Counter n_tuples_updated;$/;"	m	struct:PgStat_StatDBEntry
+n_xact_commit	../pgstat.h	/^	PgStat_Counter n_xact_commit;$/;"	m	struct:PgStat_StatDBEntry
+n_xact_rollback	../pgstat.h	/^	PgStat_Counter n_xact_rollback;$/;"	m	struct:PgStat_StatDBEntry
+name	../getopt_long.h	/^	const char *name;$/;"	m	struct:option
+nameData	../c.h	/^typedef struct nameData$/;"	s
+namedatalen	../fmgr.h	/^	int			namedatalen;	\/* NAMEDATALEN *\/$/;"	m	struct:__anon5
+nargs	../fmgr.h	/^	short		nargs;			\/* # arguments actually passed *\/$/;"	m	struct:FunctionCallInfoData
+ndim	../c.h	/^	int			ndim;			\/* always 1 for int2vector *\/$/;"	m	struct:__anon2
+ndim	../c.h	/^	int			ndim;			\/* always 1 for oidvector *\/$/;"	m	struct:__anon3
+nest_level	../pgstat.h	/^	int			nest_level;		\/* subtransaction nest level *\/$/;"	m	struct:PgStat_TableXactStatus
+next	../pgstat.h	/^	struct PgStat_TableXactStatus *next;		\/* next of same subxact *\/$/;"	m	struct:PgStat_TableXactStatus	typeref:struct:PgStat_TableXactStatus::PgStat_TableXactStatus
+ngettext	../c.h	103;"	d
+no_argument	../getopt_long.h	32;"	d
+numscans	../pgstat.h	/^	PgStat_Counter numscans;$/;"	m	struct:PgStat_StatTabEntry
+offsetof	../c.h	507;"	d
+oidvector	../c.h	/^} oidvector;					\/* VARIABLE LENGTH STRUCT *\/$/;"	t	typeref:struct:__anon3
+open	../port.h	323;"	d
+option	../getopt_long.h	/^struct option$/;"	s
+parent	../pgstat.h	/^	PgStat_TableStatus *parent; \/* per-table status *\/$/;"	m	struct:PgStat_TableXactStatus
+pclose	../port.h	328;"	d
+pg_dlclose	../dynloader.h	40;"	d
+pg_dlerror	../dynloader.h	41;"	d
+pg_dlopen	../dynloader.h	38;"	d
+pg_dlsym	../dynloader.h	39;"	d
+pg_time_t	../pgtime.h	/^typedef int64 pg_time_t;$/;"	t
+pg_tm	../pgtime.h	/^struct pg_tm$/;"	s
+pg_tz	../pgtime.h	/^typedef struct pg_tz pg_tz;$/;"	t	typeref:struct:pg_tz
+pg_tzenum	../pgtime.h	/^typedef struct pg_tzenum pg_tzenum;$/;"	t	typeref:struct:pg_tzenum
+pgoff_t	../port.h	354;"	d
+pgpipe	../port.h	235;"	d
+pgsocket	../port.h	/^typedef SOCKET pgsocket;$/;"	t
+pgsocket	../port.h	/^typedef int pgsocket;$/;"	t
+pgstat_count_buffer_hit	../pgstat.h	729;"	d
+pgstat_count_buffer_read	../pgstat.h	724;"	d
+pgstat_count_heap_fetch	../pgstat.h	709;"	d
+pgstat_count_heap_getnext	../pgstat.h	704;"	d
+pgstat_count_heap_scan	../pgstat.h	699;"	d
+pgstat_count_index_scan	../pgstat.h	714;"	d
+pgstat_count_index_tuples	../pgstat.h	719;"	d
+piperead	../port.h	236;"	d
+pipewrite	../port.h	237;"	d
+pipewrite	../port.h	242;"	d
+popen	../port.h	327;"	d
+printf	../port.h	177;"	d
+printf	../port.h	210;"	d
+printf	../port.h	217;"	d
+qsort	../port.h	432;"	d
+qsort_arg_comparator	../port.h	/^typedef int (*qsort_arg_comparator) (const void *a, const void *b, void *arg);$/;"	t
+regproc	../c.h	/^typedef Oid regproc;$/;"	t
+rename	../port.h	272;"	d
+requested_checkpoints	../pgstat.h	/^	PgStat_Counter requested_checkpoints;$/;"	m	struct:PgStat_GlobalStats
+required_argument	../getopt_long.h	33;"	d
+resultinfo	../fmgr.h	/^	fmNodePtr	resultinfo;		\/* pass or return extra info about result *\/$/;"	m	struct:FunctionCallInfoData
+ru_stime	../rusagestub.h	/^	struct timeval ru_stime;	\/* system time used *\/$/;"	m	struct:rusage	typeref:struct:rusage::timeval
+ru_utime	../rusagestub.h	/^	struct timeval ru_utime;	\/* user time used *\/$/;"	m	struct:rusage	typeref:struct:rusage::timeval
+rusage	../rusagestub.h	/^struct rusage$/;"	s
+save_f_time	../pgstat.h	/^	instr_time	save_f_time;$/;"	m	struct:PgStat_FunctionCallUsage
+save_total	../pgstat.h	/^	instr_time	save_total;$/;"	m	struct:PgStat_FunctionCallUsage
+sig_atomic_t	../c.h	/^typedef int sig_atomic_t;$/;"	t
+sigjmp_buf	../c.h	814;"	d
+siglongjmp	../c.h	816;"	d
+sigsetjmp	../c.h	815;"	d
+slot	../funcapi.h	/^	TupleTableSlot *slot;$/;"	m	struct:FuncCallContext
+snprintf	../port.h	165;"	d
+snprintf	../port.h	206;"	d
+snprintf	../port.h	213;"	d
+sprintf	../port.h	168;"	d
+sprintf	../port.h	207;"	d
+sprintf	../port.h	214;"	d
+st_activity	../pgstat.h	/^	char	   *st_activity;$/;"	m	struct:PgBackendStatus
+st_activity_start_timestamp	../pgstat.h	/^	TimestampTz st_activity_start_timestamp;$/;"	m	struct:PgBackendStatus
+st_appname	../pgstat.h	/^	char	   *st_appname;$/;"	m	struct:PgBackendStatus
+st_changecount	../pgstat.h	/^	int			st_changecount;$/;"	m	struct:PgBackendStatus
+st_clientaddr	../pgstat.h	/^	SockAddr	st_clientaddr;$/;"	m	struct:PgBackendStatus
+st_databaseid	../pgstat.h	/^	Oid			st_databaseid;$/;"	m	struct:PgBackendStatus
+st_proc_start_timestamp	../pgstat.h	/^	TimestampTz st_proc_start_timestamp;$/;"	m	struct:PgBackendStatus
+st_procpid	../pgstat.h	/^	int			st_procpid;$/;"	m	struct:PgBackendStatus
+st_userid	../pgstat.h	/^	Oid			st_userid;$/;"	m	struct:PgBackendStatus
+st_waiting	../pgstat.h	/^	bool		st_waiting;$/;"	m	struct:PgBackendStatus
+st_xact_start_timestamp	../pgstat.h	/^	TimestampTz st_xact_start_timestamp;$/;"	m	struct:PgBackendStatus
+stat	../port.h	309;"	d
+stats_timestamp	../pgstat.h	/^	TimestampTz stats_timestamp;	\/* time of stats file update *\/$/;"	m	struct:PgStat_GlobalStats
+strtoll	../c.h	825;"	d
+strtoull	../c.h	831;"	d
+symlink	../port.h	288;"	d
+t_blocks_fetched	../pgstat.h	/^	PgStat_Counter t_blocks_fetched;$/;"	m	struct:PgStat_TableCounts
+t_blocks_hit	../pgstat.h	/^	PgStat_Counter t_blocks_hit;$/;"	m	struct:PgStat_TableCounts
+t_changed_tuples	../pgstat.h	/^	PgStat_Counter t_changed_tuples;$/;"	m	struct:PgStat_TableCounts
+t_counts	../pgstat.h	/^	PgStat_TableCounts t_counts;	\/* event counts to be sent *\/$/;"	m	struct:PgStat_TableStatus
+t_counts	../pgstat.h	/^	PgStat_TableCounts t_counts;$/;"	m	struct:PgStat_TableEntry
+t_delta_dead_tuples	../pgstat.h	/^	PgStat_Counter t_delta_dead_tuples;$/;"	m	struct:PgStat_TableCounts
+t_delta_live_tuples	../pgstat.h	/^	PgStat_Counter t_delta_live_tuples;$/;"	m	struct:PgStat_TableCounts
+t_id	../pgstat.h	/^	Oid			t_id;			\/* table's OID *\/$/;"	m	struct:PgStat_TableStatus
+t_id	../pgstat.h	/^	Oid			t_id;$/;"	m	struct:PgStat_TableEntry
+t_numscans	../pgstat.h	/^	PgStat_Counter t_numscans;$/;"	m	struct:PgStat_TableCounts
+t_shared	../pgstat.h	/^	bool		t_shared;		\/* is it a shared catalog? *\/$/;"	m	struct:PgStat_TableStatus
+t_tuples_deleted	../pgstat.h	/^	PgStat_Counter t_tuples_deleted;$/;"	m	struct:PgStat_TableCounts
+t_tuples_fetched	../pgstat.h	/^	PgStat_Counter t_tuples_fetched;$/;"	m	struct:PgStat_TableCounts
+t_tuples_hot_updated	../pgstat.h	/^	PgStat_Counter t_tuples_hot_updated;$/;"	m	struct:PgStat_TableCounts
+t_tuples_inserted	../pgstat.h	/^	PgStat_Counter t_tuples_inserted;$/;"	m	struct:PgStat_TableCounts
+t_tuples_returned	../pgstat.h	/^	PgStat_Counter t_tuples_returned;$/;"	m	struct:PgStat_TableCounts
+t_tuples_updated	../pgstat.h	/^	PgStat_Counter t_tuples_updated;$/;"	m	struct:PgStat_TableCounts
+tableid	../pgstat.h	/^	Oid			tableid;$/;"	m	struct:PgStat_StatTabEntry
+tables	../pgstat.h	/^	HTAB	   *tables;$/;"	m	struct:PgStat_StatDBEntry
+text	../c.h	/^typedef struct varlena text;$/;"	t	typeref:struct:varlena
+timed_checkpoints	../pgstat.h	/^	PgStat_Counter timed_checkpoints;$/;"	m	struct:PgStat_GlobalStats
+tm_gmtoff	../pgtime.h	/^	long int	tm_gmtoff;$/;"	m	struct:pg_tm
+tm_hour	../pgtime.h	/^	int			tm_hour;$/;"	m	struct:pg_tm
+tm_isdst	../pgtime.h	/^	int			tm_isdst;$/;"	m	struct:pg_tm
+tm_mday	../pgtime.h	/^	int			tm_mday;$/;"	m	struct:pg_tm
+tm_min	../pgtime.h	/^	int			tm_min;$/;"	m	struct:pg_tm
+tm_mon	../pgtime.h	/^	int			tm_mon;			\/* origin 0, not 1 *\/$/;"	m	struct:pg_tm
+tm_sec	../pgtime.h	/^	int			tm_sec;$/;"	m	struct:pg_tm
+tm_wday	../pgtime.h	/^	int			tm_wday;$/;"	m	struct:pg_tm
+tm_yday	../pgtime.h	/^	int			tm_yday;$/;"	m	struct:pg_tm
+tm_year	../pgtime.h	/^	int			tm_year;		\/* relative to 1900 *\/$/;"	m	struct:pg_tm
+tm_zone	../pgtime.h	/^	const char *tm_zone;$/;"	m	struct:pg_tm
+trans	../pgstat.h	/^	struct PgStat_TableXactStatus *trans;		\/* lowest subxact's counts *\/$/;"	m	struct:PgStat_TableStatus	typeref:struct:PgStat_TableStatus::PgStat_TableXactStatus
+true	../c.h	188;"	d
+tupdesc	../funcapi.h	/^	TupleDesc	tupdesc;$/;"	m	struct:AttInMetadata
+tuple_desc	../funcapi.h	/^	TupleDesc	tuple_desc;$/;"	m	struct:FuncCallContext
+tuples_deleted	../pgstat.h	/^	PgStat_Counter tuples_deleted;		\/* tuples deleted in (sub)xact *\/$/;"	m	struct:PgStat_TableXactStatus
+tuples_deleted	../pgstat.h	/^	PgStat_Counter tuples_deleted;$/;"	m	struct:PgStat_StatTabEntry
+tuples_fetched	../pgstat.h	/^	PgStat_Counter tuples_fetched;$/;"	m	struct:PgStat_StatTabEntry
+tuples_hot_updated	../pgstat.h	/^	PgStat_Counter tuples_hot_updated;$/;"	m	struct:PgStat_StatTabEntry
+tuples_inserted	../pgstat.h	/^	PgStat_Counter tuples_inserted;		\/* tuples inserted in (sub)xact *\/$/;"	m	struct:PgStat_TableXactStatus
+tuples_inserted	../pgstat.h	/^	PgStat_Counter tuples_inserted;$/;"	m	struct:PgStat_StatTabEntry
+tuples_returned	../pgstat.h	/^	PgStat_Counter tuples_returned;$/;"	m	struct:PgStat_StatTabEntry
+tuples_updated	../pgstat.h	/^	PgStat_Counter tuples_updated;		\/* tuples updated in (sub)xact *\/$/;"	m	struct:PgStat_TableXactStatus
+tuples_updated	../pgstat.h	/^	PgStat_Counter tuples_updated;$/;"	m	struct:PgStat_StatTabEntry
+uint16	../c.h	/^typedef unsigned short uint16;	\/* == 16 bits *\/$/;"	t
+uint32	../c.h	/^typedef unsigned int uint32;	\/* == 32 bits *\/$/;"	t
+uint64	../c.h	/^typedef unsigned long int uint64;$/;"	t
+uint64	../c.h	/^typedef unsigned long long int uint64;$/;"	t
+uint8	../c.h	/^typedef unsigned char uint8;	\/* == 8 bits *\/$/;"	t
+unlink	../port.h	273;"	d
+upper	../pgstat.h	/^	struct PgStat_TableXactStatus *upper;		\/* next higher subxact if any *\/$/;"	m	struct:PgStat_TableXactStatus	typeref:struct:PgStat_TableXactStatus::PgStat_TableXactStatus
+user_fctx	../funcapi.h	/^	void	   *user_fctx;$/;"	m	struct:FuncCallContext
+va_4byte	../postgres.h	/^	}			va_4byte;$/;"	m	union:__anon6	typeref:struct:__anon6::__anon7
+va_compressed	../postgres.h	/^	}			va_compressed;$/;"	m	union:__anon6	typeref:struct:__anon6::__anon8
+va_data	../postgres.h	/^		char		va_data[1]; \/* Compressed data *\/$/;"	m	struct:__anon6::__anon8
+va_data	../postgres.h	/^		char		va_data[1];$/;"	m	struct:__anon6::__anon7
+va_data	../postgres.h	/^	char		va_data[1];		\/* Data (for now always a TOAST pointer) *\/$/;"	m	struct:__anon10
+va_data	../postgres.h	/^	char		va_data[1];		\/* Data begins here *\/$/;"	m	struct:__anon9
+va_extsize	../postgres.h	/^	int32		va_extsize;		\/* External saved size (doesn't) *\/$/;"	m	struct:varatt_external
+va_header	../postgres.h	/^		uint32		va_header;$/;"	m	struct:__anon6::__anon7
+va_header	../postgres.h	/^		uint32		va_header;$/;"	m	struct:__anon6::__anon8
+va_header	../postgres.h	/^	uint8		va_header;		\/* Always 0x80 or 0x01 *\/$/;"	m	struct:__anon10
+va_header	../postgres.h	/^	uint8		va_header;$/;"	m	struct:__anon9
+va_len_1be	../postgres.h	/^	uint8		va_len_1be;		\/* Physical length of datum *\/$/;"	m	struct:__anon10
+va_rawsize	../postgres.h	/^		uint32		va_rawsize; \/* Original data size (excludes header) *\/$/;"	m	struct:__anon6::__anon8
+va_rawsize	../postgres.h	/^	int32		va_rawsize;		\/* Original data size (includes header) *\/$/;"	m	struct:varatt_external
+va_toastrelid	../postgres.h	/^	Oid			va_toastrelid;	\/* RelID of TOAST table containing it *\/$/;"	m	struct:varatt_external
+va_valueid	../postgres.h	/^	Oid			va_valueid;		\/* Unique ID of value within TOAST table *\/$/;"	m	struct:varatt_external
+vacuum_timestamp	../pgstat.h	/^	TimestampTz vacuum_timestamp;		\/* user initiated vacuum *\/$/;"	m	struct:PgStat_StatTabEntry
+val	../getopt_long.h	/^	int			val;$/;"	m	struct:option
+values	../c.h	/^	Oid			values[1];		\/* VARIABLE LENGTH ARRAY *\/$/;"	m	struct:__anon3
+values	../c.h	/^	int2		values[1];		\/* VARIABLE LENGTH ARRAY *\/$/;"	m	struct:__anon2
+varatt_external	../postgres.h	/^struct varatt_external$/;"	s
+varattrib_1b	../postgres.h	/^} varattrib_1b;$/;"	t	typeref:struct:__anon9
+varattrib_1b_e	../postgres.h	/^} varattrib_1b_e;$/;"	t	typeref:struct:__anon10
+varattrib_4b	../postgres.h	/^} varattrib_4b;$/;"	t	typeref:union:__anon6
+varlena	../c.h	/^struct varlena$/;"	s
+version	../fmgr.h	/^	int			version;		\/* PostgreSQL major version *\/$/;"	m	struct:__anon5
+vfprintf	../port.h	171;"	d
+vfprintf	../port.h	208;"	d
+vfprintf	../port.h	215;"	d
+vl_dat	../c.h	/^	char		vl_dat[1];$/;"	m	struct:varlena
+vl_len_	../c.h	/^	char		vl_len_[4];		\/* Do not touch this field directly! *\/$/;"	m	struct:varlena
+vl_len_	../c.h	/^	int32		vl_len_;		\/* these fields must match ArrayType! *\/$/;"	m	struct:__anon2
+vl_len_	../c.h	/^	int32		vl_len_;		\/* these fields must match ArrayType! *\/$/;"	m	struct:__anon3
+vsnprintf	../port.h	162;"	d
+vsnprintf	../port.h	205;"	d
+vsnprintf	../port.h	212;"	d
