@@ -119,7 +119,8 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 		if (buf != NULL)
 		{
 			*lock_held = false;
-			return buf;
+		fprintf(stderr, "BUF using free %d\n", buf->buf_id);
+            return buf;
 		}
 	}
 
