@@ -119,7 +119,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 		if (buf != NULL)
 		{
 			*lock_held = false;
-		fprintf(stderr, "BUF using free %d\n", buf->buf_id);
+		fprintf(stderr, "BUF using already free %d\n", buf->buf_id);
             return buf;
 		}
 	}
@@ -162,6 +162,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 		{
 			if (strategy != NULL)
 				AddBufferToRing(strategy, buf);
+            fprintf(stderr, "BUF using free %d\n", buf->buf_id);
 			return buf;
 		}
 		UnlockBufHdr(buf);
@@ -196,7 +197,12 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 				/* Found a usable buffer */
 				if (strategy != NULL)
 					AddBufferToRing(strategy, buf);
-				return buf;
+                if (buf->flags & BM_DIRTY) 
+                    fprintf(stderr, "BUF write then read %d\n", buf->buf_id);
+                else 
+                    fprintf(stderr, "BUF read only over %d\n", buf->buf_id);			
+                fprintf(stderr, "BUF using algrithem to find free page %d\n", buf->buf_id);
+                return buf;
 			}
 		}
 		else if (--trycounter == 0)

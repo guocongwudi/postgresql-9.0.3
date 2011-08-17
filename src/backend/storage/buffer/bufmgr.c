@@ -218,8 +218,10 @@ Buffer
 ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
 				   ReadBufferMode mode, BufferAccessStrategy strategy)
 {
-	bool		hit;
-	Buffer		buf;
+  if ( (reln)->rd_rel != NULL)
+      fprintf(stderr,"REQ %s %d\n", reln->rd_rel->relname.data,  blockNum);
+  bool		hit;
+  Buffer		buf;
 
 	/* Open it at the smgr level if not already done */
 	RelationOpenSmgr(reln);
@@ -555,7 +557,7 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 				*foundPtr = FALSE;
 			}
 		}
-
+fprintf(stderr,"BUF found in %d\n",buf_id);
 		return buf;
 	}
 
