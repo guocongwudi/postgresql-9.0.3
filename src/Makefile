@@ -14,16 +14,16 @@ include Makefile.global
 
 
 all install installdirs uninstall distprep:
-	$(MAKE) -C port $@
-	$(MAKE) -C timezone $@
+#	$(MAKE) -C port $@
+#	$(MAKE) -C timezone $@
 	$(MAKE) -C backend $@
-	$(MAKE) -C backend/utils/mb/conversion_procs $@
-	$(MAKE) -C backend/snowball $@
+#	$(MAKE) -C backend/utils/mb/conversion_procs $@
+#	$(MAKE) -C backend/snowball $@
 	$(MAKE) -C include $@
 	$(MAKE) -C interfaces $@
-	$(MAKE) -C backend/replication/libpqwalreceiver $@
+#	$(MAKE) -C backend/replication/libpqwalreceiver $@
 	$(MAKE) -C bin $@
-	$(MAKE) -C pl $@
+#	$(MAKE) -C pl $@
 	$(MAKE) -C makefiles $@
 	$(MAKE) -C test/regress $@
 
