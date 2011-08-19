@@ -60,17 +60,18 @@
 /* Bits in SyncOneBuffer's return value */
 #define BUF_WRITTEN				0x01
 #define BUF_REUSABLE			0x02
-
-
+#define TAG 1
+/*-----------------------------------------------------------------------------
+ *  staus : stored the stuas of request action
+ *-----------------------------------------------------------------------------*/
+#if TAG
+char * status;
+#endif 
 /* GUC variables */
 bool		zero_damaged_pages = false;
 int			bgwriter_lru_maxpages = 100;
 double		bgwriter_lru_multiplier = 2.0;
 
-
-#if 1
-char* page_status ="";
-#endif 
 /*
  * How many buffers PrefetchBuffer callers should try to stay ahead of their
  * ReadBuffer calls by.  This is maintained by the assign hook for
@@ -222,9 +223,16 @@ Buffer
 ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
 				   ReadBufferMode mode, BufferAccessStrategy strategy)
 {
-  bool		hit;
-  Buffer	buf;
 
+    /*-----------------------------------------------------------------------------
+     *  code for prc 6 commented
+     *-----------------------------------------------------------------------------*/
+    //  if ( (reln)->rd_rel != NULL)
+  //    fprintf(stderr,"REQ %s %d\n", reln->rd_rel->relname.data,  blockNum);
+  bool	    hit;
+  Buffer	buf;
+   
+  
 	/* Open it at the smgr level if not already done */
 	RelationOpenSmgr(reln);
 
@@ -245,14 +253,13 @@ ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
 	pgstat_count_buffer_read(reln);
 	buf = ReadBuffer_common(reln->rd_smgr, reln->rd_istemp, forkNum, blockNum,
 							mode, strategy, &hit);
-	if (hit) {
+	if (hit)
 		pgstat_count_buffer_hit(reln);
-    }
-    if ( (reln)->rd_rel != NULL)
-        fprintf(stderr,"REQ %s %d  %s\n", reln->rd_rel->relname.data,  blockNum,page_status);
-    return buf;
-}
 
+    if ( (reln)->rd_rel != NULL)
+      fprintf(stderr,"REQ %s %d %s\n", reln->rd_rel->relname.data,  blockNum,status);
+	return buf;
+}
 
 
 /*
@@ -323,13 +330,8 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 		 * not currently in memory.
 		 */
 		bufHdr = BufferAlloc(smgr, forkNum, blockNum, strategy, &found);
-		if (found){
-
-#if 1
-            page_status="found_hit";
-#endif
-			pgBufferUsage.shared_blks_hit++ ;
-        }
+		if (found)
+			pgBufferUsage.shared_blks_hit++;
 		else
 			pgBufferUsage.shared_blks_read++;
 	}
@@ -377,11 +379,11 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 			 (errmsg("unexpected data beyond EOF in block %u of relation %s",
 					 blockNum, relpath(smgr->smgr_rnode, forkNum)),
 			  errhint("This has been seen to occur with buggy kernels; consider updating your system.")));
+
 		/*
 		 * We *must* do smgrextend before succeeding, else the page will not
 		 * be reserved by the kernel, and the next P_NEW call will decide to
 		 * return the same page.  Clear the BM_VALID bit, do the StartBufferIO
-
 		 * call that BufferAlloc didn't, and proceed.
 		 */
 		if (isLocalBuf)
@@ -568,9 +570,16 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 				*foundPtr = FALSE;
 			}
 		}
-		return buf;
-	}
-
+      //  fprintf(stderr,"BUF found in %d\n",buf_id);
+#if TAG
+        
+        /*-----------------------------------------------------------------------------
+         *  if reach here that means the block is in the buffer alread
+         *-----------------------------------------------------------------------------*/
+        status = "found_hit";
+        return buf;
+#endif 
+    }
 	/*
 	 * Didn't find it in the buffer pool.  We'll have to initialize a new
 	 * buffer.	Remember to unlock the mapping lock while doing the work.
@@ -591,12 +600,7 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 		buf = StrategyGetBuffer(strategy, &lock_held);
 
 		Assert(buf->refcount == 0);
-#if 1
-        if (buf->flags & BM_DIRTY)
-            page_status="write_read"; 
-        else 
-            page_status="read_only";
-#endif 
+
 		/* Must copy buffer flags while we still hold the spinlock */
 		oldFlags = buf->flags;
 
@@ -657,7 +661,15 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 												   smgr->smgr_rnode.relNode);
 
 				FlushBuffer(buf, NULL);
-				LWLockRelease(buf->content_lock);
+
+                /*-----------------------------------------------------------------------------
+                 *  at this stage the dirty buffer has been write to disk so we can assure 
+                 *  it is write_read
+                 *-----------------------------------------------------------------------------*/
+#if TAG 
+                status="write_read";
+#endif
+                LWLockRelease(buf->content_lock);
 
 				TRACE_POSTGRESQL_BUFFER_WRITE_DIRTY_DONE(forkNum, blockNum,
 													smgr->smgr_rnode.spcNode,
@@ -773,10 +785,16 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 				}
 			}
 
-#if 1
-        page_status="found_hit";
-#endif
-			return buf;
+            /*-----------------------------------------------------------------------------
+             *  i think in this stage it means some one do it before we want to use the 
+             *  buffer so it just treat as hit
+             *  not sure!!!!!!!!!!!!
+             * 
+             *-----------------------------------------------------------------------------*/
+#if TAG
+            status="found_hit";
+#endif 
+            return buf;
 		}
 
 		/*
@@ -801,7 +819,6 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 			LWLockRelease(oldPartitionLock);
 		LWLockRelease(newPartitionLock);
 		UnpinBuffer(buf, true);
-	}
 
 	/*
 	 * Okay, it's finally safe to rename the buffer.
@@ -836,10 +853,10 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 		*foundPtr = FALSE;
 	else
 		*foundPtr = TRUE;
-
-#if 1
-        page_status="read_only";
-#endif
+#if TAG
+    status="read_only";
+#endif 
+	}
 	return buf;
 }
 
