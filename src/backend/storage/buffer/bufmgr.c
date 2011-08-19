@@ -70,6 +70,7 @@ double		bgwriter_lru_multiplier = 2.0;
 
 #if 1
 char* page_status ="";
+int   slot_num;
 #endif 
 /*
  * How many buffers PrefetchBuffer callers should try to stay ahead of their
@@ -248,8 +249,10 @@ ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
 	if (hit) {
 		pgstat_count_buffer_hit(reln);
     }
+#if 1
     if ( (reln)->rd_rel != NULL)
-        fprintf(stderr,"REQ %s %d  %s\n", reln->rd_rel->relname.data,  blockNum,page_status);
+        fprintf(stderr,"REQ %s %d 0 %d %s\n", reln->rd_rel->relname.data,  blockNum,slot_num,page_status);
+#endif
     return buf;
 }
 
@@ -305,9 +308,12 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 									   isExtend);
 
 	/* Substitute proper block number if caller asked for P_NEW */
-	if (isExtend)
-		blockNum = smgrnblocks(smgr, forkNum);
-
+	if (isExtend){
+	blockNum = smgrnblocks(smgr, forkNum);
+#if 1
+    page_status="page_new";
+#endif 
+   }
 	if (isLocalBuf)
 	{
 		bufHdr = LocalBufferAlloc(smgr, forkNum, blockNum, &found);
@@ -355,6 +361,9 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 											  isExtend,
 											  found);
 
+#if 1
+    slot_num=bufHdr->buf_id;
+#endif 
 			return BufferDescriptorGetBuffer(bufHdr);
 		}
 
@@ -484,7 +493,9 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 									  isLocalBuf,
 									  isExtend,
 									  found);
-
+#if 1
+    slot_num=bufHdr->buf_id;
+#endif 
 	return BufferDescriptorGetBuffer(bufHdr);
 }
 

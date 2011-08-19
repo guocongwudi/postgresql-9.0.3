@@ -1,5 +1,4 @@
 /*-------------------------------------------------------------------------
- *
  * freelist.c
  *	  routines for managing the buffer pool's replacement strategy.
  *
@@ -119,7 +118,6 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 		if (buf != NULL)
 		{
 			*lock_held = false;
-		fprintf(stderr, "BUF using already free %d\n", buf->buf_id);
             return buf;
 		}
 	}

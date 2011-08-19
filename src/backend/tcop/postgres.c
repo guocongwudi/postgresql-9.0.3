@@ -1039,7 +1039,9 @@ exec_simple_query(const char *query_string)
 			}
 		}
 		PortalSetResultFormat(portal, 1, &format);
-
+#if 1
+        fprintf(stderr,"===\nQRY %s\n===\n",query_string);
+#endif
 		/*
 		 * Now we can create the destination receiver object.
 		 */
