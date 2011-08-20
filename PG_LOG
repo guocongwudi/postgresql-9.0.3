@@ -1,0 +1,3052 @@
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 8340) running in data directory "/home/frank/9315/data"?
+LOG:  database system was shut down at 2011-08-19 16:03:29 EST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+BUF using free 0
+REQ pg_database 0 0 0 read_only
+BUF using free 1
+REQ pg_authid 0 0 1 read_only
+REQ pg_authid 0 0 1 found_hit
+REQ pg_database 0 0 0 found_hit
+REQ pg_database 0 0 0 found_hit
+BUF using free 2
+REQ pg_class 0 0 2 read_only
+BUF using free 3
+REQ pg_class 1 0 3 read_only
+BUF using free 4
+REQ pg_class 2 0 4 read_only
+BUF using free 5
+REQ pg_class 3 0 5 read_only
+BUF using free 6
+REQ pg_class 4 0 6 read_only
+BUF using free 7
+REQ pg_class 5 0 7 read_only
+BUF using free 8
+REQ pg_attribute 0 0 8 read_only
+BUF using free 9
+REQ pg_attribute 1 0 9 read_only
+BUF using free 10
+REQ pg_attribute 2 0 10 read_only
+BUF using free 11
+REQ pg_attribute 3 0 11 read_only
+BUF using free 12
+REQ pg_attribute 4 0 12 read_only
+BUF using free 13
+REQ pg_attribute 5 0 13 read_only
+BUF using free 14
+REQ pg_attribute 6 0 14 read_only
+BUF using free 15
+REQ pg_attribute 7 0 15 read_only
+REQ pg_attribute 8 0 8 read_only
+REQ pg_attribute 9 0 9 read_only
+REQ pg_attribute 10 0 10 read_only
+REQ pg_attribute 11 0 11 read_only
+REQ pg_attribute 12 0 12 read_only
+REQ pg_attribute 13 0 13 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+BUF using free 16
+REQ pg_attribute 0 0 16 read_only
+BUF using free 17
+REQ pg_attribute 1 0 17 read_only
+BUF using free 18
+REQ pg_attribute 2 0 18 read_only
+BUF using free 19
+REQ pg_attribute 3 0 19 read_only
+BUF using free 20
+REQ pg_index 0 0 20 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+BUF using free 21
+REQ pg_attribute 4 0 21 read_only
+BUF using free 22
+REQ pg_am 0 0 22 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+BUF using free 23
+REQ pg_opclass 0 0 23 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_class 4 0 6 found_hit
+REQ pg_class 5 0 7 found_hit
+BUF using free 24
+REQ pg_class 6 0 24 read_only
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+BUF using free 25
+REQ pg_amop 0 0 25 read_only
+BUF using free 26
+REQ pg_amop 1 0 26 read_only
+BUF using free 27
+REQ pg_amop 2 0 27 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+BUF using free 28
+REQ pg_amproc 0 0 28 read_only
+BUF using free 29
+REQ pg_amproc 1 0 29 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+BUF using free 30
+REQ pg_attribute 5 0 30 read_only
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amop 1 0 26 found_hit
+REQ pg_amop 2 0 27 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_amproc 1 0 29 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+BUF using free 31
+REQ pg_attribute 14 0 31 read_only
+REQ pg_index 0 0 20 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index 0 0 20 found_hit
+BUF using free 32
+REQ pg_index 1 0 32 read_only
+BUF using free 33
+REQ pg_opclass_oid_index 0 0 33 read_only
+BUF using free 34
+REQ pg_opclass_oid_index 1 0 34 read_only
+REQ pg_opclass 0 0 23 found_hit
+BUF using free 35
+REQ pg_amop_fam_strat_index 0 0 35 read_only
+BUF using free 36
+REQ pg_amop_fam_strat_index 3 0 36 read_only
+BUF using free 37
+REQ pg_amop_fam_strat_index 1 0 37 read_only
+REQ pg_amop 0 0 25 found_hit
+BUF using free 38
+REQ pg_amproc_fam_proc_index 0 0 38 read_only
+BUF using free 39
+REQ pg_amproc_fam_proc_index 1 0 39 read_only
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_attribute 14 0 31 found_hit
+BUF using free 40
+REQ pg_attribute 15 0 40 read_only
+REQ pg_index 0 0 20 found_hit
+REQ pg_index 1 0 32 found_hit
+BUF using free 41
+REQ pg_class_oid_index 0 0 41 read_only
+BUF using free 42
+REQ pg_class_oid_index 1 0 42 read_only
+REQ pg_class 4 0 6 found_hit
+BUF using free 43
+REQ pg_attribute_relid_attnum_index 0 0 43 read_only
+BUF using free 44
+REQ pg_attribute_relid_attnum_index 3 0 44 read_only
+BUF using free 45
+REQ pg_attribute_relid_attnum_index 2 0 45 read_only
+REQ pg_attribute 14 0 31 found_hit
+BUF using free 46
+REQ pg_index_indexrelid_index 0 0 46 read_only
+BUF using free 47
+REQ pg_index_indexrelid_index 1 0 47 read_only
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 4 0 6 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+BUF using free 48
+REQ pg_attribute_relid_attnum_index 1 0 48 read_only
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_opclass_oid_index 1 0 34 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amproc_fam_proc_index 1 0 39 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 6 0 24 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_opclass_oid_index 1 0 34 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amproc_fam_proc_index 1 0 39 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+BUF using free 49
+REQ pg_attribute_relid_attnum_index 4 0 49 read_only
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_opclass_oid_index 1 0 34 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amproc_fam_proc_index 1 0 39 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 5 0 7 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 5 0 7 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_opclass_oid_index 1 0 34 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 1 0 26 found_hit
+REQ pg_amproc_fam_proc_index 1 0 39 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 5 0 7 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+BUF using free 50
+REQ pg_database_oid_index 0 0 50 read_only
+BUF using free 51
+REQ pg_database_oid_index 1 0 51 read_only
+REQ pg_database 0 0 0 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+BUF using free 52
+REQ pg_db_role_setting_databaseid_rol_index 0 0 52 read_only
+REQ pg_db_role_setting_databaseid_rol_index 0 0 52 found_hit
+REQ pg_db_role_setting_databaseid_rol_index 0 0 52 found_hit
+BUF using free 53
+REQ pg_namespace_nspname_index 0 0 53 read_only
+BUF using free 54
+REQ pg_namespace_nspname_index 1 0 54 read_only
+BUF using free 55
+REQ pg_namespace 0 0 55 read_only
+BUF using free 56
+REQ pg_class_relname_nsp_index 0 0 56 read_only
+BUF using free 57
+REQ pg_class_relname_nsp_index 3 0 57 read_only
+BUF using free 58
+REQ pg_class_relname_nsp_index 1 0 58 read_only
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 8 0 8 found_hit
+BUF using free 59
+REQ pg_proc_proname_args_nsp_index 0 0 59 read_only
+BUF using free 60
+REQ pg_proc_proname_args_nsp_index 3 0 60 read_only
+BUF using free 61
+REQ pg_proc_proname_args_nsp_index 14 0 61 read_only
+BUF using free 62
+REQ pg_proc 22 0 62 read_only
+BUF using free 63
+REQ pg_proc_oid_index 0 0 63 read_only
+BUF read only over 12
+BUF using algrithem to find free page 12
+REQ pg_proc_oid_index 3 0 12 read_only
+BUF read only over 16
+BUF using algrithem to find free page 16
+REQ pg_proc_oid_index 4 0 16 read_only
+REQ pg_proc 22 0 62 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_proc_proname_args_nsp_index 3 0 60 found_hit
+REQ pg_proc_proname_args_nsp_index 14 0 61 found_hit
+REQ pg_proc 22 0 62 found_hit
+REQ pg_proc_oid_index 3 0 12 found_hit
+REQ pg_proc_oid_index 4 0 16 found_hit
+REQ pg_proc 22 0 62 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_proc_proname_args_nsp_index 3 0 60 found_hit
+BUF read only over 17
+BUF using algrithem to find free page 17
+REQ pg_proc_proname_args_nsp_index 1 0 17 read_only
+BUF read only over 21
+BUF using algrithem to find free page 21
+REQ pg_proc 9 0 21 read_only
+BUF read only over 22
+BUF using algrithem to find free page 22
+REQ pg_type_oid_index 0 0 22 read_only
+BUF read only over 33
+BUF using algrithem to find free page 33
+REQ pg_type_oid_index 1 0 33 read_only
+BUF read only over 35
+BUF using algrithem to find free page 35
+REQ pg_type 1 0 35 read_only
+REQ pg_proc_oid_index 3 0 12 found_hit
+BUF read only over 38
+BUF using algrithem to find free page 38
+REQ pg_proc_oid_index 1 0 38 read_only
+REQ pg_proc 9 0 21 found_hit
+REQ pg_type_oid_index 1 0 33 found_hit
+BUF read only over 41
+BUF using algrithem to find free page 41
+REQ pg_type 0 0 41 read_only
+REQ pg_type_oid_index 1 0 33 found_hit
+REQ pg_type 0 0 41 found_hit
+BUF read only over 43
+BUF using algrithem to find free page 43
+REQ pg_opclass_am_name_nsp_index 0 0 43 read_only
+BUF read only over 46
+BUF using algrithem to find free page 46
+REQ pg_opclass_am_name_nsp_index 1 0 46 read_only
+REQ pg_opclass 0 0 23 found_hit
+BUF read only over 50
+BUF using algrithem to find free page 50
+REQ pg_cast_source_target_index 0 0 50 read_only
+BUF read only over 51
+BUF using algrithem to find free page 51
+REQ pg_cast_source_target_index 1 0 51 read_only
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+BUF read only over 53
+BUF using algrithem to find free page 53
+REQ pg_cast 0 0 53 read_only
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+BUF read only over 54
+BUF using algrithem to find free page 54
+REQ pg_opclass 1 0 54 read_only
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_cast_source_target_index 1 0 51 found_hit
+REQ pg_opclass 1 0 54 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_opclass 1 0 54 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_opclass_oid_index 1 0 34 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 0 0 25 found_hit
+BUF read only over 55
+BUF using algrithem to find free page 55
+REQ pg_amop_opr_fam_index 0 0 55 read_only
+BUF read only over 56
+BUF using algrithem to find free page 56
+REQ pg_amop_opr_fam_index 1 0 56 read_only
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amop_opr_fam_index 1 0 56 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amop 1 0 26 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+BUF read only over 57
+BUF using algrithem to find free page 57
+REQ pg_index_indrelid_index 0 0 57 read_only
+BUF read only over 58
+BUF using algrithem to find free page 58
+REQ pg_index_indrelid_index 1 0 58 read_only
+REQ pg_index 0 0 20 found_hit
+BUF read only over 59
+BUF using algrithem to find free page 59
+REQ pg_statistic_relid_att_inh_index 0 0 59 read_only
+BUF read only over 63
+BUF using algrithem to find free page 63
+REQ pg_statistic_relid_att_inh_index 1 0 63 read_only
+BUF read only over 1
+BUF using algrithem to find free page 1
+REQ pg_statistic 9 0 1 read_only
+REQ pg_statistic_relid_att_inh_index 1 0 63 found_hit
+REQ pg_statistic 9 0 1 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 63 found_hit
+REQ pg_statistic 9 0 1 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 63 found_hit
+REQ pg_statistic 9 0 1 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 63 found_hit
+REQ pg_statistic 9 0 1 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 63 found_hit
+BUF read only over 18
+BUF using algrithem to find free page 18
+REQ pg_tablespace_oid_index 0 0 18 read_only
+BUF read only over 24
+BUF using algrithem to find free page 24
+REQ pg_tablespace_oid_index 1 0 24 read_only
+BUF read only over 27
+BUF using algrithem to find free page 27
+REQ pg_tablespace 0 0 27 read_only
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_amop_opr_fam_index 1 0 56 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amop_opr_fam_index 1 0 56 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amop 1 0 26 found_hit
+REQ pg_amop_opr_fam_index 1 0 56 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amop_opr_fam_index 1 0 56 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amproc_fam_proc_index 1 0 39 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_database 0 0 0 found_hit
+REQ pg_type_oid_index 1 0 33 found_hit
+REQ pg_type 1 0 35 found_hit
+BUF read only over 29
+BUF using algrithem to find free page 29
+REQ pg_authid_rolname_index 0 0 29 read_only
+BUF read only over 61
+BUF using algrithem to find free page 61
+REQ pg_authid_rolname_index 1 0 61 read_only
+BUF read only over 9
+BUF using algrithem to find free page 9
+REQ pg_authid 0 0 9 read_only
+BUF read only over 11
+BUF using algrithem to find free page 11
+REQ pg_authid_oid_index 0 0 11 read_only
+BUF read only over 14
+BUF using algrithem to find free page 14
+REQ pg_authid_oid_index 1 0 14 read_only
+REQ pg_authid 0 0 9 found_hit
+BUF read only over 17
+BUF using algrithem to find free page 17
+REQ pg_database_datname_index 0 0 17 read_only
+BUF read only over 19
+BUF using algrithem to find free page 19
+REQ pg_database_datname_index 1 0 19 read_only
+REQ pg_database 0 0 0 found_hit
+REQ pg_database_datname_index 1 0 19 found_hit
+REQ pg_database 0 0 0 found_hit
+BUF read only over 22
+BUF using algrithem to find free page 22
+REQ pg_class 0 0 22 read_only
+BUF read only over 38
+BUF using algrithem to find free page 38
+REQ pg_class 1 0 38 read_only
+BUF read only over 43
+BUF using algrithem to find free page 43
+REQ pg_class 2 0 43 read_only
+BUF read only over 46
+BUF using algrithem to find free page 46
+REQ pg_class 3 0 46 read_only
+BUF read only over 50
+BUF using algrithem to find free page 50
+REQ pg_class 4 0 50 read_only
+BUF read only over 52
+BUF using algrithem to find free page 52
+REQ pg_class 5 0 52 read_only
+BUF read only over 53
+BUF using algrithem to find free page 53
+REQ pg_attribute 0 0 53 read_only
+BUF read only over 55
+BUF using algrithem to find free page 55
+REQ pg_attribute 1 0 55 read_only
+BUF read only over 57
+BUF using algrithem to find free page 57
+REQ pg_attribute 2 0 57 read_only
+BUF read only over 58
+BUF using algrithem to find free page 58
+REQ pg_attribute 3 0 58 read_only
+BUF read only over 59
+BUF using algrithem to find free page 59
+REQ pg_attribute 4 0 59 read_only
+BUF read only over 60
+BUF using algrithem to find free page 60
+REQ pg_attribute 5 0 60 read_only
+BUF read only over 6
+BUF using algrithem to find free page 6
+REQ pg_attribute 6 0 6 read_only
+BUF read only over 16
+BUF using algrithem to find free page 16
+REQ pg_attribute 7 0 16 read_only
+REQ pg_attribute 8 0 53 read_only
+REQ pg_attribute 9 0 55 read_only
+REQ pg_attribute 10 0 57 read_only
+REQ pg_attribute 11 0 58 read_only
+REQ pg_attribute 12 0 59 read_only
+REQ pg_attribute 13 0 60 read_only
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_class 2 0 43 found_hit
+BUF read only over 18
+BUF using algrithem to find free page 18
+REQ pg_attribute 0 0 18 read_only
+BUF read only over 21
+BUF using algrithem to find free page 21
+REQ pg_attribute 1 0 21 read_only
+BUF read only over 24
+BUF using algrithem to find free page 24
+REQ pg_attribute 2 0 24 read_only
+BUF read only over 27
+BUF using algrithem to find free page 27
+REQ pg_attribute 3 0 27 read_only
+BUF read only over 29
+BUF using algrithem to find free page 29
+REQ pg_index 0 0 29 read_only
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+BUF read only over 30
+BUF using algrithem to find free page 30
+REQ pg_attribute 4 0 30 read_only
+BUF read only over 35
+BUF using algrithem to find free page 35
+REQ pg_am 0 0 35 read_only
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+BUF read only over 41
+BUF using algrithem to find free page 41
+REQ pg_opclass 0 0 41 read_only
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_class 4 0 50 found_hit
+REQ pg_class 5 0 52 found_hit
+BUF read only over 61
+BUF using algrithem to find free page 61
+REQ pg_class 6 0 61 read_only
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_attribute 4 0 30 found_hit
+BUF read only over 62
+BUF using algrithem to find free page 62
+REQ pg_amop 0 0 62 read_only
+BUF read only over 2
+BUF using algrithem to find free page 2
+REQ pg_amop 1 0 2 read_only
+BUF read only over 4
+BUF using algrithem to find free page 4
+REQ pg_amop 2 0 4 read_only
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_attribute 4 0 30 found_hit
+BUF read only over 5
+BUF using algrithem to find free page 5
+REQ pg_amproc 0 0 5 read_only
+BUF read only over 7
+BUF using algrithem to find free page 7
+REQ pg_amproc 1 0 7 read_only
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_attribute 4 0 30 found_hit
+BUF read only over 10
+BUF using algrithem to find free page 10
+REQ pg_attribute 5 0 10 read_only
+REQ pg_attribute 6 0 6 found_hit
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_attribute 8 0 53 found_hit
+REQ pg_attribute 9 0 55 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_attribute 11 0 58 found_hit
+REQ pg_attribute 12 0 59 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_opclass 0 0 41 found_hit
+REQ pg_amop 0 0 62 found_hit
+REQ pg_amop 1 0 2 found_hit
+REQ pg_amop 2 0 4 found_hit
+REQ pg_amproc 0 0 5 found_hit
+REQ pg_amproc 1 0 7 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_attribute 4 0 30 found_hit
+REQ pg_attribute 5 0 10 found_hit
+REQ pg_attribute 6 0 6 found_hit
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_attribute 8 0 53 found_hit
+REQ pg_attribute 9 0 55 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_attribute 11 0 58 found_hit
+REQ pg_attribute 12 0 59 found_hit
+REQ pg_attribute 13 0 60 found_hit
+BUF read only over 11
+BUF using algrithem to find free page 11
+REQ pg_attribute 14 0 11 read_only
+REQ pg_index 0 0 29 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_attribute 4 0 30 found_hit
+REQ pg_attribute 5 0 10 found_hit
+REQ pg_attribute 6 0 6 found_hit
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_attribute 8 0 53 found_hit
+REQ pg_attribute 9 0 55 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_attribute 11 0 58 found_hit
+REQ pg_attribute 12 0 59 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_attribute 4 0 30 found_hit
+REQ pg_attribute 5 0 10 found_hit
+REQ pg_attribute 6 0 6 found_hit
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_attribute 8 0 53 found_hit
+REQ pg_attribute 9 0 55 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_attribute 11 0 58 found_hit
+REQ pg_attribute 12 0 59 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_attribute 4 0 30 found_hit
+REQ pg_attribute 5 0 10 found_hit
+REQ pg_attribute 6 0 6 found_hit
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_attribute 8 0 53 found_hit
+REQ pg_attribute 9 0 55 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_attribute 11 0 58 found_hit
+REQ pg_attribute 12 0 59 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_attribute 4 0 30 found_hit
+REQ pg_attribute 5 0 10 found_hit
+REQ pg_attribute 6 0 6 found_hit
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_attribute 8 0 53 found_hit
+REQ pg_attribute 9 0 55 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_attribute 11 0 58 found_hit
+REQ pg_attribute 12 0 59 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_attribute 4 0 30 found_hit
+REQ pg_attribute 5 0 10 found_hit
+REQ pg_attribute 6 0 6 found_hit
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_attribute 8 0 53 found_hit
+REQ pg_attribute 9 0 55 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_attribute 11 0 58 found_hit
+REQ pg_attribute 12 0 59 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index 0 0 29 found_hit
+BUF read only over 12
+BUF using algrithem to find free page 12
+REQ pg_index 1 0 12 read_only
+BUF read only over 13
+BUF using algrithem to find free page 13
+REQ pg_opclass_oid_index 0 0 13 read_only
+BUF read only over 14
+BUF using algrithem to find free page 14
+REQ pg_opclass_oid_index 1 0 14 read_only
+REQ pg_opclass 0 0 41 found_hit
+BUF read only over 15
+BUF using algrithem to find free page 15
+REQ pg_amop_fam_strat_index 0 0 15 read_only
+BUF read only over 17
+BUF using algrithem to find free page 17
+REQ pg_amop_fam_strat_index 3 0 17 read_only
+BUF read only over 26
+BUF using algrithem to find free page 26
+REQ pg_amop_fam_strat_index 1 0 26 read_only
+REQ pg_amop 0 0 62 found_hit
+BUF read only over 32
+BUF using algrithem to find free page 32
+REQ pg_amproc_fam_proc_index 0 0 32 read_only
+BUF read only over 40
+BUF using algrithem to find free page 40
+REQ pg_amproc_fam_proc_index 1 0 40 read_only
+REQ pg_amproc 0 0 5 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute 0 0 18 found_hit
+REQ pg_attribute 1 0 21 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_attribute 4 0 30 found_hit
+REQ pg_attribute 5 0 10 found_hit
+REQ pg_attribute 6 0 6 found_hit
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_attribute 8 0 53 found_hit
+REQ pg_attribute 9 0 55 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_attribute 11 0 58 found_hit
+REQ pg_attribute 12 0 59 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_attribute 14 0 11 found_hit
+BUF read only over 49
+BUF using algrithem to find free page 49
+REQ pg_attribute 15 0 49 read_only
+REQ pg_index 0 0 29 found_hit
+REQ pg_index 1 0 12 found_hit
+BUF read only over 54
+BUF using algrithem to find free page 54
+REQ pg_class_oid_index 0 0 54 read_only
+BUF read only over 3
+BUF using algrithem to find free page 3
+REQ pg_class_oid_index 1 0 3 read_only
+REQ pg_class 0 0 22 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+BUF read only over 9
+BUF using algrithem to find free page 9
+REQ pg_attribute_relid_attnum_index 0 0 9 read_only
+BUF read only over 19
+BUF using algrithem to find free page 19
+REQ pg_attribute_relid_attnum_index 3 0 19 read_only
+BUF read only over 28
+BUF using algrithem to find free page 28
+REQ pg_attribute_relid_attnum_index 1 0 28 read_only
+REQ pg_attribute 5 0 10 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+BUF read only over 31
+BUF using algrithem to find free page 31
+REQ pg_attribute_relid_attnum_index 2 0 31 read_only
+REQ pg_attribute 13 0 60 found_hit
+BUF read only over 33
+BUF using algrithem to find free page 33
+REQ pg_index_indexrelid_index 0 0 33 read_only
+BUF read only over 34
+BUF using algrithem to find free page 34
+REQ pg_index_indexrelid_index 1 0 34 read_only
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_opclass_oid_index 1 0 14 found_hit
+REQ pg_opclass 0 0 41 found_hit
+REQ pg_amop_fam_strat_index 3 0 17 found_hit
+REQ pg_amop_fam_strat_index 1 0 26 found_hit
+REQ pg_amop 0 0 62 found_hit
+REQ pg_amproc_fam_proc_index 1 0 40 found_hit
+REQ pg_amproc 0 0 5 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 2 0 24 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 6 0 61 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 28 found_hit
+REQ pg_attribute 11 0 58 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 28 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_opclass_oid_index 1 0 14 found_hit
+REQ pg_opclass 0 0 41 found_hit
+REQ pg_amop_fam_strat_index 3 0 17 found_hit
+REQ pg_amop_fam_strat_index 1 0 26 found_hit
+REQ pg_amop 0 0 62 found_hit
+REQ pg_amproc_fam_proc_index 1 0 40 found_hit
+REQ pg_amproc 0 0 5 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+BUF read only over 35
+BUF using algrithem to find free page 35
+REQ pg_attribute_relid_attnum_index 4 0 35 read_only
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 28 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 28 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 28 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 28 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 28 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 28 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 5 0 10 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 7 0 16 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 3 0 27 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_opclass_oid_index 1 0 14 found_hit
+REQ pg_opclass 0 0 41 found_hit
+REQ pg_amop_fam_strat_index 3 0 17 found_hit
+REQ pg_amop_fam_strat_index 1 0 26 found_hit
+REQ pg_amop 0 0 62 found_hit
+REQ pg_amproc_fam_proc_index 1 0 40 found_hit
+REQ pg_amproc 0 0 5 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 5 0 52 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 6 0 6 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 5 0 10 found_hit
+REQ pg_attribute 6 0 6 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 5 0 52 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_opclass_oid_index 1 0 14 found_hit
+REQ pg_opclass 0 0 41 found_hit
+REQ pg_amop_fam_strat_index 3 0 17 found_hit
+REQ pg_amop_fam_strat_index 1 0 26 found_hit
+REQ pg_amop 1 0 2 found_hit
+REQ pg_amproc_fam_proc_index 1 0 40 found_hit
+REQ pg_amproc 0 0 5 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 9 0 55 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 9 0 55 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 10 0 57 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 5 0 52 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 28 found_hit
+REQ pg_attribute 11 0 58 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 28 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 28 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+BUF read only over 39
+BUF using algrithem to find free page 39
+REQ pg_database_oid_index 0 0 39 read_only
+BUF read only over 42
+BUF using algrithem to find free page 42
+REQ pg_database_oid_index 1 0 42 read_only
+REQ pg_database 0 0 0 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 8 0 53 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 15 0 49 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+BUF read only over 45
+BUF using algrithem to find free page 45
+REQ pg_db_role_setting_databaseid_rol_index 0 0 45 read_only
+REQ pg_db_role_setting_databaseid_rol_index 0 0 45 found_hit
+REQ pg_db_role_setting_databaseid_rol_index 0 0 45 found_hit
+BUF read only over 47
+BUF using algrithem to find free page 47
+REQ pg_namespace_nspname_index 0 0 47 read_only
+BUF read only over 50
+BUF using algrithem to find free page 50
+REQ pg_namespace_nspname_index 1 0 50 read_only
+REQ pg_namespace_nspname_index 1 0 50 found_hit
+BUF read only over 59
+BUF using algrithem to find free page 59
+REQ pg_namespace 0 0 59 read_only
+BUF read only over 13
+BUF using algrithem to find free page 13
+REQ pg_class_relname_nsp_index 0 0 13 read_only
+BUF read only over 15
+BUF using algrithem to find free page 15
+REQ pg_class_relname_nsp_index 3 0 15 read_only
+BUF read only over 18
+BUF using algrithem to find free page 18
+REQ pg_class_relname_nsp_index 1 0 18 read_only
+REQ pg_class_relname_nsp_index 3 0 15 found_hit
+REQ pg_class_relname_nsp_index 1 0 18 found_hit
+REQ pg_class 6 0 61 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 6 0 61 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+BUF read only over 20
+BUF using algrithem to find free page 20
+REQ pg_attribute_relid_attnum_index 9 0 20 read_only
+BUF read only over 21
+BUF using algrithem to find free page 21
+REQ pg_attribute 32 0 21 read_only
+BUF read only over 23
+BUF using algrithem to find free page 23
+REQ pg_attribute 33 0 23 read_only
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 13 0 60 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+BUF read only over 30
+BUF using algrithem to find free page 30
+REQ pg_constraint_conrelid_index 0 0 30 read_only
+BUF read only over 32
+BUF using algrithem to find free page 32
+REQ pg_constraint_conrelid_index 1 0 32 read_only
+BUF read only over 36
+BUF using algrithem to find free page 36
+REQ pg_constraint 0 0 36 read_only
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 6 0 6 found_hit
+BUF read only over 37
+BUF using algrithem to find free page 37
+REQ pg_trigger_tgrelid_tgname_index 0 0 37 read_only
+BUF read only over 44
+BUF using algrithem to find free page 44
+REQ pg_trigger_tgrelid_tgname_index 1 0 44 read_only
+BUF read only over 48
+BUF using algrithem to find free page 48
+REQ pg_trigger 0 0 48 read_only
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 6 0 61 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 31 found_hit
+REQ pg_attribute 14 0 11 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 0 0 29 found_hit
+BUF read only over 51
+BUF using algrithem to find free page 51
+REQ pg_index_indrelid_index 0 0 51 read_only
+BUF read only over 53
+BUF using algrithem to find free page 53
+REQ pg_index_indrelid_index 1 0 53 read_only
+REQ pg_index 1 0 12 found_hit
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 6 0 61 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 9 0 20 found_hit
+REQ pg_attribute 33 0 23 found_hit
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+BUF read only over 54
+BUF using algrithem to find free page 54
+REQ pg_statistic_relid_att_inh_index 0 0 54 read_only
+BUF read only over 56
+BUF using algrithem to find free page 56
+REQ pg_statistic_relid_att_inh_index 1 0 56 read_only
+BUF read only over 63
+BUF using algrithem to find free page 63
+REQ pg_statistic 12 0 63 read_only
+REQ pg_statistic_relid_att_inh_index 1 0 56 found_hit
+REQ pg_statistic 12 0 63 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 56 found_hit
+REQ pg_statistic 12 0 63 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 56 found_hit
+BUF read only over 0
+BUF using algrithem to find free page 0
+REQ pg_statistic 13 0 0 read_only
+REQ pg_statistic_relid_att_inh_index 1 0 56 found_hit
+REQ pg_statistic 13 0 0 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 56 found_hit
+REQ pg_statistic 13 0 0 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 56 found_hit
+REQ pg_statistic 13 0 0 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 56 found_hit
+REQ pg_statistic 13 0 0 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 56 found_hit
+REQ pg_statistic 13 0 0 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 56 found_hit
+REQ pg_statistic 13 0 0 found_hit
+REQ pg_statistic_relid_att_inh_index 1 0 56 found_hit
+REQ pg_statistic 13 0 0 found_hit
+BUF read only over 1
+BUF using algrithem to find free page 1
+REQ pg_tablespace_oid_index 0 0 1 read_only
+BUF read only over 4
+BUF using algrithem to find free page 4
+REQ pg_tablespace_oid_index 1 0 4 read_only
+BUF read only over 7
+BUF using algrithem to find free page 7
+REQ pg_tablespace 0 0 7 read_only
+BUF read only over 8
+BUF using algrithem to find free page 8
+REQ pg_type_oid_index 0 0 8 read_only
+BUF read only over 9
+BUF using algrithem to find free page 9
+REQ pg_type_oid_index 1 0 9 read_only
+BUF read only over 24
+BUF using algrithem to find free page 24
+REQ pg_type 0 0 24 read_only
+REQ pg_type_oid_index 1 0 9 found_hit
+BUF read only over 25
+BUF using algrithem to find free page 25
+REQ pg_type 1 0 25 read_only
+REQ pg_type_oid_index 1 0 9 found_hit
+REQ pg_type 1 0 25 found_hit
+REQ pg_type_oid_index 1 0 9 found_hit
+REQ pg_type 1 0 25 found_hit
+BUF read only over 33
+BUF using algrithem to find free page 33
+REQ people 0 0 33 read_only
+BUF read only over 39
+BUF using algrithem to find free page 39
+REQ people 1 0 39 read_only
+BUF read only over 42
+BUF using algrithem to find free page 42
+REQ people 2 0 42 read_only
+BUF read only over 47
+BUF using algrithem to find free page 47
+REQ people 3 0 47 read_only
+BUF read only over 55
+BUF using algrithem to find free page 55
+REQ people 4 0 55 read_only
+BUF read only over 58
+BUF using algrithem to find free page 58
+REQ people 5 0 58 read_only
+BUF read only over 59
+BUF using algrithem to find free page 59
+REQ people 6 0 59 read_only
+BUF read only over 2
+BUF using algrithem to find free page 2
+REQ people 7 0 2 read_only
+REQ people 8 0 33 read_only
+REQ people 9 0 39 read_only
+REQ people 10 0 42 read_only
+REQ people 11 0 47 read_only
+REQ people 12 0 55 read_only
+REQ people 13 0 58 read_only
+REQ people 14 0 59 read_only
+REQ people 15 0 2 read_only
+REQ people 16 0 33 read_only
+REQ people 17 0 39 read_only
+REQ people 18 0 42 read_only
+REQ people 19 0 47 read_only
+REQ people 20 0 55 read_only
+REQ people 21 0 58 read_only
+REQ people 22 0 59 read_only
+REQ people 23 0 2 read_only
+REQ people 24 0 33 read_only
+REQ people 25 0 39 read_only
+REQ people 26 0 42 read_only
+BUF read only over 13
+BUF using algrithem to find free page 13
+REQ pg_database 0 0 13 read_only
+BUF read only over 21
+BUF using algrithem to find free page 21
+REQ pg_database_oid_index 0 0 21 read_only
+BUF read only over 27
+BUF using algrithem to find free page 27
+REQ pg_database_oid_index 1 0 27 read_only
+REQ pg_database 0 0 13 found_hit
+BUF read only over 30
+BUF using algrithem to find free page 30
+REQ pg_database_datname_index 0 0 30 read_only
+BUF read only over 32
+BUF using algrithem to find free page 32
+REQ pg_database_datname_index 1 0 32 read_only
+REQ pg_database 0 0 13 found_hit
+REQ pg_database_oid_index 1 0 27 found_hit
+REQ pg_database 0 0 13 found_hit
+BUF read only over 36
+BUF using algrithem to find free page 36
+REQ pg_class_oid_index 0 0 36 read_only
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 3 0 46 found_hit
+BUF read only over 37
+BUF using algrithem to find free page 37
+REQ pg_attribute_relid_attnum_index 0 0 37 read_only
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+BUF read only over 44
+BUF using algrithem to find free page 44
+REQ pg_attribute 8 0 44 read_only
+REQ pg_class_oid_index 1 0 3 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 19 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 35 found_hit
+REQ pg_attribute 15 0 49 found_hit
+BUF read only over 48
+BUF using algrithem to find free page 48
+REQ pg_index_indexrelid_index 0 0 48 read_only
+REQ pg_index_indexrelid_index 1 0 34 found_hit
+REQ pg_index 1 0 12 found_hit
+BUF read only over 50
+BUF using algrithem to find free page 50
+REQ pg_am 0 0 50 read_only
+BUF read only over 51
+BUF using algrithem to find free page 51
+REQ pg_opclass_oid_index 0 0 51 read_only
+REQ pg_opclass_oid_index 1 0 14 found_hit
+REQ pg_opclass 0 0 41 found_hit
+BUF read only over 52
+BUF using algrithem to find free page 52
+REQ pg_amop_fam_strat_index 0 0 52 read_only
+REQ pg_amop_fam_strat_index 3 0 17 found_hit
+REQ pg_amop_fam_strat_index 1 0 26 found_hit
+REQ pg_amop 0 0 62 found_hit
+BUF read only over 53
+BUF using algrithem to find free page 53
+REQ pg_amproc_fam_proc_index 0 0 53 read_only
+REQ pg_amproc_fam_proc_index 1 0 40 found_hit
+REQ pg_amproc 0 0 5 found_hit
+REQ pg_db_role_setting_databaseid_rol_index 0 0 45 found_hit
+REQ pg_db_role_setting_databaseid_rol_index 0 0 45 found_hit
+REQ pg_db_role_setting_databaseid_rol_index 0 0 45 found_hit
+REQ pg_database 0 0 13 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_class 3 0 46 found_hit
+BUF read only over 54
+BUF using algrithem to find free page 54
+REQ pg_class 4 0 54 read_only
+BUF read only over 1
+BUF using algrithem to find free page 1
+REQ pg_class 5 0 1 read_only
+REQ pg_class 6 0 61 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_class 4 0 54 found_hit
+REQ pg_class 5 0 1 found_hit
+REQ pg_class 6 0 61 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_class 4 0 54 found_hit
+REQ pg_class 5 0 1 found_hit
+REQ pg_class 6 0 61 found_hit
+REQ pg_class 0 0 22 found_hit
+REQ pg_class 1 0 38 found_hit
+REQ pg_class 2 0 43 found_hit
+REQ pg_class 3 0 46 found_hit
+REQ pg_class 4 0 54 found_hit
+REQ pg_class 5 0 1 found_hit
+REQ pg_class 6 0 61 found_hit
+REQ pg_database_oid_index 1 0 27 found_hit
+REQ pg_database 0 0 13 found_hit
+BUF read only over 4
+BUF using algrithem to find free page 4
+REQ people 0 0 4 read_only
+BUF read only over 6
+BUF using algrithem to find free page 6
+REQ people 1 0 6 read_only
+BUF read only over 7
+BUF using algrithem to find free page 7
+REQ people 2 0 7 read_only
+BUF read only over 8
+BUF using algrithem to find free page 8
+REQ people 3 0 8 read_only
+BUF read only over 10
+BUF using algrithem to find free page 10
+REQ people 4 0 10 read_only
+BUF read only over 15
+BUF using algrithem to find free page 15
+REQ people 5 0 15 read_only
+BUF read only over 18
+BUF using algrithem to find free page 18
+REQ people 6 0 18 read_only
+BUF read only over 20
+BUF using algrithem to find free page 20
+REQ people 7 0 20 read_only
+REQ people 8 0 4 read_only
+REQ people 9 0 6 read_only
+REQ people 10 0 7 read_only
+REQ people 11 0 8 read_only
+REQ people 12 0 10 read_only
+REQ people 13 0 15 read_only
+REQ people 14 0 18 read_only
+REQ people 15 0 20 read_only
+REQ people 16 0 4 read_only
+REQ people 17 0 6 read_only
+REQ people 18 0 7 read_only
+REQ people 19 0 47 found_hit
+REQ people 20 0 55 found_hit
+REQ people 21 0 58 found_hit
+REQ people 22 0 59 found_hit
+REQ people 23 0 2 found_hit
+REQ people 24 0 33 found_hit
+REQ people 25 0 39 found_hit
+REQ people 26 0 42 found_hit
+BUF read only over 23
+BUF using algrithem to find free page 23
+REQ people 0 0 23 read_only
+BUF read only over 24
+BUF using algrithem to find free page 24
+REQ people 1 0 24 read_only
+BUF read only over 16
+BUF using algrithem to find free page 16
+REQ people 2 0 16 read_only
+BUF read only over 21
+BUF using algrithem to find free page 21
+REQ people 3 0 21 read_only
+BUF read only over 30
+BUF using algrithem to find free page 30
+REQ people 4 0 30 read_only
+BUF read only over 32
+BUF using algrithem to find free page 32
+REQ people 5 0 32 read_only
+BUF read only over 33
+BUF using algrithem to find free page 33
+REQ people 6 0 33 read_only
+BUF read only over 36
+BUF using algrithem to find free page 36
+REQ people 7 0 36 read_only
+REQ people 8 0 23 read_only
+REQ people 9 0 24 read_only
+REQ people 10 0 16 read_only
+REQ people 11 0 8 found_hit
+REQ people 12 0 10 found_hit
+REQ people 13 0 15 found_hit
+REQ people 14 0 18 found_hit
+REQ people 15 0 20 found_hit
+REQ people 16 0 4 found_hit
+REQ people 17 0 6 found_hit
+REQ people 18 0 7 found_hit
+REQ people 19 0 47 found_hit
+REQ people 20 0 55 found_hit
+REQ people 21 0 58 found_hit
+REQ people 22 0 59 found_hit
+REQ people 23 0 2 found_hit
+REQ people 24 0 21 read_only
+REQ people 25 0 39 found_hit
+REQ people 26 0 42 found_hit
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2011-08-19 16:04:23 EST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+BUF using free 0
+REQ pg_database 0 0 0 read_only
+BUF using free 1
+REQ pg_authid 0 0 1 read_only
+REQ pg_authid 0 0 1 found_hit
+REQ pg_database 0 0 0 found_hit
+FATAL:  database "unoi" does not exist
+REQ pg_authid 0 0 1 found_hit
+REQ pg_authid 0 0 1 found_hit
+REQ pg_database 0 0 0 found_hit
+REQ pg_database 0 0 0 found_hit
+BUF using free 2
+REQ pg_class 0 0 2 read_only
+BUF using free 3
+REQ pg_class 1 0 3 read_only
+BUF using free 4
+REQ pg_class 2 0 4 read_only
+BUF using free 5
+REQ pg_class 3 0 5 read_only
+BUF using free 6
+REQ pg_class 4 0 6 read_only
+BUF using free 7
+REQ pg_class 5 0 7 read_only
+BUF using free 8
+REQ pg_attribute 0 0 8 read_only
+BUF using free 9
+REQ pg_attribute 1 0 9 read_only
+BUF using free 10
+REQ pg_attribute 2 0 10 read_only
+BUF using free 11
+REQ pg_attribute 3 0 11 read_only
+BUF using free 12
+REQ pg_attribute 4 0 12 read_only
+BUF using free 13
+REQ pg_attribute 5 0 13 read_only
+BUF using free 14
+REQ pg_attribute 6 0 14 read_only
+BUF using free 15
+REQ pg_attribute 7 0 15 read_only
+REQ pg_attribute 8 0 8 read_only
+REQ pg_attribute 9 0 9 read_only
+REQ pg_attribute 10 0 10 read_only
+REQ pg_attribute 11 0 11 read_only
+REQ pg_attribute 12 0 12 read_only
+REQ pg_attribute 13 0 13 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+BUF using free 16
+REQ pg_attribute 0 0 16 read_only
+BUF using free 17
+REQ pg_attribute 1 0 17 read_only
+BUF using free 18
+REQ pg_attribute 2 0 18 read_only
+BUF using free 19
+REQ pg_attribute 3 0 19 read_only
+BUF using free 20
+REQ pg_index 0 0 20 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+BUF using free 21
+REQ pg_attribute 4 0 21 read_only
+BUF using free 22
+REQ pg_am 0 0 22 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+BUF using free 23
+REQ pg_opclass 0 0 23 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_class 4 0 6 found_hit
+REQ pg_class 5 0 7 found_hit
+BUF using free 24
+REQ pg_class 6 0 24 read_only
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+BUF using free 25
+REQ pg_amop 0 0 25 read_only
+BUF using free 26
+REQ pg_amop 1 0 26 read_only
+BUF using free 27
+REQ pg_amop 2 0 27 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+BUF using free 28
+REQ pg_amproc 0 0 28 read_only
+BUF using free 29
+REQ pg_amproc 1 0 29 read_only
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+BUF using free 30
+REQ pg_attribute 5 0 30 read_only
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amop 1 0 26 found_hit
+REQ pg_amop 2 0 27 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_amproc 1 0 29 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+BUF using free 31
+REQ pg_attribute 14 0 31 read_only
+REQ pg_index 0 0 20 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index 0 0 20 found_hit
+BUF using free 32
+REQ pg_index 1 0 32 read_only
+BUF using free 33
+REQ pg_opclass_oid_index 0 0 33 read_only
+BUF using free 34
+REQ pg_opclass_oid_index 1 0 34 read_only
+REQ pg_opclass 0 0 23 found_hit
+BUF using free 35
+REQ pg_amop_fam_strat_index 0 0 35 read_only
+BUF using free 36
+REQ pg_amop_fam_strat_index 3 0 36 read_only
+BUF using free 37
+REQ pg_amop_fam_strat_index 1 0 37 read_only
+REQ pg_amop 0 0 25 found_hit
+BUF using free 38
+REQ pg_amproc_fam_proc_index 0 0 38 read_only
+BUF using free 39
+REQ pg_amproc_fam_proc_index 1 0 39 read_only
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute 0 0 16 found_hit
+REQ pg_attribute 1 0 17 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_attribute 4 0 21 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_attribute 12 0 12 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_attribute 14 0 31 found_hit
+BUF using free 40
+REQ pg_attribute 15 0 40 read_only
+REQ pg_index 0 0 20 found_hit
+REQ pg_index 1 0 32 found_hit
+BUF using free 41
+REQ pg_class_oid_index 0 0 41 read_only
+BUF using free 42
+REQ pg_class_oid_index 1 0 42 read_only
+REQ pg_class 4 0 6 found_hit
+BUF using free 43
+REQ pg_attribute_relid_attnum_index 0 0 43 read_only
+BUF using free 44
+REQ pg_attribute_relid_attnum_index 3 0 44 read_only
+BUF using free 45
+REQ pg_attribute_relid_attnum_index 2 0 45 read_only
+REQ pg_attribute 14 0 31 found_hit
+BUF using free 46
+REQ pg_index_indexrelid_index 0 0 46 read_only
+BUF using free 47
+REQ pg_index_indexrelid_index 1 0 47 read_only
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 4 0 6 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+BUF using free 48
+REQ pg_attribute_relid_attnum_index 1 0 48 read_only
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_opclass_oid_index 1 0 34 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amproc_fam_proc_index 1 0 39 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 2 0 18 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 6 0 24 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_opclass_oid_index 1 0 34 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amproc_fam_proc_index 1 0 39 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+BUF using free 49
+REQ pg_attribute_relid_attnum_index 4 0 49 read_only
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 7 0 15 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 3 0 19 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_opclass_oid_index 1 0 34 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amproc_fam_proc_index 1 0 39 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 5 0 7 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 13 0 13 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 0 0 20 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 5 0 30 found_hit
+REQ pg_attribute 6 0 14 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 5 0 7 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 14 0 31 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_opclass_oid_index 1 0 34 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 1 0 26 found_hit
+REQ pg_amproc_fam_proc_index 1 0 39 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 9 0 9 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 10 0 10 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 5 0 7 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 2 0 45 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 11 0 11 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 1 0 48 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+BUF using free 50
+REQ pg_database_oid_index 0 0 50 read_only
+BUF using free 51
+REQ pg_database_oid_index 1 0 51 read_only
+REQ pg_database 0 0 0 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+BUF using free 52
+REQ pg_db_role_setting_databaseid_rol_index 0 0 52 read_only
+REQ pg_db_role_setting_databaseid_rol_index 0 0 52 found_hit
+REQ pg_db_role_setting_databaseid_rol_index 0 0 52 found_hit
+REQ pg_database 0 0 0 found_hit
+REQ pg_database_oid_index 0 0 50 found_hit
+REQ pg_database_oid_index 1 0 51 found_hit
+REQ pg_database 0 0 0 found_hit
+BUF using free 53
+REQ pg_database_datname_index 0 0 53 read_only
+BUF using free 54
+REQ pg_database_datname_index 1 0 54 read_only
+REQ pg_database 0 0 0 found_hit
+REQ pg_database_oid_index 1 0 51 found_hit
+REQ pg_database 0 0 0 found_hit
+REQ pg_class_oid_index 0 0 41 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_attribute_relid_attnum_index 0 0 43 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 8 0 8 found_hit
+REQ pg_class_oid_index 1 0 42 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_attribute_relid_attnum_index 3 0 44 found_hit
+REQ pg_attribute_relid_attnum_index 4 0 49 found_hit
+REQ pg_attribute 15 0 40 found_hit
+REQ pg_index_indexrelid_index 0 0 46 found_hit
+REQ pg_index_indexrelid_index 1 0 47 found_hit
+REQ pg_index 1 0 32 found_hit
+REQ pg_am 0 0 22 found_hit
+REQ pg_opclass_oid_index 0 0 33 found_hit
+REQ pg_opclass_oid_index 1 0 34 found_hit
+REQ pg_opclass 0 0 23 found_hit
+REQ pg_amop_fam_strat_index 0 0 35 found_hit
+REQ pg_amop_fam_strat_index 3 0 36 found_hit
+REQ pg_amop_fam_strat_index 1 0 37 found_hit
+REQ pg_amop 0 0 25 found_hit
+REQ pg_amproc_fam_proc_index 0 0 38 found_hit
+REQ pg_amproc_fam_proc_index 1 0 39 found_hit
+REQ pg_amproc 0 0 28 found_hit
+REQ pg_db_role_setting_databaseid_rol_index 0 0 52 found_hit
+REQ pg_db_role_setting_databaseid_rol_index 0 0 52 found_hit
+REQ pg_db_role_setting_databaseid_rol_index 0 0 52 found_hit
+REQ pg_database 0 0 0 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_class 4 0 6 found_hit
+REQ pg_class 5 0 7 found_hit
+REQ pg_class 6 0 24 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_class 4 0 6 found_hit
+REQ pg_class 5 0 7 found_hit
+REQ pg_class 6 0 24 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_class 4 0 6 found_hit
+REQ pg_class 5 0 7 found_hit
+REQ pg_class 6 0 24 found_hit
+REQ pg_class 0 0 2 found_hit
+REQ pg_class 1 0 3 found_hit
+REQ pg_class 2 0 4 found_hit
+REQ pg_class 3 0 5 found_hit
+REQ pg_class 4 0 6 found_hit
+REQ pg_class 5 0 7 found_hit
+REQ pg_class 6 0 24 found_hit
+REQ pg_database_oid_index 1 0 51 found_hit
+REQ pg_database 0 0 0 found_hit
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2011-08-19 23:38:47 EST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+BUF using free 0
+REQ pg_database - 0 1 read_only
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2011-08-20 21:04:02 EST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+BUF using free 0
+REQ pg_database  0 - 1 read_only
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down

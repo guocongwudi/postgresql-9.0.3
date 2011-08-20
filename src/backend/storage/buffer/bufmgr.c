@@ -71,6 +71,7 @@ double		bgwriter_lru_multiplier = 2.0;
 #if 1
 char* page_status ="";
 int   slot_num;
+int   glob_block_num; 
 #endif 
 /*
  * How many buffers PrefetchBuffer callers should try to stay ahead of their
@@ -149,7 +150,7 @@ PrefetchBuffer(Relation reln, ForkNumber forkNum, BlockNumber blockNum)
 		INIT_BUFFERTAG(newTag, reln->rd_smgr->smgr_rnode, forkNum, blockNum);
 
 		/* determine its hash code and partition lock ID */
-		newHash = BufTableHashCode(&newTag);
+ 		newHash = BufTableHashCode(&newTag);
 		newPartitionLock = BufMappingPartitionLock(newHash);
 
 		/* see if the block is in the buffer pool already */
@@ -225,7 +226,7 @@ ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
 {
   bool		hit;
   Buffer	buf;
-
+  glob_block_num = blockNum;
 	/* Open it at the smgr level if not already done */
 	RelationOpenSmgr(reln);
 
@@ -251,7 +252,7 @@ ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
     }
 #if 1
     if ( (reln)->rd_rel != NULL)
-        fprintf(stderr,"REQ %s %d 0 %d %s\n", reln->rd_rel->relname.data,  blockNum,slot_num,page_status);
+        fprintf(stderr,"REQ %s %d 0 %d %s\n", reln->rd_rel->relname.data, glob_block_num,slot_num+1,page_status);
 #endif
     return buf;
 }
@@ -311,6 +312,7 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 	if (isExtend){
 	blockNum = smgrnblocks(smgr, forkNum);
 #if 1
+    glob_block_num = blockNum ;
     page_status="page_new";
 #endif 
    }
