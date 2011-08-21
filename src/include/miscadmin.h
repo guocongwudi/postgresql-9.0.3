@@ -129,6 +129,12 @@ extern bool ExitOnAnyError;
 
 extern PGDLLIMPORT char *DataDir;
 
+
+#if 1
+extern PGDLLIMPORT int Npools; 
+
+
+#endif
 extern PGDLLIMPORT int NBuffers;
 extern int	MaxBackends;
 extern int	MaxConnections;

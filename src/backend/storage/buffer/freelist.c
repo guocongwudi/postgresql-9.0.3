@@ -299,10 +299,10 @@ StrategyShmemSize(void)
  *		Only called by postmaster and only during initialization.
  */
 void
-StrategyInitialize(bool init)
+StrategyInitialize(bool init,int poolnum)
 {
 	bool		found;
-
+    
 	/*
 	 * Initialize the shared buffer lookup hashtable.
 	 *
@@ -334,7 +334,8 @@ StrategyInitialize(bool init)
 		 * Grab the whole linked list of free buffers for our strategy. We
 		 * assume it was previously set up by InitBufferPool().
 		 */
-		StrategyControl->firstFreeBuffer = 0;
+	    
+        StrategyControl->firstFreeBuffer = 0;
 		StrategyControl->lastFreeBuffer = NBuffers - 1;
 
 		/* Initialize the clock sweep pointer */

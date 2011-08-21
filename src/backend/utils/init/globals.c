@@ -104,6 +104,10 @@ int			maintenance_work_mem = 16384;
  * assign hooks for those variables):
  */
 int			NBuffers = 1000;
+
+#if 1
+int         Npools = 4;       
+#endif 
 int			MaxBackends = 100;
 int			MaxConnections = 90;
 
