@@ -102,6 +102,7 @@ static void AddBufferToRing(BufferAccessStrategy strategy,
  *	might awaken other processes, and it would be bad to do the associated
  *	kernel calls while holding the buffer header spinlock.
  */
+
 volatile BufferDesc *
 StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 {
@@ -118,7 +119,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 		if (buf != NULL)
 		{
 			*lock_held = false;
-            return buf;
+			return buf;
 		}
 	}
 
@@ -194,7 +195,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 				/* Found a usable buffer */
 				if (strategy != NULL)
 					AddBufferToRing(strategy, buf);
-                return buf;
+				return buf;
 			}
 		}
 		else if (--trycounter == 0)
@@ -215,7 +216,6 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 	/* not reached */
 	return NULL;
 }
-
 /*
  * StrategyFreeBuffer: put a buffer on the freelist
  */
@@ -299,11 +299,10 @@ StrategyShmemSize(void)
  *		Only called by postmaster and only during initialization.
  */
 void
-StrategyInitialize(bool init,int poolnum)
+StrategyInitialize(bool init,int poolnum, BufferPoolDesc*  BufferPoolDescripors)
 {
 	bool		found;
-    
-	/*
+        /*
 	 * Initialize the shared buffer lookup hashtable.
 	 *
 	 * Since we can't tolerate running out of lookup table entries, we must be
@@ -313,7 +312,9 @@ StrategyInitialize(bool init,int poolnum)
 	 * happening in each partition concurrently, so we could need as many as
 	 * NBuffers + NUM_BUFFER_PARTITIONS entries.
 	 */
-	InitBufTable(NBuffers + NUM_BUFFER_PARTITIONS);
+//	InitBufTable(NBuffers + NUM_BUFFER_PARTITIONS);
+     
+	InitBufTable(BufferPoolDescripors[poolnum].size + NUM_BUFFER_PARTITIONS);
 
 	/*
 	 * Get or create the shared strategy control block
@@ -335,12 +336,15 @@ StrategyInitialize(bool init,int poolnum)
 		 * assume it was previously set up by InitBufferPool().
 		 */
 	    
-        StrategyControl->firstFreeBuffer = 0;
-		StrategyControl->lastFreeBuffer = NBuffers - 1;
+      //  StrategyControl->firstFreeBuffer = 0;
+#if 1
+        StrategyControl->firstFreeBuffer = BufferPoolDescripors[poolnum].start_Nbuffer;
+        //StrategyControl->lastFreeBuffer = NBuffers - 1;
 
-		/* Initialize the clock sweep pointer */
-		StrategyControl->nextVictimBuffer = 0;
-
+        StrategyControl->lastFreeBuffer = BufferPoolDescripors[poolnum].end_Nbuffer;
+		/* Initialize the clock sweep pointer  0 before modify*/
+		StrategyControl->nextVictimBuffer = BufferPoolDescripors[poolnum].start_Nbuffer;
+#endif 
 		/* Clear statistics */
 		StrategyControl->completePasses = 0;
 		StrategyControl->numBufferAllocs = 0;

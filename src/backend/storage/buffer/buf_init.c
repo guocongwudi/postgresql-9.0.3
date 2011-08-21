@@ -181,7 +181,7 @@ InitBufferPool(void)
 #if 1
     for(i = 0 ; i < Npools ; i++)
     {
-	StrategyInitialize(!foundDescs,i);
+	StrategyInitialize(!foundDescs,i,BufferPoolDescripors);
     }
     }
 #endif 
