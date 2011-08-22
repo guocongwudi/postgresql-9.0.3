@@ -187,7 +187,7 @@ typedef struct sbufpooldesc
 extern PGDLLIMPORT BufferDesc *BufferDescriptors;
 extern PGDLLIMPORT BufferPoolDesc *BufferPoolDescripors;
 /* in localbuf.c */
-//extern BufferDesc *LocalBufferDescriptors;
+extern BufferDesc *LocalBufferDescriptors;
 
 
 /*
@@ -196,7 +196,7 @@ extern PGDLLIMPORT BufferPoolDesc *BufferPoolDescripors;
 
 /* freelist.c */
 extern volatile BufferDesc *StrategyGetBuffer(BufferAccessStrategy strategy,
-				  bool *lock_held );
+				  bool *lock_held ,int poolnum);
 extern void StrategyFreeBuffer(volatile BufferDesc *buf);
 extern bool StrategyRejectBuffer(BufferAccessStrategy strategy,
 					 volatile BufferDesc *buf);

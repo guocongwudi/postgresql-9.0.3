@@ -131,7 +131,6 @@ InitBufferPool(void)
 			SpinLockInit(&buf->buf_hdr_lock);
 
 			buf->buf_id = i;
-
 			/*
 			 * Initially link all the buffers together as unused. Subsequent
 			 * management of this list is done by freelist.c.
@@ -166,6 +165,7 @@ InitBufferPool(void)
             bufpool->end_Nbuffer = tembuf + poolsize[i] -1;
             tembuf = tembuf + poolsize[i];
      
+ fprintf(stderr,"@ddddddddddddddddd$ %d$$%d",bufpool->poolid,bufpool->size );
         }
 
         /*-----------------------------------------------------------------------------
@@ -179,10 +179,10 @@ InitBufferPool(void)
            /* Init other shared buffer-management stuff */
 //	StrategyInitialize(!foundDescs);
 #if 1
-    for(i = 0 ; i < Npools ; i++)
-    {
-	StrategyInitialize(!foundDescs,i,BufferPoolDescripors);
-    }
+        for(i = 0 ; i < Npools ; i++)
+        {
+            StrategyInitialize(!foundDescs,i,BufferPoolDescripors);
+        }
     }
 #endif 
 }

@@ -104,12 +104,16 @@ static void AddBufferToRing(BufferAccessStrategy strategy,
  */
 
 volatile BufferDesc *
-StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
+StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
 {
 	volatile BufferDesc *buf;
 	int			trycounter;
-
-	/*
+    //modifiy change nbuffer for uniq pool
+    int tempbuffer;
+    tempbuffer = NBuffers;
+   // NBuffers = BufferPoolDescripors[poolnum].end_Nbuffer;
+    
+        /*
 	 * If given a strategy object, see whether it can select a buffer. We
 	 * assume strategy objects don't need the BufFreelistLock.
 	 */
@@ -147,7 +151,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 
 		/* Unconditionally remove buffer from freelist */
 		StrategyControl->firstFreeBuffer = buf->freeNext;
-		buf->freeNext = FREENEXT_NOT_IN_LIST;
+		buf->freeNext ++;
 
 		/*
 		 * If the buffer is pinned or has a nonzero usage_count, we cannot use
@@ -174,7 +178,8 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 
 		if (++StrategyControl->nextVictimBuffer >= NBuffers)
 		{
-			StrategyControl->nextVictimBuffer = 0;
+            //change 0 to start_N
+			StrategyControl->nextVictimBuffer = BufferPoolDescripors[poolnum].start_Nbuffer;
 			StrategyControl->completePasses++;
 		}
 
@@ -212,7 +217,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 		}
 		UnlockBufHdr(buf);
 	}
-
+NBuffers=tempbuffer;
 	/* not reached */
 	return NULL;
 }
@@ -325,6 +330,7 @@ StrategyInitialize(bool init,int poolnum, BufferPoolDesc*  BufferPoolDescripors)
 						&found);
 
 	if (!found)
+
 	{
 		/*
 		 * Only done once, usually in postmaster
@@ -345,7 +351,8 @@ StrategyInitialize(bool init,int poolnum, BufferPoolDesc*  BufferPoolDescripors)
 		/* Initialize the clock sweep pointer  0 before modify*/
 		StrategyControl->nextVictimBuffer = BufferPoolDescripors[poolnum].start_Nbuffer;
 #endif 
-		/* Clear statistics */
+	
+        /* Clear statistics */
 		StrategyControl->completePasses = 0;
 		StrategyControl->numBufferAllocs = 0;
 	}

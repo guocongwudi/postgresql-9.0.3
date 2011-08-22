@@ -255,7 +255,7 @@ ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
 		pgstat_count_buffer_hit(reln);
     }
     if ( (reln)->rd_rel != NULL)
-        fprintf(stderr,"REQ %s %d  %s\n", reln->rd_rel->relname.data,  global_block_num,page_status);
+        fprintf(stderr,"REQ %s %d %d  %s\n", reln->rd_rel->relname.data, global_block_num,buf,page_status);
     return buf;
 }
 
@@ -312,9 +312,12 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 
 	/* Substitute proper block number if caller asked for P_NEW */
 	if (isExtend)
+    {
 		blockNum = smgrnblocks(smgr, forkNum);
         global_block_num = blockNum ;
-	if (isLocalBuf)
+        page_status = "new_page";
+    }
+    if (isLocalBuf)
 	{
 		bufHdr = LocalBufferAlloc(smgr, forkNum, blockNum, &found);
 		if (found)
@@ -598,10 +601,16 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 
 		Assert(buf->refcount == 0);
 #if 1
+        if( strcmp("new_page", page_status))
+        ;
+        else
+        {
+
         if (buf->flags & BM_DIRTY)
             page_status="write_read"; 
         else 
             page_status="read_only";
+        }
 #endif 
 		/* Must copy buffer flags while we still hold the spinlock */
 		oldFlags = buf->flags;

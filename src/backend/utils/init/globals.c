@@ -106,7 +106,7 @@ int			maintenance_work_mem = 16384;
 int			NBuffers = 1000;
 
 #if 1
-int         Npools = 4;       
+int         Npools = 1;       
 #endif 
 int			MaxBackends = 100;
 int			MaxConnections = 90;
