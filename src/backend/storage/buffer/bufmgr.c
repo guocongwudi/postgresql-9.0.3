@@ -334,9 +334,6 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 		bufHdr = BufferAlloc(smgr, forkNum, blockNum, strategy, &found);
 		if (found){
 
-#if 1
-            page_status="found_hit";
-#endif
 			pgBufferUsage.shared_blks_hit++ ;
         }
 		else
@@ -545,6 +542,8 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 	buf_id = BufTableLookup(&newTag, newHash);
 	if (buf_id >= 0)
 	{
+
+        page_status = "found_hit";
 		/*
 		 * Found it.  Now, pin the buffer so no one can steal it from the
 		 * buffer pool, and check to see if the correct data has been loaded
@@ -605,7 +604,7 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
         if (buf->flags & BM_DIRTY)
         {
             
-            if( strcmp("new_page", page_status))
+            if(! strcmp("new_page", page_status))
             {
                 page_status="write_new"; 
             }
@@ -615,7 +614,7 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
         }
         else
         {
-            if( strcmp("new_page", page_status))
+            if( !strcmp("new_page", page_status))
                 ;
             else
                 page_status="read_only";

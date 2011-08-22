@@ -152,10 +152,17 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
 		buf = &BufferDescriptors[StrategyControl[poolnum]->firstFreeBuffer];
 		Assert(buf->freeNext != FREENEXT_NOT_IN_LIST);
 
+
+
 		/* Unconditionally remove buffer from freelist */
+
+
 		StrategyControl[poolnum]->firstFreeBuffer = buf->freeNext;
 		buf->freeNext ++;
 
+		if (buf->freeNext >= BufferPoolDescripors[poolnum].end_Nbuffer ){
+			break;
+		}
 		/*
 		 * If the buffer is pinned or has a nonzero usage_count, we cannot use
 		 * it; discard it and retry.  (This can only happen if VACUUM put a
@@ -339,7 +346,7 @@ StrategyInitialize(bool init, BufferPoolDesc*  BufferPoolDescripors)
 					sizeof(BufferStrategyControl ),
 					&found);
 
-fprintf(stderr,"Npool   asdasdasdsdsadasdas   %d\n" ,6  );
+
 	}
 
 	//found = 0;
