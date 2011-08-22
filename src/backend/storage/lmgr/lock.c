@@ -348,6 +348,8 @@ InitLocks(void)
 									  128,
 									  &info,
 									  hash_flags);
+
+	 fprintf(stderr,"sadddddddddddss2221sadasdsadd");
 }
 
 

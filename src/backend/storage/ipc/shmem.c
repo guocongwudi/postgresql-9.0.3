@@ -338,18 +338,25 @@ ShmemInitStruct(const char *name, Size size, bool *foundPtr)
 			 * index has been initialized.	This should be OK because no other
 			 * process can be accessing shared memory yet.
 			 */
+
 			Assert(shmemseghdr->index == NULL);
 			structPtr = ShmemAlloc(size);
-			if (structPtr == NULL)
+
+			if (structPtr == NULL){
 				ereport(ERROR,
 						(errcode(ERRCODE_OUT_OF_MEMORY),
 						 errmsg("not enough shared memory for data structure"
 								" \"%s\" (%lu bytes requested)",
 								name, (unsigned long) size)));
+
+				fprintf(stderr,"PRoblem  sdsdsdsaddas    %d\n" ,6  );
+			}
 			shmemseghdr->index = structPtr;
 			*foundPtr = FALSE;
 		}
+
 		LWLockRelease(ShmemIndexLock);
+		fprintf(stderr,"PRoblem     23 %d\n" ,6  );
 		return structPtr;
 	}
 
@@ -375,6 +382,7 @@ ShmemInitStruct(const char *name, Size size, bool *foundPtr)
 		 */
 		if (result->size != size)
 		{
+
 			LWLockRelease(ShmemIndexLock);
 			ereport(ERROR,
 				  (errmsg("ShmemIndex entry size is wrong for data structure"
@@ -392,6 +400,8 @@ ShmemInitStruct(const char *name, Size size, bool *foundPtr)
 		if (structPtr == NULL)
 		{
 			/* out of memory; remove the failed ShmemIndex entry */
+
+	//		fprintf(stderr,"PRoblem  sdsdsdsaddas    %d\n" ,6  );
 			hash_search(ShmemIndex, name, HASH_REMOVE, NULL);
 			LWLockRelease(ShmemIndexLock);
 			ereport(ERROR,
@@ -407,6 +417,7 @@ ShmemInitStruct(const char *name, Size size, bool *foundPtr)
 	LWLockRelease(ShmemIndexLock);
 
 	Assert(ShmemAddrIsValid(structPtr));
+
 	return structPtr;
 }
 

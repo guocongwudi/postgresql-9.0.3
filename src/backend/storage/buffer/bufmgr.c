@@ -601,15 +601,24 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 
 		Assert(buf->refcount == 0);
 #if 1
-        if( strcmp("new_page", page_status))
-        ;
-        else
-        {
 
         if (buf->flags & BM_DIRTY)
-            page_status="write_read"; 
-        else 
-            page_status="read_only";
+        {
+            
+            if( strcmp("new_page", page_status))
+            {
+                page_status="write_new"; 
+            }
+
+            else 
+                page_status="write_read";
+        }
+        else
+        {
+            if( strcmp("new_page", page_status))
+                ;
+            else
+                page_status="read_only";
         }
 #endif 
 		/* Must copy buffer flags while we still hold the spinlock */
@@ -789,7 +798,7 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 			}
 
 #if 1
-        page_status="found_hit";
+      //  page_status="found_hit";
 #endif
 			return buf;
 		}
@@ -852,9 +861,6 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 	else
 		*foundPtr = TRUE;
 
-#if 1
-        page_status="read_only";
-#endif
 	return buf;
 }
 

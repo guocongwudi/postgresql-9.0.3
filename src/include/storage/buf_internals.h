@@ -204,7 +204,7 @@ extern bool StrategyRejectBuffer(BufferAccessStrategy strategy,
 extern int	StrategySyncStart(uint32 *complete_passes, uint32 *num_buf_alloc);
 extern Size StrategyShmemSize(void);
 #if 1
-extern void StrategyInitialize(bool initi,int poolnum,BufferPoolDesc * BufferPoolDescripors);
+extern void StrategyInitialize(bool init,BufferPoolDesc * BufferPoolDescripors);
 #endif
 //extern void StrategyInitialize(bool init);
 

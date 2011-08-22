@@ -105,9 +105,11 @@ InitBufferPool(void)
 		/* both should be present or neither */
 		Assert(foundDescs && foundBufs);
 		/* note: this path is only taken in EXEC_BACKEND case */
+
 	}
 	else
 	{
+
 		BufferDesc *buf;
 		int			i;
 
@@ -151,6 +153,7 @@ InitBufferPool(void)
         /*-----------------------------------------------------------------------------
          *  initialize muti buffer pool
          *-----------------------------------------------------------------------------*/
+        int j = 0;
         int tembuf = 0;
         int poolsize[Npools];
         poolsize[0]=16;
@@ -165,7 +168,7 @@ InitBufferPool(void)
             bufpool->end_Nbuffer = tembuf + poolsize[i] -1;
             tembuf = tembuf + poolsize[i];
      
- fprintf(stderr,"@ddddddddddddddddd$ %d$$%d",bufpool->poolid,bufpool->size );
+ fprintf(stderr,"itialize Nbuffer %d$$%d\n",bufpool->poolid,bufpool->size );
         }
 
         /*-----------------------------------------------------------------------------
@@ -173,18 +176,24 @@ InitBufferPool(void)
          *-----------------------------------------------------------------------------*/
         for ( i = 0 ; i < Npools ; i++)
         {
-            BufferDescriptors[i].poolid = i ;
+            for( j = 0 ; j <NBuffers ; j++)
+            {
+                BufferDescriptors[i].poolid = i ;
+
+            }
+            fprintf(stderr,"@set pool %d" ,i );
         }
+
 #endif
            /* Init other shared buffer-management stuff */
 //	StrategyInitialize(!foundDescs);
-#if 1
-        for(i = 0 ; i < Npools ; i++)
-        {
-            StrategyInitialize(!foundDescs,i,BufferPoolDescripors);
-        }
+
+
+
+            StrategyInitialize(!foundDescs,BufferPoolDescripors);
+
     }
-#endif 
+
 }
 
 /*
@@ -231,6 +240,6 @@ BufferShmemSize(void)
 
 	/* size of stuff controlled by freelist.c */
 	size = add_size(size, StrategyShmemSize());
-
+	size = add_size(size, mul_size(Npools, sizeof(BufferPoolDesc)));
 	return size;
 }

@@ -44,6 +44,8 @@ typedef enum
 /* in globals.c ... this duplicates miscadmin.h */
 extern PGDLLIMPORT int NBuffers;
 
+// added
+extern PGDLLIMPORT int Npools;
 /* in bufmgr.c */
 extern bool zero_damaged_pages;
 extern int	bgwriter_lru_maxpages;
@@ -64,7 +66,7 @@ extern PGDLLIMPORT int32 *LocalRefCount;
 
 /*
  * Buffer content lock modes (mode argument for LockBuffer())
- */
+  */
 #define BUFFER_LOCK_UNLOCK		0
 #define BUFFER_LOCK_SHARE		1
 #define BUFFER_LOCK_EXCLUSIVE	2

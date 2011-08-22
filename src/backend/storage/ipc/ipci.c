@@ -193,6 +193,7 @@ CreateSharedMemoryAndSemaphores(bool makePrivate, int port)
 	TwoPhaseShmemInit();
 	MultiXactShmemInit();
 	InitBufferPool();
+	 fprintf(stderr,"sadddddddddddss2221sadasdsadd");
 
 	/*
 	 * Set up lock manager
