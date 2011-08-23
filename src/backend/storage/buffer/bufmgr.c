@@ -596,6 +596,11 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 		 * still held, since it would be bad to hold the spinlock while
 		 * possibly waking up other processes.
 		 */
+
+
+
+
+		/* code need add mapping  */
 		buf = StrategyGetBuffer(strategy, &lock_held,0);
 
 		Assert(buf->refcount == 0);

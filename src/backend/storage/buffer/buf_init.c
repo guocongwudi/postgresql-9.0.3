@@ -156,7 +156,7 @@ InitBufferPool(void)
         int j = 0;
         int tembuf = 0;
         int poolsize[Npools];
-        poolsize[0]=16;
+        poolsize[0]=32;
         poolsize[1]=16;
         poolsize[2]=16;
         poolsize[3]=16;
@@ -167,8 +167,9 @@ InitBufferPool(void)
             bufpool->start_Nbuffer = tembuf;
             bufpool->end_Nbuffer = tembuf + poolsize[i] -1;
             tembuf = tembuf + poolsize[i];
+
      
- fprintf(stderr,"itialize Nbuffer %d$$%d\n",bufpool->poolid,bufpool->size );
+ fprintf(stderr,"it22222ialize Nbuffer %d$$%d\n",bufpool->start_Nbuffer,bufpool->end_Nbuffer );
         }
 
         /*-----------------------------------------------------------------------------
