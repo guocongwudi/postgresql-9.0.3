@@ -13,6 +13,11 @@
 objfiles.txt
 .deps/
 
+/config/
+/contrib/
+/doc/
+
+
 # Local excludes in root directory
 /GNUmakefile
 /config.log

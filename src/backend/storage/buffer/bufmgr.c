@@ -590,6 +590,11 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 	 */
 	LWLockRelease(newPartitionLock);
 
+//	new page
+//	read_only
+//	write_read
+//	found_hit
+
 	/* Loop here in case we have to try another victim buffer */
 	for (;;)
 	{
