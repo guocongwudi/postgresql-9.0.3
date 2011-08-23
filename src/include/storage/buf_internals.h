@@ -140,10 +140,26 @@ typedef struct sbufdesc
 
 	int			buf_id;			/* buffer's index number (from 0) */
 	int			freeNext;		/* link in freelist chain */
-
+#if 1
+    int         poolid;   /*  pool id*/
+#endif 
 	LWLockId	io_in_progress_lock;	/* to wait for I/O to complete */
 	LWLockId	content_lock;	/* to lock access to buffer contents */
 } BufferDesc;
+
+
+#if 1
+
+typedef struct sbufpooldesc
+{
+    int        poolid;
+    int        size;
+    int        start_Nbuffer;
+    int        end_Nbuffer;
+    int        Nextvictim;
+}BufferPoolDesc;
+
+#endif
 
 #define BufferDescriptorGetBuffer(bdesc) ((bdesc)->buf_id + 1)
 
@@ -169,7 +185,7 @@ typedef struct sbufdesc
 
 /* in buf_init.c */
 extern PGDLLIMPORT BufferDesc *BufferDescriptors;
-
+extern PGDLLIMPORT BufferPoolDesc *BufferPoolDescripors;
 /* in localbuf.c */
 extern BufferDesc *LocalBufferDescriptors;
 
@@ -180,14 +196,17 @@ extern BufferDesc *LocalBufferDescriptors;
 
 /* freelist.c */
 extern volatile BufferDesc *StrategyGetBuffer(BufferAccessStrategy strategy,
-				  bool *lock_held);
+				  bool *lock_held ,int poolnum);
 extern void StrategyFreeBuffer(volatile BufferDesc *buf);
 extern bool StrategyRejectBuffer(BufferAccessStrategy strategy,
 					 volatile BufferDesc *buf);
 
 extern int	StrategySyncStart(uint32 *complete_passes, uint32 *num_buf_alloc);
 extern Size StrategyShmemSize(void);
-extern void StrategyInitialize(bool init);
+#if 1
+extern void StrategyInitialize(bool init,BufferPoolDesc * BufferPoolDescripors);
+#endif
+//extern void StrategyInitialize(bool init);
 
 /* buf_table.c */
 extern Size BufTableShmemSize(int size);

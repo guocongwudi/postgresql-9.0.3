@@ -13,7 +13,9 @@
  *-------------------------------------------------------------------------
  */
 #include "postgres.h"
-
+#if 1
+#include "miscadmin.h"
+#endif 
 #include "storage/bufmgr.h"
 #include "storage/buf_internals.h"
 
@@ -23,6 +25,10 @@ char	   *BufferBlocks;
 int32	   *PrivateRefCount;
 
 
+#if 1
+BufferPoolDesc *BufferPoolDescripors;
+
+#endif
 /*
  * Data Structures:
  *		buffers live in a freelist and a lookup data structure.
@@ -74,12 +80,23 @@ InitBufferPool(void)
 {
 	bool		foundBufs,
 				foundDescs;
-
-	BufferDescriptors = (BufferDesc *)
+#if 1
+    bool        foundbufferpoolDescs , foundpools;
+#endif 
+    BufferDescriptors = (BufferDesc *)
 		ShmemInitStruct("Buffer Descriptors",
 						NBuffers * sizeof(BufferDesc), &foundDescs);
 
-	BufferBlocks = (char *)
+    /*-----------------------------------------------------------------------------
+     *  initialize bufferpool strcut allc memery
+     *-----------------------------------------------------------------------------*/
+#if 1
+
+    BufferPoolDescripors =(BufferPoolDesc *)
+        ShmemInitStruct("Bufferpool descriptors",Npools * sizeof(BufferPoolDesc),&foundbufferpoolDescs);
+	
+#endif             
+        BufferBlocks = (char *)
 		ShmemInitStruct("Buffer Blocks",
 						NBuffers * (Size) BLCKSZ, &foundBufs);
 
@@ -88,18 +105,24 @@ InitBufferPool(void)
 		/* both should be present or neither */
 		Assert(foundDescs && foundBufs);
 		/* note: this path is only taken in EXEC_BACKEND case */
+
 	}
 	else
 	{
+
 		BufferDesc *buf;
 		int			i;
 
 		buf = BufferDescriptors;
-
-		/*
+#if 1
+        BufferPoolDesc *bufpool;
+        bufpool = BufferPoolDescripors;
+#endif
+            /*
 		 * Initialize all the buffer headers.
 		 */
-		for (i = 0; i < NBuffers; buf++, i++)
+
+        for (i = 0; i < NBuffers; buf++, i++)
 		{
 			CLEAR_BUFFERTAG(buf->tag);
 			buf->flags = 0;
@@ -110,7 +133,6 @@ InitBufferPool(void)
 			SpinLockInit(&buf->buf_hdr_lock);
 
 			buf->buf_id = i;
-
 			/*
 			 * Initially link all the buffers together as unused. Subsequent
 			 * management of this list is done by freelist.c.
@@ -123,10 +145,55 @@ InitBufferPool(void)
 
 		/* Correct last entry of linked list */
 		BufferDescriptors[NBuffers - 1].freeNext = FREENEXT_END_OF_LIST;
-	}
+	
 
-	/* Init other shared buffer-management stuff */
-	StrategyInitialize(!foundDescs);
+
+#if 1
+
+        /*-----------------------------------------------------------------------------
+         *  initialize muti buffer pool
+         *-----------------------------------------------------------------------------*/
+        int j = 0;
+        int tembuf = 0;
+        int poolsize[Npools];
+        poolsize[0]=16;
+        poolsize[1]=16;
+        poolsize[2]=16;
+        poolsize[3]=16;
+        for( i = 0 ; i < Npools  ;i++,bufpool++ )
+        {
+            bufpool->poolid = i;
+            bufpool->size = poolsize[i];
+            bufpool->start_Nbuffer = tembuf;
+            bufpool->end_Nbuffer = tembuf + poolsize[i] -1;
+            tembuf = tembuf + poolsize[i];
+     
+ fprintf(stderr,"itialize Nbuffer %d$$%d\n",bufpool->poolid,bufpool->size );
+        }
+
+        /*-----------------------------------------------------------------------------
+         *  set pool id in each bufferdesc
+         *-----------------------------------------------------------------------------*/
+        for ( i = 0 ; i < Npools ; i++)
+        {
+            for( j = 0 ; j <NBuffers ; j++)
+            {
+                BufferDescriptors[i].poolid = i ;
+
+            }
+            fprintf(stderr,"@set pool %d" ,i );
+        }
+
+#endif
+           /* Init other shared buffer-management stuff */
+//	StrategyInitialize(!foundDescs);
+
+
+
+            StrategyInitialize(!foundDescs,BufferPoolDescripors);
+
+    }
+
 }
 
 /*
@@ -173,6 +240,6 @@ BufferShmemSize(void)
 
 	/* size of stuff controlled by freelist.c */
 	size = add_size(size, StrategyShmemSize());
-
+	size = add_size(size, mul_size(Npools, sizeof(BufferPoolDesc)));
 	return size;
 }

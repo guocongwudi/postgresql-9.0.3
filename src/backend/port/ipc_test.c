@@ -50,7 +50,7 @@ bool		assert_enabled = true;
 
 int			MaxBackends = 32;
 int			NBuffers = 64;
-
+int         Npools= 1;
 char	   *DataDir = ".";
 
 

@@ -23,9 +23,9 @@
  *
  * MarkBufferDirty() -- mark a pinned buffer's contents as "dirty".
  *		The disk write is delayed until buffer replacement or checkpoint.
- *
  * See also these files:
  *		freelist.c -- chooses victim for buffer replacement
+ *
  *		buf_table.c -- manages the buffer lookup table
  */
 #include "postgres.h"
@@ -70,8 +70,7 @@ double		bgwriter_lru_multiplier = 2.0;
 
 #if 1
 char* page_status ="";
-int   slot_num;
-int   glob_block_num; 
+int   global_block_num;
 #endif 
 /*
  * How many buffers PrefetchBuffer callers should try to stay ahead of their
@@ -150,7 +149,7 @@ PrefetchBuffer(Relation reln, ForkNumber forkNum, BlockNumber blockNum)
 		INIT_BUFFERTAG(newTag, reln->rd_smgr->smgr_rnode, forkNum, blockNum);
 
 		/* determine its hash code and partition lock ID */
- 		newHash = BufTableHashCode(&newTag);
+		newHash = BufTableHashCode(&newTag);
 		newPartitionLock = BufMappingPartitionLock(newHash);
 
 		/* see if the block is in the buffer pool already */
@@ -226,7 +225,12 @@ ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
 {
   bool		hit;
   Buffer	buf;
-  glob_block_num = blockNum;
+
+
+  /*-----------------------------------------------------------------------------
+   *  initialilze global_block_num 
+   *-----------------------------------------------------------------------------*/
+  global_block_num = blockNum;
 	/* Open it at the smgr level if not already done */
 	RelationOpenSmgr(reln);
 
@@ -250,10 +254,8 @@ ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
 	if (hit) {
 		pgstat_count_buffer_hit(reln);
     }
-#if 1
     if ( (reln)->rd_rel != NULL)
-        fprintf(stderr,"REQ %s %d 0 %d %s\n", reln->rd_rel->relname.data, glob_block_num,slot_num+1,page_status);
-#endif
+        fprintf(stderr,"REQ %s %d %d  %s\n", reln->rd_rel->relname.data, global_block_num,buf,page_status);
     return buf;
 }
 
@@ -309,14 +311,13 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 									   isExtend);
 
 	/* Substitute proper block number if caller asked for P_NEW */
-	if (isExtend){
-	blockNum = smgrnblocks(smgr, forkNum);
-#if 1
-    glob_block_num = blockNum ;
-    page_status="page_new";
-#endif 
-   }
-	if (isLocalBuf)
+	if (isExtend)
+    {
+		blockNum = smgrnblocks(smgr, forkNum);
+        global_block_num = blockNum ;
+        page_status = "new_page";
+    }
+    if (isLocalBuf)
 	{
 		bufHdr = LocalBufferAlloc(smgr, forkNum, blockNum, &found);
 		if (found)
@@ -333,9 +334,6 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 		bufHdr = BufferAlloc(smgr, forkNum, blockNum, strategy, &found);
 		if (found){
 
-#if 1
-            page_status="found_hit";
-#endif
 			pgBufferUsage.shared_blks_hit++ ;
         }
 		else
@@ -363,9 +361,6 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 											  isExtend,
 											  found);
 
-#if 1
-    slot_num=bufHdr->buf_id;
-#endif 
 			return BufferDescriptorGetBuffer(bufHdr);
 		}
 
@@ -495,9 +490,7 @@ ReadBuffer_common(SMgrRelation smgr, bool isLocalBuf, ForkNumber forkNum,
 									  isLocalBuf,
 									  isExtend,
 									  found);
-#if 1
-    slot_num=bufHdr->buf_id;
-#endif 
+
 	return BufferDescriptorGetBuffer(bufHdr);
 }
 
@@ -549,6 +542,8 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 	buf_id = BufTableLookup(&newTag, newHash);
 	if (buf_id >= 0)
 	{
+
+        page_status = "found_hit";
 		/*
 		 * Found it.  Now, pin the buffer so no one can steal it from the
 		 * buffer pool, and check to see if the correct data has been loaded
@@ -606,14 +601,29 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 		 * still held, since it would be bad to hold the spinlock while
 		 * possibly waking up other processes.
 		 */
-		buf = StrategyGetBuffer(strategy, &lock_held);
+		buf = StrategyGetBuffer(strategy, &lock_held,0);
 
 		Assert(buf->refcount == 0);
 #if 1
+
         if (buf->flags & BM_DIRTY)
-            page_status="write_read"; 
-        else 
-            page_status="read_only";
+        {
+            
+            if(! strcmp("new_page", page_status))
+            {
+                page_status="write_new"; 
+            }
+
+            else 
+                page_status="write_read";
+        }
+        else
+        {
+            if( !strcmp("new_page", page_status))
+                ;
+            else
+                page_status="read_only";
+        }
 #endif 
 		/* Must copy buffer flags while we still hold the spinlock */
 		oldFlags = buf->flags;
@@ -792,7 +802,7 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 			}
 
 #if 1
-        page_status="found_hit";
+      //  page_status="found_hit";
 #endif
 			return buf;
 		}
@@ -855,9 +865,6 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 	else
 		*foundPtr = TRUE;
 
-#if 1
-        page_status="read_only";
-#endif
 	return buf;
 }
 

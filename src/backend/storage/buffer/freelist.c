@@ -42,8 +42,9 @@ typedef struct
 	uint32		numBufferAllocs;	/* Buffers allocated since last reset */
 } BufferStrategyControl;
 
+
 /* Pointers to shared state */
-static BufferStrategyControl *StrategyControl = NULL;
+ BufferStrategyControl  * StrategyControl[0];
 
 /*
  * Private (non-shared) state for managing a ring of shared buffers to re-use.
@@ -102,13 +103,20 @@ static void AddBufferToRing(BufferAccessStrategy strategy,
  *	might awaken other processes, and it would be bad to do the associated
  *	kernel calls while holding the buffer header spinlock.
  */
+
 volatile BufferDesc *
-StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
+StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
 {
+
+
 	volatile BufferDesc *buf;
 	int			trycounter;
-
-	/*
+    //modifiy change nbuffer for uniq pool
+    int tempbuffer;
+    tempbuffer = NBuffers;
+   // NBuffers = BufferPoolDescripors[poolnum].end_Nbuffer;
+    
+        /*
 	 * If given a strategy object, see whether it can select a buffer. We
 	 * assume strategy objects don't need the BufFreelistLock.
 	 */
@@ -118,7 +126,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 		if (buf != NULL)
 		{
 			*lock_held = false;
-            return buf;
+			return buf;
 		}
 	}
 
@@ -131,7 +139,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 	 * the rate of buffer consumption.	Note that buffers recycled by a
 	 * strategy object are intentionally not counted here.
 	 */
-	StrategyControl->numBufferAllocs++;
+	StrategyControl[poolnum]->numBufferAllocs++;
 
 	/*
 	 * Try to get a buffer from the freelist.  Note that the freeNext fields
@@ -139,15 +147,22 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 	 * individual buffer spinlocks, so it's OK to manipulate them without
 	 * holding the spinlock.
 	 */
-	while (StrategyControl->firstFreeBuffer >= 0)
+	while (StrategyControl[poolnum]->firstFreeBuffer >= 0)
 	{
-		buf = &BufferDescriptors[StrategyControl->firstFreeBuffer];
+		buf = &BufferDescriptors[StrategyControl[poolnum]->firstFreeBuffer];
 		Assert(buf->freeNext != FREENEXT_NOT_IN_LIST);
 
-		/* Unconditionally remove buffer from freelist */
-		StrategyControl->firstFreeBuffer = buf->freeNext;
-		buf->freeNext = FREENEXT_NOT_IN_LIST;
 
+
+		/* Unconditionally remove buffer from freelist */
+
+
+		StrategyControl[poolnum]->firstFreeBuffer = buf->freeNext;
+		buf->freeNext ++;
+
+		if (buf->freeNext >= BufferPoolDescripors[poolnum].end_Nbuffer ){
+			break;
+		}
 		/*
 		 * If the buffer is pinned or has a nonzero usage_count, we cannot use
 		 * it; discard it and retry.  (This can only happen if VACUUM put a
@@ -160,6 +175,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 		{
 			if (strategy != NULL)
 				AddBufferToRing(strategy, buf);
+			 fprintf(stderr,"this is from free list \n"  );
 			return buf;
 		}
 		UnlockBufHdr(buf);
@@ -169,12 +185,13 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 	trycounter = NBuffers;
 	for (;;)
 	{
-		buf = &BufferDescriptors[StrategyControl->nextVictimBuffer];
+		buf = &BufferDescriptors[StrategyControl[poolnum]->nextVictimBuffer];
 
-		if (++StrategyControl->nextVictimBuffer >= NBuffers)
+		if (++StrategyControl[poolnum]->nextVictimBuffer >= BufferPoolDescripors[poolnum].end_Nbuffer)
 		{
-			StrategyControl->nextVictimBuffer = 0;
-			StrategyControl->completePasses++;
+            //change 0 to start_N
+			StrategyControl[poolnum]->nextVictimBuffer = BufferPoolDescripors[poolnum].start_Nbuffer;
+			StrategyControl[poolnum]->completePasses++;
 		}
 
 		/*
@@ -187,14 +204,14 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 			if (buf->usage_count > 0)
 			{
 				buf->usage_count--;
-				trycounter = NBuffers;
+				trycounter = BufferPoolDescripors[poolnum].end_Nbuffer;
 			}
 			else
 			{
 				/* Found a usable buffer */
 				if (strategy != NULL)
 					AddBufferToRing(strategy, buf);
-                return buf;
+				return buf;
 			}
 		}
 		else if (--trycounter == 0)
@@ -211,11 +228,10 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held)
 		}
 		UnlockBufHdr(buf);
 	}
-
+NBuffers=tempbuffer;
 	/* not reached */
 	return NULL;
 }
-
 /*
  * StrategyFreeBuffer: put a buffer on the freelist
  */
@@ -230,10 +246,10 @@ StrategyFreeBuffer(volatile BufferDesc *buf)
 	 */
 	if (buf->freeNext == FREENEXT_NOT_IN_LIST)
 	{
-		buf->freeNext = StrategyControl->firstFreeBuffer;
+		buf->freeNext = StrategyControl[0]->firstFreeBuffer;
 		if (buf->freeNext < 0)
-			StrategyControl->lastFreeBuffer = buf->buf_id;
-		StrategyControl->firstFreeBuffer = buf->buf_id;
+			StrategyControl[0]->lastFreeBuffer = buf->buf_id;
+		StrategyControl[0]->firstFreeBuffer = buf->buf_id;
 	}
 
 	LWLockRelease(BufFreelistLock);
@@ -256,13 +272,13 @@ StrategySyncStart(uint32 *complete_passes, uint32 *num_buf_alloc)
 	int			result;
 
 	LWLockAcquire(BufFreelistLock, LW_EXCLUSIVE);
-	result = StrategyControl->nextVictimBuffer;
+	result = StrategyControl[0]->nextVictimBuffer;
 	if (complete_passes)
-		*complete_passes = StrategyControl->completePasses;
+		*complete_passes = StrategyControl[0]->completePasses;
 	if (num_buf_alloc)
 	{
-		*num_buf_alloc = StrategyControl->numBufferAllocs;
-		StrategyControl->numBufferAllocs = 0;
+		*num_buf_alloc = StrategyControl[0]->numBufferAllocs;
+		StrategyControl[0]->numBufferAllocs = 0;
 	}
 	LWLockRelease(BufFreelistLock);
 	return result;
@@ -299,13 +315,15 @@ StrategyShmemSize(void)
  *		Only called by postmaster and only during initialization.
  */
 void
-StrategyInitialize(bool init)
+StrategyInitialize(bool init, BufferPoolDesc*  BufferPoolDescripors)
 {
-	bool		found;
 
-	/*
+	/*i is just a counter */
+	int i;
+	bool		found;
+        /*
 	 * Initialize the shared buffer lookup hashtable.
-	 *
+	 *s
 	 * Since we can't tolerate running out of lookup table entries, we must be
 	 * sure to specify an adequate table size here.  The maximum steady-state
 	 * usage is of course NBuffers entries, but BufferAlloc() tries to insert
@@ -313,18 +331,29 @@ StrategyInitialize(bool init)
 	 * happening in each partition concurrently, so we could need as many as
 	 * NBuffers + NUM_BUFFER_PARTITIONS entries.
 	 */
+//	InitBufTable(NBuffers + NUM_BUFFER_PARTITIONS);
+     
 	InitBufTable(NBuffers + NUM_BUFFER_PARTITIONS);
 
 	/*
 	 * Get or create the shared strategy control block
 	 */
-	StrategyControl = (BufferStrategyControl *)
-		ShmemInitStruct("Buffer Strategy Status",
-						sizeof(BufferStrategyControl),
-						&found);
-
-	if (!found)
+	for (i = 0 ; i <Npools ;i++)
 	{
+
+	StrategyControl[i] = (BufferStrategyControl *)
+		ShmemInitStruct("Buffer Strategy Stat",
+					sizeof(BufferStrategyControl ),
+					&found);
+
+
+	}
+
+	//found = 0;
+	if (!found)
+
+	{
+		fprintf(stderr,"get in strategyinitialze \n"  );
 		/*
 		 * Only done once, usually in postmaster
 		 */
@@ -334,18 +363,33 @@ StrategyInitialize(bool init)
 		 * Grab the whole linked list of free buffers for our strategy. We
 		 * assume it was previously set up by InitBufferPool().
 		 */
-		StrategyControl->firstFreeBuffer = 0;
-		StrategyControl->lastFreeBuffer = NBuffers - 1;
+	    
+      //  StrategyControl->firstFreeBuffer = 0;
+#if 1
+		fprintf(stderr,"initialize pool free list start\n" );
+		for(i=0 ; i < Npools ;i ++ )
+		{
+        StrategyControl[i]->firstFreeBuffer = BufferPoolDescripors[i].start_Nbuffer;
+        fprintf(stderr,"BufferPoolDescripors[i].start_Nbuffer ==> %d\n",BufferPoolDescripors[i].start_Nbuffer );
+        //StrategyControl->lastFreeBuffer = NBuffers - 1;
 
-		/* Initialize the clock sweep pointer */
-		StrategyControl->nextVictimBuffer = 0;
+        StrategyControl[i]->lastFreeBuffer = BufferPoolDescripors[i].end_Nbuffer;
+        fprintf(stderr,"BufferPoolDescripors[i].end_Nbuffer ==> %d\n",BufferPoolDescripors[i].end_Nbuffer );
+		/* Initialize the clock sweep pointer  0 before modify*/
+		StrategyControl[i]->nextVictimBuffer = BufferPoolDescripors[i].start_Nbuffer;
+		StrategyControl[i]->completePasses = 0;
+		StrategyControl[i]->numBufferAllocs = 0;
+		}
+#endif 
+		fprintf(stderr,"initialize pool free list end\n" );
+        /* Clear statistics */
 
-		/* Clear statistics */
-		StrategyControl->completePasses = 0;
-		StrategyControl->numBufferAllocs = 0;
 	}
 	else
 		Assert(!init);
+
+
+
 }
 
 
