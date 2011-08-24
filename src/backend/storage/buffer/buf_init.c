@@ -167,22 +167,28 @@ InitBufferPool(void)
             bufpool->start_Nbuffer = tembuf;
             bufpool->end_Nbuffer = tembuf + poolsize[i] -1;
             tembuf = tembuf + poolsize[i];
+            int tmp;
+            for (tmp = bufpool->start_Nbuffer; tmp <= bufpool->end_Nbuffer; tmp++)
+            {
+            	BufferDescriptors[tmp].buf_id = i;
+            }
+
      
  fprintf(stderr,"itialize Nbuffer %d$$%d\n",bufpool->poolid,bufpool->size );
         }
 
-        /*-----------------------------------------------------------------------------
-         *  set pool id in each bufferdesc
-         *-----------------------------------------------------------------------------*/
-        for ( i = 0 ; i < Npools ; i++)
-        {
-            for( j = 0 ; j <NBuffers ; j++)
-            {
-                BufferDescriptors[i].poolid = i ;
-
-            }
-            fprintf(stderr,"@set pool %d" ,i );
-        }
+//        /*-----------------------------------------------------------------------------
+//         *  set pool id in each bufferdesc
+//         *-----------------------------------------------------------------------------*/
+//        for ( i = 0 ; i < Npools ; i++)
+//        {
+//            for( j = 0 ; j <NBuffers ; j++)
+//            {
+//                BufferDescriptors[i].poolid = i ;
+//
+//            }
+//            fprintf(stderr,"@set pool %d" ,i );
+//        }
 
 #endif
            /* Init other shared buffer-management stuff */

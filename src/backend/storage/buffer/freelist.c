@@ -367,18 +367,22 @@ StrategyInitialize(bool init, BufferPoolDesc*  BufferPoolDescripors)
       //  StrategyControl->firstFreeBuffer = 0;
 #if 1
 		fprintf(stderr,"initialize pool free list start\n" );
-		for(i=0 ; i < Npools ;i ++ )
-		{
-        StrategyControl[i]->firstFreeBuffer = BufferPoolDescripors[i].start_Nbuffer;
-        fprintf(stderr,"BufferPoolDescripors[i].start_Nbuffer ==> %d\n",BufferPoolDescripors[i].start_Nbuffer );
-        //StrategyControl->lastFreeBuffer = NBuffers - 1;
+		for (i = 0; i < Npools; i++) {
+			StrategyControl[i]->firstFreeBuffer =
+					BufferPoolDescripors[i].start_Nbuffer;
+			fprintf(stderr, "BufferPoolDescripors[i].start_Nbuffer ==> %d\n",
+					BufferPoolDescripors[i].start_Nbuffer);
+			//StrategyControl->lastFreeBuffer = NBuffers - 1;
 
-        StrategyControl[i]->lastFreeBuffer = BufferPoolDescripors[i].end_Nbuffer;
-        fprintf(stderr,"BufferPoolDescripors[i].end_Nbuffer ==> %d\n",BufferPoolDescripors[i].end_Nbuffer );
-		/* Initialize the clock sweep pointer  0 before modify*/
-		StrategyControl[i]->nextVictimBuffer = BufferPoolDescripors[i].start_Nbuffer;
-		StrategyControl[i]->completePasses = 0;
-		StrategyControl[i]->numBufferAllocs = 0;
+			StrategyControl[i]->lastFreeBuffer =
+					BufferPoolDescripors[i].end_Nbuffer;
+			fprintf(stderr, "BufferPoolDescripors[i].end_Nbuffer ==> %d\n",
+					BufferPoolDescripors[i].end_Nbuffer);
+			/* Initialize the clock sweep pointer  0 before modify*/
+			StrategyControl[i]->nextVictimBuffer =
+					BufferPoolDescripors[i].start_Nbuffer;
+			StrategyControl[i]->completePasses = 0;
+			StrategyControl[i]->numBufferAllocs = 0;
 		}
 #endif 
 		fprintf(stderr,"initialize pool free list end\n" );

@@ -537,6 +537,7 @@ PostmasterMain(int argc, char *argv[])
 				break;
 
 			case 'B':
+				//fprintf(stderr,"param -B %s\n", optarg);
 				SetConfigOption("shared_buffers", optarg, PGC_POSTMASTER, PGC_S_ARGV);
 				break;
 
