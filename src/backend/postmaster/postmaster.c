@@ -125,6 +125,7 @@
 #include "storage/spin.h"
 #endif
 
+
 /*
  * List of active backends (or child processes anyway; we don't actually
  * know whether a given child has become a backend or is still in the
@@ -190,8 +191,8 @@ static bool Reinit = true;
 static int SendStop = false;
 
 /* still more option variables */
-bool EnableSSL = false;
-bool SilentMode = false; /* silent_mode */
+bool		EnableSSL = false;
+bool		SilentMode = false; /* silent_mode */
 
 int PreAuthDelay = 0;
 int AuthenticationTimeout = 60;
