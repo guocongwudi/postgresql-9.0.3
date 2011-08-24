@@ -159,7 +159,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
 
 
 		StrategyControl[poolnum]->firstFreeBuffer = buf->freeNext;
-		if (buf->freeNext > BufferPoolDescripors[poolnum].end_Nbuffer+1 ){
+		if (buf->freeNext > BufferPoolDescripors[poolnum].end_Nbuffer ){
 						StrategyControl[poolnum]->firstFreeBuffer=FREENEXT_NOT_IN_LIST;
 						// fprintf(stderr,"!!!=====this is current free bufnum %d ====!!!\n",buf->freeNext );
 						break;
@@ -248,6 +248,7 @@ StrategyFreeBuffer(volatile BufferDesc *buf)
 	 */
 	if (buf->freeNext == FREENEXT_NOT_IN_LIST)
 	{
+
 		buf->freeNext = StrategyControl[0]->firstFreeBuffer;
 		if (buf->freeNext < 0)
 			StrategyControl[0]->lastFreeBuffer = buf->buf_id;
