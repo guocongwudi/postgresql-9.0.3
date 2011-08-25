@@ -1,4 +1,5 @@
 #include <ctype.h>
+#include <stdlib.h>
 /*-------------------------------------------------------------------------
  *
  * postmaster.c
@@ -524,7 +525,7 @@ int PostmasterMain(int argc, char *argv[]) {
 			break;
 
 		case 'B':
-			if (atoi(optarg) != 0) {
+			if (atoi(optarg) == 0) {
 				Npools = 1;
 				SetConfigOption("shared_buffers", optarg, PGC_POSTMASTER,
 						PGC_S_ARGV);
@@ -560,6 +561,11 @@ int PostmasterMain(int argc, char *argv[]) {
 				NBuffers = total_buffer;
 				fprintf(stderr, "%d =======pool=%d", NBuffers, Npools);
 
+				// convert 123 to string [buf]
+				sprintf(optarg, "%d", NBuffers);
+				fprintf(stderr, "=======char of optarg====== %s", optarg);
+				SetConfigOption("shared_buffers", optarg, PGC_POSTMASTER,
+										PGC_S_ARGV);
 			}
 			break;
 

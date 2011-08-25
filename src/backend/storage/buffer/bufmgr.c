@@ -601,9 +601,9 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 
 
 
+		int destPool = 0;
 
-
-
+		destPool = (smgr->smgr_rnode.relNode) % Npools;
 
 
 		//----------------------------------------------------
@@ -614,7 +614,7 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 
 
 		/* code need add mapping  */
-		buf = StrategyGetBuffer(strategy, &lock_held,0);
+		buf = StrategyGetBuffer(strategy, &lock_held, destPool);
 
 		Assert(buf->refcount == 0);
 #if 1
@@ -880,6 +880,7 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 
 	return buf;
 }
+
 
 /*
  * InvalidateBuffer -- mark a shared buffer invalid and return it to the
