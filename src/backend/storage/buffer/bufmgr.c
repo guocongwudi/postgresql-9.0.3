@@ -596,6 +596,33 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 		 * still held, since it would be bad to hold the spinlock while
 		 * possibly waking up other processes.
 		 */
+//adding area   to process string// add by guo
+
+		char strategy_type = argv_string[0];
+		char* token = strtok( argv_string, ":XYZ,");
+		while( token != NULL )
+		 {
+		/* While there are tokens in "string" */
+			  fprintf(stderr,"%s @@@@@@@@@@@@@@", token );
+		/* Get next token: */
+		        token = strtok( NULL, ":XYZ,");
+		    }
+
+
+
+
+
+
+
+
+		//----------------------------------------------------
+
+
+
+
+
+
+		/* code need add mapping  */
 		buf = StrategyGetBuffer(strategy, &lock_held,0);
 
 		Assert(buf->refcount == 0);

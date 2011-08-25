@@ -167,11 +167,14 @@ InitBufferPool(void)
             bufpool->start_Nbuffer = tembuf;
             bufpool->end_Nbuffer = tembuf + poolsize[i] -1;
             tembuf = tembuf + poolsize[i];
+<<<<<<< HEAD
             int tmp;
             for (tmp = bufpool->start_Nbuffer; tmp <= bufpool->end_Nbuffer; tmp++)
             {
             	BufferDescriptors[tmp].buf_id = i;
             }
+=======
+>>>>>>> 4a876e832e925246df982b78d4c6a399ffd9a604
 
      
  //fprintf(stderr,"it22222ialize Nbuffer %d$$%d\n",bufpool->start_Nbuffer,bufpool->end_Nbuffer );

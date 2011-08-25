@@ -44,7 +44,7 @@ typedef struct
 
 
 /* Pointers to shared state */
- BufferStrategyControl  * StrategyControl[0];
+ BufferStrategyControl  * * StrategyControl;
 
 /*
  * Private (non-shared) state for managing a ring of shared buffers to re-use.
@@ -153,16 +153,18 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
 		Assert(buf->freeNext != FREENEXT_NOT_IN_LIST);
 
 
-
+		// fprintf(stderr,"=====this is current free bufnum %d ====\n",buf->buf_id );
 		/* Unconditionally remove buffer from freelist */
 
 
-		StrategyControl[poolnum]->firstFreeBuffer = buf->freeNext;
-		buf->freeNext ++;
 
-		if (buf->freeNext >= BufferPoolDescripors[poolnum].end_Nbuffer ){
-			break;
-		}
+		StrategyControl[poolnum]->firstFreeBuffer = buf->freeNext;
+		if (buf->freeNext > BufferPoolDescripors[poolnum].end_Nbuffer ){
+						StrategyControl[poolnum]->firstFreeBuffer=FREENEXT_NOT_IN_LIST;
+						// fprintf(stderr,"!!!=====this is current free bufnum %d ====!!!\n",buf->freeNext );
+						break;
+					}
+	//	 fprintf(stderr,"!!!@@@=====this is current free bufnum %d ====!!!\n",buf->freeNext );
 		/*
 		 * If the buffer is pinned or has a nonzero usage_count, we cannot use
 		 * it; discard it and retry.  (This can only happen if VACUUM put a
@@ -182,12 +184,12 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
 	}
 
 	/* Nothing on the freelist, so run the "clock sweep" algorithm */
-	trycounter = NBuffers;
+	trycounter = BufferPoolDescripors[poolnum].end_Nbuffer+1;
 	for (;;)
 	{
 		buf = &BufferDescriptors[StrategyControl[poolnum]->nextVictimBuffer];
 
-		if (++StrategyControl[poolnum]->nextVictimBuffer >= BufferPoolDescripors[poolnum].end_Nbuffer)
+		if (++StrategyControl[poolnum]->nextVictimBuffer > BufferPoolDescripors[poolnum].end_Nbuffer)
 		{
             //change 0 to start_N
 			StrategyControl[poolnum]->nextVictimBuffer = BufferPoolDescripors[poolnum].start_Nbuffer;
@@ -246,6 +248,7 @@ StrategyFreeBuffer(volatile BufferDesc *buf)
 	 */
 	if (buf->freeNext == FREENEXT_NOT_IN_LIST)
 	{
+
 		buf->freeNext = StrategyControl[0]->firstFreeBuffer;
 		if (buf->freeNext < 0)
 			StrategyControl[0]->lastFreeBuffer = buf->buf_id;
@@ -338,6 +341,7 @@ StrategyInitialize(bool init, BufferPoolDesc*  BufferPoolDescripors)
 	/*
 	 * Get or create the shared strategy control block
 	 */
+	StrategyControl =malloc(Npools* sizeof(BufferStrategyControl *));
 	for (i = 0 ; i <Npools ;i++)
 	{
 

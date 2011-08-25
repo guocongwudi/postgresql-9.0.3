@@ -3050,3 +3050,76 @@ LOG:  received smart shutdown request
 LOG:  autovacuum launcher shutting down
 LOG:  shutting down
 LOG:  database system is shut down
+postgres cannot access the server configuration file "/home/frank/postgresql-9.0.3/64/postgresql.conf": No such file or directory
+PRoblem     23 6
+it22222ialize Nbuffer 0$$31
+@set pool 0get in strategyinitialze 
+initialize pool free list start
+BufferPoolDescripors[i].start_Nbuffer ==> 0
+BufferPoolDescripors[i].end_Nbuffer ==> 31
+initialize pool free list end
+sadddddddddddss2221sadasdsaddsadddddddddddss2221sadasdsaddLOG:  database system was shut down at 2011-08-25 20:59:14 EST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+this is from free list 
+REQ pg_database 0 1  read_only
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 24289) running in data directory "/home/frank/9315/data"?
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+PRoblem     23 6
+it22222ialize Nbuffer 0$$31
+@set pool 0get in strategyinitialze 
+initialize pool free list start
+BufferPoolDescripors[i].start_Nbuffer ==> 0
+BufferPoolDescripors[i].end_Nbuffer ==> 31
+initialize pool free list end
+sadddddddddddss2221sadasdsaddsadddddddddddss2221sadasdsaddLOG:  database system was shut down at 2011-08-25 21:08:16 EST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+this is from free list 
+REQ pg_database 0 1  read_only
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 24307) running in data directory "/home/frank/9315/data"?
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 24307) running in data directory "/home/frank/9315/data"?
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+PRoblem     23 6
+it22222ialize Nbuffer 0$$31
+@set pool 0get in strategyinitialze 
+initialize pool free list start
+BufferPoolDescripors[i].start_Nbuffer ==> 0
+BufferPoolDescripors[i].end_Nbuffer ==> 31
+initialize pool free list end
+sadddddddddddss2221sadasdsaddsadddddddddddss2221sadasdsaddLOG:  database system was shut down at 2011-08-25 21:08:43 EST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+this is from free list 
+REQ pg_database 0 1  read_only
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 25254) running in data directory "/home/frank/9315/data"?
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+PRoblem     23 6
+it22222ialize Nbuffer 0$$31
+@set pool 0get in strategyinitialze 
+initialize pool free list start
+BufferPoolDescripors[i].start_Nbuffer ==> 0
+BufferPoolDescripors[i].end_Nbuffer ==> 31
+initialize pool free list end
+sadddddddddddss2221sadasdsaddsadddddddddddss2221sadasdsaddLOG:  database system was shut down at 2011-08-25 21:09:59 EST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+this is from free list 
+REQ pg_database 0 1  read_only
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down

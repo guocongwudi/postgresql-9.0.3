@@ -132,7 +132,8 @@ extern PGDLLIMPORT char *DataDir;
 
 #if 1
 extern PGDLLIMPORT int Npools; 
-
+extern PGDLLIMPORT char * argv_string;
+extern PGDLLIMPORT int buffer_array;
 
 #endif
 extern PGDLLIMPORT int NBuffers;
