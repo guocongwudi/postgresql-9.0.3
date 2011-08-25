@@ -46,6 +46,8 @@ extern PGDLLIMPORT int NBuffers;
 
 // added
 extern PGDLLIMPORT int Npools;
+extern PGDLLIMPORT char * argv_string;
+extern PGDLLIMPORT int * buffer_array;
 /* in bufmgr.c */
 extern bool zero_damaged_pages;
 extern int	bgwriter_lru_maxpages;

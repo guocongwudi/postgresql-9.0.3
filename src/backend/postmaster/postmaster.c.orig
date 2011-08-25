@@ -514,6 +514,7 @@ int PostmasterMain(int argc, char *argv[]) {
 	 * tcop/postgres.c (the option sets should not conflict) and with the
 	 * common help() function in main/main.c.
 	 */
+<<<<<<< HEAD
 	while ((opt = getopt(argc, argv,
 			"A:B:c:D:d:EeFf:h:ijk:lN:nOo:Pp:r:S:sTt:W:-:")) != -1) {
 		switch (opt) {
@@ -521,19 +522,56 @@ int PostmasterMain(int argc, char *argv[]) {
 			SetConfigOption("debug_assertions", optarg, PGC_POSTMASTER,
 					PGC_S_ARGV);
 			break;
+=======
+	while ((opt = getopt(argc, argv, "A:B:c:D:d:EeFf:h:ijk:lN:nOo:Pp:r:S:sTt:W:-:")) != -1)
+	{
+		switch (opt)
+		{
+			case 'A':
+				SetConfigOption("debug_assertions", optarg, PGC_POSTMASTER, PGC_S_ARGV);
+				break;
+
+			case 'B':
+				//fprintf(stderr,"param -B %s\n", optarg);
+				SetConfigOption("shared_buffers", optarg, PGC_POSTMASTER, PGC_S_ARGV);
+				break;
+
+			case 'D':
+				userDoption = optarg;
+				break;
+
+			case 'd':
+				set_debug_options(atoi(optarg), PGC_POSTMASTER, PGC_S_ARGV);
+				break;
+
+			case 'E':
+				SetConfigOption("log_statement", "all", PGC_POSTMASTER, PGC_S_ARGV);
+				break;
+
+			case 'e':
+				SetConfigOption("datestyle", "euro", PGC_POSTMASTER, PGC_S_ARGV);
+				break;
+
+			case 'F':
+				SetConfigOption("fsync", "false", PGC_POSTMASTER, PGC_S_ARGV);
+				break;
+
+			case 'f':
+				if (!set_plan_disabling_options(optarg, PGC_POSTMASTER, PGC_S_ARGV))
+				{
+					write_stderr("%s: invalid argument for option -f: \"%s\"\n",
+								 progname, optarg);
+					ExitPostmaster(1);
+				}
+				break;
+>>>>>>> origin/q2
 
 		case 'B':
-			if (atoi(optarg) != 0) {
+			if (isdigit(optarg))
+				fprintf(stderr, "get ############argv    \n############## %s", optarg);
+			SetConfigOption("shared_buffers", optarg, PGC_POSTMASTER,
+					PGC_S_ARGV);
 
-				SetConfigOption("shared_buffers", optarg, PGC_POSTMASTER,
-						PGC_S_ARGV);
-				NBuffers = atoi(optarg);
-
-			}
-			else {
-				Npools = 1;
-				argv_string = optarg;
-			}
 			break;
 
 		case 'D':
@@ -754,11 +792,11 @@ int PostmasterMain(int argc, char *argv[]) {
 		ereport(
 				DEBUG3,
 				(errmsg_internal("%s: PostmasterMain: initial environ dump:", progname)));
-		ereport( DEBUG3,
+		ereport(DEBUG3,
 				(errmsg_internal("-----------------------------------------")));
 		for (p = environ; *p; ++p)
 			ereport(DEBUG3, (errmsg_internal("\t%s", *p)));
-		ereport( DEBUG3,
+		ereport(DEBUG3,
 				(errmsg_internal("-----------------------------------------")));
 	}
 
@@ -2262,7 +2300,7 @@ static void reaper(SIGNAL_ARGS) {
 				PgStatPID = pgstat_start();
 
 			/* at this point we are really open for business */
-			ereport( LOG,
+			ereport(LOG,
 					(errmsg("database system is ready to accept connections")));
 
 			continue;
@@ -2664,7 +2702,7 @@ static void LogChildExit(int lev, const char *procname, int pid, int exitstatus)
 								procname, pid, WTERMSIG(exitstatus))));
 #endif
 else
-													ereport(
+								ereport(
 				lev,
 
 				/*------
@@ -2858,7 +2896,7 @@ static void PostmasterStateMachine(void) {
 	 * to exit, then reset shmem and StartupDataBase.
 	 */
 	if (FatalError && pmState == PM_NO_CHILDREN) {
-		ereport( LOG,
+		ereport(LOG,
 				(errmsg("all server processes terminated; reinitializing")));
 
 		shmem_exit(1);
@@ -4153,7 +4191,7 @@ static pid_t StartChildProcess(AuxProcType type) {
 			ereport(LOG, (errmsg("could not fork startup process: %m")));
 			break;
 		case BgWriterProcess:
-			ereport( LOG,
+			ereport(LOG,
 					(errmsg("could not fork background writer process: %m")));
 			break;
 		case WalWriterProcess:
@@ -4236,7 +4274,7 @@ static void StartAutovacuumWorker(void) {
 			(void) ReleasePostmasterChildSlot(bn->child_slot);
 			free(bn);
 		} else
-			ereport( LOG,
+			ereport(LOG,
 					(errcode(ERRCODE_OUT_OF_MEMORY), errmsg("out of memory")));
 	}
 
