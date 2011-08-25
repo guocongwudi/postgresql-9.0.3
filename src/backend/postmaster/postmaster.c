@@ -524,15 +524,41 @@ int PostmasterMain(int argc, char *argv[]) {
 
 		case 'B':
 			if (atoi(optarg) != 0) {
-
+				Npools = 1;
 				SetConfigOption("shared_buffers", optarg, PGC_POSTMASTER,
 						PGC_S_ARGV);
 				NBuffers = atoi(optarg);
-
 			}
 			else {
-				Npools = 1;
 				argv_string = optarg;
+
+				char strategy_type = argv_string[0];
+				int m = 0; // loop
+				int counter = 1; // count pool num
+				int total_buffer = 0;
+				for (m = 0; m < strlen(argv_string); m++) {
+					if (argv_string[m] == ',')
+						counter++;
+				}
+				m = 0;
+				buffer_array = (int*) malloc(sizeof(int) * counter);
+				Npools = counter;
+
+				char* token = strtok(argv_string, ":XYZ,");
+				while (token != NULL) {
+
+					buffer_array[m] = atoi(token);
+					total_buffer += buffer_array[m];
+					m++;
+					/* While there are tokens in "string" */
+					fprintf(stderr, "%d @@@@@@@@@@@@@@\n", buffer_array[m-1]);
+
+					/* Get next token: */
+					token = strtok(NULL, ":XYZ,");
+				}
+				NBuffers = total_buffer;
+				fprintf(stderr, "%d =======pool=%d", NBuffers, Npools);
+
 			}
 			break;
 

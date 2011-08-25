@@ -598,15 +598,6 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 		 */
 //adding area   to process string// add by guo
 
-		char strategy_type = argv_string[0];
-		char* token = strtok( argv_string, ":XYZ,");
-		while( token != NULL )
-		 {
-		/* While there are tokens in "string" */
-			  fprintf(stderr,"%s @@@@@@@@@@@@@@", token );
-		/* Get next token: */
-		        token = strtok( NULL, ":XYZ,");
-		    }
 
 
 

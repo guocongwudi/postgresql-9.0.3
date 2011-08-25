@@ -80,7 +80,14 @@ InitBufferPool(void)
 {
 	bool		foundBufs,
 				foundDescs;
-#if 1
+
+
+
+
+
+
+
+	#if 1
     bool        foundbufferpoolDescs , foundpools;
 #endif 
     BufferDescriptors = (BufferDesc *)
@@ -118,7 +125,16 @@ InitBufferPool(void)
         BufferPoolDesc *bufpool;
         bufpool = BufferPoolDescripors;
 #endif
-            /*
+
+
+
+
+
+
+
+
+
+        /*
 		 * Initialize all the buffer headers.
 		 */
 

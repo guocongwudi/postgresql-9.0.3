@@ -107,7 +107,7 @@ int			NBuffers = 1000;
 
 #if 1
 int         Npools = 1;
-int *        buffer_array;
+int *   buffer_array;
 char *      argv_string="";
 #endif 
 int			MaxBackends = 100;
