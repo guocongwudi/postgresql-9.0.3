@@ -132,6 +132,7 @@ extern PGDLLIMPORT char *DataDir;
 
 #if 1
 extern PGDLLIMPORT int Npools; 
+extern PGDLLIMPORT int total_buffer;
 extern PGDLLIMPORT char * argv_string;
 extern PGDLLIMPORT int * buffer_array;
 extern PGDLLIMPORT char strategy_type;

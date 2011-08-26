@@ -1,4 +1,3 @@
-#include <ctype.h>
 /*-------------------------------------------------------------------------
  *
  * postmaster.c
@@ -67,6 +66,7 @@
 
 #include "postgres.h"
 
+#include  <stdlib.h>
 #include <unistd.h>
 #include <signal.h>
 #include <time.h>
@@ -524,18 +524,24 @@ int PostmasterMain(int argc, char *argv[]) {
 
 		case 'B':
 			if (atoi(optarg) != 0) {
+
+				//fprintf(stderr, "^^^^^ @@@@@@@@@@@@@@\n %s",optarg);
 				Npools = 1;
+				// total_buffer=64;
+				buffer_array = (int*) malloc(sizeof(int));
+				buffer_array[0] = atoi(optarg);
 				SetConfigOption("shared_buffers", optarg, PGC_POSTMASTER,
 						PGC_S_ARGV);
-				NBuffers = atoi(optarg);
-			}
-			else {
+
+				//NBuffers = atoi(optarg);
+
+			} else {
 				argv_string = optarg;
 
 				strategy_type = argv_string[0];
 				int m = 0; // loop
 				int counter = 1; // count pool num
-				int total_buffer = 0;
+				total_buffer = 0;
 				for (m = 0; m < strlen(argv_string); m++) {
 					if (argv_string[m] == ',')
 						counter++;
@@ -551,12 +557,16 @@ int PostmasterMain(int argc, char *argv[]) {
 					total_buffer += buffer_array[m];
 					m++;
 					/* While there are tokens in "string" */
-					fprintf(stderr, "%d @@@@@@@@@@@@@@\n", buffer_array[m-1]);
+					fprintf(stderr, "%d @@@@@@@@@@@@@@\n", buffer_array[m - 1]);
 
 					/* Get next token: */
 					token = strtok(NULL, ":XYZ,");
 				}
-				NBuffers = total_buffer;
+				//NBuffers = total_buffer;
+                 //this int to string is very good
+				sprintf(optarg, "%d%", total_buffer);
+				SetConfigOption("shared_buffers", optarg, PGC_POSTMASTER,
+						PGC_S_ARGV);
 				fprintf(stderr, "%d =======pool=%d", NBuffers, Npools);
 
 			}
@@ -2690,7 +2700,7 @@ static void LogChildExit(int lev, const char *procname, int pid, int exitstatus)
 								procname, pid, WTERMSIG(exitstatus))));
 #endif
 else
-													ereport(
+															ereport(
 				lev,
 
 				/*------

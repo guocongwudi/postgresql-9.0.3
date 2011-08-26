@@ -101,12 +101,12 @@ int			maintenance_work_mem = 16384;
 /*
  * Primary determinants of sizes of shared-memory structures.  MaxBackends is
  * MaxConnections + autovacuum_max_workers + 1 (it is computed by the GUC
- * assign hooks for those variables):
  */
 int			NBuffers = 1000;
 
 #if 1
 int         Npools = 1;
+int total_buffer =0;
 int *   buffer_array;
 char *      argv_string="";
 char strategy_type;

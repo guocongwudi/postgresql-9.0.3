@@ -529,7 +529,7 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum,
 	int			buf_id;
 	volatile BufferDesc *buf;
 	bool		valid;
-
+    int pool_number = 0;
 	/* create a tag so we can lookup the buffer */
 	INIT_BUFFERTAG(newTag, smgr->smgr_rnode, forkNum, blockNum);
 

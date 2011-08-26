@@ -81,6 +81,7 @@ struct varatt_external
  * compiler might otherwise think it could generate code that assumes
  * alignment while touching fields of a 1-byte-header varlena.
  */
+
 typedef union
 {
 	struct						/* Normal varlena (4-byte length) */
