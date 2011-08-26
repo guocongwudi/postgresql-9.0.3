@@ -532,7 +532,7 @@ int PostmasterMain(int argc, char *argv[]) {
 			else {
 				argv_string = optarg;
 
-				char strategy_type = argv_string[0];
+				strategy_type = argv_string[0];
 				int m = 0; // loop
 				int counter = 1; // count pool num
 				int total_buffer = 0;

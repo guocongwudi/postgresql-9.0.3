@@ -134,6 +134,7 @@ extern PGDLLIMPORT char *DataDir;
 extern PGDLLIMPORT int Npools; 
 extern PGDLLIMPORT char * argv_string;
 extern PGDLLIMPORT int * buffer_array;
+extern PGDLLIMPORT char strategy_type;
 
 #endif
 extern PGDLLIMPORT int NBuffers;

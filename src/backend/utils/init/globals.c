@@ -109,6 +109,7 @@ int			NBuffers = 1000;
 int         Npools = 1;
 int *   buffer_array;
 char *      argv_string="";
+char strategy_type;
 #endif 
 int			MaxBackends = 100;
 int			MaxConnections = 90;
