@@ -178,6 +178,7 @@ InitBufferPool(void)
             bufpool->size = buffer_array[i];
             bufpool->start_Nbuffer = tembuf;
             bufpool->end_Nbuffer = tembuf + buffer_array[i] -1;
+            bufpool->relations=" ";
             tembuf = tembuf + buffer_array[i];
             int tmp=0;
             for (tmp = bufpool->start_Nbuffer; tmp <= bufpool->end_Nbuffer; tmp++)

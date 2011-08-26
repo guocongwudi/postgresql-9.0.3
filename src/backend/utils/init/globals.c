@@ -103,13 +103,14 @@ int			maintenance_work_mem = 16384;
  * MaxConnections + autovacuum_max_workers + 1 (it is computed by the GUC
  */
 int			NBuffers = 1000;
-
+int global_pool_num =0;
+int  pool_next_victim=0;
 #if 1
 int         Npools = 1;
 int total_buffer =0;
 int *   buffer_array;
 char *      argv_string="";
-char strategy_type;
+char strategy_type =' ';
 #endif 
 int			MaxBackends = 100;
 int			MaxConnections = 90;

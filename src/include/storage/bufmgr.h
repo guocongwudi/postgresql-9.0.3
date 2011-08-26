@@ -46,10 +46,12 @@ extern PGDLLIMPORT int NBuffers;
 
 // added
 extern PGDLLIMPORT int Npools;
+extern PGDLLIMPORT int pool_next_victim;
 extern PGDLLIMPORT int total_buffer;
 extern PGDLLIMPORT char * argv_string;
 extern PGDLLIMPORT int * buffer_array;
 extern PGDLLIMPORT char strategy_type;
+extern PGDLLIMPORT int global_pool_num;
 /* in bufmgr.c */
 extern bool zero_damaged_pages;
 extern int	bgwriter_lru_maxpages;

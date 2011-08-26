@@ -156,7 +156,7 @@ typedef struct sbufpooldesc
     int        size;
     int        start_Nbuffer;
     int        end_Nbuffer;
-    int        Nextvictim;
+    char *     relations ;
 }BufferPoolDesc;
 
 #endif

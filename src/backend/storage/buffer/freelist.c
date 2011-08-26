@@ -120,7 +120,10 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
 	 * If given a strategy object, see whether it can select a buffer. We
 	 * assume strategy objects don't need the BufFreelistLock.
 	 */
-	if (strategy != NULL)
+	//if (strategy != NULL)
+
+	// colsed the ring  because it will inpact muti buffer .we do not implement muti ring
+	if(false)
 	{
 		buf = GetBufferFromRing(strategy);
 		if (buf != NULL)

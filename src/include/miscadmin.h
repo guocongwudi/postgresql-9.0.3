@@ -132,13 +132,15 @@ extern PGDLLIMPORT char *DataDir;
 
 #if 1
 extern PGDLLIMPORT int Npools; 
+extern PGDLLIMPORT int pool_next_victim;
 extern PGDLLIMPORT int total_buffer;
 extern PGDLLIMPORT char * argv_string;
 extern PGDLLIMPORT int * buffer_array;
 extern PGDLLIMPORT char strategy_type;
-
+extern PGDLLIMPORT int global_pool_num;
 #endif
 extern PGDLLIMPORT int NBuffers;
+
 extern int	MaxBackends;
 extern int	MaxConnections;
 
