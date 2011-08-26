@@ -514,6 +514,10 @@ int PostmasterMain(int argc, char *argv[]) {
 	 * tcop/postgres.c (the option sets should not conflict) and with the
 	 * common help() function in main/main.c.
 	 */
+	Npools = 1;
+					// total_buffer=64;
+					buffer_array = (int*) malloc(sizeof(int));
+					buffer_array[0] = 1024;
 	while ((opt = getopt(argc, argv,
 			"A:B:c:D:d:EeFf:h:ijk:lN:nOo:Pp:r:S:sTt:W:-:")) != -1) {
 		switch (opt) {
@@ -523,6 +527,7 @@ int PostmasterMain(int argc, char *argv[]) {
 			break;
 
 		case 'B':
+
 			if (atoi(optarg) != 0) {
 
 				//fprintf(stderr, "^^^^^ @@@@@@@@@@@@@@\n %s",optarg);
@@ -557,7 +562,7 @@ int PostmasterMain(int argc, char *argv[]) {
 					total_buffer += buffer_array[m];
 					m++;
 					/* While there are tokens in "string" */
-					fprintf(stderr, "%d @@@@@@@@@@@@@@\n", buffer_array[m - 1]);
+				//	fprintf(stderr, "%d @@@@@@@@@@@@@@\n", buffer_array[m - 1]);
 
 					/* Get next token: */
 					token = strtok(NULL, ":XYZ,");
@@ -567,7 +572,7 @@ int PostmasterMain(int argc, char *argv[]) {
 				sprintf(optarg, "%d%", total_buffer);
 				SetConfigOption("shared_buffers", optarg, PGC_POSTMASTER,
 						PGC_S_ARGV);
-				fprintf(stderr, "%d =======pool=%d", NBuffers, Npools);
+			//	fprintf(stderr, "%d =======pool=%d", NBuffers, Npools);
 
 			}
 			break;
@@ -719,6 +724,7 @@ int PostmasterMain(int argc, char *argv[]) {
 		}
 
 		default:
+
 			write_stderr("Try \"%s --help\" for more information.\n", progname);
 			ExitPostmaster(1);
 		}

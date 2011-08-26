@@ -187,7 +187,7 @@ InitBufferPool(void)
             }
 
      
- fprintf(stderr," start ,end %d$$%d\n",bufpool->start_Nbuffer,bufpool->end_Nbuffer );
+ //fprintf(stderr," start ,end %d$$%d\n",bufpool->start_Nbuffer,bufpool->end_Nbuffer );
         }
 
 //        /*-----------------------------------------------------------------------------

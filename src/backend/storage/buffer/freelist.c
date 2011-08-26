@@ -17,17 +17,15 @@
 #include "storage/buf_internals.h"
 #include "storage/bufmgr.h"
 
-
 /*
  * The shared freelist control information.
  */
-typedef struct
-{
+typedef struct {
 	/* Clock sweep hand: index of next buffer to consider grabbing */
-	int			nextVictimBuffer;
+	int nextVictimBuffer;
 
-	int			firstFreeBuffer;	/* Head of list of unused buffers */
-	int			lastFreeBuffer; /* Tail of list of unused buffers */
+	int firstFreeBuffer; /* Head of list of unused buffers */
+	int lastFreeBuffer; /* Tail of list of unused buffers */
 
 	/*
 	 * NOTE: lastFreeBuffer is undefined when firstFreeBuffer is -1 (that is,
@@ -38,37 +36,35 @@ typedef struct
 	 * Statistics.	These counters should be wide enough that they can't
 	 * overflow during a single bgwriter cycle.
 	 */
-	uint32		completePasses; /* Complete cycles of the clock sweep */
-	uint32		numBufferAllocs;	/* Buffers allocated since last reset */
+	uint32 completePasses; /* Complete cycles of the clock sweep */
+	uint32 numBufferAllocs; /* Buffers allocated since last reset */
 } BufferStrategyControl;
 
-
 /* Pointers to shared state */
- BufferStrategyControl  **  StrategyControl;
+BufferStrategyControl ** StrategyControl;
 
 /*
  * Private (non-shared) state for managing a ring of shared buffers to re-use.
  * This is currently the only kind of BufferAccessStrategy object, but someday
  * we might have more kinds.
  */
-typedef struct BufferAccessStrategyData
-{
+typedef struct BufferAccessStrategyData {
 	/* Overall strategy type */
 	BufferAccessStrategyType btype;
 	/* Number of elements in buffers[] array */
-	int			ring_size;
+	int ring_size;
 
 	/*
 	 * Index of the "current" slot in the ring, ie, the one most recently
 	 * returned by GetBufferFromRing.
 	 */
-	int			current;
+	int current;
 
 	/*
 	 * True if the buffer just returned by StrategyGetBuffer had been in the
 	 * ring already.
 	 */
-	bool		current_was_in_ring;
+	bool current_was_in_ring;
 
 	/*
 	 * Array of buffer numbers.  InvalidBuffer (that is, zero) indicates we
@@ -76,15 +72,13 @@ typedef struct BufferAccessStrategyData
 	 * simplicity this is palloc'd together with the fixed fields of the
 	 * struct.
 	 */
-	Buffer		buffers[1];		/* VARIABLE SIZE ARRAY */
+	Buffer buffers[1]; /* VARIABLE SIZE ARRAY */
 } BufferAccessStrategyData;
-
 
 /* Prototypes for internal functions */
 static volatile BufferDesc *GetBufferFromRing(BufferAccessStrategy strategy);
 static void AddBufferToRing(BufferAccessStrategy strategy,
-				volatile BufferDesc *buf);
-
+		volatile BufferDesc *buf);
 
 /*
  * StrategyGetBuffer
@@ -105,26 +99,22 @@ static void AddBufferToRing(BufferAccessStrategy strategy,
  */
 
 volatile BufferDesc *
-StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
-{
-
+StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held, int poolnum) {
 
 	volatile BufferDesc *buf;
-	int			trycounter;
-    //modifiy change nbuffer for uniq pool
-    //int tempbuffer;
+	int trycounter;
+	//modifiy change nbuffer for uniq pool
+	//int tempbuffer;
 
-   // NBuffers = BufferPoolDescripors[poolnum].end_Nbuffer;
-    
-        /*
+	// NBuffers = BufferPoolDescripors[poolnum].end_Nbuffer;
+
+	/*
 	 * If given a strategy object, see whether it can select a buffer. We
 	 * assume strategy objects don't need the BufFreelistLock.
 	 */
 	//if (strategy != NULL)
-
 	// colsed the ring  because it will inpact muti buffer .we do not implement muti ring
-	if(false)
-	{
+	if (false) {
 		buf = GetBufferFromRing(strategy);
 		if (buf != NULL)
 		{
@@ -150,24 +140,21 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
 	 * individual buffer spinlocks, so it's OK to manipulate them without
 	 * holding the spinlock.
 	 */
-	while (StrategyControl[poolnum]->firstFreeBuffer >= 0)
-	{
+	//fprintf(stderr, "pool num--------%d", poolnum);
+	while (StrategyControl[poolnum]->firstFreeBuffer >= 0) {
 		buf = &BufferDescriptors[StrategyControl[poolnum]->firstFreeBuffer];
 		Assert(buf->freeNext != FREENEXT_NOT_IN_LIST);
 
-
-		 fprintf(stderr,"=====this is current free bufnum %d  %d ====\n",buf->buf_id ,poolnum );
+		//	 fprintf(stderr,"=====this is current free bufnum %d  %d ====\n",buf->buf_id ,poolnum );
 		/* Unconditionally remove buffer from freelist */
 
-
-
 		StrategyControl[poolnum]->firstFreeBuffer = buf->freeNext;
-		if (buf->freeNext > BufferPoolDescripors[poolnum].end_Nbuffer ){
-						StrategyControl[poolnum]->firstFreeBuffer=FREENEXT_NOT_IN_LIST;
-						// fprintf(stderr,"!!!=====this is current free bufnum %d ====!!!\n",buf->freeNext );
-						break;
-					}
-	//	 fprintf(stderr,"!!!@@@=====this is current free bufnum %d ====!!!\n",buf->freeNext );
+		if (buf->freeNext > BufferPoolDescripors[poolnum].end_Nbuffer) {
+			StrategyControl[poolnum]->firstFreeBuffer = FREENEXT_NOT_IN_LIST;
+			// fprintf(stderr,"!!!=====this is current free bufnum %d ====!!!\n",buf->freeNext );
+			break;
+		}
+		//	 fprintf(stderr,"!!!@@@=====this is current free bufnum %d ====!!!\n",buf->freeNext );
 		/*
 		 * If the buffer is pinned or has a nonzero usage_count, we cannot use
 		 * it; discard it and retry.  (This can only happen if VACUUM put a
@@ -176,26 +163,26 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
 		 * we'd better check anyway.)
 		 */
 		LockBufHdr(buf);
-		if (buf->refcount == 0 && buf->usage_count == 0)
-		{
-			if (strategy != NULL)
+		if (buf->refcount == 0 && buf->usage_count == 0) {
+			if (strategy != NULL
+				)
 				AddBufferToRing(strategy, buf);
-			 fprintf(stderr,"this is from free list \n"  );
+			//fprintf(stderr,"this is from free list \n"  );
 			return buf;
 		}
 		UnlockBufHdr(buf);
 	}
 
 	/* Nothing on the freelist, so run the "clock sweep" algorithm */
-	trycounter = BufferPoolDescripors[poolnum].end_Nbuffer+1;
-	for (;;)
-	{
+	trycounter = BufferPoolDescripors[poolnum].end_Nbuffer + 1;
+	for (;;) {
 		buf = &BufferDescriptors[StrategyControl[poolnum]->nextVictimBuffer];
 
-		if (++StrategyControl[poolnum]->nextVictimBuffer > BufferPoolDescripors[poolnum].end_Nbuffer)
-		{
-            //change 0 to start_N
-			StrategyControl[poolnum]->nextVictimBuffer = BufferPoolDescripors[poolnum].start_Nbuffer;
+		if (++StrategyControl[poolnum]->nextVictimBuffer
+				> BufferPoolDescripors[poolnum].end_Nbuffer) {
+			//change 0 to start_N
+			StrategyControl[poolnum]->nextVictimBuffer =
+					BufferPoolDescripors[poolnum].start_Nbuffer;
 			StrategyControl[poolnum]->completePasses++;
 		}
 
@@ -204,23 +191,18 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
 		 * it; decrement the usage_count (unless pinned) and keep scanning.
 		 */
 		LockBufHdr(buf);
-		if (buf->refcount == 0)
-		{
-			if (buf->usage_count > 0)
-			{
+		if (buf->refcount == 0) {
+			if (buf->usage_count > 0) {
 				buf->usage_count--;
 				trycounter = BufferPoolDescripors[poolnum].end_Nbuffer;
-			}
-			else
-			{
+			} else {
 				/* Found a usable buffer */
-				if (strategy != NULL)
+				if (strategy != NULL
+					)
 					AddBufferToRing(strategy, buf);
 				return buf;
 			}
-		}
-		else if (--trycounter == 0)
-		{
+		} else if (--trycounter == 0) {
 			/*
 			 * We've scanned all the buffers without making any state changes,
 			 * so all the buffers are pinned (or were when we looked at them).
@@ -240,9 +222,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, bool *lock_held,int poolnum)
 /*
  * StrategyFreeBuffer: put a buffer on the freelist
  */
-void
-StrategyFreeBuffer(volatile BufferDesc *buf)
-{
+void StrategyFreeBuffer(volatile BufferDesc *buf) {
 	LWLockAcquire(BufFreelistLock, LW_EXCLUSIVE);
 
 	/*
@@ -272,25 +252,21 @@ StrategyFreeBuffer(volatile BufferDesc *buf)
  * allocs if non-NULL pointers are passed.	The alloc count is reset after
  * being read.
  */
-int
-StrategySyncStart(uint32 *complete_passes, uint32 *num_buf_alloc)
-{
-	int			result;
+int StrategySyncStart(uint32 *complete_passes, uint32 *num_buf_alloc) {
+	int result;
 
 	LWLockAcquire(BufFreelistLock, LW_EXCLUSIVE);
 
 	result = StrategyControl[0]->nextVictimBuffer;
 	if (complete_passes)
 		*complete_passes = StrategyControl[0]->completePasses;
-	if (num_buf_alloc)
-	{
+	if (num_buf_alloc) {
 		*num_buf_alloc = StrategyControl[0]->numBufferAllocs;
 		StrategyControl[0]->numBufferAllocs = 0;
 	}
 	LWLockRelease(BufFreelistLock);
 	return result;
 }
-
 
 /*
  * StrategyShmemSize
@@ -300,10 +276,8 @@ StrategySyncStart(uint32 *complete_passes, uint32 *num_buf_alloc)
  * Note: for somewhat historical reasons, the buffer lookup hashtable size
  * is also determined here.
  */
-Size
-StrategyShmemSize(void)
-{
-	Size		size = 0;
+Size StrategyShmemSize(void) {
+	Size size = 0;
 
 	/* size of lookup hash table ... see comment in StrategyInitialize */
 	size = add_size(size, BufTableShmemSize(NBuffers + NUM_BUFFER_PARTITIONS));
@@ -321,17 +295,12 @@ StrategyShmemSize(void)
  * Assumes: All of the buffers are already built into a linked list.
  *		Only called by postmaster and only during initialization.
  */
-void
-StrategyInitialize(bool init, BufferPoolDesc*  BufferPoolDescripors)
-{
-
-
-
+void StrategyInitialize(bool init, BufferPoolDesc* BufferPoolDescripors) {
 
 	/*i is just a counter */
 	int i;
-	bool		found;
-        /*
+	bool found;
+	/*
 	 * Initialize the shared buffer lookup hashtable.
 	 *s
 	 * Since we can't tolerate running out of lookup table entries, we must be
@@ -343,31 +312,25 @@ StrategyInitialize(bool init, BufferPoolDesc*  BufferPoolDescripors)
 	 */
 //	InitBufTable(NBuffers + NUM_BUFFER_PARTITIONS);;
 	// NBuffers=total_buffer;
-
 	InitBufTable(NBuffers + NUM_BUFFER_PARTITIONS);
 
 	/*
 	 * Get or create the shared strategy control block
 	 */
-	StrategyControl =malloc(Npools* sizeof(BufferStrategyControl ));
-	for (i = 0 ; i <Npools ;i++)
-	{
+	StrategyControl = malloc(Npools * sizeof(BufferStrategyControl));
+	for (i = 0; i < Npools; i++) {
 
-
-
-	StrategyControl[i] = (BufferStrategyControl *)
-		ShmemInitStruct("Buffer Strategy Status",
-					sizeof(BufferStrategyControl ),
-					&found);
-
+		StrategyControl[i] = (BufferStrategyControl *) ShmemInitStruct(
+				"Buffer Strategy Status", sizeof(BufferStrategyControl),
+				&found);
 
 	}
 
 	//found = 0;
-	if (!found)
+	if (1)
 
 	{
-		fprintf(stderr,"get in strategyinitialze \n"  );
+		//	fprintf(stderr,"get in strategyinitialze \n"  );
 		/*
 		 * Only done once, usually in postmaster
 		 */
@@ -377,21 +340,21 @@ StrategyInitialize(bool init, BufferPoolDesc*  BufferPoolDescripors)
 		 * Grab the whole linked list of free buffers for our strategy. We
 		 * assume it was previously set up by InitBufferPool().
 		 */
-	    
-      //  StrategyControl->firstFreeBuffer = 0;
+
+		//  StrategyControl->firstFreeBuffer = 0;
 #if 1
-		fprintf(stderr,"initialize pool free list start\n" );
+		//	fprintf(stderr,"initialize pool free list start\n" );
 		for (i = 0; i < Npools; i++) {
 			StrategyControl[i]->firstFreeBuffer =
 					BufferPoolDescripors[i].start_Nbuffer;
-			fprintf(stderr, "BufferPoolDescripors[i].start_Nbuffer ==> %d\n",
-					BufferPoolDescripors[i].start_Nbuffer);
+			//fprintf(stderr, "BufferPoolDescripors[i].start_Nbuffer ==> %d\n",
+				//	BufferPoolDescripors[i].start_Nbuffer);
 			//StrategyControl->lastFreeBuffer = NBuffers - 1;
 
 			StrategyControl[i]->lastFreeBuffer =
 					BufferPoolDescripors[i].end_Nbuffer;
-			fprintf(stderr, "BufferPoolDescripors[i].end_Nbuffer ==> %d\n",
-					BufferPoolDescripors[i].end_Nbuffer);
+			//fprintf(stderr, "BufferPoolDescripors[i].end_Nbuffer ==> %d\n",
+			//BufferPoolDescripors[i].end_Nbuffer);
 			/* Initialize the clock sweep pointer  0 before modify*/
 			StrategyControl[i]->nextVictimBuffer =
 					BufferPoolDescripors[i].start_Nbuffer;
@@ -399,34 +362,27 @@ StrategyInitialize(bool init, BufferPoolDesc*  BufferPoolDescripors)
 			StrategyControl[i]->numBufferAllocs = 0;
 		}
 #endif 
-		fprintf(stderr,"initialize pool free list end\n" );
-        /* Clear statistics */
+		//	fprintf(stderr,"initialize pool free list end\n" );
+		/* Clear statistics */
 
-	}
-	else
+	} else
 		Assert(!init);
 
-
-
 }
-
 
 /* ----------------------------------------------------------------
  *				Backend-private buffer ring management
  * ----------------------------------------------------------------
  */
 
-
 /*
  * GetAccessStrategy -- create a BufferAccessStrategy object
  *
  * The object is allocated in the current memory context.
  */
-BufferAccessStrategy
-GetAccessStrategy(BufferAccessStrategyType btype)
-{
+BufferAccessStrategy GetAccessStrategy(BufferAccessStrategyType btype) {
 	BufferAccessStrategy strategy;
-	int			ring_size;
+	int ring_size;
 
 	/*
 	 * Select ring size to use.  See buffer/README for rationales.
@@ -434,35 +390,33 @@ GetAccessStrategy(BufferAccessStrategyType btype)
 	 * Note: if you change the ring size for BAS_BULKREAD, see also
 	 * SYNC_SCAN_REPORT_INTERVAL in access/heap/syncscan.c.
 	 */
-	switch (btype)
-	{
-		case BAS_NORMAL:
-			/* if someone asks for NORMAL, just give 'em a "default" object */
-			return NULL;
+	switch (btype) {
+	case BAS_NORMAL:
+		/* if someone asks for NORMAL, just give 'em a "default" object */
+		return NULL;
 
-		case BAS_BULKREAD:
-			ring_size = 256 * 1024 / BLCKSZ;
-			break;
-		case BAS_BULKWRITE:
-			ring_size = 16 * 1024 * 1024 / BLCKSZ;
-			break;
-		case BAS_VACUUM:
-			ring_size = 256 * 1024 / BLCKSZ;
-			break;
+	case BAS_BULKREAD:
+		ring_size = 256 * 1024 / BLCKSZ;
+		break;
+	case BAS_BULKWRITE:
+		ring_size = 16 * 1024 * 1024 / BLCKSZ;
+		break;
+	case BAS_VACUUM:
+		ring_size = 256 * 1024 / BLCKSZ;
+		break;
 
-		default:
-			elog(ERROR, "unrecognized buffer access strategy: %d",
-				 (int) btype);
-			return NULL;		/* keep compiler quiet */
+	default:
+		elog(ERROR, "unrecognized buffer access strategy: %d", (int) btype);
+		return NULL; /* keep compiler quiet */
 	}
 
 	/* Make sure ring isn't an undue fraction of shared buffers */
 	ring_size = Min(NBuffers / 8, ring_size);
 
 	/* Allocate the object and initialize all elements to zeroes */
-	strategy = (BufferAccessStrategy)
-		palloc0(offsetof(BufferAccessStrategyData, buffers) +
-				ring_size * sizeof(Buffer));
+	strategy =
+			(BufferAccessStrategy) palloc0(offsetof(BufferAccessStrategyData, buffers) +
+					ring_size * sizeof(Buffer));
 
 	/* Set fields that don't start out zero */
 	strategy->btype = btype;
@@ -477,11 +431,10 @@ GetAccessStrategy(BufferAccessStrategyType btype)
  * A simple pfree would do at the moment, but we would prefer that callers
  * don't assume that much about the representation of BufferAccessStrategy.
  */
-void
-FreeAccessStrategy(BufferAccessStrategy strategy)
-{
+void FreeAccessStrategy(BufferAccessStrategy strategy) {
 	/* don't crash if called on a "default" strategy */
-	if (strategy != NULL)
+	if (strategy != NULL
+		)
 		pfree(strategy);
 }
 
@@ -492,10 +445,9 @@ FreeAccessStrategy(BufferAccessStrategy strategy)
  * The bufhdr spin lock is held on the returned buffer.
  */
 static volatile BufferDesc *
-GetBufferFromRing(BufferAccessStrategy strategy)
-{
+GetBufferFromRing(BufferAccessStrategy strategy) {
 	volatile BufferDesc *buf;
-	Buffer		bufnum;
+	Buffer bufnum;
 
 	/* Advance to next ring slot */
 	if (++strategy->current >= strategy->ring_size)
@@ -524,12 +476,10 @@ GetBufferFromRing(BufferAccessStrategy strategy)
 	 */
 	buf = &BufferDescriptors[bufnum - 1];
 	LockBufHdr(buf);
-	if (buf->refcount == 0 && buf->usage_count <= 1)
-	{
+	if (buf->refcount == 0 && buf->usage_count <= 1) {
 		strategy->current_was_in_ring = true;
 		return buf;
-	}
-	UnlockBufHdr(buf);
+	}UnlockBufHdr(buf);
 
 	/*
 	 * Tell caller to allocate a new buffer with the normal allocation
@@ -545,9 +495,8 @@ GetBufferFromRing(BufferAccessStrategy strategy)
  * Caller must hold the buffer header spinlock on the buffer.  Since this
  * is called with the spinlock held, it had better be quite cheap.
  */
-static void
-AddBufferToRing(BufferAccessStrategy strategy, volatile BufferDesc *buf)
-{
+static void AddBufferToRing(BufferAccessStrategy strategy,
+		volatile BufferDesc *buf) {
 	strategy->buffers[strategy->current] = BufferDescriptorGetBuffer(buf);
 }
 
@@ -562,16 +511,17 @@ AddBufferToRing(BufferAccessStrategy strategy, volatile BufferDesc *buf)
  * Returns true if buffer manager should ask for a new victim, and false
  * if this buffer should be written and re-used.
  */
-bool
-StrategyRejectBuffer(BufferAccessStrategy strategy, volatile BufferDesc *buf)
-{
+bool StrategyRejectBuffer(BufferAccessStrategy strategy,
+		volatile BufferDesc *buf) {
 	/* We only do this in bulkread mode */
 	if (strategy->btype != BAS_BULKREAD)
 		return false;
 
 	/* Don't muck with behavior of normal buffer-replacement strategy */
-	if (!strategy->current_was_in_ring ||
-	  strategy->buffers[strategy->current] != BufferDescriptorGetBuffer(buf))
+	if (!strategy->current_was_in_ring
+			|| strategy->buffers[strategy->current]
+					!= BufferDescriptorGetBuffer(buf)
+		)
 		return false;
 
 	/*

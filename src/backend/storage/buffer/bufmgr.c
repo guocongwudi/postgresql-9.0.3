@@ -235,20 +235,20 @@ Buffer ReadBufferExtended(Relation reln, ForkNumber forkNum,
 		break;
 
 	case 'Y':
-		fprintf(stderr, " \n %s FFFFFFFFFFFFFFFFFFFF\n", "s");
+		//fprintf(stderr, " \n %s FFFFFFFFFFFFFFFFFFFF\n", "s");
 		global_pool_num = lookup_poolnum(0, reln);
 
 		break;
 	case 'Z':
-
+		global_pool_num = lookup_poolnum(1, reln);
 		break;
 	default:
 		global_pool_num = 0;
 		break;
 	}
 
-	fprintf(stderr, "%d )(())()()(",
-			BufferPoolDescripors[global_pool_num].poolid);
+	//fprintf(stderr, "%d <<==========",
+		//	BufferPoolDescripors[global_pool_num].poolid);
 
 	/*
 	 * Read the buffer, and update pgstat counters to reflect a cache hit or
@@ -262,8 +262,8 @@ Buffer ReadBufferExtended(Relation reln, ForkNumber forkNum,
 	}
 	if ((reln)->rd_rel != NULL
 	)
-		fprintf(stderr, "REQ %s %d %d %d  %s\n", reln->rd_rel->relname.data,
-				global_block_num, BufferDescriptors[buf - 1].poolid, buf,
+		fprintf(stderr, "REQ %s %d %d %d %s\n", reln->rd_rel->relname.data,
+				global_block_num, global_pool_num, buf,
 				page_status);
 	return buf;
 }
@@ -570,6 +570,7 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum, BlockNumber blockNum,
 //adding area   to process string// add by guo
 //----------------------------------------------------
 		/* code need add mapping  */
+		//fprintf(stderr,"==============>%d<==========",global_pool_num);
 		buf = StrategyGetBuffer(strategy, &lock_held, global_pool_num);
 
 		Assert(buf->refcount == 0);
@@ -753,7 +754,7 @@ BufferAlloc(SMgrRelation smgr, ForkNumber forkNum, BlockNumber blockNum,
 			}
 
 #if 1
-			//  page_status="found_hit";
+			  page_status="found_hit";
 #endif
 			return buf;
 		}
@@ -2577,30 +2578,43 @@ static void buffer_write_error_callback(void *arg) {
 }
 
 int lookup_poolnum(int start_Npools, Relation reln) {
-	char * temp;
-//sprintf(temp,"%s",reln->rd_rel->relname.data);
-	temp = reln->rd_rel->relname.data;
-	fprintf(stderr, " \n %s FFFFFFFFFFFFFFFFFFFF\n", temp);
-	for (l = start_Npools; l < Npools; l++) {
-		fprintf(stderr, " \n %s KKKKKKKKKK\n", temp);
-		if (strstr(BufferPoolDescripors[l].relations, temp) != NULL) {
-			fprintf(stderr, " \n %s SSSSSSSSSSSSSSS\n", temp);
-			return BufferPoolDescripors[l].poolid;
+	//char * temp;
+	//fprintf(stderr, " \n %u KKKKKKKKKK\n", reln->rd_id);
+	if (start_Npools == 0)
+		return reln->rd_id % Npools;
+	else {
+		if (reln->rd_id <13000)
+			{return Npools - 1;
+			//fprintf(stderr, " \n@@@@%c@@@@%c@@@%s\n",reln->rd_rel->relname.data[0],reln->rd_rel->relname.data[1],reln->rd_rel->relname.data);
+			}
+		else{
+			//fprintf(stderr, " \tttttttt\n");
+			return reln->rd_id % (Npools - 1);
 		}
-
 	}
-
-	strcat(temp, " ");
-	fprintf(stderr, " \n %s BEFORE\n",
-			BufferPoolDescripors[0].relations);
-	//strcat(BufferPoolDescripors[0].relations, temp);
-	fprintf(stderr, " \n %s@ AFTER\n",
-			BufferPoolDescripors[pool_next_victim].relations);
-	pool_next_victim++;
-	if (pool_next_victim >= Npools) {
-		pool_next_victim = 0;
-		return 0;
-	} else
-		return pool_next_victim - 1;
+//sprintf(temp,"%s",reln->rd_rel->relname.data);
+//	temp = reln->rd_rel->relname.data;
+//	fprintf(stderr, " \n %s FFFFFFFFFFFFFFFFFFFF\n", temp);
+//	for (l = start_Npools; l < Npools; l++) {
+//		fprintf(stderr, " \n %s KKKKKKKKKK\n", temp);
+//		if (strstr(BufferPoolDescripors[l].relations, temp) != NULL) {
+//			fprintf(stderr, " \n %s SSSSSSSSSSSSSSS\n", temp);
+//			return BufferPoolDescripors[l].poolid;
+//		}
+//
+//	}
+//
+//	strcat(temp, " ");
+//	fprintf(stderr, " \n %s BEFORE\n",
+//			BufferPoolDescripors[0].relations);
+//	//strcat(BufferPoolDescripors[0].relations, temp);
+//	fprintf(stderr, " \n %s@ AFTER\n",
+//			BufferPoolDescripors[pool_next_victim].relations);
+//	pool_next_victim++;
+//	if (pool_next_victim >= Npools) {
+//		pool_next_victim = 0;
+//		return 0;
+//	} else
+//		return pool_next_victim - 1;
 
 }

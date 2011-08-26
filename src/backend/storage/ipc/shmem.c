@@ -349,14 +349,14 @@ ShmemInitStruct(const char *name, Size size, bool *foundPtr)
 								" \"%s\" (%lu bytes requested)",
 								name, (unsigned long) size)));
 
-				fprintf(stderr,"PRoblem  sdsdsdsaddas    %d\n" ,6  );
+				//fprintf(stderr,"PRoblem  sdsdsdsaddas    %d\n" ,6  );
 			}
 			shmemseghdr->index = structPtr;
 			*foundPtr = FALSE;
 		}
 
 		LWLockRelease(ShmemIndexLock);
-		fprintf(stderr,"PRoblem     23 %d\n" ,6  );
+	//	fprintf(stderr,"PRoblem     23 %d\n" ,6  );
 		return structPtr;
 	}
 
