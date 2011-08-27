@@ -1,0 +1,102 @@
+Proj Report
+Test 1:
+    number of buffer pools: 3
+    number of buffers in each pool: 16 in each pool
+    strategy for allocating pages to pools: Z
+    query: select max(id) from People
+    buffer pool start state: cold
+    log: log_Q1_Z_cold
+    
+Expect:
+    1)The buffer state is read_only for all the buffers, because the start state is cold.
+    2)Requested buffers are in the same pool number, as in Z strategy the requested relation is the same one.
+    3)The id column has been indexed, so only a few request for the db, loop the whole table is not needed. 
+    
+Outcome:
+
+===
+QRY explain (analyze, buffers, format yaml) select max(id) from People;
+===
+REQ people_pkey 0 1 17 read_only
+REQ people_pkey 3 1 18 read_only
+REQ people_pkey 6 1 19 read_only
+REQ people 26 1 20 read_only
+Explain:
+The outcome fit the expect.
+
+
+Test 2:
+
+number of buffer pools: 3
+number of buffers in each pool: 16 in each pool
+strategy for allocating pages to pools: Y
+query: 
+explain (analyze, buffers, format yaml) select given||' '||family as name
+from   People
+where  birthday = (select min(birthday) from People);
+buffer pool start state: cold
+log: log_Q2_Y_cold
+
+Expect:
+
+1) Loop table needed.
+2) As the Strategy is to put one relation in one buffer pool, and the pool size is pretty small, so the Shared Hit Blocks is limitted
+Outcome:
+     Shared Hit Blocks: 1                       +
+     Shared Read Blocks: 53 
+Explain:
+
+The outcome fit the expect.
+
+
+Test 3:
+
+number of buffer pools: 3
+number of buffers in each pool: 1000 in each pool
+strategy for allocating pages to pools: Y
+query: 
+explain (analyze, buffers, format yaml) select given||' '||family as name
+from   People
+where  birthday = (select min(birthday) from People);
+buffer pool start state: cold
+log: log_Q2_Y_cold_largePool
+
+Expect:
+
+1) Loop table needed.
+2) The Shared Read Blocks number equal to Shared Hit Blocks number
+Outcome:
+    Shared Hit Blocks: 27                      +
+    Shared Read Blocks: 27
+Explain:
+
+The outcome fit the expect.
+
+
+Test 4:
+
+number of buffer pools: 5
+number of buffers in each pool: 32 in each pool
+strategy for allocating pages to pools: Y
+query: 
+explain (analyze, buffers, format yaml) 
+select c.code, p.family||', '||p.given as name, e.mark, sum(a.mark)
+from   People p, Courses c, Enrolments e, Items i, Assessments a
+where  p.id = e.student and e.course = c.id and i.course = c.id
+       and a.student = p.id and a.item = i.id
+       group  by c.code, p.family, p.given, e.mark
+       order  by c.code, p.family;
+buffer pool start state: cold
+log: log_Q2_Y_cold_largePool
+
+Expect:
+
+1) As the join constrain are foreign keys, so a large numbers of bolcks can be hit.
+Outcome:
+         Shared Hit Blocks: 84737                                               
+         Shared Read Blocks: 137
+Explain:
+
+The outcome fit the expect.
+
+Summary:
