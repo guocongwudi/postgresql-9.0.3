@@ -199,6 +199,64 @@ Analysis:
 
 The outcome fit the expect.
 
+Test 9:
+
+number of buffer pools: 4
+number of buffers in each pool: 64 in each pool
+strategy for allocating pages to pools: Y
+query: 
+explain (analyze, buffers, format yaml) 
+    select p.given, avg(e.mark)
+    from people p, enrolments e
+    where e.student = p.id
+    group by p.given;
+buffer pool start state: cold
+log: log_Q8_Y_cold
+
+Expect:
+
+1) As strategy Y are used, so Courses and Enrolments are in different Buffer Pools
+2) Buffer Pool size is pretty small, so the buffered touple may be removed from the buffer pool 
+
+Outcome:
+
+Shared Hit Blocks: 3                    +
+Shared Read Blocks: 45 
+
+Analysis:
+
+The outcome fit the expect.
+
+
+Test 10:
+
+number of buffer pools: 4
+number of buffers in each pool: 64 in each pool
+strategy for allocating pages to pools: Y
+query: 
+explain (analyze, buffers, format yaml) 
+    select p.given, avg(e.mark)
+    from people p, enrolments e
+    where e.student = p.id
+    group by p.given;
+buffer pool start state: hot
+log: log_Q8_Y_hot
+
+Expect:
+
+1) As strategy Y are used, so Courses and Enrolments are in different Buffer Pools
+2) Buffer Pool size is pretty small, so the buffered touple may be removed from the buffer pool 
+
+Outcome:
+
+Shared Hit Blocks: 46  
+Shared Read Blocks: 0 
+
+Analysis:
+
+The outcome fit the expect.
+
+
 
 Summary:
 
