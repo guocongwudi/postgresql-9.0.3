@@ -21,7 +21,7 @@ REQ people_pkey 0 1 17 read_only
 REQ people_pkey 3 1 18 read_only
 REQ people_pkey 6 1 19 read_only
 REQ people 26 1 20 read_only
-Explain:
+Analysis:
 The outcome fit the expect.
 
 
@@ -44,7 +44,7 @@ Expect:
 Outcome:
      Shared Hit Blocks: 1                       +
      Shared Read Blocks: 53 
-Explain:
+Analysis:
 
 The outcome fit the expect.
 
@@ -68,7 +68,7 @@ Expect:
 Outcome:
     Shared Hit Blocks: 27                      +
     Shared Read Blocks: 27
-Explain:
+Analysis:
 
 The outcome fit the expect.
 
@@ -95,8 +95,113 @@ Expect:
 Outcome:
          Shared Hit Blocks: 84737                                               
          Shared Read Blocks: 137
-Explain:
+Analysis:
 
 The outcome fit the expect.
 
+Test 5:
+
+number of buffer pools: 3
+number of buffers in each pool: 16 in each pool
+strategy for allocating pages to pools: Y
+query: 
+explain (analyze, buffers, format yaml) 
+    select c.code,count(e.student)
+    from   Courses c left outer join Enrolments e on (c.id = e.course)
+    group  by c.code;
+buffer pool start state: cold
+log: log_Q5_Y_cold
+
+Expect:
+
+1) As strategy Y are used, so Courses and Enrolments are in different Buffer Pools
+2) Buffer Pool size is pretty small, so the buffered touple may be removed from the buffer pool 
+
+Outcome:
+     Shared Hit Blocks: 5 
+     Shared Read Blocks: 25 
+Analysis:
+
+The outcome fit the expect.
+
+Test 6:
+
+number of buffer pools: 3
+number of buffers in each pool: 16 in each pool
+strategy for allocating pages to pools: Y
+query: 
+explain (analyze, buffers, format yaml) 
+    select c.code,count(e.student)
+    from   Courses c left outer join Enrolments e on (c.id = e.course)
+    group  by c.code;
+buffer pool start state: hot
+log: log_Q5_Y_hot
+
+Expect:
+
+1) As strategy Y are used, so Courses and Enrolments are in different Buffer Pools
+2) Buffer Pool size is pretty small, so the buffered touple may be removed from the buffer pool 
+
+Outcome:
+     Shared Hit Blocks: 4 
+     Shared Read Blocks: 24 
+Analysis:
+
+The outcome fit the expect.
+
+Test 7:
+
+number of buffer pools: 3
+number of buffers in each pool: 16 in each pool
+strategy for allocating pages to pools: Y
+query: 
+explain (analyze, buffers, format yaml) 
+    select distinct enr.student 
+    from courses c, enrolments enr
+    where c.id=enr.course and enr.mark>50 and c.title like '%Acc%';
+buffer pool start state: warm
+log: log_Q7_Y_warm
+
+Expect:
+
+1) As strategy Y are used, so Courses and Enrolments are in different Buffer Pools
+2) Buffer Pool size is pretty small, so the buffered touple may be removed from the buffer pool 
+
+Outcome:
+    Shared Hit Blocks: 13 
+    Shared Read Blocks: 16 
+Analysis:
+
+The outcome fit the expect.
+
+Test 8:
+
+number of buffer pools: 3
+number of buffers in each pool: 16 in each pool
+strategy for allocating pages to pools: Y
+query: 
+explain (analyze, buffers, format yaml) 
+    select distinct enr.student 
+    from courses c, enrolments enr
+    where c.id=enr.course and enr.mark>50 and c.title like '%Acc%';
+buffer pool start state: hot
+log: log_Q7_Y_hot
+
+Expect:
+
+1) As strategy Y are used, so Courses and Enrolments are in different Buffer Pools
+2) Buffer Pool size is pretty small, so the buffered touple may be removed from the buffer pool 
+
+Outcome:
+    Shared Hit Blocks: 20  
+    Shared Read Blocks: 9  
+Analysis:
+
+The outcome fit the expect.
+
+
 Summary:
+
+1) The performance of buffer pool start in cold state and warm state are pretty simmilar. 
+2) If buffer pool can hold most of the table content. then the Shared Hit Bolocks is pretty high.
+3) Strategy Z can make pg related querry pretty efficient
