@@ -1,0 +1,15 @@
+src/backend/port/ipc_test.c
+src/backend/postmaster/postmaster.c
+src/backend/storage/buffer/buf_init.c
+src/backend/storage/buffer/bufmgr.c
+src/backend/storage/buffer/freelist.c
+src/backend/storage/ipc/ipci.c
+src/backend/storage/ipc/shmem.c
+src/backend/storage/lmgr/lock.c
+src/backend/tcop/postgres.c
+src/backend/utils/init/globals.c
+src/bin/psql/startup.c
+src/include/miscadmin.h
+src/include/postgres.h
+src/include/storage/buf_internals.h
+src/include/storage/bufmgr.h
